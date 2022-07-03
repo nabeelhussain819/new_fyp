@@ -19,7 +19,7 @@ exports.login = async (req, res) => {
       const isMatch = await bcrypt.compare(password, userLogin.password);
       token = await userLogin.generateAuthToken();
       if (!isMatch) {
-        res.status(400).json({ message: "Invalid Credentials" });
+        res.status(400).json({ message: "Wrong Password" });
       } else {
         const token = jwt.sign({ _id: student._id }, process.env.KEY);
         const name = userLogin;

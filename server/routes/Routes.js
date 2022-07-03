@@ -28,7 +28,7 @@ const {
   deleteSession,
 } = require("../Controller/Create/Session");
 const { readCourse } = require("../Controller/Index/Course");
-const { readDept } = require("../Controller/Index/Department");
+const { readDept, editDepart } = require("../Controller/Index/Department");
 const { readProgram } = require("../Controller/Index/Program");
 const { section } = require("../Controller/Index/Section");
 const { readSemes, deleteSemester } = require("../Controller/Index/Semester");
@@ -101,6 +101,7 @@ router.route("/delete-sessions").post(deleteSession);
 //for department
 router.route("/create-department").post(createDept);
 router.route("/delete-departments").post(deleteDepartment);
+router.route("/edit-departments").post(editDepart);
 router.route("/departments").get(readDept);
 router.route("/get-depart").post(getDepartment);
 // for semester

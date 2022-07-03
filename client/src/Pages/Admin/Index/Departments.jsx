@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ReadDepartment } from "../../../Api/Department";
 import Allcreate from "../Create/Department";
-import Edit from "../Edit/Edit";
+import Edit from "../Edit/DepartEdit";
 import Delete from "../Delete/Delete";
 
 const Departments = () => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useParams, useLocation } from "react-router-dom";
-import Edit from "../Edit/Edit";
+
 import { useNavigate } from "react-router-dom";
 import Delete from "../Delete/Delete";
 
@@ -54,7 +54,7 @@ const Details = () => {
                     <>
                       <div className="container-fluid ">
                         <div class="btn-box mt-4 ">
-                          <Edit data={from} />
+                        
                           <Delete id={id} api={api} />
                         </div>
                       </div>

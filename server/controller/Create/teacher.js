@@ -1,6 +1,7 @@
 const teacher = require("../../Models/Teacher");
 
 exports.Commend = async (req, res) => {
+  console.log(req.body)
   try {
     const { isHelpfull, isFriendly, isProfessional, teacherId } = req.body;
 

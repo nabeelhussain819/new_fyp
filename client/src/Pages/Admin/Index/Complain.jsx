@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Edit from "../Edit/Edit";
+
 import Delete from "../Delete/Delete";
 import { ReadCourse } from "../../../Api/Course";
 import Course from "../Create/Course";
@@ -245,7 +245,6 @@ const Complains = () => {
                                 >
                                   <i class="la la-eye"></i>
                                 </Link>
-                                <Edit data={data} />
                                 <Delete id={data._id} api={"complains"} />
                               </div>
                             </td>

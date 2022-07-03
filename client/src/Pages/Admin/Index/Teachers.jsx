@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Allcreate from "../Create/Department";
-import Edit from "../Edit/Edit";
+import Edit from "../Edit/TeacherEdit";
 import Delete from "../Delete/Delete";
 import { ReadTeacher } from "../../../Api/Teacher";
 

@@ -48,33 +48,13 @@ exports.register = async (req, res, next) => {
     await Teacher.save();
     res.status(200).json(Teacher);
   } else if (user.test(term)) {
-    const myArray = term.split("-");
-    const userSession = myArray[1][2];
-    const Depart = await department.find({ code: myArray[0] });
-    const Session = await session.find({});
-    const deptCode = Depart.map((data) => data.code);
-    const deptId = Depart.map((data) => data._id);
-    const SessionMaped = Session.map((data) => [data["name"][0]]);
-    const hh = userSession.toLowerCase();
-    console.log(
-      userSession.toLowerCase(),
-      SessionMaped.map((data) => data[0])
-    );
-    if (myArray[0] == deptCode) {
+
       const Student = new student(req.body);
       await Student.save();
-      const studentId = Student._id;
-      const Student1 = await student.findById({ _id: Student._id });
-      Student1.deptId.push(deptId);
-      await Student1.save();
-      const Departs = await department.findById({ _id: deptId });
-      Departs.studentId.push(studentId);
-      await Departs.save();
+   
 
       res.status(200).json(Student);
-    } else {
-      return res.status(400).json({ error: "ID isnot valid" });
-    }
+   
   } else {
     return res.status(400).json({ error: "ID isnot valid" });
   }

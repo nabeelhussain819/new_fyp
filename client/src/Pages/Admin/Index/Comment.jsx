@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Edit from "../Edit/Edit";
 import Delete from "../Delete/Delete";
 import { ReadComment } from "../../../Api/Comment";
 
@@ -217,7 +216,7 @@ const Comments = () => {
                                 >
                                   <i class="la la-eye"></i>
                                 </Link>
-                                <Edit data={data} />
+                              
                                 <Delete id={data._id} api={"comments"} />
                               </div>
                             </td>

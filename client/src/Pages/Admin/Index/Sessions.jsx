@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Edit from "../Edit/Edit";
+import Edit from "../Edit/SessionEdit";
 import Delete from "../Delete/Delete";
 import Session from "../Create/Session";
 import { ReadSession } from "../../../Api/Session";

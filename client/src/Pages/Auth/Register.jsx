@@ -76,10 +76,10 @@ const Register = () => {
         password,
         u_id,
         phone,
-        deptId,
-        sessionId,
-        programId,
-        semesterId,
+        // deptId,
+        // sessionId,
+        // programId,
+        // semesterId,
       }),
     });
     const data = await res.json();

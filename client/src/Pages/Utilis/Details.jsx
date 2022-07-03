@@ -1,12 +1,15 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
+import Commend from "./Commend";
 import Complain from "./Complain";
 
 const Details = () => {
   const location = useLocation();
   const params = useParams();
   const { from, api } = location.state;
-
+function print(){
+  window.print();
+}
   return (
     <div>
       <section class="breadcrumb-area bread-bg-9">
@@ -27,6 +30,7 @@ const Details = () => {
                       <a href="index.html">Home</a>
                     </li>
                     <li>Details</li>
+                   
                   </ul>
                 </div>
               </div>
@@ -58,12 +62,8 @@ const Details = () => {
                       </div>
                       <div class="card-body px-0 pb-0">
                         <div class="post-categories">
-                          <a href="#" class="badge">
-                            Travel
-                          </a>
-                          <a href="#" class="badge">
-                            lifestyle
-                          </a>
+                        <button onClick={print} className="bg-transparent text-dark border-0 theme-btn">print</button>
+                          <Commend data={data}/>
                         </div>
                         <h3 class="card-title font-size-28">{data.name}</h3>
                         <p class="card-meta pb-3">

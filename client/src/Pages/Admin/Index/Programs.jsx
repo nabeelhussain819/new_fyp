@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Edit from "../Edit/Edit";
+import Edit from "../Edit/ProgramEdit";
 import Delete from "../Delete/Delete";
 import { ReadProgram } from "../../../Api/Program";
 import Program from "../Create/Program";

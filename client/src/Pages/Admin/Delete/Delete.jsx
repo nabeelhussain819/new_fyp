@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Delete({ id, api }) {
   const Navigate = useNavigate();
-  console.log(api);
+
   const onDelete = async (e) => {
     e.preventDefault();
 
