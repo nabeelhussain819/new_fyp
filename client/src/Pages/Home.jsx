@@ -232,7 +232,7 @@ export const Home = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="section-heading text-center">
-                <h2 className="sec__title">Trending Activities</h2>
+                <h2 className="sec__title">Trending Programs</h2>
               </div>
             </div>
           </div>
@@ -255,7 +255,7 @@ export const Home = () => {
                       </div>
                       <div className="card-body">
                         <h3 className="card-title">{data.name}</h3>
-                        <p className="card-meta">124 E Huron St, New york</p>
+                        <p className="card-meta">Department</p>
                         <div className="card-rating">
                           <span className="badge text-white">4.4/5</span>
                           <span className="review__text">Students</span>
@@ -265,7 +265,6 @@ export const Home = () => {
                         </div>
                         <div className="card-price d-flex align-items-center justify-content-between">
                           <p>
-                            <span className="price__num">$124.00</span>
                           </p>
                           <Link
                             to={"/details/" + data._id}

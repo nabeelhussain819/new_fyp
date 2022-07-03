@@ -5,12 +5,16 @@ const semester = require("../../Models/Semester");
 const section = require("../../Models/Section");
 const department = require("../../Models/Department");
 const student = require("../../Models/Student");
+const course = require("../../Models/Course");
 
 exports.register = async (req, res, next) => {
   const { email, password, phone, u_id, name } = req.body;
   const existingUserU = await student.findOne({ u_id: u_id });
   const existingUser = await student.findOne({ email: email });
-  const existingUserPhone = await student.findOne({ phone: phone });
+  const existingUserPhone = await teacher.findOne({ phone: phone });
+  const existingUserU1 = await teacher.findOne({ u_id: u_id });
+  const existingUser1 = await teacher.findOne({ email: email });
+  const existingUserPhone1 = await teacher.findOne({ phone: phone });
   var term = req.body.u_id;
   var user = new RegExp(/[A-Z]{3,}-[0-9]{2,2}[FS]-[0-9]{3,3}/gm);
   var re = new RegExp(/[TEC]{3,}-[0-9]{2,2}[FS]-[0-9]{3,3}/gm);
@@ -21,17 +25,17 @@ exports.register = async (req, res, next) => {
     return res
       .status(400)
       .json({ error: "The password needs to be at least 5 characters long." });
-  } else if (existingUser) {
+  } else if (existingUser || existingUser1) {
     return res
       .status(400)
       .json({ error: "An account with this email already exists." });
   } else if (!emailRegex.test(req.body.email)) {
     return res.status(400).json({ error: "Invalid email." });
-  } else if (existingUserU) {
+  } else if (existingUserU || existingUserU1) {
     return res
       .status(400)
       .json({ error: "An account with this University Id already exists." });
-  } else if (existingUserPhone) {
+  } else if (existingUserPhone ||existingUserPhone1) {
     return res
       .status(400)
       .json({ error: "An account with this Phone Number already exists." });
@@ -59,16 +63,19 @@ exports.register = async (req, res, next) => {
     return res.status(400).json({ error: "ID isnot valid" });
   }
 };
-exports.addDepartment = async (req, res, next) => {
-  console.log(req.body);
-  const { deptId, studentId, teacherId } = req.body;
-  if (!deptId) {
+exports.extendedRegister = async (req, res, next) => {
+
+  const { deptId, studentId, teacherId,programId,semesterId,sessionId } = req.body;
+
+  if (!deptId  || !programId||!sessionId ) {
+    console.log(req.body)
     return res
       .status(400)
-      .json({ error: "An account with this email already exists." });
+      .json({ error: "Add All Feilds" });
   } else {
     res.status(200).json({ message: "registerd" });
     if (teacherId) {
+
       const Teacher = await teacher.findById({ _id: teacherId });
       Teacher.deptId.push(req.body.deptId);
       await Teacher.save();
@@ -76,6 +83,24 @@ exports.addDepartment = async (req, res, next) => {
       const Depart = await department.findById({ _id: deptId });
       Depart.teacherId.push(teacherId);
       await Depart.save();
+
+      Teacher.programId.push(req.body.programId);
+      await Teacher.save();
+
+      const Program = await program.findById({ _id: programId });
+      Program.teacherId.push(teacherId);
+      await Program.save();
+
+      Teacher.sessionId.push(req.body.sessionId);
+      await Teacher.save();
+
+      const Session = await session.findById({ _id: sessionId });
+      Session.teacherId.push(teacherId);
+      await Session.save();
+
+
+      
+      res.status(200).json({ message: "registerd" });
     } else {
       const Student = await student.findById({ _id: studentId });
       Student.deptId.push(req.body.deptId);
@@ -84,34 +109,57 @@ exports.addDepartment = async (req, res, next) => {
       const Depart = await department.findById({ _id: deptId });
       Depart.studentId.push(studentId);
       await Depart.save();
-    }
-  }
-};
-exports.addProgram = async (req, res, next) => {
-  const { programId, studentId, teacherId } = req.body;
-  if (!programId) {
-    return res
-      .status(400)
-      .json({ error: "An account with this email already exists." });
-  } else {
-    res.status(200).json({ message: "registerd" });
-    if (teacherId) {
-      const Teacher = await teacher.findById({ _id: teacherId });
-      Teacher.programId.push(req.body.programId);
-      await Teacher.save();
 
-      const Program = await program.findById({ _id: programId });
-      Program.teacherId.push(teacherId);
-      await Program.save();
-    } else {
-      const Student = await student.findById({ _id: studentId });
+    
       Student.programId.push(programId);
       await Student.save();
 
       const Program = await program.findById({ _id: programId });
       Program.studentId.push(studentId);
       await Program.save();
+     
+      Student.semesterId.push(semesterId);
+      await Student.save();
+
+      Student.sessionId.push(sessionId);
+      await Student.save();
+
+      const Session = await session.findById({ _id: sessionId });
+      Session.studentId.push(studentId);
+      await Session.save();
+
+
+      res.status(200).json({ message: "registerd" });
+
     }
+  }
+};
+exports.addCourse = async (req, res, next) => {
+  const { courseId, studentId, teacherId } = req.body;
+  if (!courseId) {
+    return res
+      .status(400)
+      .json({ error: "An account with this email already exists." });
+  } else {
+   
+    if (teacherId) {
+      const Teacher = await teacher.findById({ _id: teacherId });
+      Teacher.courseId.push(req.body.courseId);
+      await Teacher.save();
+
+      const Course = await course.findById({ _id: courseId });
+      Course.teacherId.push(teacherId);
+      await Course.save();
+    } else {
+      const Student = await student.findById({ _id: studentId });
+      Student.programId.push(req.body.courseId);
+      await Student.save();
+
+      const Course = await course.findById({ _id: courseId });
+      Course.studentId.push(studentId);
+      await Course.save();
+    }
+    res.status(200).json({ message: "registerd" });
   }
 };
 exports.addSemester = async (req, res, next) => {

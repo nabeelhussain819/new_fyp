@@ -3,6 +3,7 @@ const semes = require("../../Models/Semester");
 exports.readSemes = async (req, res) => {
   semes
     .find({})
+    .populate("courseId")
     .populate("programId")
     .populate("studentId")
     .populate("teacherId")

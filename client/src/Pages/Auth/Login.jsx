@@ -120,8 +120,7 @@ function Login() {
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="custom-checkbox mb-0">
-                    <input type="checkbox" id="rememberchb" />
-                    <label for="rememberchb">Remember me</label>
+                   
                   </div>
                   <p class="forgot-password">
                     <a href="recover.html">Forgot Password?</a>
@@ -136,32 +135,7 @@ function Login() {
                 >
                   Login Account
                 </button>
-              </div>
-              <div class="action-box text-center">
-                <p class="font-size-14">Or Login Using</p>
-                <ul class="social-profile py-3">
-                  <li>
-                    <a href="#" class="bg-5 text-white">
-                      <i class="lab la-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="bg-6 text-white">
-                      <i class="lab la-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="bg-7 text-white">
-                      <i class="lab la-instagram"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="bg-5 text-white">
-                      <i class="lab la-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              </div>            
             </form>
           </div>
         </div>

@@ -10,6 +10,8 @@ const {
   addSemester,
   addSession,
   addSection,
+  extendedRegister,
+  addCourse,
 } = require("../Controller/Auth/Register");
 const { createCourse, deleteCourse } = require("../Controller/Create/Course");
 const {
@@ -85,11 +87,8 @@ app.use(function (req, res, next) {
 // for authentication
 router.route("/signup").post(register);
 router.route("/signin").post(login);
-router.route("/add-department").post(addDepartment);
-router.route("/add-program").post(addProgram);
-router.route("/add-semester").post(addSemester);
-router.route("/add-session").post(addSession);
-router.route("/add-section").post(addSection);
+router.route("/extendedRegister").post(extendedRegister);
+router.route("/add-course").post(addCourse);
 // getting users data
 router.route("/students").get(student);
 router.route("/teachers").get(teacher);

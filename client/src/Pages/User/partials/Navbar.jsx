@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div class="dashboard-nav">
+      <div class="dashboard-nav bg-light">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">

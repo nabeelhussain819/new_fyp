@@ -161,8 +161,8 @@ export const Dashboard = () => {
                         <span class="color-text-2 font-weight-medium mr-2">
                           Phone
                         </span>
-                        <span class="theme-btn theme-btn-small theme-btn-rgb theme-btn-danger-rgb">
-                          Not verified
+                        <span class="theme-btn theme-btn-small theme-btn-rgb ">
+                           verified
                         </span>
                       </li>
                       <li class="d-flex justify-content-between align-items-center">
@@ -183,7 +183,7 @@ export const Dashboard = () => {
                       </li>
                       <li class="d-flex justify-content-between align-items-center">
                         <span class="color-text-2 font-weight-medium mr-2">
-                          Travel Certificate
+                          Name
                         </span>
                         <span class="theme-btn theme-btn-small theme-btn-rgb">
                           Verified

@@ -6,7 +6,7 @@ import Logout from "../../../Components/Logout";
 const Sidebar = () => {
   return (
     <div>
-      <div class="sidebar-nav">
+      <div class="sidebar-nav ">
         <div class="sidebar-nav-body">
           <div class="side-menu-close">
             <i class="la la-times"></i>
