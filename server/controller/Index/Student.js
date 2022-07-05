@@ -4,7 +4,7 @@ exports.student = async (req, res, next) => {
   Student.find({})
     .populate({
       path: "deptId",
-    })
+    })  .populate("courseId")
     .populate("sessionId")
     .populate("semesterId")
     .populate("programId")

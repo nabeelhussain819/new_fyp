@@ -34,10 +34,10 @@ const StudentSchema = new mongoose.Schema(
         required: false,
       },
     ],
-    cgpa: [
+    cgpaRate: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Cgpa",
+        ref: "GPA",
         required: false,
       },
     ],
@@ -105,14 +105,14 @@ const StudentSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-StudentSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
-    next();
-  }
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
+// StudentSchema.pre("save", async function (next) {
+//   if (!this.isModified("password")) {
+//     next();
+//   }
+//   const salt = await bcrypt.genSalt(10);
+//   this.password = await bcrypt.hash(this.password, salt);
+//   next();
+// });
 StudentSchema.methods.generateAuthToken = async function () {
   try {
     let token = jwt.sign({ _id: this._id }, process.env.KEY);

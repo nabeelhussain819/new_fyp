@@ -7,7 +7,8 @@ const Comment = ({ data, api }) => {
   const [value, setValue] = useState("");
   const [studentId, setUserId] = useState(localStorage.getItem("id"));
   const [courseId, setCourseId] = useState([data._id]);
-
+  console.log(data.email)
+const teacherId = data._id
   const CommentC = async (e) => {
     e.preventDefault();
     if (!localStorage.getItem("token")) {
@@ -21,6 +22,7 @@ const Comment = ({ data, api }) => {
           value,
           studentId,
           courseId,
+          teacherId
         }),
       });
       const data = await res.json();

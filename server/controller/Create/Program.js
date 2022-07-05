@@ -7,6 +7,7 @@ exports.createProgram = async (req, res) => {
   try {
     const data = {
       name: req.body.name,
+      description: req.body.description,
       departmentId: req.body.departmentId,
       sessionId: req.body.sessionId,
     };

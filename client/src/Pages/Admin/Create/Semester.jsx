@@ -7,6 +7,7 @@ import { ReadProgram } from "../../../Api/Program";
 const Semester = () => {
   const [name, setName] = useState([]);
   const [programId, setProgramId] = useState("");
+  const [description, setDescription] = useState("");
   const [depart, setDepart] = useState([]);
   const [session, setSession] = useState([]);
   const [departmentId, setDepartmentId] = useState([]);
@@ -20,6 +21,7 @@ const Semester = () => {
       body: JSON.stringify({
         name,
         programId,
+        description
       }),
     });
     const data = await res.json();
@@ -82,6 +84,18 @@ const Semester = () => {
                               className="form-control"
                               type="number"
                               onChange={(e) => setName(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-12 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Semester Description</label>
+                          <div className="form-group">
+                            <input
+                              className="form-control"
+                              type="number"
+                              onChange={(e) => setDescription(e.target.value)}
                             />
                           </div>
                         </div>

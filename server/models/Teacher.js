@@ -63,6 +63,12 @@ const TeacherSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    isQec: [
+      {
+        type: String,
+        required: false,
+      },
+    ],
     deptId: [
       {
         type: Schema.Types.ObjectId,
@@ -90,14 +96,14 @@ const TeacherSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-TeacherSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
-    next();
-  }
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
+// TeacherSchema.pre("save", async function (next) {
+//   if (!this.isModified("password")) {
+//     next();
+//   }
+//   const salt = await bcrypt.genSalt(10);
+//   this.password = await bcrypt.hash(this.password, salt);
+//   next();
+// });
 TeacherSchema.methods.generateAuthToken = async function () {
   try {
     let token = jwt.sign({ _id: this._id }, process.env.KEY);

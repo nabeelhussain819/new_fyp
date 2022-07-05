@@ -1,185 +1,180 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import bg from "../Assets/logo.png";
 const Footer = () => {
   return (
-    <section class="footer-area section-bg padding-top-100px padding-bottom-30px">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 responsive-column">
-            <div class="footer-item">
-              <div class="footer-logo padding-bottom-30px">
-                <a href="index.html" class="foot__logo">
-                  <img src="images/logo.png" alt="logo" />
+    <section className="footer-area section-bg padding-top-30px padding-bottom-10px hidden-print">
+      <div className="container text-dark">
+        <div className="row">
+          <div className="col-lg-3 responsive-column"> 
+            <div className="footer-item">
+              <div className="footer-logo padding-bottom-30px">
+                <a href="index.html" className="foot__logo">
+                <img src={bg} alt="logo" style={{width:"260px"}}/>
                 </a>
               </div>
-              <p class="footer__desc">
-                Morbi convallis bibendum urna ut viverra. Maecenas consequat
-              </p>
-              <ul class="list-items pt-3">
-                <li>
-                  3015 Grand Ave, Coconut Grove,
-                  <br /> Cerrick Way, FL 12345
-                </li>
+              <p className="footer__desc">Sindh Madressatul Islam University</p>
+              <ul className="list-items pt-3">
+                <li>3015 Grand Ave, Coconut Grove Cerrick Way, FL 12345</li>
                 <li>+123-456-789</li>
                 <li>
-                  <a href="#">trizen@yourwebsite.com</a>
+                  <Link to="" className="text-dark">
+                    smiu@edu.pk
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 responsive-column">
-            <div class="footer-item">
-              <h4
-                class="title curve-shape pb-3 margin-bottom-20px"
-                data-text="curvs"
-              >
-                Company
+          <div className="col-lg-3 responsive-column">
+            <div className="footer-item">
+              <h4 className=" curve-shape pb-3 margin-bottom-20px margin-top-50px">
+                Main Pages
               </h4>
-              <ul class="list-items list--items">
+              <ul className="list-items list--items">
                 <li>
-                  <a href="about.html">About us</a>
+                  <Link to="" className="text-dark">
+                    Department
+                  </Link>
                 </li>
                 <li>
-                  <a href="services.html">Services</a>
+                  <Link to="" className="text-dark">
+                    Courses
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Jobs</a>
+                  <Link to="" className="text-dark">
+                    Programs
+                  </Link>
                 </li>
                 <li>
-                  <a href="blog-grid.html">News</a>
-                </li>
-                <li>
-                  <a href="contact.html">Support</a>
-                </li>
-                <li>
-                  <a href="#">Advertising</a>
+                  <Link to="" className="text-dark">
+                    Semesters
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 responsive-column">
-            <div class="footer-item">
-              <h4
-                class="title curve-shape pb-3 margin-bottom-20px"
-                data-text="curvs"
-              >
+          <div className="col-lg-3 responsive-column">
+            <div className="footer-item">
+              <h4 className=" curve-shape pb-3 margin-bottom-20px margin-top-50px">
                 Other Services
               </h4>
-              <ul class="list-items list--items">
+              <ul className="list-items list--items">
                 <li>
-                  <a href="#">Investor Relations</a>
+                  <Link to="" className="text-dark">
+                    Dashboard
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Trizen.com Rewards</a>
+                  <Link to="" className="text-dark">
+                    Profile
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Partners</a>
+                  <Link to="" className="text-dark">
+                    Qec
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">List My Hotel</a>
-                </li>
-                <li>
-                  <a href="#">All Hotels</a>
-                </li>
-                <li>
-                  <a href="#">TV Ads</a>
+                  <Link to="" className="text-dark">
+                    Teachers
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 responsive-column">
-            <div class="footer-item">
-              <h4
-                class="title curve-shape pb-3 margin-bottom-20px"
-                data-text="curvs"
-              >
+          <div className="col-lg-3 responsive-column">
+            <div className="footer-item">
+              <h4 className=" curve-shape pb-3 margin-bottom-20px margin-top-50px">
                 Other Links
               </h4>
-              <ul class="list-items list--items">
+              <ul className="list-items list--items">
                 <li>
-                  <a href="#">USA Vacation Packages</a>
+                  <Link to="" className="text-dark">
+                    Your Program
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">USA Flights</a>
+                  <Link to="" className="text-dark">
+                    Your Department
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">USA Hotels</a>
+                  <Link to="" className="text-dark">
+                    Your Courses
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">USA Car Hire</a>
-                </li>
-                <li>
-                  <a href="#">Create an Account</a>
-                </li>
-                <li>
-                  <a href="#">Trizen Reviews</a>
+                  <Link to="" className="text-dark">
+                    Your Comments
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <div class="term-box footer-item">
-              <ul class="list-items list--items d-flex align-items-center">
+        <div className="row align-items-center">
+          <div className="col-lg-8">
+            <div className="term-box footer-item">
+              <ul className="list-items list--items d-flex align-items-center">
                 <li>
-                  <a href="#">Terms &amp; Conditions</a>
+                  <Link to="" className="text-dark">
+                    Terms &amp; Conditions
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <Link to="" className="text-dark">
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Help Center</a>
+                  <Link to="" className="text-dark">
+                    Help Center
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="footer-social-box text-right">
-              <ul class="social-profile">
+          <div className="col-lg-4">
+            <div className="footer-social-box text-right">
+              <ul className="social-profile">
                 <li>
-                  <a href="#">
-                    <i class="lab la-facebook-f"></i>
-                  </a>
+                  <Link to="" className="text-dark">
+                    <i className="lab la-facebook-f"></i>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="lab la-twitter"></i>
-                  </a>
+                  <Link to="" className="text-dark">
+                    <i className="lab la-twitter"></i>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="lab la-instagram"></i>
-                  </a>
+                  <Link to="" className="text-dark">
+                    <i className="lab la-instagram"></i>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="lab la-linkedin-in"></i>
-                  </a>
+                  <Link to="" className="text-dark">
+                    <i className="lab la-linkedin-in"></i>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-block mt-4"></div>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <div class="copy-right padding-top-30px">
-              <p class="copy__desc">
-                © Copyright Trizen 2020. Made with
-                <span class="la la-heart"></span> by{" "}
-                <a href="https://themeforest.net/user/techydevs/portfolio">
-                  TechyDevs
-                </a>
-              </p>
+      <div className="section-block mt-4"></div>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-7">
+            <div className="copy-right padding-top-30px">
+              <p className="copy__desc">© Sindh Madressatul Islam University</p>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="copy-right-content d-flex align-items-center justify-content-end padding-top-30px">
-              <h3 class="title font-size-15 pr-2">We Accept</h3>
-              <img src="images/payment-img.png" alt="" />
+          <div className="col-lg-5">
+            <div className="copy-right-content d-flex align-items-center justify-content-end padding-top-30px">
+              <span className="la la-heart"></span>
+              <a href="">NIA</a>
             </div>
           </div>
         </div>

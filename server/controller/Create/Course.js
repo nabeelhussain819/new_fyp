@@ -10,6 +10,7 @@ exports.createCourse = async (req, res) => {
       teacherId: req.body.teacherId,
       studentId: req.body.studentId,
       comment: req.body.comment,
+      description: req.body.description,
       code: (Math.random() + 1).toString(36).substring(5),
     };
     const Course = new course(data);

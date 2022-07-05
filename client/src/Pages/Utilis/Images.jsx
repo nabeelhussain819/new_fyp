@@ -51,11 +51,120 @@ export const GalleryImages = [
     image: carouselimage4,
   },
   {
-    key: 4,
+    key: 5,
     image: carouselimage5,
   },
   {
-    key: 4,
+    key: 6,
+    image: carouselimage6,
+  },
+  {
+    key: 7,
+    image: carouselimage1,
+  },
+  {
+    key: 8,
+    image: carouselimage2,
+  },
+  {
+    key: 9,
+    image: carouselimage3,
+  },
+  {
+    key: 10,
+    image: carouselimage4,
+  },
+  {
+    key: 11,
+    image: carouselimage5,
+  },
+  {
+    key: 12,
+    image: carouselimage6,
+  },
+  {
+    key: 13,
+    image: carouselimage1,
+  },
+  {
+    key: 14,
+    image: carouselimage2,
+  },
+  {
+    key: 15,
+    image: carouselimage3,
+  },
+  {
+    key: 16,
+    image: carouselimage4,
+  },
+  {
+    key: 17,
+    image: carouselimage5,
+  },
+  {
+    key: 18,
+    image: carouselimage6,
+  },
+  {
+    key: 19,
+    image: carouselimage1,
+  },
+  {
+    key: 20,
+    image: carouselimage2,
+  },
+  {
+    key: 21,
+    image: carouselimage3,
+  },
+  {
+    key: 22,
+    image: carouselimage4,
+  },
+  {
+    key: 23,
+    image: carouselimage5,
+  },
+  {
+    key: 24,
+    image: carouselimage6,
+  },
+  {
+    key: 25,
+    image: carouselimage6,
+  },
+  {
+    key: 26,
+    image: carouselimage6,
+  },
+  {
+    key: 27,
+    image: carouselimage6,
+  },
+  {
+    key: 28,
+    image: carouselimage6,
+  },  {
+    key: 29,
+    image: carouselimage6,
+  },  {
+    key: 30,
+    image: carouselimage6,
+  },  {
+    key: 31,
+    image: carouselimage6,
+  },  {
+    key: 32,
+    image: carouselimage6,
+  },  {
+    key: 33,
+    image: carouselimage6,
+  },  {
+    key: 34,
+    image: carouselimage6,
+  },  {
+    key: 35,
     image: carouselimage6,
   },
 ];

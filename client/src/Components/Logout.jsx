@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import logo1 from "../Assets/logo.png";
 import { Modal, Button, Container } from "react-bootstrap";
 
 function Logout() {
@@ -10,9 +10,9 @@ function Logout() {
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
     setShow(true);
-    localStorage.clear();
+     localStorage.clear();
     setTimeout(function () {
-      window.location.href = "/";
+       window.location.href = "/";
     }, 3000);
   }
 
@@ -27,6 +27,7 @@ function Logout() {
           centered
           onClick={() => handleShow(v)}
         >
+       
           <i class="la la-power-off mr-2 text-color-11"></i>LogOut
           {typeof v === "string" && `below ${v.split("-")[0]}`}
         </button>
@@ -42,11 +43,12 @@ function Logout() {
       >
         <Modal.Body
           id="contained-modal-title-vcenter"
-          className=" text-center text-light mt-2 section-bg3"
-          style={{ backgroundColor: "#0d233e" }}
+          className=" text-right text-dark mt-2  bg-transparent"
         >
+          <img src={logo1} style={{width:"450px"}} alt="" />
           <div id="loading-wrapper" className="p-4">
-            <div id="loading-text">LOGOUT...</div>
+          
+            <div id="loading-text"><h3>LOGING OUT...</h3></div>
             <div id="loading-content"></div>
           </div>
         </Modal.Body>

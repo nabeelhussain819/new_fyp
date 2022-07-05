@@ -7603,7 +7603,7 @@ body {
 }
 @media (max-width: 425px) {
   .countdown-item {
-    width: 50%;
+    
     margin-right: 0;
     margin-bottom: 50px;
   }
@@ -31000,4 +31000,18 @@ select.selectpicker {
   position: relative;
   width: 100%;
   height: auto;
+}
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}
+.bg-819 {
+  background-image: url(../public/assets/color-bg2.png);
+}
+.bg-818 {
+  background-image: url(../public/assets/color-bg.png);
+}
+.bg-817 {
+  background-image: url(../public/assets/color-bg3.png);
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { carouselImage } from "./Images";
+import { GalleryImages } from "./Images";
 import { Link, useNavigate } from "react-router-dom";
 
 const SearchBar = ({ item, api }) => {
@@ -9,7 +9,7 @@ const SearchBar = ({ item, api }) => {
 
   return (
     <div>
-      <div className="row">
+      <div className="row " >
         <div class="col-lg-12">
           <div class="filter-wrap padding-bottom-60px">
             <div class="filter-bar shadow-lg d-flex align-items-center justify-content-between margin-top-30px">
@@ -37,7 +37,7 @@ const SearchBar = ({ item, api }) => {
             <div class="col-lg-4 responsive-column">
               <div class="card-item shadow-lg">
                 <div class="card-img">
-                  {carouselImage.map((data, key) => {
+                  {GalleryImages.map((data, key) => {
                     return (
                       key === index && (
                         <img src={data.image} alt="destination-img" />
@@ -65,11 +65,13 @@ const SearchBar = ({ item, api }) => {
                       {data.name}
                     </Link>
                   </h3>
-                  <p class="card-meta">124 E Huron St, New york</p>
+                  <p class="card-meta">Joined At: {new Date(
+                                    data.createdAt
+                                  ).toLocaleDateString("en-US")}
+                         </p>
                   <div class="card-rating">
                     <span class="badge text-white">4.4/5</span>
-                    <span class="review__text">Average</span>
-                    <span class="rating__text">(30 Reviews)</span>
+                    <span class="review__text">Average </span>
                   </div>
 
                   <span class="tour-hour mb-4 ">

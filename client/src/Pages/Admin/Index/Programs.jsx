@@ -97,8 +97,8 @@ const Programs = () => {
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
                         <th scope="col">Department</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">City</th>
+                        <th scope="col">Session</th>
+                        <th scope="col">Total Students</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                       </tr>
@@ -113,12 +113,12 @@ const Programs = () => {
                                 <h3 class="title">{data.name}</h3>
                               </div>
                             </td>
-                            <td>{data.departmentId.name}</td>
-                            <td>United States</td>
-                            <td>New York</td>
+                            <td>{data.departmentId.map((data1)=>data1.name)}</td>
+                            <td>{data.sessionId.map((data1)=>data1.name)}</td>
+                            <td>{data.studentId.length}</td>
                             <td>
-                              <span class="badge badge-success py-1 px-2">
-                                Active
+                            <span class="badge badge-warning py-1 px-2">
+                              {data.studentId.length < 100 ? "Less Students" :"ACTIVE"}
                               </span>
                             </td>
                             <td>

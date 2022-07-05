@@ -1,4 +1,5 @@
 import React from "react";
+import { carouselImage, GalleryImages } from "./Utilis/Images";
 
 export const Blog = () => {
   return (
@@ -11,7 +12,7 @@ export const Blog = () => {
                 <div class="breadcrumb-content text-center">
                   <div class="section-heading">
                     <h2 class="sec__title text-white">
-                      Discover Trizen's Luxury Living
+                      SMIU Gallery
                     </h2>
                   </div>
                   <span class="arrow-blink">
@@ -33,92 +34,29 @@ export const Blog = () => {
           </svg>
         </div>
       </section>
-      <section class="gallery-area section--padding">
+      <section class="gallery-area section--padding bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
               <div class="section-heading text-center">
                 <h2 class="sec__title">Gallery Grid</h2>
                 <p class="sec__desc pt-2">
-                  We used bootstrap grid layout format You can change grid
-                  format from 2 to 5 responsive-columns
+               Sindh Madressatul Islam University Pictures Gallery
                 </p>
               </div>
             </div>
           </div>
           <div class="row padding-top-50px">
-            <div class="col-lg-4">
-              <div class="gallery-card">
-                <a
-                  class="d-block"
-                  data-fancybox="gallery"
-                  href="images/img5.jpg"
-                  data-caption="Showing image 1"
-                >
-                  <img src="images/img5.jpg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="gallery-card">
-                <a
-                  class="d-block"
-                  data-fancybox="gallery"
-                  href="images/img29.jpg"
-                  data-caption="Showing image 2"
-                >
-                  <img src="images/img29.jpg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="gallery-card">
-                <a
-                  class="d-block"
-                  data-fancybox="gallery"
-                  href="images/img30.jpg"
-                  data-caption="Showing image 3"
-                >
-                  <img src="images/img30.jpg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="gallery-card">
-                <a
-                  class="d-block"
-                  data-fancybox="gallery"
-                  href="images/img31.jpg"
-                  data-caption="Showing image 4"
-                >
-                  <img src="images/img31.jpg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="gallery-card">
-                <a
-                  class="d-block"
-                  data-fancybox="gallery"
-                  href="images/img32.jpg"
-                  data-caption="Showing image 5"
-                >
-                  <img src="images/img32.jpg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="gallery-card">
-                <a
-                  class="d-block"
-                  data-fancybox="gallery"
-                  href="images/img33.jpg"
-                  data-caption="Showing image 6"
-                >
-                  <img src="images/img33.jpg" />
-                </a>
-              </div>
-            </div>
+            {carouselImage.map((data)=>{return(
+  <div class="col-lg-4">
+  <div class="gallery-card">
+  
+      <img src={data.image} />
+    
+  </div>
+</div>
+            )})}          
+       
           </div>
         </div>
       </section>

@@ -7,6 +7,10 @@ const DepartmentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: false,
+    },
     code: {
       type: String,
       required: true,

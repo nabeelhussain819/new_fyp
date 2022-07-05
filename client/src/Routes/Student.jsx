@@ -10,7 +10,11 @@ import Program from "../Pages/User/Program";
 import Teacher from "../Pages/User/Teacher";
 import Details from "../Pages/Utilis/Details";
 import Qec from "../Pages/Utilis/Qec";
-
+import CourseEvaluate from "../Pages/Qec/CourseEvaluate";
+import Profile from "../Pages/Utilis/Profile";
+import Semester from "../Pages/User/Semester";
+import Complain from "../Pages/User/Complain";
+import Comment from "../Pages/User/Comments";
 
 function Students() {
   return (
@@ -23,14 +27,18 @@ function Students() {
         <Fragment>
           <Routes>
             <Route path="/departments" element={<Department />} />
+            <Route path="/qec" element={<CourseEvaluate />} />
             <Route path="/programs" element={<Program />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/details/:id" element={<Details />} />
             <Route path="/teachers" element={<Teacher />} />
             <Route path="/" element={<Home />} />
-            <Route path="/user-panel" element={<Dashboard />} />
-            <Route path="/qec" element={<Qec />} />
-           
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/evaluation" element={<Qec />} />
+            <Route path="/semesters" element={<Semester />} />
+            <Route path="/comments" element={<Comment />} />
+            <Route path="/complains" element={<Complain />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Fragment>
       </section>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const Contact = () => {
   return (
     <div>
@@ -18,7 +20,7 @@ export const Contact = () => {
                 <div class="breadcrumb-list text-right">
                   <ul class="list-items">
                     <li>
-                      <a href="index.html">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li>Pages</li>
                     <li>Contact us</li>
@@ -39,7 +41,7 @@ export const Contact = () => {
           </svg>
         </div>
       </section>
-      <section class="contact-area section--padding">
+      <section class="contact-area section--padding bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
@@ -111,7 +113,7 @@ export const Contact = () => {
                       </div>
                       <div class="col-lg-12">
                         <div class="btn-box">
-                          <button type="button" class="theme-btn">
+                          <button type="button" class="theme-btn" onClick={()=>toast.success("MESSAGE HAS BEEN SENT")}>
                             Send Message
                           </button>
                         </div>
@@ -133,7 +135,7 @@ export const Contact = () => {
                         <i class="la la-map-marker icon-element"></i>
                         <h5 class="title font-size-16 pb-1">Address</h5>
                         <p class="map__desc">
-                          Melbourne, Australia, 105 South Park Avenue
+                          SINDH MADRESSATUL ISLAM UNIVERSITY
                         </p>
                       </li>
                       <li>
@@ -145,8 +147,8 @@ export const Contact = () => {
                       <li>
                         <i class="la la-envelope-o icon-element"></i>
                         <h5 class="title font-size-16 pb-1">Email</h5>
-                        <p class="map__desc">needhelp@trizen.com</p>
-                        <p class="map__desc">inquiry@trizen.com</p>
+                        <p class="map__desc">smiu@email.com</p>
+                        <p class="map__desc">smiu@edu.pk.com</p>
                       </li>
                     </ul>
                     <ul class="social-profile text-center">

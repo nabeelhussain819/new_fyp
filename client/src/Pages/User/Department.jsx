@@ -30,7 +30,7 @@ const Department = () => {
               <div class="col-lg-6">
                 <div class="breadcrumb-content">
                   <div class="section-heading">
-                    <h2 class="sec__title text-white">Teachers</h2>
+                    <h2 class="sec__title text-white">Departments</h2>
                   </div>
                 </div>
               </div>
@@ -38,9 +38,9 @@ const Department = () => {
                 <div class="breadcrumb-list text-right">
                   <ul class="list-items">
                     <li>
-                      <a href="index.html">Home</a>
+                      <a href="/dashboard">Home</a>
                     </li>
-                    <li>Teachers</li>
+                    <li>Departments</li>
                   </ul>
                 </div>
               </div>
@@ -58,7 +58,7 @@ const Department = () => {
           </svg>
         </div>
       </section>
-      <section class="card-area section--padding">
+      <section class="card-area section--padding bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -68,9 +68,6 @@ const Department = () => {
                     <h3 className="font-size-24">
                       Total Departments Available
                     </h3>
-                    <p className="font-size-14 line-height-20 pt-1">
-                      Select your best view
-                    </p>
                   </div>
                 </div>
               </div>

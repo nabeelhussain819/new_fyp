@@ -66,14 +66,14 @@ exports.register = async (req, res, next) => {
 exports.extendedRegister = async (req, res, next) => {
 
   const { deptId, studentId, teacherId,programId,semesterId,sessionId } = req.body;
-
+  console.log(req.body)
   if (!deptId  || !programId||!sessionId ) {
     console.log(req.body)
     return res
       .status(400)
       .json({ error: "Add All Feilds" });
   } else {
-    res.status(200).json({ message: "registerd" });
+    
     if (teacherId) {
 
       const Teacher = await teacher.findById({ _id: teacherId });
@@ -91,23 +91,18 @@ exports.extendedRegister = async (req, res, next) => {
       Program.teacherId.push(teacherId);
       await Program.save();
 
-      Teacher.sessionId.push(req.body.sessionId);
-      await Teacher.save();
 
       const Session = await session.findById({ _id: sessionId });
       Session.teacherId.push(teacherId);
       await Session.save();
-
-
-      
       res.status(200).json({ message: "registerd" });
     } else {
-      const Student = await student.findById({ _id: studentId });
+      const Student = await student.findById({ _id: req.body.studentId });
       Student.deptId.push(req.body.deptId);
       await Student.save();
 
       const Depart = await department.findById({ _id: deptId });
-      Depart.studentId.push(studentId);
+      Depart.studentId.push(req.body.studentId);
       await Depart.save();
 
     
@@ -115,7 +110,7 @@ exports.extendedRegister = async (req, res, next) => {
       await Student.save();
 
       const Program = await program.findById({ _id: programId });
-      Program.studentId.push(studentId);
+      Program.studentId.push(req.body.studentId);
       await Program.save();
      
       Student.semesterId.push(semesterId);
@@ -125,7 +120,7 @@ exports.extendedRegister = async (req, res, next) => {
       await Student.save();
 
       const Session = await session.findById({ _id: sessionId });
-      Session.studentId.push(studentId);
+      Session.studentId.push(req.body.studentId);
       await Session.save();
 
 
@@ -152,7 +147,7 @@ exports.addCourse = async (req, res, next) => {
       await Course.save();
     } else {
       const Student = await student.findById({ _id: studentId });
-      Student.programId.push(req.body.courseId);
+      Student.courseId.push(req.body.courseId);
       await Student.save();
 
       const Course = await course.findById({ _id: courseId });

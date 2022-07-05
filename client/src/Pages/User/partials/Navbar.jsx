@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo1 from "../../../Assets/logo.jpg";
+import logo1 from "../../../Assets/logo.png";
 import { Link } from "react-router-dom";
 import Logout from "../../../Components/Logout";
 
@@ -8,14 +8,14 @@ const Navbar = () => {
 
   return (
     <div>
-      <div class="dashboard-nav bg-light">
+      <div class="dashboard-nav bg-warning">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
               <div class="menu-wrapper">
                 <div class="logo mr-5">
-                  <a href="index.html">
-                    <img src={logo1} alt="logo" />
+                  <a href="/dashboard">
+                    <img src={logo1} alt="logo"style={{width:"200px"}} />
                   </a>
                   <div class="menu-toggler">
                     {show == false ? (

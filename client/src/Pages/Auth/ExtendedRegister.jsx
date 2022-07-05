@@ -27,8 +27,8 @@ export default function ExtendedForm() {
     const [programApi, setProgramApi] = useState([]);
     const [semesterApi, setSemesterApi] = useState([]);
     const [courseApi, setCourseApi] = useState([]);
-    const [studentId, setStudentId] = useState();
-    const [teacherId, setTeacherId] = useState();
+    const [studentId, setStudentId] = useState("");
+    const [teacherId, setTeacherId] = useState("");
     console.log(studentId,teacherId,semesterId,programId,sessionId,deptId)
     function handleButton(props) {
         if (props == "depart") {
@@ -87,12 +87,13 @@ export default function ExtendedForm() {
         
       }
       function handleNextSemester(data) {
-        setProgramId(data);
+        setSemesterId(data);
         setSemester(false);        
         setCourse(true);   
         getData4({ data });            
         
       }
+      console.log(departApi)
       const extendedRegisterUser = async (e) => {               
         const res = await fetch("http://localhost:5000/extendedRegister", {
           method: "POST",
@@ -270,27 +271,19 @@ export default function ExtendedForm() {
               <div class="my-service-list">
                 <div class="card-item card-item-list">
                   <div class="card-img">
-                    <a href="hotel-single.html" class="d-block">
+                    <a href="#" class="d-block">
                       <img src={smiu} alt="hotel-img" />
                     </a>                            
                   </div>
 
                   <div class="card-body">
                     <h3 class="card-title">
-                      <a href="hotel-single.html">{data.name}</a>
+                      <a href="#">{data.name}</a>
                     </h3>
-                    <p class="card-meta">Total Students</p>
-                    <div class="card-rating d-flex align-items-center pt-1">
-                      <span class="rating__text">Hotel star</span>
-                      <span class="ratings d-flex align-items-center mx-2">
-                        <i class="la la-star"></i>
-                        <i class="la la-star"></i>
-                        <i class="la la-star"></i>
-                        <i class="la la-star"></i>
-                        <i class="la la-star"></i>
-                      </span>
-                      <span class="rating__text">5 of 5</span>
-                    </div>
+                    <p class="card-meta">Total Students {data.studentId.length}</p>
+                    <p class="card-meta">Total teachers {data.teacherId.length}</p>
+                    <p class="card-meta">Total program {data.programId.length}</p>
+                  
                     <div class="card-price d-flex align-items-center justify-content-between">
                    
                       <button
@@ -330,44 +323,32 @@ export default function ExtendedForm() {
                    <div class="my-service-list">
                      <div class="card-item card-item-list">
                        <div class="card-img">
-                         <a href="hotel-single.html" class="d-block">
-                           <img
-                             src="images/img1.jpg"
-                             alt="hotel-img"
-                           />
+                         <a href="#" class="d-block">
+                         <img src={smiu} alt="hotel-img" />
                          </a>
-                         <span class="badge">Featured</span>
+                         <span class="badge">{index.name}</span>
                        </div>
        
                        <div class="card-body">
                          <h3 class="card-title">
-                           <a href="hotel-single.html">
+                           <a href="#">
                              {index.name}
                            </a>
                          </h3>
                          <p class="card-meta">
-                           124 E Huron St, New york
+                         Total Students :{index.studentId.length}
                          </p>
-                         <div class="card-rating d-flex align-items-center pt-1">
-                           <span class="rating__text">
-                             Hotel star
-                           </span>
-                           <span class="ratings d-flex align-items-center mx-2">
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                           </span>
-                           <span class="rating__text">5 of 5</span>
-                         </div>
+                         <p class="card-meta">
+                         Total teachers :{index.teacherId.length}
+                         </p>
+                         <p class="card-meta">
+                         Joined At :{new Date(
+                                    index.createdAt
+                                  ).toLocaleDateString("en-US")}
+                         </p>
+                      
                          <div class="card-price d-flex align-items-center justify-content-between">
-                           <p>
-                             <span class="price__from">
-                               Price from
-                             </span>
-                             <span class="price__num">$00.00</span>
-                           </p>
+                          
                            <button
                              className="theme-btn"
                              onClick={() => handleNextSession(index._id)}
@@ -410,44 +391,31 @@ export default function ExtendedForm() {
                     <div class="my-service-list">
                       <div class="card-item card-item-list">
                         <div class="card-img">
-                          <a href="hotel-single.html" class="d-block">
-                            <img
-                              src="images/img1.jpg"
-                              alt="hotel-img"
-                            />
+                          <a href="#" class="d-block">
+                          <img src={smiu} alt="hotel-img" />
                           </a>
-                          <span class="badge">Featured</span>
+                          <span class="badge">{index.name}</span>
                         </div>
         
                         <div class="card-body">
                           <h3 class="card-title">
-                            <a href="hotel-single.html">
+                            <a href="#">
                               {index.name}
                             </a>
                           </h3>
                           <p class="card-meta">
-                            124 E Huron St, New york
+                          Total Students :{index.studentId.length}
                           </p>
-                          <div class="card-rating d-flex align-items-center pt-1">
-                            <span class="rating__text">
-                              Hotel star
-                            </span>
-                            <span class="ratings d-flex align-items-center mx-2">
-                              <i class="la la-star"></i>
-                              <i class="la la-star"></i>
-                              <i class="la la-star"></i>
-                              <i class="la la-star"></i>
-                              <i class="la la-star"></i>
-                            </span>
-                            <span class="rating__text">5 of 5</span>
-                          </div>
+                          <p class="card-meta">
+                          Total Teachers :{index.teacherId.length}
+                          </p>
+                          <p class="card-meta">
+                         Joined At :{new Date(
+                                    index.createdAt
+                                  ).toLocaleDateString("en-US")}
+                         </p>
                           <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                              <span class="price__from">
-                                Price from
-                              </span>
-                              <span class="price__num">$00.00</span>
-                            </p>
+                            
                             <button
                               className="theme-btn"
                               onClick={() => handleNextProgram(index._id)}
@@ -490,44 +458,31 @@ export default function ExtendedForm() {
                    <div class="my-service-list">
                      <div class="card-item card-item-list">
                        <div class="card-img">
-                         <a href="hotel-single.html" class="d-block">
-                           <img
-                             src="images/img1.jpg"
-                             alt="hotel-img"
-                           />
+                         <a href="#" class="d-block">
+                         <img src={smiu} alt="hotel-img" />
                          </a>
-                         <span class="badge">Featured</span>
+                         <span class="badge">{index.studentId.length}</span>
                        </div>
        
                        <div class="card-body">
                          <h3 class="card-title">
-                           <a href="hotel-single.html">
+                           <a href="#">
                              {index.name}
                            </a>
                          </h3>
                          <p class="card-meta">
-                           124 E Huron St, New york
+                          Total Students :{index.studentId.length}
+                          </p>
+                          <p class="card-meta">
+                          Total Teachers :{index.teacherId.length}
+                          </p>
+                          <p class="card-meta">
+                         Joined At :{new Date(
+                                    index.createdAt
+                                  ).toLocaleDateString("en-US")}
                          </p>
-                         <div class="card-rating d-flex align-items-center pt-1">
-                           <span class="rating__text">
-                             Hotel star
-                           </span>
-                           <span class="ratings d-flex align-items-center mx-2">
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                           </span>
-                           <span class="rating__text">5 of 5</span>
-                         </div>
                          <div class="card-price d-flex align-items-center justify-content-between">
-                           <p>
-                             <span class="price__from">
-                               Price from
-                             </span>
-                             <span class="price__num">$00.00</span>
-                           </p>
+                           
                            <button
                              className="theme-btn"
                              onClick={() => handleNextSemester(index._id)}
@@ -575,44 +530,32 @@ export default function ExtendedForm() {
            <div class="my-service-list">
              <div class="card-item card-item-list">
                <div class="card-img">
-                 <a href="hotel-single.html" class="d-block">
-                   <img
-                     src="images/img1.jpg"
-                     alt="hotel-img"
-                   />
+                 <a href="#" class="d-block">
+                 <img src={smiu} alt="hotel-img" />
                  </a>
-                 <span class="badge">Featured</span>
+                 <span class="badge">{data.name}</span>
                </div>
 
                <div class="card-body">
                  <h3 class="card-title">
-                   <a href="hotel-single.html">
+                   <a href="#">
                      {data.name}
                    </a>
                  </h3>
                  <p class="card-meta">
-                   124 E Huron St, New york
-                 </p>
-                 <div class="card-rating d-flex align-items-center pt-1">
-                   <span class="rating__text">
-                     Hotel star
-                   </span>
-                   <span class="ratings d-flex align-items-center mx-2">
-                     <i class="la la-star"></i>
-                     <i class="la la-star"></i>
-                     <i class="la la-star"></i>
-                     <i class="la la-star"></i>
-                     <i class="la la-star"></i>
-                   </span>
-                   <span class="rating__text">5 of 5</span>
-                 </div>
+                          Total Students :{data.studentId.length}
+                          </p>
+                          <p class="card-meta">
+                          Total Teachers :{data.teacherId.length}
+                          </p>
+                          <p class="card-meta">
+                         Joined At :{new Date(
+                                    data.createdAt
+                                  ).toLocaleDateString("en-US")}
+                         </p>
+               
                  <div class="card-price d-flex align-items-center justify-content-between">
-                   <p>
-                     <span class="price__from">
-                       Price from
-                     </span>
-                     <span class="price__num">$00.00</span>
-                   </p>
+                  
                    <button
                      className="theme-btn"
                      onClick={() => registerCourse(data._id)}
@@ -643,44 +586,32 @@ export default function ExtendedForm() {
                    <div class="my-service-list">
                      <div class="card-item card-item-list">
                        <div class="card-img">
-                         <a href="hotel-single.html" class="d-block">
-                           <img
-                             src="images/img1.jpg"
-                             alt="hotel-img"
-                           />
+                         <a href="#" class="d-block">
+                         <img src={smiu} alt="hotel-img" />
                          </a>
-                         <span class="badge">Featured</span>
+                         <span class="badge"> {index.name}</span>
                        </div>
        
                        <div class="card-body">
                          <h3 class="card-title">
-                           <a href="hotel-single.html">
+                           <a href="#">
                              {index.name}
                            </a>
                          </h3>
                          <p class="card-meta">
-                           124 E Huron St, New york
+                          Total Students :{data.studentId.length}
+                          </p>
+                          <p class="card-meta">
+                          Total Teachers :{data.teacherId.length}
+                          </p>
+                          <p class="card-meta">
+                         Joined At :{new Date(
+                                    data.createdAt
+                                  ).toLocaleDateString("en-US")}
                          </p>
-                         <div class="card-rating d-flex align-items-center pt-1">
-                           <span class="rating__text">
-                             Hotel star
-                           </span>
-                           <span class="ratings d-flex align-items-center mx-2">
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                             <i class="la la-star"></i>
-                           </span>
-                           <span class="rating__text">5 of 5</span>
-                         </div>
+                        
                          <div class="card-price d-flex align-items-center justify-content-between">
-                           <p>
-                             <span class="price__from">
-                               Price from
-                             </span>
-                             <span class="price__num">$00.00</span>
-                           </p>
+                          
                            <button
                              className="theme-btn"
                              onClick={() => registerCourse(index._id)}

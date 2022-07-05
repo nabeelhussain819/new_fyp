@@ -1,23 +1,11 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const CgpaSchema = new Schema(
+const GPASchema = new Schema(
   {
-    gpa: {
+    Rate: {
       type: Number,
       required: true,
-      unique: true,
-    },
-    courseId: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Course",
-        required: false,
-      },
-    ],
-    cgpa: {
-      type: Number,
-      required: false,
     },
     studentId: [
       {
@@ -26,10 +14,15 @@ const CgpaSchema = new Schema(
         required: false,
       },
     ],
+    teacherId: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Teacher",
+        required: false,
+      },
+    ],
   },
   { timestamps: true }
 );
-
-const cgpa = mongoose.model("Cgpa", CgpaSchema);
-
-module.exports = cgpa;
+module.exports =
+  mongoose.models.GPA || mongoose.model("GPA", GPASchema);

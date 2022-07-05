@@ -1,7 +1,7 @@
 const teacher = require("../../Models/Teacher");
 
 exports.Commend = async (req, res) => {
-  console.log(req.body)
+ 
   try {
     const { isHelpfull, isFriendly, isProfessional, teacherId } = req.body;
 
@@ -13,10 +13,10 @@ exports.Commend = async (req, res) => {
       res.status(400).json({ success: false, message: "ooo" });
     } else {
       const Teacher = await teacher.findById({ _id: req.body.teacherId });
-      Teacher.isHelpfull = req.body.isHelpfull;
-      Teacher.isFriendly = req.body.isFriendly;
-      Teacher.isProfessional = req.body.isProfessional;
-      console.log(req.body);
+    
+      Teacher.isHelpfull.push(req.body.isHelpfull);
+      Teacher.isFriendly.push(req.body.isFriendly);
+      Teacher.isProfessional.push(req.body.isProfessional);
       await Teacher.save();
       res.status(200).json({ success: true });
     }

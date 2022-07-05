@@ -1,5 +1,9 @@
 import React from "react";
-
+import imrar from '../Assets/imrar.jpg'
+import ali from '../Assets/ali.jpg'
+import nabeel from '../Assets/nabeel.jpg'
+import img from '../Assets/img22.jpg'
+import spr from '../Assets/support.png'
 const About = () => {
   return (
     <div>
@@ -11,7 +15,7 @@ const About = () => {
                 <div class="breadcrumb-content">
                   <div class="section-heading">
                     <h2 class="sec__title line-height-50 text-white">
-                      Trizen.com is Your Trusted <br /> Travel Companion.
+                      TES Evaluation System is Your Trusted <br /> Evaluation Companion.
                     </h2>
                   </div>
                 </div>
@@ -30,14 +34,13 @@ const About = () => {
           </svg>
         </div>
       </section>
-      <section class="about-area padding-bottom-90px overflow-hidden">
+      <section class="about-area padding-bottom-90px overflow-hidden bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
               <div class="section-heading margin-bottom-40px">
                 <h2 class="sec__title">About Us</h2>
                 <h4 class="title font-size-16 line-height-26 pt-4 pb-2">
-                  Since 2002, TRIZEN has been revolutionising the travel
                   industry. Metasearch for travel? No one was doing it. Until we
                   did.
                 </h4>
@@ -64,13 +67,12 @@ const About = () => {
             <div class="col-lg-5 ml-auto">
               <div class="image-box about-img-box">
                 <img
-                  src="images/img24.jpg"
+                  src={img}
                   alt="about-img"
                   class="img__item img__item-1"
                 />
                 <img
-                  src="images/img25.jpg"
-                  alt="about-img"
+                  src={spr}
                   class="img__item img__item-2"
                 />
               </div>
@@ -106,7 +108,7 @@ const About = () => {
                       </span>
                       <span class="count-symbol">+</span>
                     </div>
-                    <p class="counter__title">Partners</p>
+                    <p class="counter__title">teachers</p>
                   </div>
                 </div>
               </div>
@@ -127,7 +129,7 @@ const About = () => {
                       </span>
                       <span class="count-symbol">k</span>
                     </div>
-                    <p class="counter__title">Properties</p>
+                    <p class="counter__title">Students</p>
                   </div>
                 </div>
               </div>
@@ -148,7 +150,7 @@ const About = () => {
                       </span>
                       <span class="count-symbol">+</span>
                     </div>
-                    <p class="counter__title">Destinations</p>
+                    <p class="counter__title">Courses</p>
                   </div>
                 </div>
               </div>
@@ -167,9 +169,9 @@ const About = () => {
                       >
                         40
                       </span>
-                      <span class="count-symbol">k</span>
+                      <span class="count-symbol">+</span>
                     </div>
-                    <p class="counter__title">Booking</p>
+                    <p class="counter__title">Departments</p>
                   </div>
                 </div>
               </div>
@@ -190,11 +192,11 @@ const About = () => {
             <div class="col-lg-4 responsive-column">
               <div class="card-item team-card">
                 <div class="card-img">
-                  <img src="images/team1.jpg" alt="team-img" />
+                  <img src={nabeel} alt="team-img" />
                 </div>
                 <div class="card-body">
-                  <h3 class="card-title">David Roberts</h3>
-                  <p class="card-meta">Founder &amp; Director</p>
+                  <h3 class="card-title">NABEEL HUSSAIN</h3>
+                  <p class="card-meta">Founder &amp; Developer</p>
                   <p class="card-text font-size-15 pt-2">
                     Ligula vehicula enenatis semper, magna lorem aliquet lacusin
                     ante dapibus dictum fugats vitaes nemo minima.
@@ -227,11 +229,11 @@ const About = () => {
             <div class="col-lg-4 responsive-column">
               <div class="card-item team-card">
                 <div class="card-img">
-                  <img src="images/team2.jpg" alt="team-img" />
+                  <img src={ali} alt="team-img" />
                 </div>
                 <div class="card-body">
-                  <h3 class="card-title">Augusta Silva</h3>
-                  <p class="card-meta">Chief Operating Officer</p>
+                  <h3 class="card-title">ALI SHAHZAD</h3>
+                  <p class="card-meta">UI/UX Designer</p>
                   <p class="card-text font-size-15 pt-2">
                     Ligula vehicula enenatis semper, magna lorem aliquet lacusin
                     ante dapibus dictum fugats vitaes nemo minima.
@@ -264,11 +266,11 @@ const About = () => {
             <div class="col-lg-4 responsive-column">
               <div class="card-item team-card">
                 <div class="card-img">
-                  <img src="images/team3.jpg" alt="team-img" />
+                  <img src={imrar} alt="team-img" />
                 </div>
                 <div class="card-body">
-                  <h3 class="card-title">Bernice Lucas</h3>
-                  <p class="card-meta">Account Manager</p>
+                  <h3 class="card-title">IMRAR KHAN</h3>
+                  <p class="card-meta">Manager / SEO</p>
                   <p class="card-text font-size-15 pt-2">
                     Ligula vehicula enenatis semper, magna lorem aliquet lacusin
                     ante dapibus dictum fugats vitaes nemo minima.
@@ -307,7 +309,7 @@ const About = () => {
             <div class="col-lg-12">
               <div class="section-heading">
                 <h2 class="sec__title mb-3 text-white">
-                  Interested in a career <br /> at Trizen.
+                  Interested in a Evaluation <br /> at TES.
                 </h2>
                 <p class="sec__desc text-white">
                   We’re always looking for talented individuals and

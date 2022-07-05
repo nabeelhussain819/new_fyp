@@ -210,10 +210,7 @@ const Complains = () => {
                     <thead>
                       <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Department</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">City</th>
+                        <th scope="col">Complain</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                       </tr>
@@ -228,9 +225,6 @@ const Complains = () => {
                                 <h3 class="title">{data.complain}</h3>
                               </div>
                             </td>
-                            <td>{}</td>
-                            <td>United States</td>
-                            <td>New York</td>
                             <td>
                               <span class="badge badge-success py-1 px-2">
                                 Active

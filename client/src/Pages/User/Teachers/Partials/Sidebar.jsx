@@ -1,5 +1,5 @@
 import React from "react";
-import logo1 from "../../../../Assets/logo.jpg";
+import logo1 from "../../../../Assets/logo.png";
 import { Link } from "react-router-dom";
 import Logout from "../../../../Components/Logout";
 
@@ -43,11 +43,6 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="semesters">
-                <i class="la la-heart mr-2 text-color-3"></i>Semesters
-              </Link>
-            </li>
-            <li>
               <Link to="Courses">
                 <i class="la la-text-width mr-2 text-color-3"></i>Courses
               </Link>
@@ -62,6 +57,21 @@ const Sidebar = () => {
                 <i class="la la-area-chart mr-2 text-color-3"></i>Comments
               </Link>
             </li>
+            <li>
+                <Link to="qec">
+                  <i class="la la-area-chart mr-2 text-color-3"></i>QEC Result
+                </Link>
+              </li>
+              <li>
+                <Link to="students">
+                  <i class="la la-area-chart mr-2 text-color-3"></i>Students
+                </Link>
+              </li>
+              <li>
+                <Link to="profile">
+                  <i class="la la-area-chart mr-2 text-color-3"></i>Profile
+                </Link>
+              </li>
             <hr />
             <li className="mt-4 col-lg-12">
               <Logout />

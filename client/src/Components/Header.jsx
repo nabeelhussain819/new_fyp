@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../Assets/logo-2.jpg";
-import logo1 from "../Assets/logo.jpg";
+import logo from "../Assets/logo.png";
+import logo1 from "../Assets/logo.png";
 import { Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <div>
-      <header class="header-wrapper">
+      <header class="header-wrapper hidden-print">
         <header class="header-area">
           <div class="header-top-bar padding-right-100px padding-left-100px ">
             <div class="container-fluid">
@@ -32,7 +32,7 @@ const Header = () => {
                         <li>
                           <a href="#">
                             <i class="la la-envelope mr-1"></i>
-                            trizen@example.com
+                            hnabeel570@gmail.com
                           </a>
                         </li>
                       </ul>
@@ -68,7 +68,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px">
+          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-warning">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-12">
@@ -79,6 +79,7 @@ const Header = () => {
                           class="img-responsive"
                           src={logo1}
                           alt="logo.jpg"
+                          style={{width:"200px"}}
                         />
                       </Link>
                       <div class="menu-toggler">
@@ -136,11 +137,7 @@ const Header = () => {
                         </ul>
                       </nav>
                     </div>
-                    <div class="nav-btn">
-                      <Link to="become-local-expert.html" class="theme-btn">
-                        Become Local Expert
-                      </Link>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -159,38 +156,37 @@ const Header = () => {
                 <div class="header-menu-nav">
                   <ul class="menu-nav">
                     <li className="p-2">
-                      <Link to="login.html" class="color-dark">
+                      <Link to="/" class="color-dark">
                         Home
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="login.html" class="color-dark">
+                      <Link to="departmnet" class="color-dark">
                         Department
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="login.html" class="color-dark">
+                      <Link to="lprogram" class="color-dark">
                         Programs
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="login.html" class="color-dark">
+                      <Link to="course" class="color-dark">
                         Courses
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="login.html" class="color-dark">
+                      <Link to="about" class="color-dark">
                         About
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="login.html" class="color-dark ">
-                        Sign Up
-                      </Link>
+                    <Link to="signup" className="theme-btn btn-lg">
+                              Sign Up
+                            </Link>
                     </li>
-                    <Link to="login.html" class="color-dark pl-2">
-                      Log In
-                    </Link>
+                    <Login />
+                            
                   </ul>
                 </div>
               </div>

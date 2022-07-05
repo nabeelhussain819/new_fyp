@@ -8,3 +8,14 @@ export const ReadTeacher = async () => {
     });
   return response;
 };
+export const AuthTeacher = async () => {
+  const response = await (await fetch("http://localhost:5000/teachers"))
+    .json()
+    .then(function (result) {
+      const ans = result.map((item) => 
+      item._id == localStorage.getItem('id') && item 
+      );
+      return ans;
+    });
+  return response;
+};

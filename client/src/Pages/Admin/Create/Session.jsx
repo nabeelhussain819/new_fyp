@@ -6,6 +6,7 @@ import { ReadDepartment } from "../../../Api/Department";
 const Session = () => {
   const [name, setName] = useState([]);
   const [departmentId, setDepartmentId] = useState("");
+  const [description, setDescription] = useState("");
   const [depart, setDepart] = useState([]);
   const registerSession = async (e) => {
     e.preventDefault();
@@ -59,6 +60,19 @@ const Session = () => {
                           type="text"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 responsive-column">
+                    <div className="input-box">
+                      <label className="label-text">Session Description</label>
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={name}
+                          onChange={(e) => setDescription(e.target.value)}
                         />
                       </div>
                     </div>

@@ -3,7 +3,7 @@ const department = require("../../Models/Department");
 
 exports.createSession = async (req, res) => {
   try {
-    const { name, departmentId, studentId } = req.body;
+    const { name, departmentId, studentId,description } = req.body;
 
     const Sessions = new sessions(req.body);
     await Sessions.save();

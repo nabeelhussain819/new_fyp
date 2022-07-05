@@ -7,6 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 export default function Allcreate() {
   const [name, setName] = useState("");
   const [code, setCode] = useState("");
+  const [description, setDescription] = useState("");
   const [session, setSession] = useState(false);
   const registerDepartment = async (e) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ export default function Allcreate() {
       body: JSON.stringify({
         name,
         code,
+        description
       }),
     });
     const data = await res.json();
@@ -97,6 +99,19 @@ export default function Allcreate() {
                           </div>
                         </div>
                       </div>
+                      <div className="col-lg-6 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Department Description</label>
+                          <div className="form-group">
+                            <span className="la la-user form-icon"></span>
+                            <input
+                              className="form-control"
+                              type="text"
+                              onChange={(e) => setDescription(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                      </div>
                       <div className="col-lg-12">
                         <div className="btn-box">
                           <button
@@ -123,6 +138,7 @@ function SessionCreate(props) {
   const [name, setName] = useState([]);
   const [departmentId, setDepartmentId] = useState([]);
   const [depart, setDepart] = useState([]);
+  const [description, setDescription] = useState([]);
   const [program, setProgram] = useState(false);
   const both = ["spring", "fall"];
 
@@ -134,6 +150,7 @@ function SessionCreate(props) {
       body: JSON.stringify({
         name,
         departmentId,
+        description
       }),
     });
     const data = await res.json();
@@ -207,23 +224,23 @@ function SessionCreate(props) {
                               name=".."
                               value="spring"
                               onChange={(e) => setName(e.target.value)}
-                            />{" "}
+                            />
                             Spring
                             <input
                               type="radio"
                               name=".."
                               value="fall"
                               onChange={(e) => setName(e.target.value)}
-                            />{" "}
+                            />
                             Fall
-                            <input
-                              type="radio"
-                              name=".."
-                              value={both}
-                              onChange={(e) => setName(e.target.value)}
-                            />{" "}
-                            Both
+                            
                           </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-12 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Session Description</label>
+                          <input type="text" className="form-control" onChange={(e)=>setDescription(e.target.value)} />
                         </div>
                       </div>
                       <div className="col-lg-12 responsive-column">
@@ -276,6 +293,7 @@ function ProgramCreate(props) {
   const [departmentId, setDepartmentId] = useState("");
   const [depart, setDepart] = useState([]);
   const [sessionId, setSessionId] = useState("");
+  const [description, setDescription] = useState([]);
   const [semester, setSemester] = useState(false);
   const registerProgram = async (e) => {
     e.preventDefault();
@@ -286,6 +304,7 @@ function ProgramCreate(props) {
         name,
         departmentId,
         sessionId,
+        description
       }),
     });
     const data = await res.json();
@@ -359,6 +378,18 @@ function ProgramCreate(props) {
                               type="text"
                               value={name}
                               onChange={(e) => setName(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-12 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Program Description</label>
+                          <div className="form-group">
+                            <input
+                              className="form-control"
+                              type="text"
+                              onChange={(e) => setDescription(e.target.value)}
                             />
                           </div>
                         </div>
@@ -449,6 +480,7 @@ function SemesterCreate(props) {
   const [programId, setProgramId] = useState("");
   const [program, setProgram] = useState([]);
   const [section, setSection] = useState(false);
+  const [description, setDescription] = useState([]);
   const [formValues, setFormValues] = useState([{ subject: "" }]);
   const [move, setMove] = useState(false);
 
@@ -460,6 +492,7 @@ function SemesterCreate(props) {
       body: JSON.stringify({
         name,
         programId,
+        description
       }),
     });
     const data = await res.json();
@@ -588,6 +621,21 @@ function SemesterCreate(props) {
                               </div>
                             </div>
                           </div>
+                          <div className="col-lg-12 responsive-column">
+                            <div className="input-box">
+                              <label className="label-text">
+                                Semester Description
+                              </label>
+                              <div className="form-group">
+                                <span className="la la-user form-icon"></span>
+                                <input
+                                  className="form-control"
+                                  type="text"
+                                  onChange={(e) => setDescription(e.target.value)}
+                                />
+                              </div>
+                            </div>
+                          </div>
                           <div className="col-lg-12">
                             <div className="btn-box">
                               {index ? (
@@ -634,6 +682,7 @@ function CourseCreate(props) {
   const [name, setName] = useState([]);
   const [semesterId, setSemesterId] = useState("");
   const Navigate = useNavigate();
+  const [description, setDescription] = useState([]);
   const [formValues, setFormValues] = useState([{ subject: "" }]);
   const [semester, setSemester] = useState([]);
   const [move, setMove] = useState(false);
@@ -645,6 +694,7 @@ function CourseCreate(props) {
       body: JSON.stringify({
         name,
         semesterId,
+        description
       }),
     });
     const data = await res.json();
@@ -761,6 +811,19 @@ function CourseCreate(props) {
                                 );
                               })}
                             </select>
+                          </div>
+                        </div>
+                      </div>
+                       <div className="col-lg-12 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Course Description</label>
+                          <div className="form-group">
+                            <span className="la la-user form-icon"></span>
+                            <input
+                              className="form-control"
+                              type="text"
+                              onChange={(e) => setDescription(e.target.value)}
+                            />
                           </div>
                         </div>
                       </div>

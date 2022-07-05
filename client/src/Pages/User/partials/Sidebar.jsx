@@ -1,12 +1,12 @@
 import React from "react";
-import logo1 from "../../../Assets/logo.jpg";
+import logo1 from "../../../Assets/logo.png";
 import { Link } from "react-router-dom";
 import Logout from "../../../Components/Logout";
 
 const Sidebar = () => {
   return (
     <div>
-      <div class="sidebar-nav ">
+      <div class="sidebar-nav bg-warning">
         <div class="sidebar-nav-body">
           <div class="side-menu-close">
             <i class="la la-times"></i>
@@ -26,6 +26,11 @@ const Sidebar = () => {
               <li class="page-active">
                 <Link to="dashboard">
                   <i class="la la-dashboard mr-2"></i>Dashboard
+                </Link>
+              </li>
+              <li >
+                <Link to="qec">
+                  <i class="la la-dashboard mr-2"></i>QEC
                 </Link>
               </li>
               <li>
@@ -63,6 +68,12 @@ const Sidebar = () => {
                   <i class="la la-area-chart mr-2 text-color-3"></i>Comments
                 </Link>
               </li>
+              <li>
+                <Link to="profile">
+                  <i class="la la-area-chart mr-2 text-color-3"></i>Profile
+                </Link>
+              </li>
+            
               <hr />
               <li className="mt-4 col-lg-12">
                 <Logout />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo1 from "../../../../Assets/logo.jpg";
+import logo1 from "../../../../Assets/logo.png";
 import { Link } from "react-router-dom";
 import Logout from "../../../../Components/Logout";
 
@@ -14,7 +14,7 @@ const Navbar = () => {
             <div class="menu-wrapper">
               <div class="logo mr-5">
                 <a href="index.html">
-                  <img src={logo1} alt="logo" />
+                  <img src={logo1} alt="logo"style={{width:"200px"}} />
                 </a>
                 <div class="menu-toggler">
                   {show == false ? (

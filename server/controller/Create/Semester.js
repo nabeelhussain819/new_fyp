@@ -8,6 +8,7 @@ exports.createSemes = async (req, res) => {
       programId: req.body.programId,
       studentId: req.body.studentId,
       teacherId: req.body.teacherId,
+      description: req.body.description,
     };
     const Semester = new Semes(data);
     await Semester.save();

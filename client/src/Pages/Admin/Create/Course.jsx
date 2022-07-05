@@ -9,6 +9,7 @@ const Course = () => {
   const [depart, setDepart] = useState([]);
   const [session, setSession] = useState([]);
   const [semesterId, setSemester] = useState([]);
+  const [description, setDescription] = useState("");
   const [formValues, setFormValues] = useState([{ subject: "" }]);
   const [move, setMove] = useState(false);
   const registerProgram = async (e) => {
@@ -18,6 +19,7 @@ const Course = () => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name,
+        description,
         semesterId,
         programId,
       }),
@@ -84,6 +86,18 @@ const Course = () => {
                               className="form-control"
                               type="text"
                               onChange={(e) => setName(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-12 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Course Description</label>
+                          <div className="form-group">
+                            <input
+                              className="form-control"
+                              type="text"
+                              onChange={(e) => setDescription(e.target.value)}
                             />
                           </div>
                         </div>

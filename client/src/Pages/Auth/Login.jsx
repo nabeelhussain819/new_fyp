@@ -69,7 +69,7 @@ function Login() {
         navigate("/dashboard");
         window.location.reload();
       } else {
-        navigate("/user-panel");
+        navigate("/dashboard");
         window.location.reload();
       }
     }
@@ -120,11 +120,7 @@ function Login() {
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="custom-checkbox mb-0">
-                   
                   </div>
-                  <p class="forgot-password">
-                    <a href="recover.html">Forgot Password?</a>
-                  </p>
                 </div>
               </div>
               <div class="btn-box pt-3 pb-4">

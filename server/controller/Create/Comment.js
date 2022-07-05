@@ -2,7 +2,7 @@ const Comment = require("../..//Models/Review/DepartmentReview");
 const Comment1 = require("../../Models/Review/CourseReview");
 const Comment2 = require("../../Models/Review/TeacherReview");
 const Comment3 = require("../../Models/Review/SemesterReview");
-
+const Teacher = require("../../Models/Teacher");
 exports.departComment = async (req, res, next) => {
   const data = {
     comment: req.body.comment,
@@ -49,13 +49,19 @@ exports.teacherComment = async (req, res, next) => {
   if (!data) {
     res.status(400).json({ error: "add all feilds" });
   }
+  console.log( req.body.teacherId)
+  const teacher = await Teacher.findById({ _id: req.body.teacherId });
+  teacher.comment.push(req.body.comment)
+  await teacher.save();
+
   Comment2.create(data, (error, index) => {
     if (error) {
       res.status(400).json({ error: "add all feilds" });
-    } else {
-      res.status(200).json({ message: "add all feilds" });
-    }
-  });
+    } 
+  }
+  );
+
+  res.status(200).json({ message: "add all feilds" });
 };
 
 exports.semesterComment = async (req, res, next) => {

@@ -7,6 +7,7 @@ import Complains from "../Pages/Admin/Index/Complain";
 import Courses from "../Pages/Admin/Index/Courses";
 import Departments from "../Pages/Admin/Index/Departments";
 import Programs from "../Pages/Admin/Index/Programs";
+import QEC from "../Pages/Admin/Index/Qec";
 import Semesters from "../Pages/Admin/Index/Semester";
 import Sessions from "../Pages/Admin/Index/Sessions";
 import Students from "../Pages/Admin/Index/Students";
@@ -58,6 +59,7 @@ function Admin() {
             <Route path="/sessions" element={<Sessions />} />
             <Route path="/comments" element={<Comments />} />
             <Route path="/complains" element={<Complains />} />
+            <Route path="/qec" element={<QEC />} />
             <Route path="/details/:id" element={<Details />} />
             {/* <Route path="/dashboard" element={<AdminDashboard />} />
             <Route path="/program" element={<Program />} />

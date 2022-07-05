@@ -8,6 +8,10 @@ const SemesterSchema = new Schema(
       required: true,
       unique: true,
     },
+    description: {
+      type: String,
+      required: false,
+    },
     courseId: [
       {
         type: Schema.Types.ObjectId,

@@ -6,6 +6,7 @@ exports.createDept = async (req, res, next) => {
     studentId: req.body.studentId,
     teacherId: req.body.teacherId,
     code: req.body.code,
+    description: req.body.description,
   };
   console.log(req.body);
   if (!data || !req.body.code) {

@@ -9,6 +9,7 @@ const Program = () => {
   const [departmentId, setDepartmentId] = useState("");
   const [depart, setDepart] = useState([]);
   const [sessionId, setSessionId] = useState("");
+  const [description, setDEscription] = useState("");
   const [session, setSession] = useState([]);
   const registerProgram = async (e) => {
     e.preventDefault();
@@ -69,6 +70,19 @@ const Program = () => {
                           type="text"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-12 responsive-column">
+                    <div className="input-box">
+                      <label className="label-text">Program Description</label>
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={name}
+                          onChange={(e) => setDEscription(e.target.value)}
                         />
                       </div>
                     </div>

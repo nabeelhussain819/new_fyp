@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo1 from "../Assets/logo.jpg";
+import myData from '../Pages/Qec/question.json'
 import { useNavigate, Link } from "react-router-dom";
 import {
   FcBusinessman,
@@ -12,6 +12,7 @@ import { carouselImage } from "../Pages/Utilis/Images";
 import { ReadDepartment } from "../Api/Department";
 import { ReadProgram } from "../Api/Program";
 import { ReadTeacher } from "../Api/Teacher";
+import Login from "./Auth/Login";
 export const Home = () => {
   const [dept, setDept] = useState([]);
   const [program, setProgram] = useState([]);
@@ -49,7 +50,7 @@ export const Home = () => {
   return (
     <>
       <CarouselItem />
-      <section className="funfact-area section-bg4 bg-light padding-top-80px">
+      <section className="funfact-area section-bg4 bg-light padding-top-80px bg-819">
         <div className="container ">
           <div className="row ">
             <div className="col-lg-12 ">
@@ -96,7 +97,7 @@ export const Home = () => {
                       data-to="160"
                       data-refresh-interval="5"
                     >
-                      160
+                      200
                     </span>
                     <p className="counter__title">Teachers</p>
                   </div>
@@ -114,7 +115,7 @@ export const Home = () => {
                       data-to="43"
                       data-refresh-interval="5"
                     >
-                      43
+                      20
                     </span>
                     <p className="counter__title">Departments </p>
                   </div>
@@ -132,7 +133,7 @@ export const Home = () => {
                       data-to="3500000"
                       data-refresh-interval="5"
                     >
-                      3500000
+                      350
                     </span>
                     <p className="counter__title">Courses Available</p>
                   </div>
@@ -142,7 +143,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="destination-area section-bg3 padding-top-130px padding-bottom-80px">
+      <section className="destination-area section-bg3 padding-top-130px padding-bottom-80px bg-818 ">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
@@ -203,31 +204,23 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="cta-area cta-bg bg-fixed section-padding text-center">
+      <section className="cta-area cta-bg bg-fixed section-padding text-center ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="section-heading">
                 <h2 className="sec__title text-white font-size-50 line-height-60">
-                  Relax with us. We love Our Clients.
+                  Join with us. To Share Love With Your Teahcers.
                 </h2>
                 <p className="sec__desc text-white pt-3">
                   Nemo enim ipsam voluptatem quia voluptas sit aspernatur
                 </p>
               </div>
-              <div className="btn-box padding-top-35px">
-                <a
-                  href="become-local-expert.html"
-                  className="theme-btn border-0"
-                >
-                  Become Local Expert
-                </a>
-              </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="trending-area section-bg  position-relative section-padding ">
+      <section className="trending-area section-bg  position-relative section-padding bg-817 ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -301,219 +294,97 @@ export const Home = () => {
           </div>
           <div className="row padding-top-60px">
             <div className="col-lg-7">
-              <div className="accordion accordion-item" id="accordionExample">
-                <div className="card">
-                  <div className="card-header" id="faqHeadingOne">
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link d-flex align-items-center justify-content-between"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapseOne"
-                        aria-expanded="true"
-                        aria-controls="faqCollapseOne"
-                      >
-                        <span>What do I need to hire a car?</span>
-                        <i className="la la-minus"></i>
-                        <i className="la la-plus"></i>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="faqCollapseOne"
-                    className="collapse show"
-                    aria-labelledby="faqHeadingOne"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ab accusamus aliquid at, aut cumque cupiditate
-                        delectus dignissimos
-                      </p>
-                      <ul className="list-items py-2">
-                        <li>Mus accumsan venenatis hac</li>
-                        <li>Curabitur per quis parturient vel ut</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="faqHeadingTwo">
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link d-flex align-items-center justify-content-between"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapseTwo"
-                        aria-expanded="false"
-                        aria-controls="faqCollapseTwo"
-                      >
-                        <span>How old do I have to be to rent a car?</span>
-                        <i className="la la-minus"></i>
-                        <i className="la la-plus"></i>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="faqCollapseTwo"
-                    className="collapse"
-                    aria-labelledby="faqHeadingTwo"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don't look even slightly believable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="faqHeadingThree">
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link d-flex align-items-center justify-content-between"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapseThree"
-                        aria-expanded="false"
-                        aria-controls="faqCollapseThree"
-                      >
-                        <span>Can I book a hire car for someone else?</span>
-                        <i className="la la-minus"></i>
-                        <i className="la la-plus"></i>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="faqCollapseThree"
-                    className="collapse"
-                    aria-labelledby="faqHeadingThree"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don't look even slightly believable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="faqHeadingFour">
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link d-flex align-items-center justify-content-between"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapseFour"
-                        aria-expanded="false"
-                        aria-controls="faqCollapseFour"
-                      >
-                        <span>How do I find the cheapest car hire deal?</span>
-                        <i className="la la-minus"></i>
-                        <i className="la la-plus"></i>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="faqCollapseFour"
-                    className="collapse"
-                    aria-labelledby="faqHeadingFour"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don't look even slightly believable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="faqHeadingFive">
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link d-flex align-items-center justify-content-between"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapseFive"
-                        aria-expanded="false"
-                        aria-controls="faqCollapseFive"
-                      >
-                        <span>
-                          What should I look for when I’m choosing a car?
-                        </span>
-                        <i className="la la-minus"></i>
-                        <i className="la la-plus"></i>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="faqCollapseFive"
-                    className="collapse"
-                    aria-labelledby="faqHeadingFive"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don't look even slightly believable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="faqHeadingSix">
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link d-flex align-items-center justify-content-between"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapseSix"
-                        aria-expanded="false"
-                        aria-controls="faqCollapseSix"
-                      >
-                        <span>Are all fees included in the rental price?</span>
-                        <i className="la la-minus"></i>
-                        <i className="la la-plus"></i>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="faqCollapseSix"
-                    className="collapse"
-                    aria-labelledby="faqHeadingSix"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don't look even slightly believable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div id="faq" className="page-scroll">
+                        <div className="single-content-item  padding-bottom-40px">                      
+                          <div
+                            className="accordion accordion-item "
+                            id="accordionExample2"
+                          >
+            {myData.slice(0, 1).map((data) => {
+                              return (
+                                <>
+                                  <div className="card">
+                                    <div
+                                      className="card-header"
+                                      id="faqHeadingFour"
+                                    >
+                                      <h2 className="mb-0">
+                                        <button
+                                          className="btn btn-link d-flex align-items-center justify-content-end flex-row-reverse font-size-16"
+                                          type="button"
+                                          data-toggle="collapse"
+                                          data-target="#faqCollapseFour"
+                                          aria-expanded="true"
+                                          aria-controls="faqCollapseFour"
+                                        >
+                                          <span className="ml-3">
+                                            {data.question}
+                                          </span>
+                                          <i className="la la-minus"></i>
+                                          <i className="la la-plus"></i>
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div
+                                      id="faqCollapseFour"
+                                      className="collapse show"
+                                      aria-labelledby="faqHeadingFour"
+                                      data-parent="#accordionExample2"
+                                    >
+                                      <div className="card-body d-flex">
+                                        <p>
+                                          Mea appareat omittantur eloquentiam
+                                          ad, nam ei quas oportere democritum.
+                                          Prima causae admodum id est, ei timeam
+                                          inimicus sed. Sit an meis aliquam,
+                                          cetero inermis vel ut. An sit illum
+                                          euismod facilisis Nullam id dolor id
+                                          nibh ultricies vehicula ut id elit.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </>
+                              );
+                            })}
+                            {myData.slice(1, 5).map((data) => {
+                              return (
+                                <>
+                                  <div className="card">
+                                    <div
+                                      className="card-header"
+                                      id="faqHeadingSix"
+                                    >
+                                      <h2 className="mb-0">
+                                        <button
+                                          className="btn btn-link d-flex align-items-center justify-content-end flex-row-reverse font-size-16"
+                                          type="button"
+                                          data-toggle="collapse"
+                                          data-target="#faqCollapseSix"
+                                          aria-expanded="false"
+                                          aria-controls="faqCollapseSix"
+                                        >
+                                          <span className="ml-3">
+                                            {data.question}
+                                          </span>
+                                          <i className="la la-minus"></i>
+                                          <i className="la la-plus"></i>
+                                        </button>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                </>
+                              );
+                            })}
+                            </div>  </div>  </div>
               <div className="accordion-help-text pt-2">
                 <p className="font-size-14 font-weight-regular">
                   Any questions? Just visit our{" "}
-                  <a href="#" className="color-text">
+                  <a href="/about" className="color-text">
                     Help center
                   </a>{" "}
                   or{" "}
-                  <a href="#" className="color-text">
+                  <a href="/contact" className="color-text">
                     Contact Us
                   </a>
                 </p>

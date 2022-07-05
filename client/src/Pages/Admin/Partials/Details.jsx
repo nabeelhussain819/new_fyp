@@ -10,7 +10,7 @@ const Details = () => {
   const location = useLocation();
   const { from, api } = location.state;
   const [id, setId] = useState([from].map((data) => data._id));
-
+console.log(from)
   return (
     <div>
       <div class="dashboard-bread dashboard--bread dashboard-bread-2">
@@ -53,9 +53,9 @@ const Details = () => {
                   return (
                     <>
                       <div className="container-fluid ">
-                        <div class="btn-box mt-4 ">
-                        
+                        <div class="btn-box mt-4 ">                        
                           <Delete id={id} api={api} />
+                          <button className="btn-primary btn ml-2 hidden-print" onClick={()=>window.print()}>Print</button>
                         </div>
                       </div>
 
@@ -65,30 +65,114 @@ const Details = () => {
                             <span>ID</span>
                             {data._id}
                           </li>
-                          <li>
+                          {data.name && <li>
                             <span>Name</span>
                             {data.name}
+                          </li>} 
+                          {data.u_id && <li>
+                            <span>University ID</span>
+                            {data.u_id}
+                          </li>} 
+                          {data.email && <li>
+                            <span>email</span>
+                            {data.email}
+                          </li>} 
+                          {data.phone && <li>
+                            <span>phone</span>
+                            {data.phone}
+                          </li>}  
+                          {data.cgpa && <li>
+                            <span>CGPA</span>
+                            {data.cgpa}
+                          </li> }
+                          {data.departmentId && <li>
+                            <span>Department</span>
+                            {data.departmentId.map((data)=>data.name)}
+                          </li>} 
+                          {data.deptId && <li>
+                            <span>Department</span>
+                            {data.deptId.map((data)=>data.name)}
+                          </li>} 
+                          {data.courseId && <li>
+                            <span>Courses</span>
+                            {data.courseId.map((data)=>data.name ,)}
+                          </li>} 
+                          {data.complain && <><li>
+                            <span>Complain</span>
+                            {data.complain}
+                          </li><li>
+                            <span>Student</span>
+                            {data.studentId.map((data)=>data.name)}
+                          </li></>} 
+                          {data.comment && <><li>
+                            <span>Comment</span>
+                            {data.complain}
                           </li>
-                          <li>
+                          {data.studentId &&   <li>
+                            <span>Student</span>
+                            {data.studentId.map((data)=>data.name)}
+                          </li>}
+                        
+                          </>}   
+                          {data.semesterId && <li>
+                            <span>Semester</span>
+                            {data.semesterId.map((data)=>data.name)}
+                          </li>}   
+                          {data.isHelpfull && <li>
+                            <span>isHelpfull</span>
+                            {data.isHelpfull.length}
+                          </li>}
+                          {data.isFriendly && <li>
+                            <span>isFriendly</span>
+                            {data.isFriendly.length}
+                          </li>}  
+                          {data.isProfessional && <li>
+                            <span>isProfessional</span>
+                            {data.isProfessional.length}
+                          </li>}                       
+                          {data.code && <li>
                             <span>Code</span>
                             {data.code}
-                          </li>
-                          <li>
-                            <span>ID</span>
-                            {data._id}
-                          </li>
-                          <li>
-                            <span>ID</span>
-                            {data._id}
-                          </li>
-                          <li>
-                            <span>ID</span>
-                            {data._id}
-                          </li>
-                          <li>
-                            <span>ID</span>
-                            {data._id}
-                          </li>
+                          </li>}
+                          {data.programId && <li>
+                            <span>Program</span>
+                            {data.programId.map((data)=>data.name)}
+                          </li>}
+                          {data.sessionId && <li>
+                            <span>Session</span>
+                            {data.sessionId.map((data)=>data.name )}
+                          </li> }
+                          {!data.complain && <>{data.studentId && <li>
+                            <span>Total Students</span>
+                            {data.studentId.length}
+                          </li> }</> }
+                          {!data.complain && <>{data.teacherId && <li>
+                            <span>Total Teachers</span>
+                            {data.teacherId.length}
+                          </li> }</>}
+                          {!data.comment && <>{data.teacherId && <li>
+                            <span>Total Teachers</span>
+                            {data.teacherId.length}
+                          </li> }</>}
+                          {!data.comment && <>{data.studentId && <li>
+                            <span>Total Students</span>
+                            {data.studentId.length}
+                          </li> }</> }
+                          {data.tokens && <li>
+                            <span>Loged In</span>
+                            {data.tokens.length} times
+                          </li>} 
+                          {data.rating && <li>
+                            <span>Rating</span>
+                            {data.rating}
+                          </li> }
+                          {data.createdAt && <li>
+                            <span>Created At</span>
+                            {new Date(
+                                    data.createdAt
+                                  ).toLocaleDateString("en-US")}
+                          </li> }
+                        
                         </ul>
                       </div>
                     </>
@@ -98,14 +182,14 @@ const Details = () => {
             </div>
           </div>
           <div class="border-top mt-5"></div>
-          <div class="row align-items-center">
+          <div class="row align-items-center hidden-print">
             <div class="col-lg-7">
               <div class="copy-right padding-top-30px">
                 <p class="copy__desc">
-                  © Copyright Trizen 2020. Made with
+                  © Copyright Nabeel Imrar Ali 2022. Made with
                   <span class="la la-heart"></span> by{" "}
                   <a href="https://themeforest.net/user/techydevs/portfolio">
-                    TechyDevs
+                    NIA
                   </a>
                 </p>
               </div>

@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  FaThList,
-  FaBorderNone,
-  FaEye,
-  FaTrashAlt,
-  FaPen,
-} from "react-icons/fa";
 import SearchBar from "../Utilis/SearchBar";
-import { ReadProgram } from "../../Api/Program";
 import { ReadTeacher } from "../../Api/Teacher";
 const Teacher = () => {
   let navigate = useNavigate();
@@ -36,7 +28,7 @@ const Teacher = () => {
               <div class="col-lg-6">
                 <div class="breadcrumb-content">
                   <div class="section-heading">
-                    <h2 class="sec__title text-white">Tour Full Width</h2>
+                    <h2 class="sec__title text-white">Available Teachers</h2>
                   </div>
                 </div>
               </div>
@@ -44,10 +36,9 @@ const Teacher = () => {
                 <div class="breadcrumb-list text-right">
                   <ul class="list-items">
                     <li>
-                      <a href="index.html">Home</a>
+                      <a href="/dashboard">Home</a>
                     </li>
-                    <li>Tour</li>
-                    <li>Tour Full Width</li>
+                    <li>Teachers</li>
                   </ul>
                 </div>
               </div>
@@ -65,7 +56,7 @@ const Teacher = () => {
           </svg>
         </div>
       </section>
-      <section class="card-area section--padding">
+      <section class="card-area section--padding bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -75,9 +66,6 @@ const Teacher = () => {
                     <h3 className="font-size-24">
                       Total Teacher Available {teacher.length}
                     </h3>
-                    <p className="font-size-14 line-height-20 pt-1">
-                      Select your best view
-                    </p>
                   </div>
                 </div>
               </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import logo1 from "../../../Assets/logo.jpg";
+import logo1 from "../../../Assets/logo.png";
 import Logout from "../../../Components/Logout";
 import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div>
-      <div class="sidebar-nav sidebar--nav">
+      <div class="sidebar-nav sidebar--nav hidden-print">
         <div class="sidebar-nav-body">
           <div class="side-menu-close">
             <i class="la la-times"></i>
@@ -16,7 +16,7 @@ function Sidebar() {
                 <img src={logo1} alt="testimonial image" />
               </div>
               <div class="author-bio">
-                <h4 class="author__title">Royel travel agency</h4>
+                <h4 class="author__title">ADMIN</h4>
                 <span class="author__meta">Welcome to Admin Panel</span>
               </div>
             </div>
@@ -74,20 +74,9 @@ function Sidebar() {
                 </Link>
               </li>
               <li>
-                <span class="side-menu-icon toggle-menu-icon">
-                  <i class="la la-angle-down"></i>
-                </span>
-                <a href="#">
-                  <i class="la la-map-signs mr-2 text-color-9"></i>Locations
-                </a>
-                <ul class="toggle-drop-menu">
-                  <li>
-                    <a href="admin-countries.html">Countries</a>
-                  </li>
-                  <li>
-                    <a href="admin-airlines.html">Airlines</a>
-                  </li>
-                </ul>
+              <Link to="qec">
+                  <i class="la la-area-chart mr-2 text-color-3"></i>QEC results
+                </Link>
               </li>
               <li>
                 <a href="admin-dashboard-settings.html">

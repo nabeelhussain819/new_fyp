@@ -1,17 +1,17 @@
 import React from "react";
-import logo1 from "../../../Assets/logo-2.jpg";
+import logo1 from "../../../Assets/logo.png";
 import Logout from "../../../Components/Logout";
 const Header = () => {
   return (
     <div>
-      <div className="dashboard-nav dashboard--nav">
+      <div className="dashboard-nav dashboard--nav hidden-print">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
               <div className="menu-wrapper">
                 <div className="logo mr-5">
                   <a href="index.html">
-                    <img src={logo1} alt="testimonial image" />
+                    <img src={logo1} alt="testimonial image" style={{width:"200px"}}/>
                   </a>
                   <div className="menu-toggler">
                     <i className="la la-bars"></i>

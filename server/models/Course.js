@@ -6,6 +6,10 @@ const CourseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: false,
+    },
     semesterId: [
       {
         type: Schema.Types.ObjectId,
@@ -17,6 +21,12 @@ const CourseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    isCourse: [
+      {
+        type: String,
+        required: false,
+      },
+    ],
     comment: [
       {
         type: String,

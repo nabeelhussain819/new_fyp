@@ -7,6 +7,10 @@ const SessionSchema = new Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: false,
+    },
     departmentId: [
       {
         type: Schema.Types.ObjectId,

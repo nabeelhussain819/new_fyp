@@ -35,7 +35,7 @@ const Program = () => {
               <div class="col-lg-6">
                 <div class="breadcrumb-content">
                   <div class="section-heading">
-                    <h2 class="sec__title text-white">Tour Full Width</h2>
+                    <h2 class="sec__title text-white">Available Programs</h2>
                   </div>
                 </div>
               </div>
@@ -43,10 +43,9 @@ const Program = () => {
                 <div class="breadcrumb-list text-right">
                   <ul class="list-items">
                     <li>
-                      <a href="index.html">Home</a>
+                      <a href="/dashboard">Home</a>
                     </li>
-                    <li>Tour</li>
-                    <li>Tour Full Width</li>
+                    <li>Programs</li>
                   </ul>
                 </div>
               </div>
@@ -64,7 +63,7 @@ const Program = () => {
           </svg>
         </div>
       </section>
-      <section class="card-area section--padding">
+      <section class="card-area section--padding bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">

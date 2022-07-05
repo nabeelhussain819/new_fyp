@@ -29,12 +29,12 @@ const {
   createSession,
   deleteSession,
 } = require("../Controller/Create/Session");
-const { readCourse } = require("../Controller/Index/Course");
+const { readCourse, editCourse } = require("../Controller/Index/Course");
 const { readDept, editDepart } = require("../Controller/Index/Department");
-const { readProgram } = require("../Controller/Index/Program");
+const { readProgram, editProgram } = require("../Controller/Index/Program");
 const { section } = require("../Controller/Index/Section");
-const { readSemes, deleteSemester } = require("../Controller/Index/Semester");
-const { session } = require("../Controller/Index/Session");
+const { readSemes, deleteSemester, editSemester } = require("../Controller/Index/Semester");
+const { session, editSession } = require("../Controller/Index/Session");
 const { student } = require("../Controller/Index/Student");
 const { teacher } = require("../Controller/Index/Teacher");
 const { login } = require("../Controller/Auth/Login");
@@ -63,6 +63,8 @@ const {
   getCourseComment,
   deleteComments,
 } = require("../Controller/Create/Comment");
+const { createQec, readQec } = require("../controller/Create/Qec");
+const { createCgpa, readGpa } = require("../controller/Create/Gpa");
 
 var storage = multer.diskStorage({
   destination: function (req, file, callback) {
@@ -96,6 +98,7 @@ router.route("/commend").post(Commend);
 // for sessions
 router.route("/sessions").get(session);
 router.route("/create-session").post(createSession);
+router.route("/edit-sessions").post(editSession);
 router.route("/delete-sessions").post(deleteSession);
 //for department
 router.route("/create-department").post(createDept);
@@ -110,11 +113,13 @@ router.route("/semesters").get(readSemes);
 // for course
 router.route("/create-course").post(createCourse);
 router.route("/delete-courses").post(deleteCourse);
+router.route("/edit-courses").post(editCourse);
 router.route("/courses").get(readCourse);
 // for program
 // router.route("/create-program", upload.single("image")).post(createProgram);
 router.route("/programs").get(readProgram);
 router.route("/delete-programs").post(deleteProgram);
+router.route("/edit-programs").post(editProgram);
 router.route("/create-program").post(createProgram);
 // for section
 router.route("/create-section").post(createSection);
@@ -141,5 +146,10 @@ router.route("/comments-semesters").get(getSemComment);
 router.route("/comments-courses").get(getCourseComment);
 router.route("/comments-teachers").get(getTechComment);
 router.route("/delete-comments").post(deleteComments);
-
+// for Qec
+router.route("/qec-results").get(readQec);
+router.route("/qec").post(createQec);
+// for gpa
+router.route("/dd").get(readGpa);
+router.route("/gpaRate").post(createCgpa);
 module.exports = router;

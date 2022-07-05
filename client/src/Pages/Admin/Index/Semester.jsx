@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Edit from "../Edit/SemesterEdit";
 import Delete from "../Delete/Delete";
 import { ReadSemester } from "../../../Api/Semester";
 import Semester from "../Create/Semester";
@@ -96,9 +95,9 @@ const Semesters = () => {
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Department</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">City</th>
+                        <th scope="col">Program</th>
+                        <th scope="col">Total Students</th>
+                        <th scope="col">Total Teachers</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                       </tr>
@@ -113,12 +112,12 @@ const Semesters = () => {
                                 <h3 class="title">{data.name}</h3>
                               </div>
                             </td>
-                            <td>{}</td>
-                            <td>United States</td>
-                            <td>New York</td>
+                            <td>{data.programId.map((data1)=>data1.name)}</td>
+                            <td>{data.studentId.length}</td>
+                            <td>{data.teacherId.length}</td>
                             <td>
-                              <span class="badge badge-success py-1 px-2">
-                                Active
+                            <span class="badge badge-warning py-1 px-2">
+                              {data.studentId.length < 100 ? "Less Students" :"ACTIVE"}
                               </span>
                             </td>
                             <td>
@@ -130,7 +129,6 @@ const Semesters = () => {
                                 >
                                   <i class="la la-eye"></i>
                                 </Link>
-                                <Edit data={data} />
                                 <Delete id={data._id} api={"semesters"} />
                               </div>
                             </td>

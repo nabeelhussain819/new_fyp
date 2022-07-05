@@ -56,3 +56,15 @@ export const GetCourse = async ({ data }) => {
     });
   return response;
 };
+export const GetSpecificCourse = async ({ data }) => {
+  const response = await (await fetch("http://localhost:5000/Courses"))
+    .json()
+    .then(function (result) {
+      const ans = result.map((item) =>    
+     
+      item._id == data && item 
+      );
+      return ans;
+    });
+  return response;
+};

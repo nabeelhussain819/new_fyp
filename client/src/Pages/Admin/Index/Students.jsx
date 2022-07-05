@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Allcreate from "../Create/Department";
-import Edit from "../Edit/StudentEdit";
 import Delete from "../Delete/Delete";
 import { ReadStudent } from "../../../Api/Student";
 
@@ -79,9 +78,9 @@ const Students = () => {
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Department</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">City</th>
+                        <th scope="col">University Id</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                       </tr>
@@ -96,9 +95,9 @@ const Students = () => {
                                 <h3 class="title">{data.name}</h3>
                               </div>
                             </td>
-                            <td>{}</td>
-                            <td>United States</td>
-                            <td>New York</td>
+                            <td>{data.u_id}</td>
+                            <td>{data.email}</td>
+                            <td>{data.phone}</td>
                             <td>
                               <span class="badge badge-success py-1 px-2">
                                 Active
@@ -113,7 +112,6 @@ const Students = () => {
                                 >
                                   <i class="la la-eye"></i>
                                 </Link>
-                                <Edit data={data} />
                                 <Delete id={data._id} api={"programs"} />
                               </div>
                             </td>
