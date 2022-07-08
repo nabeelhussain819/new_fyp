@@ -44,19 +44,12 @@ const Teacher = () => {
               </div>
             </div>
           </div>
+          <div class="bread-svg-box">
+        <svg class="hero-svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path></svg>
         </div>
-        <div class="bread-svg-box">
-          <svg
-            class="bread-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 10"
-            preserveAspectRatio="none"
-          >
-            <polygon points="100 0 50 10 0 0 0 10 100 10"></polygon>
-          </svg>
         </div>
       </section>
-      <section class="card-area section--padding bg-817">
+      <section class="card-area pt-4 bg-817">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">

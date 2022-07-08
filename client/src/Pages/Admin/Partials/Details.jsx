@@ -53,8 +53,9 @@ console.log(from)
                   return (
                     <>
                       <div className="container-fluid ">
-                        <div class="btn-box mt-4 ">                        
-                          <Delete id={id} api={api} />
+                        <div class="btn-box mt-4 ">      
+                        {!data.u_id &&  <Delete id={id} api={api} />}                   
+                         
                           <button className="btn-primary btn ml-2 hidden-print" onClick={()=>window.print()}>Print</button>
                         </div>
                       </div>

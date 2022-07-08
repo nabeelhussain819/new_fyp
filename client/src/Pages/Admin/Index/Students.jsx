@@ -112,7 +112,6 @@ const Students = () => {
                                 >
                                   <i class="la la-eye"></i>
                                 </Link>
-                                <Delete id={data._id} api={"programs"} />
                               </div>
                             </td>
                           </tr>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -19,7 +19,7 @@ function Login() {
 
   const loginUser = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://fyptes.herokuapp.com/signin", {
+    const res = await fetch("http://localhost:5000/signin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -30,9 +30,9 @@ function Login() {
 
     const data = await res.json();
     if (res.status === 400 || !data) {
-      toast.warning("Invalid Credentials");
+      toast.warning(data.message);
     } else if (res.status === 401) {
-      toast.warning("Your Email is not verified");
+      toast.warning(data.message);
     } else {
       console.log(data);
       toast.success("Logged In Successfully");
@@ -76,7 +76,7 @@ function Login() {
   };
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className="mr-2">
+      <Button variant="primary" onClick={handleShow} className="bg-transparent border-0 text-dark">
         Log In
       </Button>
 
@@ -121,8 +121,12 @@ function Login() {
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="custom-checkbox mb-0">
                   </div>
+                  <p class="forgot-password">
+                  <a href="recover">Forgot Password?</a>
+              </p>
                 </div>
               </div>
+            
               <div class="btn-box pt-3 pb-4">
                 <button
                   type="button"

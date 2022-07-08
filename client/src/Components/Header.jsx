@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../Assets/logo.png";
-import logo1 from "../Assets/logo.png";
+import logo1 from "../Assets/logo-5.png";
 import { Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -13,14 +13,14 @@ const Header = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  return (
-    <div>
-      <header class="header-wrapper hidden-print">
-        <header class="header-area">
-          <div class="header-top-bar padding-right-100px padding-left-100px ">
+  return (<>
+       
+      <header class="header-wrapper hidden-print wrapper">
+        <header class="header-area ">
+        <div class="header-top-bar">
             <div class="container-fluid">
               <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                   <div class="header-top-content">
                     <div class="header-left">
                       <ul class="list-items">
@@ -35,40 +35,23 @@ const Header = () => {
                             hnabeel570@gmail.com
                           </a>
                         </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="header-top-content">
-                    <div class="header-right d-flex align-items-center justify-content-end">
-                      <div class="header-right-action">
-                        {!localStorage.getItem("token") ? (
-                          <>
-                            <Login />
-                            <Link to="signup" className="theme-btn btn-lg">
+                        <li>
+                        <Login />
+                        </li>
+                        <li>
+                        <Link to="signup">
                               Sign Up
                             </Link>
-                          </>
-                        ) : (
-                          <>
-                            <Link
-                              to="user-panel"
-                              className="theme-btn btn-lg mr-2"
-                            >
-                              Dashboard
-                            </Link>
-                            <Logout />
-                          </>
-                        )}
-                      </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-warning">
+        
+          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-info">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-12">
@@ -79,7 +62,7 @@ const Header = () => {
                           class="img-responsive"
                           src={logo1}
                           alt="logo.jpg"
-                          style={{width:"200px"}}
+                          style={{width:"150px"}}
                         />
                       </Link>
                       <div class="menu-toggler">
@@ -100,7 +83,7 @@ const Header = () => {
                         )}
                       </div>
                     </div>
-                    <div class="main-menu-content">
+                    <div class="right main-menu-content mt-4">
                       <nav>
                         <ul>
                           <li>
@@ -143,50 +126,58 @@ const Header = () => {
               </div>
             </div>
           </div>
+         
         </header>
+        
       </header>
       {show && (
-        <header class="header-wrapper">
+        <header class="header-wrapper bg-info">
           <div class="header-nav d-xl-none">
             <div class="container">
               <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
                 <div class="header-static-nav">
-                  <p>Welcome you to Rozer Store!</p>
+                  <p>Welcome you to T&S Evaluation System!</p>
                 </div>
                 <div class="header-menu-nav">
-                  <ul class="menu-nav">
+                  <ul >
                     <li className="p-2">
-                      <Link to="/" class="color-dark">
+                      <Link to="/" class="text-white">
                         Home
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="departmnet" class="color-dark">
-                        Department
-                      </Link>
+                      <Link to="/teacher" class="text-white">Teachers</Link>
                     </li>
                     <li className="p-2">
-                      <Link to="lprogram" class="color-dark">
-                        Programs
-                      </Link>
+                      <Link to="/course" class="text-white">Courses</Link>
                     </li>
                     <li className="p-2">
-                      <Link to="course" class="color-dark">
-                        Courses
-                      </Link>
+                      <Link to="/program" class="text-white">Programs</Link>
                     </li>
                     <li className="p-2">
-                      <Link to="about" class="color-dark">
+                      <Link to="/department" class="text-white">Department</Link>
+                    </li>
+                    <li className="p-2">
+                      <Link to="about" class="text-white">
                         About
                       </Link>
                     </li>
                     <li className="p-2">
-                    <Link to="signup" className="theme-btn btn-lg">
+                      <Link to="blog" class="text-white">
+                        Gellery
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link to="contact" class="text-white">
+                        Contact
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                    <Link to="signup" class="text-white">
                               Sign Up
                             </Link>
                     </li>
-                    <Login />
-                            
+                    <Login />    
                   </ul>
                 </div>
               </div>
@@ -194,7 +185,8 @@ const Header = () => {
           </div>
         </header>
       )}
-    </div>
+    </>
+    
   );
 };
 

@@ -19,8 +19,8 @@ console.log(name)
   },[])
   return (
     <>
-      <section className="dashboard-content-wrap">
-        <div class="dashboard-bread">
+      <section className="dashboard-content-wrap ">
+        <div class="breadcrumb-area bread-bg">
           <div class="container-fluid">
             <div class="row align-items-center">
               <div class="col-lg-6">
@@ -43,9 +43,9 @@ console.log(name)
                 </div>
               </div>
             </div>
-            <div class="row mt-4">
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
+            <div class="row mt-4 ">
+              <div class="col-lg-3 responsive-column-m ">
+                <div class="icon-box shadow-lg icon-layout-2 dashboard-icon-box">
                   <div class="d-flex">
                     <div class="info-icon icon-element flex-shrink-0">
                       <i class="la la-shopping-cart"></i>
@@ -111,7 +111,7 @@ console.log(name)
           <div className="container-fluid">
           <div class="row">
                     <div class="col-lg-6 responsive-column--m">
-                        <div class="form-box">
+                        <div class="form-box shadow-lg">
                             <div class="form-title-wrap">
                                 <h3 class="title">Statics Results</h3>
                                 
@@ -121,7 +121,7 @@ console.log(name)
                         <LineChart data={name}/>
                     </div>
                     <div class="col-lg-6 responsive-column--m">
-                        <div class="form-box dashboard-card">
+                        <div class="form-box dashboard-card shadow-lg">
                             <div class="form-title-wrap">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h3 class="title">Notifications</h3>
@@ -150,7 +150,7 @@ console.log(name)
                         </div>
                     </div>     
                     <div class="col-lg-6 responsive-column--m">
-                        <div class="form-box">
+                        <div class="form-box shadow-lg">
                             <div class="form-title-wrap">
                                 <h3 class="title">Statics Results</h3>
                                 
@@ -160,7 +160,7 @@ console.log(name)
                         <LineChart1 />
                     </div>
                     <div class="col-lg-6 responsive-column--m">
-                        <div class="form-box">
+                        <div class="form-box shadow-lg">
                             <div class="form-title-wrap">
                                 <h3 class="title">Statics Results</h3>
                                 

@@ -8,11 +8,13 @@ import {
   FcGraduationCap,
 } from "react-icons/fc";
 import CarouselItem from "./Utilis/Carousel";
-import { carouselImage } from "../Pages/Utilis/Images";
+import  img  from "../Assets/smiu-logo.png";
+import { GalleryImages } from "../Pages/Utilis/Images";
 import { ReadDepartment } from "../Api/Department";
 import { ReadProgram } from "../Api/Program";
 import { ReadTeacher } from "../Api/Teacher";
 import Login from "./Auth/Login";
+import MapContainer from "../Components/Map";
 export const Home = () => {
   const [dept, setDept] = useState([]);
   const [program, setProgram] = useState([]);
@@ -50,100 +52,32 @@ export const Home = () => {
   return (
     <>
       <CarouselItem />
-      <section className="funfact-area section-bg4 bg-light padding-top-80px bg-819">
-        <div className="container ">
-          <div className="row ">
-            <div className="col-lg-12 ">
-              <div className="section-heading text-center">
-                <h2 className="sec__title">
-                  University's first ever Evaluation Portal
-                </h2>
-                <p className="sec__desc pt-3">
-                  Where You can Evaluate your teacher
+      <section class="about-area padding-bottom-90px padding-top-80px overflow-hidden bg-818">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="section-heading margin-bottom-40px">
+                <h2 class="sec__title">Welcome To Sindh Madressatul Islam University (SMIU)</h2>
+                
+                <p class="sec__desc font-size-16 pb-3 mt-4 pt-4">
+                Sindh Madressatul Islam University (SMIU) is a chartered University duly recognized by the Higher Education Commission of Pakistan. It is one of the oldest institutions in South Asia, which started as a school in 1885, became a college in 1943 and a university in February 2012.
                 </p>
+                
               </div>
             </div>
-          </div>
-          <div className="counter-box mt-5 pb-2 shadow-lg">
-            <div className="row">
-              <div className="col-lg-3 responsive-column">
-                <div className="counter-item d-flex">
-                  <div className="counter-icon flex-shrink-0">
-                    <FcGraduationCap size={42} />
-                  </div>
-                  <div className="counter-content">
-                    <span
-                      className="counter"
-                      data-from="0"
-                      data-to="50000"
-                      data-refresh-interval="5"
-                    >
-                      50000
-                    </span>
-                    <span className="count-symbol">+</span>
-                    <p className="counter__title">Students</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 responsive-column">
-                <div className="counter-item d-flex">
-                  <div className="counter-icon flex-shrink-0">
-                    <FcBusinessman size={42} />
-                  </div>
-                  <div className="counter-content">
-                    <span
-                      className="counter"
-                      data-from="0"
-                      data-to="160"
-                      data-refresh-interval="5"
-                    >
-                      200
-                    </span>
-                    <p className="counter__title">Teachers</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 responsive-column">
-                <div className="counter-item d-flex">
-                  <div className="counter-icon flex-shrink-0">
-                    <FcDepartment size={42} />
-                  </div>
-                  <div className="counter-content">
-                    <span
-                      className="counter"
-                      data-from="0"
-                      data-to="43"
-                      data-refresh-interval="5"
-                    >
-                      20
-                    </span>
-                    <p className="counter__title">Departments </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 responsive-column">
-                <div className="counter-item d-flex">
-                  <div className="counter-icon flex-shrink-0">
-                    <FcCollaboration size={42} />
-                  </div>
-                  <div className="counter-content">
-                    <span
-                      className="counter"
-                      data-from="0"
-                      data-to="3500000"
-                      data-refresh-interval="5"
-                    >
-                      350
-                    </span>
-                    <p className="counter__title">Courses Available</p>
-                  </div>
-                </div>
+            <div class="col-lg-4 ml-auto">
+              <div class="image-box about-img-box">
+                 <img
+                  src={img}
+                  alt="about-img"
+                  class="img__item img__item-1"
+                />              
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="destination-area section-bg3 padding-top-130px padding-bottom-80px bg-818 ">
+      <section className="destination-area section-bg3 padding-bottom-80px bg-818 ">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
@@ -169,7 +103,7 @@ export const Home = () => {
                   <div className="col-lg-4 responsive-column ">
                     <div className="card-item shadow-lg destination-card destination--card">
                       <div className="card-img">
-                        {carouselImage.map((data, key) => {
+                        {GalleryImages.map((data, key) => {
                           return (
                             key === index && (
                               <img src={data.image} alt="destination-img" />
@@ -204,16 +138,17 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="cta-area cta-bg bg-fixed section-padding text-center ">
+      <section className="cta-area cta-bg section-padding text-center ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="section-heading">
                 <h2 className="sec__title text-white font-size-50 line-height-60">
-                  Join with us. To Share Love With Your Teahcers.
+                Prof. Dr. Mujeeb-U-Ddin Sahrai Memon
+Vice Chancellor
                 </h2>
                 <p className="sec__desc text-white pt-3">
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                It gives natural vibrations to my hands and sensations to my mind when to write about this august university i.e. Sindh Madressatul Islam University, Karachi. This is the institute credited with production of wise persons, visionary leaders, freedom fighters, educationists and founders, viz: Quaid-e-Azam Mohammad Ali Jinnah, Sir Shahnawaz Bhutto, Sir Abdullah Haroon, Sir Ghulam Hussain Hidayatullah, Khan Bahadur Mohammad Ayub Khuhro, Allama I.I. Kazi, Allama Umer Bin Mohammad Doudpota, Hanif Muhammad and to my groomer i.e. my father father Taj Muhammad Sahrai.​
                 </p>
               </div>
             </div>
@@ -236,36 +171,25 @@ export const Home = () => {
                   <div className="owl-item active">
                     <div className="card-item shadow-lg trending-card mb-0 mb-3">
                       <div className="card-img">
-                        <a href="tour-details.html" className="d-block">
-                          {carouselImage.map((data, key) => {
+                      <Link
+                            to={"/details/" + data._id}
+                            state={{ from: data, api: "programs" }}
+                          > 
+                          {GalleryImages.map((data, key) => {
                             return (
                               key === index && (
                                 <img src={data.image} alt="destination-img" />
                               )
                             );
                           })}
-                        </a>
+                        </Link>
                       </div>
                       <div className="card-body">
-                        <h3 className="card-title">{data.name}</h3>
-                        <p className="card-meta">Department</p>
-                        <div className="card-rating">
-                          <span className="badge text-white">4.4/5</span>
-                          <span className="review__text">Students</span>
-                          <span className="rating__text">
-                            ({data.studentId.length})
-                          </span>
-                        </div>
-                        <div className="card-price d-flex align-items-center justify-content-between">
-                          <p>
-                          </p>
-                          <Link
+                      <Link
                             to={"/details/" + data._id}
                             state={{ from: data, api: "programs" }}
-                          >
-                            see Details
-                          </Link>
-                        </div>
+                          > <h3 className="card-title">Department Of {data.name}</h3></Link>
+                       
                       </div>
                     </div>
                   </div>
@@ -285,111 +209,12 @@ export const Home = () => {
       </section>
       <section className="faq-area section-bg4  section--padding">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section-heading text-center">
-                <h2 className="sec__title">Frequently Asked Questions</h2>
-              </div>
-            </div>
+          <div className="row">          
           </div>
-          <div className="row padding-top-60px">
+          <div className="row padding-top-20px">
             <div className="col-lg-7">
-            <div id="faq" className="page-scroll">
-                        <div className="single-content-item  padding-bottom-40px">                      
-                          <div
-                            className="accordion accordion-item "
-                            id="accordionExample2"
-                          >
-            {myData.slice(0, 1).map((data) => {
-                              return (
-                                <>
-                                  <div className="card">
-                                    <div
-                                      className="card-header"
-                                      id="faqHeadingFour"
-                                    >
-                                      <h2 className="mb-0">
-                                        <button
-                                          className="btn btn-link d-flex align-items-center justify-content-end flex-row-reverse font-size-16"
-                                          type="button"
-                                          data-toggle="collapse"
-                                          data-target="#faqCollapseFour"
-                                          aria-expanded="true"
-                                          aria-controls="faqCollapseFour"
-                                        >
-                                          <span className="ml-3">
-                                            {data.question}
-                                          </span>
-                                          <i className="la la-minus"></i>
-                                          <i className="la la-plus"></i>
-                                        </button>
-                                      </h2>
-                                    </div>
-                                    <div
-                                      id="faqCollapseFour"
-                                      className="collapse show"
-                                      aria-labelledby="faqHeadingFour"
-                                      data-parent="#accordionExample2"
-                                    >
-                                      <div className="card-body d-flex">
-                                        <p>
-                                          Mea appareat omittantur eloquentiam
-                                          ad, nam ei quas oportere democritum.
-                                          Prima causae admodum id est, ei timeam
-                                          inimicus sed. Sit an meis aliquam,
-                                          cetero inermis vel ut. An sit illum
-                                          euismod facilisis Nullam id dolor id
-                                          nibh ultricies vehicula ut id elit.
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </>
-                              );
-                            })}
-                            {myData.slice(1, 5).map((data) => {
-                              return (
-                                <>
-                                  <div className="card">
-                                    <div
-                                      className="card-header"
-                                      id="faqHeadingSix"
-                                    >
-                                      <h2 className="mb-0">
-                                        <button
-                                          className="btn btn-link d-flex align-items-center justify-content-end flex-row-reverse font-size-16"
-                                          type="button"
-                                          data-toggle="collapse"
-                                          data-target="#faqCollapseSix"
-                                          aria-expanded="false"
-                                          aria-controls="faqCollapseSix"
-                                        >
-                                          <span className="ml-3">
-                                            {data.question}
-                                          </span>
-                                          <i className="la la-minus"></i>
-                                          <i className="la la-plus"></i>
-                                        </button>
-                                      </h2>
-                                    </div>
-                                  </div>
-                                </>
-                              );
-                            })}
-                            </div>  </div>  </div>
-              <div className="accordion-help-text pt-2">
-                <p className="font-size-14 font-weight-regular">
-                  Any questions? Just visit our{" "}
-                  <a href="/about" className="color-text">
-                    Help center
-                  </a>{" "}
-                  or{" "}
-                  <a href="/contact" className="color-text">
-                    Contact Us
-                  </a>
-                </p>
-              </div>
-            </div>
+           <MapContainer/>
+           </div>
             <div className="col-lg-5">
               <div className="faq-forum pl-4">
                 <div className="form-box border">

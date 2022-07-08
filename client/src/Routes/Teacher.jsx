@@ -14,11 +14,12 @@ import Comment from "../Pages/User/Comments";
 import QecResult from "../Pages/Qec/QecResult";
 import Students from "../Pages/User/Teachers/Students";
 import Profile from "../Pages/User/Teachers/Profile";
+import ChangePass from "../Pages/Auth/ChangePass";
 function Teacher() {
   return (
     <>
-      <Sidebar />
-      <section className="dashboard-area">
+      {/* <Sidebar />
+      <section className="dashboard-area"> */}
         <NavBar />
         <Fragment>
           <Routes>
@@ -35,9 +36,10 @@ function Teacher() {
             <Route path="/complains" element={<Complain />} />
             <Route path="/students" element={<Students />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/recover" element={<ChangePass />} />
           </Routes>
         </Fragment>
-      </section>
+      {/* </section> */}
     </>
   );
 }

@@ -13,7 +13,7 @@ export default function Profile(){
           getData();
     },[])
 return(<>
-<div class="dashboard-bread dashboard--bread">
+<div class="breadcrumb-area bread-bg">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6">

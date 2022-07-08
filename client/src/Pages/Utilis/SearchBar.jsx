@@ -34,8 +34,8 @@ const SearchBar = ({ item, api }) => {
       <div className="row">
         {filterData.map((data, index) => {
           return (
-            <div class="col-lg-4 responsive-column">
-              <div class="card-item shadow-lg">
+            <div class="col-lg-4  responsive-column">
+              <div class="card-item ">
                 <div class="card-img">
                   {GalleryImages.map((data, key) => {
                     return (

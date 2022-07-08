@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from "../Assets/logo.png";
+import bg from "../Assets/logo-5.png";
 const Footer = () => {
   return (
-    <section className="footer-area section-bg padding-top-30px padding-bottom-10px hidden-print">
+    <section className="footer-area section-bg padding-top-30px padding-bottom-10px hidden-print bg-info">
       <div className="container text-dark">
         <div className="row">
           <div className="col-lg-3 responsive-column"> 

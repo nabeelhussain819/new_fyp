@@ -21,8 +21,8 @@ function Logout() {
       {values.map((v, idx) => (
         <button
           key={idx}
-          className=" theme-btn btn-lg"
-          style={{ textDecoration: "none" }}
+          className=" bg-transparent border-0 text-white"
+          style={{ textDecoration: "none" , letterSpacing: "2px" , textTransform: "uppercase"}}
           aria-labelledby="contained-modal-title-vcenter"
           centered
           onClick={() => handleShow(v)}
