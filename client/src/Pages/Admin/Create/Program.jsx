@@ -13,7 +13,7 @@ const Program = () => {
   const [session, setSession] = useState([]);
   const registerProgram = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-program", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-program", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -43,7 +43,7 @@ const Program = () => {
   useEffect(() => {
     const getData = async () => {
       const response = await (
-        await fetch("http://localhost:5000/departments")
+        await fetch("https://fyptes.herokuapp.com/departments")
       ).json();
       setDepart(response);
     };

@@ -12,7 +12,7 @@ function MyVerticallyCenteredModal(props) {
   const sendData=async(e)=>{
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/edit-departments" , {
+    const res = await fetch("https://fyptes.herokuapp.com/edit-departments" , {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

@@ -1,5 +1,5 @@
 export const ReadQec = async () => {
-    const response = await (await fetch("http://localhost:5000/qec-results"))
+    const response = await (await fetch("https://fyptes.herokuapp.com/qec-results"))
       .json()
       .then(function (result) {
         return result;
@@ -7,7 +7,7 @@ export const ReadQec = async () => {
     return response;
   };
   export const ReadTeacherQec = async () => {
-    const response = await (await fetch("http://localhost:5000/qec-results"))
+    const response = await (await fetch("https://fyptes.herokuapp.com/qec-results"))
       .json()
       .then(function (result) {
         console.log(result)

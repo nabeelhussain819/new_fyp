@@ -11,7 +11,7 @@ export default function Allcreate() {
   const [session, setSession] = useState(false);
   const registerDepartment = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-department", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-department", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -297,7 +297,7 @@ function ProgramCreate(props) {
   const [semester, setSemester] = useState(false);
   const registerProgram = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-program", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-program", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -320,7 +320,7 @@ function ProgramCreate(props) {
   useEffect(() => {
     const getData = async () => {
       const response = await (
-        await fetch("http://localhost:5000/departments")
+        await fetch("https://fyptes.herokuapp.com/departments")
       ).json();
       response.map((data) => {
         return data.name == props.department && setDepart([data]);
@@ -486,7 +486,7 @@ function SemesterCreate(props) {
 
   const registerSemester = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-semester", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-semester", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -688,7 +688,7 @@ function CourseCreate(props) {
   const [move, setMove] = useState(false);
   const registerCourse = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-course", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-course", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

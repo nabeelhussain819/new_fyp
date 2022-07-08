@@ -14,7 +14,7 @@ const teacherId = data._id
     if (!localStorage.getItem("token")) {
       toast.warning("You Need To Login First");
     } else {
-      const res = await fetch("http://localhost:5000/comment-" + api, {
+      const res = await fetch("https://fyptes.herokuapp.com/comment-" + api, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({

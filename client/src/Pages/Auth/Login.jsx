@@ -19,7 +19,7 @@ function Login() {
 
   const loginUser = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/signin", {
+    const res = await fetch("https://fyptes.herokuapp.com/signin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -63,13 +63,13 @@ function Login() {
       localStorage.setItem("code", code);
       localStorage.setItem("id", id);
       if (localStorage.getItem("isAdmin")) {
-        navigate("/dashboard");
+        navigate("/");
         window.location.reload();
       } else if (localStorage.getItem("isTeacher")) {
-        navigate("/dashboard");
+        navigate("/");
         window.location.reload();
       } else {
-        navigate("/dashboard");
+        navigate("/");
         window.location.reload();
       }
     }

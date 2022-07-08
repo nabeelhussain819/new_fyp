@@ -15,7 +15,7 @@ const Semester = () => {
   const [move, setMove] = useState(false);
   const registerProgram = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-semester", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-semester", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

@@ -9,7 +9,7 @@ function Delete({ id, api }) {
   const onDelete = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/delete-" + api, {
+    const res = await fetch("https://fyptes.herokuapp.com/delete-" + api, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

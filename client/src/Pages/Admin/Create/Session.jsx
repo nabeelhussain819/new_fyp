@@ -10,7 +10,7 @@ const Session = () => {
   const [depart, setDepart] = useState([]);
   const registerSession = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/create-session", {
+    const res = await fetch("https://fyptes.herokuapp.com/create-session", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

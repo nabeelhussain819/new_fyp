@@ -95,7 +95,7 @@ export default function ExtendedForm() {
       }
       console.log(departApi)
       const extendedRegisterUser = async (e) => {               
-        const res = await fetch("http://localhost:5000/extendedRegister", {
+        const res = await fetch("https://fyptes.herokuapp.com/extendedRegister", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -117,7 +117,7 @@ export default function ExtendedForm() {
       };
       const registerCourse = async (courseId) => {
             console.log(courseId)
-        const res = await fetch("http://localhost:5000/add-course", {
+        const res = await fetch("https://fyptes.herokuapp.com/add-course", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export const ReadTeacher = async () => {
-  const response = await (await fetch("http://localhost:5000/teachers"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/teachers"))
     .json()
     .then(function (result) {
       return result;
@@ -9,7 +9,7 @@ export const ReadTeacher = async () => {
   return response;
 };
 export const AuthTeacher = async () => {
-  const response = await (await fetch("http://localhost:5000/teachers"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/teachers"))
     .json()
     .then(function (result) {
       const ans = result.map((item) => 

@@ -27,7 +27,7 @@ const Register = () => {
  
   const registerUser = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/signup", {
+    const res = await fetch("https://fyptes.herokuapp.com/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

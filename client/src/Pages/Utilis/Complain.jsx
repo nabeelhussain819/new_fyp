@@ -11,7 +11,7 @@ const Complain = ({ data, api }) => {
   const ComplainDept = async (e) => {
     e.preventDefault();
     if (localStorage.getItem("token")) {
-      const res = await fetch("http://localhost:5000/complain-" + api, {
+      const res = await fetch("https://fyptes.herokuapp.com/complain-" + api, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({

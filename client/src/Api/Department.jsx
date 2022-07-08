@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export const ReadDepartment = async () => {
   const response = await (
-    await fetch("http://localhost:5000/departments")
+    await fetch("https://fyptes.herokuapp.com/departments")
   )
     .json()
     .then(function (result) {
@@ -11,7 +11,7 @@ export const ReadDepartment = async () => {
   return response;
 };
 export const GetSession = async ({ data }) => {
-  const response = await (await fetch("http://localhost:5000/departments"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/departments"))
     .json()
     .then(function (result) {
       const ans = result.map((item) =>
@@ -22,7 +22,7 @@ export const GetSession = async ({ data }) => {
   return response;
 };
 export const GetProgram = async ({ data }) => {
-  const response = await (await fetch("http://localhost:5000/sessions"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/sessions"))
     .json()
     .then(function (result) {
       const ans = result.map((item) =>    
@@ -33,7 +33,7 @@ export const GetProgram = async ({ data }) => {
   return response;
 };
 export const GetSemester = async ({ data }) => {
-  const response = await (await fetch("http://localhost:5000/programs"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/programs"))
     .json()
     .then(function (result) {
       const ans = result.map((item) =>    
@@ -45,7 +45,7 @@ export const GetSemester = async ({ data }) => {
   return response;
 };
 export const GetCourse = async ({ data }) => {
-  const response = await (await fetch("http://localhost:5000/Semesters"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/Semesters"))
     .json()
     .then(function (result) {
       const ans = result.map((item) =>    
@@ -57,7 +57,7 @@ export const GetCourse = async ({ data }) => {
   return response;
 };
 export const GetSpecificCourse = async ({ data }) => {
-  const response = await (await fetch("http://localhost:5000/Courses"))
+  const response = await (await fetch("https://fyptes.herokuapp.com/Courses"))
     .json()
     .then(function (result) {
       const ans = result.map((item) =>    

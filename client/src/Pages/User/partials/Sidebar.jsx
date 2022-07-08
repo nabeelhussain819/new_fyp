@@ -30,7 +30,7 @@ const Sidebar = () => {
               </li>
               <li >
                 <Link to="qec">
-                  <i class="la la-dashboard mr-2"></i>QEC
+                  <i class="la la-dashboard mr-2"></i>Evaluation
                 </Link>
               </li>
               <li>
