@@ -1,13 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import Commend from "./Commend";
 import Complain from "./Complain";
 import myData from "../Qec/question.json";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Details = () => {
   const location = useLocation();
   const params = useParams();
+  const [studentId, setStudentId] = useState(
+    !localStorage.getItem("isTeacher") && localStorage.getItem("id")
+  );
+  const [teacherId, setTeacherId] = useState(
+    localStorage.getItem("isTeacher") && localStorage.getItem("id")
+  );
   const { from, api } = location.state;
-  console.log(from);
+  console.log(teacherId, studentId);
+
+  const registerCourse = async (courseId) => {
+    const res = await fetch("https://fyptes.herokuapp.com/add-course", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        studentId,
+        courseId,
+        teacherId,
+      }),
+    });
+    const data = await res.json();
+    if (res.status === 400 || !data) {
+      toast.error("Course is not registered Successfully");
+    } else {
+      toast.success("Course registered Successfully");
+    }
+  };
   function print() {
     window.print();
   }
@@ -59,13 +85,17 @@ const Details = () => {
                     <div class="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
                       <div class="card-body px-0 pb-0">
                         <div class="post-categories">
-                          <button
-                            onClick={print}
-                            className="bg-transparent text-dark border-0 theme-btn"
-                          >
-                            print
-                          </button>
-                          <Commend data={data} />
+                          {localStorage.getItem("id") && (
+                            <Commend data={data} />
+                          )}
+                          {api == "courses" && (
+                            <button
+                              className="theme-btn"
+                              onClick={registerCourse}
+                            >
+                              EnroLl Now!
+                            </button>
+                          )}
                         </div>
                         <h3 class="card-title font-size-28">{data.name}</h3>
                         <p class="card-meta pb-3">

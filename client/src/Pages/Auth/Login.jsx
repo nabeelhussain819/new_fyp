@@ -76,67 +76,111 @@ function Login() {
   };
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className="bg-transparent border-0 text-dark">
-        Log In
+      <Button
+        variant="primary"
+        onClick={handleShow}
+        className="bg-transparent border-0 text-dark"
+      >
+        LOG IN
       </Button>
 
       <Modal show={show} onHide={handleClose} keyboard={false} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Log In</Modal.Title>
-        </Modal.Header>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title title" id="exampleModalLongTitle2">
+                Login
+              </h5>
+              <p class="font-size-14">Hello! Welcome to your account</p>
+            </div>
+            <button
+              type="button"
+              class="la la-close border-0 bg-transparent"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={() => setShow(false)}
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="contact-form-action">
+              <form method="post" class="MultiFile-intercepted">
+                <div class="input-box">
+                  <label class="label-text">Email</label>
+                  <div class="form-group">
+                    <span class="la la-user form-icon"></span>
 
-        <div class="modal-body">
-          <div class="contact-form-action">
-            <form method="post">
-              <div class="input-box">
-                <label class="label-text">Email</label>
-                <div class="form-group">
-                  <span class="la la-user form-icon"></span>
-
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="text"
-                    placeholder="Type your email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div class="input-box">
-                <label class="label-text">Password</label>
-                <div class="form-group mb-2">
-                  <span class="la la-lock form-icon"></span>
-                  <input
-                    class="form-control"
-                    type="password"
-                    name="text"
-                    placeholder="Type password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </div>
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="custom-checkbox mb-0">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="text"
+                      placeholder="Type your email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
-                  <p class="forgot-password">
-                  <a href="recover">Forgot Password?</a>
-              </p>
                 </div>
-              </div>
-            
-              <div class="btn-box pt-3 pb-4">
-                <button
-                  type="button"
-                  class="theme-btn w-100"
-                  onClick={loginUser}
-                >
-                  Login Account
-                </button>
-              </div>            
-            </form>
+                <div class="input-box">
+                  <label class="label-text">Password</label>
+                  <div class="form-group mb-2">
+                    <span class="la la-lock form-icon"></span>
+                    <input
+                      class="form-control"
+                      type="password"
+                      name="text"
+                      placeholder="Type password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="custom-checkbox mb-0"></div>
+                    <p class="forgot-password">
+                      <a href="recover">Forgot Password?</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="btn-box pt-3 pb-4">
+                  <button
+                    type="button"
+                    class="theme-btn w-100"
+                    onClick={loginUser}
+                  >
+                    Login Account
+                  </button>
+                </div>
+                <div class="action-box text-center">
+                  <p class="font-size-14">
+                    {" "}
+                    Don't Have Any Account ?{" "}
+                    <Link to="/signup">Register Now </Link>
+                  </p>
+                  <ul class="social-profile py-3">
+                    <li>
+                      <a href="#" class="bg-5 text-white">
+                        <i class="lab la-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-6 text-white">
+                        <i class="lab la-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-7 text-white">
+                        <i class="lab la-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-5 text-white">
+                        <i class="lab la-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </Modal>

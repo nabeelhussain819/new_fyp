@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export const ReadProgram = async () => {
-  const response = await (await fetch("https://fyptes.herokuapp.com/programs"))
+  const response = await (await fetch("http://localhost:5000/programs"))
     .json()
     .then(function (result) {
       return result;

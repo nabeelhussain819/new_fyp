@@ -1,43 +1,60 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Line,Bar } from "react-chartjs-2";
+import { Line, Bar } from "react-chartjs-2";
 import { AuthTeacher } from "../../../Api/Teacher";
+import { ReadTeacherQec } from "../../../Api/Qec";
 
+export default function BarChart({ data }) {
+  const [rating, setRating] = useState([]);
+  const [name, setName] = useState([]);
+  const state = {
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "10+"],
+    datasets: [
+      {
+        label: "rating of your Professionalism",
+        fill: false,
+        lineTension: 0.5,
+        backgroundColor: "rgba(75,192,192,1)",
+        borderColor: "rgba(0,0,0,1)",
+        borderWidth: 2,
+        data: name.isProfessional,
+      },
+    ],
+  };
 
+  console.log(rating);
+  useEffect(() => {
+    const getData = () => {
+      ReadTeacherQec().then(function (result) {
+        result.map((index) =>
+          data.teacherId.map(
+            (data) =>
+              data._id == localStorage.getItem("id") && setRating(index.rating)
+          )
+        );
+      });
+    };
 
-export default function BarChart(props){
-  const [rating ,setRating] =useState([])
-
-console.log(props.data.map((data)=>data.tokens.length))
-    return (
-      <div >
-        <div >
-        <div class="col-lg-12 responsive-column--m">
-                        <div class="form-box dashboard-card">                         
-                            <div class="form-content pb-0">
-                                <div class="dashboard-progressbar pb-4">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar" style={{width: `${(props.data.map((data)=>data.tokens.length))}%`}} aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="font-size-14 pt-1">Rating of Helpfull : {props.data.map((data)=>data.tokens.length)} </p>
-                                </div>
-                                 <div class="dashboard-progressbar pb-4">
-                                     <div class="progress">
-                                         <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style={{width: `${props.data.map((data)=>data.tokens.length)}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                     </div>
-                                     <p class="font-size-14 pt-1">Rating of Friendly: {props.data.map((data)=>data.tokens.length)}</p>
-                                </div>
-                                 <div class="dashboard-progressbar pb-4">
-                                     <div class="progress">
-                                         <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style={{width: `${props.data.map((data)=>data.tokens.length)}%`}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                     </div>
-                                     <p class="font-size-14 pt-1">Rating of Professsional: {props.data.map((data)=>data.tokens.length)}/100</p>
-                                </div>                               
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+    getData();
+  }, []);
+  return (
+    <div className="form-box">
+      <div className="form-content">
+        <Bar
+          data={state}
+          options={{
+            title: {
+              display: true,
+              text: "Average rating per month",
+              fontSize: 20,
+            },
+            legend: {
+              display: true,
+              position: "right",
+            },
+          }}
+        />
       </div>
-    );
-  }
-
+    </div>
+  );
+}

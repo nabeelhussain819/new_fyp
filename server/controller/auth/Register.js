@@ -154,7 +154,7 @@ exports.addCourse = async (req, res, next) => {
       Course.studentId.push(studentId);
       await Course.save();
     }
-    res.status(200).json({ message: "registerd" });
+    res.status(200).json({ courseId });
   }
 };
 exports.addSemester = async (req, res, next) => {

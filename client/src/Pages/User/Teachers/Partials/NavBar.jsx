@@ -111,87 +111,81 @@ const Navbar = () => {
         </div>
       </div>
       {show && (
-        <div class="header-menu-wrapper ">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="menu-wrapper">
-                  <div className="container">
-                    <div class="main-menu-content" style={{ display: "block" }}>
-                      <nav>
-                        <ul>
-                          <li className="text-white">
-                            <li>
-                              <Link to="dashboard">
-                                <i class="la la-area-chart mr-2 text-color-3"></i>
-                                <span className="text-white">Dashboard</span>
-                              </Link>
-                            </li>
-                            <Link to="departments ">
-                              <i class="la la-shopping-cart mr-2 text-color"></i>{" "}
-                              <span className="text-white">Departments</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="programs">
-                              <i class="la la-list mr-2 text-color-2"></i>
-                              <span className="text-white">Programs</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="teachers">
-                              <i class="la la-users mr-2 text-color-3"></i>
-                              <span className="text-white">Teachers</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="Courses">
-                              <i class="la la-text-width mr-2 text-color-3"></i>
-                              <span className="text-white">Courses</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="complains">
-                              <i class="la la-area-chart mr-2 text-color-3"></i>
-                              <span className="text-white">Complians</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="comments">
-                              <i class="la la-area-chart mr-2 text-color-3"></i>
-                              <span className="text-white">Comments</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="qec">
-                              <i class="la la-area-chart mr-2 text-color-3"></i>
-                              <span className="text-white">QEC Result</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="students">
-                              <i class="la la-area-chart mr-2 text-color-3"></i>
-                              <span className="text-white">Students</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="profile">
-                              <i class="la la-area-chart mr-2 text-color-3"></i>
-                              <span className="text-white">Profile</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Logout />
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
+        <header class="header-wrapper bg-dark pt-3">
+          <div class="header-nav d-xl-none">
+            <div class="container">
+              <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
+                <div class="header-menu-nav">
+                  <ul>
+                    <li className="text-white">
+                      <li>
+                        <Link to="dashboard">
+                          <i class="la la-area-chart mr-2 text-color-3"></i>
+                          <span className="text-white">Dashboard</span>
+                        </Link>
+                      </li>
+                      <Link to="departments ">
+                        <i class="la la-shopping-cart mr-2 text-color"></i>{" "}
+                        <span className="text-white">Departments</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="programs">
+                        <i class="la la-list mr-2 text-color-2"></i>
+                        <span className="text-white">Programs</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="teachers">
+                        <i class="la la-users mr-2 text-color-3"></i>
+                        <span className="text-white">Teachers</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="Courses">
+                        <i class="la la-text-width mr-2 text-color-3"></i>
+                        <span className="text-white">Courses</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="complains">
+                        <i class="la la-area-chart mr-2 text-color-3"></i>
+                        <span className="text-white">Complians</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="comments">
+                        <i class="la la-area-chart mr-2 text-color-3"></i>
+                        <span className="text-white">Comments</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="qec">
+                        <i class="la la-area-chart mr-2 text-color-3"></i>
+                        <span className="text-white">QEC Result</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="students">
+                        <i class="la la-area-chart mr-2 text-color-3"></i>
+                        <span className="text-white">Students</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="profile">
+                        <i class="la la-area-chart mr-2 text-color-3"></i>
+                        <span className="text-white">Profile</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Logout />
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </header>
       )}
     </>
   );

@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ReadDepartment } from "../../Api/Department";
 import { GetSession } from "../../Api/Department";
-import smiu from '../../Assets/smiu2.jpg'
+import smiu from "../../Assets/smiu2.jpg";
 import ExtendedForm from "./ExtendedRegister";
 const Register = () => {
   const [show, setShow] = useState(false);
@@ -17,17 +17,16 @@ const Register = () => {
   const [u_id, setUid] = useState("");
   const [all, setAll] = useState(true);
   //   const filterDepart = depart.filter((data) => data.name.includes(search));
-  if(all == true){
-    if(localStorage.getItem("isTeacher") ||localStorage.getItem("user") ){
-      alert("you want To Sign Up!")
-      localStorage.clear()
+  if (all == true) {
+    if (localStorage.getItem("isTeacher") || localStorage.getItem("user")) {
+      alert("you want To Sign Up!");
+      localStorage.clear();
     }
   }
- 
- 
+
   const registerUser = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://fyptes.herokuapp.com/signup", {
+    const res = await fetch("http://localhost:5000/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -36,7 +35,6 @@ const Register = () => {
         password,
         u_id,
         phone,
-      
       }),
     });
     const data = await res.json();
@@ -48,151 +46,151 @@ const Register = () => {
           ? localStorage.setItem("isTeacher", data._id)
           : localStorage.setItem("user", data._id);
       }
-      setAll(false)
-      setShow(true)
-      if(localStorage.getItem("isTeacher", data._id)){
-        setShow(true)
-      }   
+      setAll(false);
+      setShow(true);
+      if (localStorage.getItem("isTeacher", data._id)) {
+        setShow(true);
+      }
       toast.success("register Successfully");
       toast.warning("Please Fill the Extended Form");
     }
   };
- 
- 
+
   return (
-    <div>
-      <section class="user-area padding-top-100px padding-bottom-60px">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="title font-size-24"> Sign Up Now</h3>
-              <div class="card-item user-card card-item-list mt-4 mb-0">
-                <div class="card-body">
-                  <h3 class="card-title">Your Information</h3>
-                  
-                  <p class="card-meta"></p>
-                  <div class="d-flex justify-content-between pt-3">
-                    <ul class="list-items list-items-2 flex-grow-1">
-                      <li>
-                        <span>Email:</span>{" "}
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="text"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="Type your Email"
-                          required
-                        />
-                      </li>
-                      <li>
-                        <span>Phone:</span>{" "}
-                        <input
-                          class="form-control"
-                          type="number"
-                          name="text"
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          placeholder="Type your Phone"
-                          required
-                        />
-                      </li>
-                      <li>
-                        <span>Full Name:</span>{" "}
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="text"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          placeholder="Type your username"
-                          required
-                        />
-                      </li>
-                      <li>
-                        <span>University ID:</span>{" "}
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="text"
-                          value={u_id}
-                          onChange={(e) => setUid(e.target.value)}
-                          placeholder="Type your University ID"
-                          required
-                        />
-                      </li>
-                      <li>
-                        <span>Password:</span>{" "}
-                        <input
-                          class="form-control"
-                          type="password"
-                          name="text"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          placeholder="Type your Password"
-                          required
-                        />
-                      </li>
-                    </ul>
-                    <ul class="list-items flex-grow-1 pl-4">
-                      <li>
-                        <h3 class="title">
-                          Verification of your Entered Feilds
-                        </h3>
-                      </li>
-                      <li class="d-flex justify-content-between align-items-center">
-                        <span class="color-text-2 font-weight-medium mr-2">
-                          Name
-                        </span>
-                        <span class="theme-btn theme-btn-small theme-btn-rgb ">
-                          {name}
-                        </span>
-                      </li>
-                      <li class="d-flex justify-content-between align-items-center">
-                        <span class="color-text-2 font-weight-medium mr-2">
-                          Email
-                        </span>
-                        <span class="theme-btn theme-btn-small theme-btn-rgb">
-                          {email}
-                        </span>
-                      </li>
-                      <li class="d-flex justify-content-between align-items-center">
-                        <span class="color-text-2 font-weight-medium mr-2">
-                          ID Number
-                        </span>
-                        <span class="theme-btn theme-btn-small theme-btn-rgb">
-                          {u_id}
-                        </span>
-                      </li>
-                      <li class="d-flex justify-content-between align-items-center">
-                        <span class="color-text-2 font-weight-medium mr-2">
-                          Phone
-                        </span>
-                        <span class="theme-btn theme-btn-small theme-btn-rgb">
-                          {phone}
-                        </span>
-                      </li>                    
-                    </ul>
+    <>
+      <section className="listing-form section--padding">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9 mx-auto">
+              {!show && (
+                <>
+                  <div class="listing-header pb-4">
+                    <h3 class="title font-size-28 pb-2">
+                      SignUp To T&S Evaluation Form
+                    </h3>
+                    <p class="font-size-14">
+                      Enter Your Valid Information Then Click On Next
+                    </p>
+                    <p class="font-size-14">
+                      You Will Move To Anoter Step Where You Enter Your
+                      Information About Yourself
+                    </p>
                   </div>
-                  <button
-                    type="button"
-                    onClick={registerUser}
-                    className="theme-btn w-100"
-                  >
-                    Create Account
-                  </button>
-                </div>
-              </div>
+
+                  <div class="form-box">
+                    <div class="form-title-wrap">
+                      <h3 class="title">
+                        <i class="la la-user mr-2 text-gray"></i>Your
+                        information
+                      </h3>
+                    </div>
+                    <div class="form-content contact-form-action">
+                      <form method="post" class="row MultiFile-intercepted">
+                        <div class="col-lg-6 responsive-column">
+                          <div class="input-box">
+                            <label class="label-text">Your Email</label>
+                            <div class="form-group">
+                              <span class="la la-user form-icon"></span>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="text"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Type your Email"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 responsive-column">
+                          <div class="input-box">
+                            <label class="label-text">Your Phone Number</label>
+                            <div class="form-group">
+                              <span class="la la-envelope-o form-icon"></span>
+                              <input
+                                class="form-control"
+                                type="number"
+                                name="text"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                placeholder="Type your Phone"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 responsive-column">
+                          <div class="input-box">
+                            <label class="label-text">Your Full Name</label>
+                            <div class="form-group">
+                              <span class="la la-envelope-o form-icon"></span>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                placeholder="Type your username"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 responsive-column">
+                          <div class="input-box">
+                            <label class="label-text">Your Universty ID</label>
+                            <div class="form-group">
+                              <span class="la la-envelope-o form-icon"></span>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="text"
+                                value={u_id}
+                                onChange={(e) => setUid(e.target.value)}
+                                placeholder="Type your University ID"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 responsive-column">
+                          <div class="input-box">
+                            <label class="label-text">Your Password</label>
+                            <div class="form-group">
+                              <span class="la la-envelope-o form-icon"></span>
+                              <input
+                                class="form-control"
+                                type="password"
+                                name="text"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Type your Password"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 responsive-column">
+                          <button
+                            type="button"
+                            onClick={registerUser}
+                            className="theme-btn w-100"
+                          >
+                            Create Account
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </>
+              )}
+              {show && <ExtendedForm />}
             </div>
-          </div>  
-         
-          {show &&
-         <ExtendedForm/>        
-          }
-          
+          </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

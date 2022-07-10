@@ -7,14 +7,14 @@ const Comment = ({ data, api }) => {
   const [value, setValue] = useState("");
   const [studentId, setUserId] = useState(localStorage.getItem("id"));
   const [courseId, setCourseId] = useState([data._id]);
-  console.log(data.email)
-const teacherId = data._id
+  console.log(data.email);
+  const teacherId = data._id;
   const CommentC = async (e) => {
     e.preventDefault();
     if (!localStorage.getItem("token")) {
       toast.warning("You Need To Login First");
     } else {
-      const res = await fetch("https://fyptes.herokuapp.com/comment-" + api, {
+      const res = await fetch("http://localhost:5000/comment-" + api, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
@@ -22,7 +22,7 @@ const teacherId = data._id
           value,
           studentId,
           courseId,
-          teacherId
+          teacherId,
         }),
       });
       const data = await res.json();

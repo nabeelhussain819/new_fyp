@@ -13,11 +13,11 @@ const Header = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  return (<>
-       
+  return (
+    <>
       <header class="header-wrapper hidden-print wrapper">
         <header class="header-area ">
-        <div class="header-top-bar">
+          <div class="header-top-bar">
             <div class="container-fluid">
               <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -36,12 +36,10 @@ const Header = () => {
                           </a>
                         </li>
                         <li>
-                        <Login />
+                          <Login />
                         </li>
                         <li>
-                        <Link to="signup">
-                              Sign Up
-                            </Link>
+                          <Link to="signup">SIGN UP</Link>
                         </li>
                       </ul>
                     </div>
@@ -50,8 +48,8 @@ const Header = () => {
               </div>
             </div>
           </div>
-        
-          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-info">
+
+          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-light">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-12">
@@ -62,7 +60,7 @@ const Header = () => {
                           class="img-responsive"
                           src={logo1}
                           alt="logo.jpg"
-                          style={{width:"150px"}}
+                          style={{ width: "150px" }}
                         />
                       </Link>
                       <div class="menu-toggler">
@@ -87,51 +85,48 @@ const Header = () => {
                       <nav>
                         <ul>
                           <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/">HOME</Link>
                           </li>
                           <li>
                             <Link to="/">
-                              Pages
+                              PAGES
                               <ul class="dropdown-menu-item">
                                 <li>
-                                  <Link to="/teacher">Teachers</Link>
+                                  <Link to="/teacher">TEACHERS</Link>
                                 </li>
                                 <li>
-                                  <Link to="/course">Courses</Link>
+                                  <Link to="/course">COURSES</Link>
                                 </li>
                                 <li>
-                                  <Link to="/program">Programs</Link>
+                                  <Link to="/program">PROGRAMS</Link>
                                 </li>
                                 <li>
-                                  <Link to="/department">Department</Link>
+                                  <Link to="/department">DEPARTMENT</Link>
                                 </li>
                               </ul>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/blog">Gallery</Link>
+                            <Link to="/blog">GALLERY</Link>
                           </li>
                           <li>
-                            <Link to="/about">About Us</Link>
+                            <Link to="/about">ABOUT US</Link>
                           </li>
                           <li>
-                            <Link to="/contact">Contact Us</Link>
+                            <Link to="/contact">CONTACT US</Link>
                           </li>
                         </ul>
                       </nav>
                     </div>
-                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
-         
         </header>
-        
       </header>
       {show && (
-        <header class="header-wrapper bg-info">
+        <header class="header-wrapper">
           <div class="header-nav d-xl-none">
             <div class="container">
               <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
@@ -139,45 +134,53 @@ const Header = () => {
                   <p>Welcome you to T&S Evaluation System!</p>
                 </div>
                 <div class="header-menu-nav">
-                  <ul >
+                  <ul>
                     <li className="p-2">
-                      <Link to="/" class="text-white">
+                      <Link to="/" class="text-dark">
                         Home
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/teacher" class="text-white">Teachers</Link>
+                      <Link to="/teacher" class="text-dark">
+                        Teachers
+                      </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/course" class="text-white">Courses</Link>
+                      <Link to="/course" class="text-dark">
+                        Courses
+                      </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/program" class="text-white">Programs</Link>
+                      <Link to="/program" class="text-dark">
+                        Programs
+                      </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/department" class="text-white">Department</Link>
+                      <Link to="/department" class="text-dark">
+                        Department
+                      </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="about" class="text-white">
+                      <Link to="about" class="text-dark">
                         About
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="blog" class="text-white">
+                      <Link to="blog" class="text-dark">
                         Gellery
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="contact" class="text-white">
+                      <Link to="contact" class="text-dark">
                         Contact
                       </Link>
                     </li>
                     <li className="p-2">
-                    <Link to="signup" class="text-white">
-                              Sign Up
-                            </Link>
+                      <Link to="signup" class="text-dark">
+                        Sign Up
+                      </Link>
                     </li>
-                    <Login />    
+                    <Login />
                   </ul>
                 </div>
               </div>
@@ -186,7 +189,6 @@ const Header = () => {
         </header>
       )}
     </>
-    
   );
 };
 

@@ -28,9 +28,31 @@ const StudentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    comment: [
+    DepartmentComment: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "DepartmentComment",
+        required: false,
+      },
+    ],
+    SemesterComment: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "SemesterComment",
+        required: false,
+      },
+    ],
+    CourseComment: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "CourseComment",
+        required: false,
+      },
+    ],
+    TeacherComment: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "TeacherComment",
         required: false,
       },
     ],

@@ -698,12 +698,13 @@ body {
   color: #fff;
   transition: 0.5s;
   background-size: 200% auto;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   line-height: 45px;
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: 0 0 20px #eee;
   text-align: center;
-  text-transform: uppercase;
   background-image: linear-gradient(to right, #0099F7 0%, #F11712  51%, #0099F7  100%);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -714,7 +715,7 @@ body {
   display: block;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  border-radius: 10px;
+  border-radius: 1.5rem;
   border: 1px solid #efeff0;
   font-weight: 500;
 }
@@ -1390,6 +1391,8 @@ body {
 .title {
   font-size: 18px;
   color: #0d233e;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .curve-shape {
   position: relative;
