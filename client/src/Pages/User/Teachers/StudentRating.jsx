@@ -45,7 +45,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -83,10 +83,10 @@ function StudentRating({ data }) {
   return (
     <>
       <button
-        class="btn-transparent btn-sm p-2 border-0"
+        className="btn-transparent btn-sm p-2 border-0"
         onClick={() => setModalShow(true)}
       >
-        <i class="la la-edit"></i>
+        <i className="la la-edit"></i>
       </button>
 
       <MyVerticallyCenteredModal

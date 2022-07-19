@@ -75,21 +75,21 @@ const Qec = () => {
   }, []);
   return (
     <>
-      <div class="dashboard-bread gradient-bg-gray ">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="breadcrumb-content">
-                <div class="section-heading">
-                  <h2 class="sec__title font-size-30 text-dark">
+      <div className="dashboard-bread gradient-bg-gray ">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="breadcrumb-content">
+                <div className="section-heading">
+                  <h2 className="sec__title font-size-30 text-dark">
                     EVALUATION FORM
                   </h2>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="text-right">
-                <ul class="list-items">
+            <div className="col-lg-6">
+              <div className="text-right">
+                <ul className="list-items">
                   <img src={logo1} alt="logo" style={{ width: "200px" }} />
                 </ul>
               </div>
@@ -97,27 +97,27 @@ const Qec = () => {
           </div>
         </div>
       </div>
-      <div class="pb-0">
-        <div class="container pt-4">
-          <div class="col-lg-12 pt-4">
-            <div class="form-box">
-              <div class="form-title-wrap">
-                <h3 class="title">
-                  <i class="la la-user mr-2 text-gray"></i>About Student
+      <div className="pb-0">
+        <div className="container pt-4">
+          <div className="col-lg-12 pt-4">
+            <div className="form-box">
+              <div className="form-title-wrap">
+                <h3 className="title">
+                  <i className="la la-user mr-2 text-gray"></i>About Student
                 </h3>
               </div>
-              <div class="form-content contact-form-action">
-                <form method="post" class="row MultiFile-intercepted">
+              <div className="form-content contact-form-action">
+                <form method="post" className="row MultiFile-intercepted">
                   {user.map((data) => {
                     return (
                       <>
-                        <div class="col-lg-6">
-                          <div class="input-box">
-                            <label class="label-text">Full Name</label>
-                            <div class="form-group">
-                              <span class="la la-user form-icon"></span>
+                        <div className="col-lg-6">
+                          <div className="input-box">
+                            <label className="label-text">Full Name</label>
+                            <div className="form-group">
+                              <span className="la la-user form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 value={data.name}
                                 placeholder="+1(1)8547632521"
@@ -125,13 +125,13 @@ const Qec = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6">
-                          <div class="input-box">
-                            <label class="label-text">Phone</label>
-                            <div class="form-group">
-                              <span class="la la-phone form-icon"></span>
+                        <div className="col-lg-6">
+                          <div className="input-box">
+                            <label className="label-text">Phone</label>
+                            <div className="form-group">
+                              <span className="la la-phone form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 value={data.phone}
                                 placeholder="+1(1)1147521433"
@@ -139,13 +139,13 @@ const Qec = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6">
-                          <div class="input-box">
-                            <label class="label-text">Email</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6">
+                          <div className="input-box">
+                            <label className="label-text">Email</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 value={data.email}
                                 placeholder="Email for customer inquiries"
@@ -153,13 +153,13 @@ const Qec = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6">
-                          <div class="input-box">
-                            <label class="label-text">University ID</label>
-                            <div class="form-group">
-                              <span class="la la-globe form-icon"></span>
+                        <div className="col-lg-6">
+                          <div className="input-box">
+                            <label className="label-text">University ID</label>
+                            <div className="form-group">
+                              <span className="la la-globe form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 value={data.u_id}
                                 placeholder="https://www.techydevs.com/"
@@ -176,30 +176,30 @@ const Qec = () => {
           </div>
         </div>
       </div>
-      <div class="pb-0">
-        <div class="container pt-4">
-          <div class="col-lg-12 pt-4">
-            <div class="form-box">
-              <div class="form-title-wrap">
-                <h3 class="title">
-                  <i class="la la-user mr-2 text-gray"></i>About Course
+      <div className="pb-0">
+        <div className="container pt-4">
+          <div className="col-lg-12 pt-4">
+            <div className="form-box">
+              <div className="form-title-wrap">
+                <h3 className="title">
+                  <i className="la la-user mr-2 text-gray"></i>About Course
                 </h3>
               </div>
-              <div class="form-content contact-form-action">
-                <form method="post" class="row MultiFile-intercepted">
+              <div className="form-content contact-form-action">
+                <form method="post" className="row MultiFile-intercepted">
                   {course.map((data) => {
                     return (
                       <>
                         {data._id == courseId ? (
                           <>
                             {" "}
-                            <div class="col-lg-6">
-                              <div class="input-box">
-                                <label class="label-text">Course</label>
-                                <div class="form-group">
-                                  <span class="la la-user form-icon"></span>
+                            <div className="col-lg-6">
+                              <div className="input-box">
+                                <label className="label-text">Course</label>
+                                <div className="form-group">
+                                  <span className="la la-user form-icon"></span>
                                   <input
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
                                     value={data.name}
                                     placeholder="+1(1)8547632521"
@@ -207,13 +207,13 @@ const Qec = () => {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-6">
-                              <div class="input-box">
-                                <label class="label-text">Teacher</label>
-                                <div class="form-group">
-                                  <span class="la la-phone form-icon"></span>
+                            <div className="col-lg-6">
+                              <div className="input-box">
+                                <label className="label-text">Teacher</label>
+                                <div className="form-group">
+                                  <span className="la la-phone form-icon"></span>
                                   <input
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
                                     value={data.teacherId.map((data) =>
                                       data._id == teacherId ? data.name : null
@@ -223,13 +223,13 @@ const Qec = () => {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-6">
-                              <div class="input-box">
-                                <label class="label-text">Semester</label>
-                                <div class="form-group">
-                                  <span class="la la-envelope-o form-icon"></span>
+                            <div className="col-lg-6">
+                              <div className="input-box">
+                                <label className="label-text">Semester</label>
+                                <div className="form-group">
+                                  <span className="la la-envelope-o form-icon"></span>
                                   <input
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
                                     value={data.semesterId.map(
                                       (data) => "semester" - data.name
@@ -239,13 +239,13 @@ const Qec = () => {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-6">
-                              <div class="input-box">
-                                <label class="label-text">Code</label>
-                                <div class="form-group">
-                                  <span class="la la-globe form-icon"></span>
+                            <div className="col-lg-6">
+                              <div className="input-box">
+                                <label className="label-text">Code</label>
+                                <div className="form-group">
+                                  <span className="la la-globe form-icon"></span>
                                   <input
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
                                     value={data.code}
                                     placeholder="https://www.techydevs.com/"
@@ -264,23 +264,23 @@ const Qec = () => {
           </div>
         </div>
       </div>
-      <div class="pb-0">
-        <div class="container pt-4">
-          <div class="col-lg-12 pt-4">
-            <div class="form-box">
-              <div class="form-title-wrap">
-                <h3 class="title">
-                  <i class="la la-building-o mr-2 text-gray"></i>Information
+      <div className="pb-0">
+        <div className="container pt-4">
+          <div className="col-lg-12 pt-4">
+            <div className="form-box">
+              <div className="form-title-wrap">
+                <h3 className="title">
+                  <i className="la la-building-o mr-2 text-gray"></i>Information
                   about your Instructor
                 </h3>
               </div>
-              <div class="form-content contact-form-action">
-                <form method="post" class="row MultiFile-intercepted">
-                  <div class="col-lg-4">
-                    <div class="input-box">
-                      <label class="label-text">Rate The Teacher</label>
-                      <div class="rate-stars-option">
-                        <span class="ratings d-flex align-items-center mr-1">
+              <div className="form-content contact-form-action">
+                <form method="post" className="row MultiFile-intercepted">
+                  <div className="col-lg-4">
+                    <div className="input-box">
+                      <label className="label-text">Rate The Teacher</label>
+                      <div className="rate-stars-option">
+                        <span className="ratings d-flex align-items-center mr-1">
                           <input
                             type="checkbox"
                             id="lst1"
@@ -320,15 +320,15 @@ const Qec = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-8">
-                    <div class="input-box">
-                      <label class="label-text">
+                  <div className="col-lg-8">
+                    <div className="input-box">
+                      <label className="label-text">
                         Select a Teacher Category
                       </label>
-                      <div class="form-group">
-                        <span class="la la-calendar form-icon"></span>
+                      <div className="form-group">
+                        <span className="la la-calendar form-icon"></span>
                         <select
-                          class="select-contain-select form-control"
+                          className="select-contain-select form-control"
                           tabindex="-98"
                           onChange={(e) => result(e.target.value)}
                         >
@@ -342,33 +342,33 @@ const Qec = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="input-box">
-                      <label class="label-text mb-0 line-height-20">
+                  <div className="col-lg-12">
+                    <div className="input-box">
+                      <label className="label-text mb-0 line-height-20">
                         Describe Your Teacher In Your Own Word(Optional)
                       </label>
-                      <p class="font-size-13 mb-3 line-height-20">
+                      <p className="font-size-13 mb-3 line-height-20">
                         400 character limit
                       </p>
-                      <div class="form-group">
-                        <span class="la la-pencil form-icon"></span>
+                      <div className="form-group">
+                        <span className="la la-pencil form-icon"></span>
                         <textarea
-                          class="message-control form-control"
+                          className="message-control form-control"
                           name="message"
                           placeholder="In English only, no HTML, no web or email address, no ALL CAPS           "
                         ></textarea>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor was well prepared for class *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-1"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -377,12 +377,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>yes</span>
                         </label>
                         <label
                           for="radio-2"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -391,21 +391,21 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>No</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         Individual class meetings were well prepared *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-3"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -414,12 +414,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>On site</span>
                         </label>
                         <label
                           for="radio-4"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -428,21 +428,21 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>None</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor used class time effectively *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-5"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -451,12 +451,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Yes</span>
                         </label>
                         <label
                           for="radio-6"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -465,22 +465,22 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>No</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor was organized, well prepared, and used
                         class time efficiently *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-7"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -489,12 +489,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Included in room rate</span>
                         </label>
                         <label
                           for="radio-8"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -503,22 +503,22 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Additional Fee</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor communicated clearly and was easy to
                         understand *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-9"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -527,12 +527,12 @@ const Qec = () => {
                             value="2"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Daily</span>
                         </label>
                         <label
                           for="radio-10"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -541,12 +541,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Weekly</span>
                         </label>
                         <label
                           for="radio-11"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -555,22 +555,22 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Bi-weekly</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor encouraged student participation in class
                         *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-13"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -579,12 +579,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>24-hour staffing</span>
                         </label>
                         <label
                           for="radio-14"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -593,22 +593,22 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Limited hours staffing</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor presented course material in a clear
                         manner that facilitated understanding *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-126"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -617,12 +617,12 @@ const Qec = () => {
                             value="2"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>All en suite</span>
                         </label>
                         <label
                           for="radio-127"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -631,12 +631,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Some en suite</span>
                         </label>
                         <label
                           for="radio-128"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -645,22 +645,22 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Shared</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor effectively organized and facilitated
                         well-run learning activities *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-116"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -669,12 +669,12 @@ const Qec = () => {
                             value="2"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>All en suite</span>
                         </label>
                         <label
                           for="radio-117"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -683,12 +683,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Some en suite</span>
                         </label>
                         <label
                           for="radio-118"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -697,21 +697,21 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Shared</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor’s teaching methods were effective *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-16"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -720,12 +720,12 @@ const Qec = () => {
                             value="2"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>All en suite</span>
                         </label>
                         <label
                           for="radio-17"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -734,12 +734,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Some en suite</span>
                         </label>
                         <label
                           for="radio-18"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -748,21 +748,21 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Shared</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text text-color-6">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text text-color-6">
                         The instructor’s teaching methods aided my learning *
                       </label>
-                      <div class="form-group d-flex align-items-center">
+                      <div className="form-group d-flex align-items-center">
                         <label
                           for="radio-19"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -771,12 +771,12 @@ const Qec = () => {
                             value="2"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>All en suite</span>
                         </label>
                         <label
                           for="radio-20"
-                          class="radio-trigger mb-0 font-size-14 mr-3"
+                          className="radio-trigger mb-0 font-size-14 mr-3"
                         >
                           <input
                             type="radio"
@@ -785,12 +785,12 @@ const Qec = () => {
                             value="1"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Some en suite</span>
                         </label>
                         <label
                           for="radio-21"
-                          class="radio-trigger mb-0 font-size-14"
+                          className="radio-trigger mb-0 font-size-14"
                         >
                           <input
                             type="radio"
@@ -799,7 +799,7 @@ const Qec = () => {
                             value="0"
                             onChange={(e) => result(e.target.value)}
                           />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                           <span>Shared</span>
                         </label>
                       </div>
@@ -812,24 +812,24 @@ const Qec = () => {
         </div>
       </div>
 
-      <div class="pb-0">
-        <div class="container pt-4">
-          <div class="col-lg-12 pt-4">
-            <div class="form-box">
-              <div class="form-title-wrap">
-                <h3 class="title">
-                  <i class="la la-gear mr-2 text-gray"></i>Ability And
+      <div className="pb-0">
+        <div className="container pt-4">
+          <div className="col-lg-12 pt-4">
+            <div className="form-box">
+              <div className="form-title-wrap">
+                <h3 className="title">
+                  <i className="la la-gear mr-2 text-gray"></i>Ability And
                   Limitations
                 </h3>
               </div>
-              <div class="form-content contact-form-action">
-                <form method="post" class="row MultiFile-intercepted">
-                  <div class="col-lg-6">
-                    <div class="custom-checkbox">
+              <div className="form-content contact-form-action">
+                <form method="post" className="row MultiFile-intercepted">
+                  <div className="col-lg-6">
+                    <div className="custom-checkbox">
                       <input type="checkbox" id="AirportTransportation" />
                       <label for="AirportTransportation">Well Influnced</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="BarLounge"
@@ -838,7 +838,7 @@ const Qec = () => {
                       />
                       <label for="BarLounge">Well Dressed</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="Beach"
@@ -847,7 +847,7 @@ const Qec = () => {
                       />
                       <label for="Beach">Punctual</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="BeverageSelection"
@@ -856,7 +856,7 @@ const Qec = () => {
                       />
                       <label for="BeverageSelection">Clearity In Voice</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="SwimmingPool"
@@ -865,7 +865,7 @@ const Qec = () => {
                       />
                       <label for="SwimmingPool">Understandable</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="WIFI"
@@ -874,7 +874,7 @@ const Qec = () => {
                       />
                       <label for="WIFI"></label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="Coffee"
@@ -883,7 +883,7 @@ const Qec = () => {
                       />
                       <label for="Coffee">Coffee</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="AirConditioning"
@@ -892,7 +892,7 @@ const Qec = () => {
                       />
                       <label for="AirConditioning">Air Conditioning</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="Entertainment"
@@ -901,7 +901,7 @@ const Qec = () => {
                       />
                       <label for="Entertainment">Entertainment</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="ElevatorInBuilding"
@@ -913,8 +913,8 @@ const Qec = () => {
                       </label>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="custom-checkbox">
+                  <div className="col-lg-6">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="WheelchairAccess"
@@ -923,7 +923,7 @@ const Qec = () => {
                       />
                       <label for="WheelchairAccess">Wheelchair access</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="FitnessFacility"
@@ -932,7 +932,7 @@ const Qec = () => {
                       />
                       <label for="FitnessFacility">Fitness Facility</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="Breakfast"
@@ -941,7 +941,7 @@ const Qec = () => {
                       />
                       <label for="Breakfast">Breakfast</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="HandicapAccessible"
@@ -952,7 +952,7 @@ const Qec = () => {
                         Handicap Accessible
                       </label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="PetsAllowed"
@@ -961,7 +961,7 @@ const Qec = () => {
                       />
                       <label for="PetsAllowed">Pets Allowed</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="SuitableForEvents"
@@ -970,7 +970,7 @@ const Qec = () => {
                       />
                       <label for="SuitableForEvents">Suitable For Events</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="Restaurant"
@@ -979,7 +979,7 @@ const Qec = () => {
                       />
                       <label for="Restaurant">Restaurant</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="Doorman"
@@ -988,7 +988,7 @@ const Qec = () => {
                       />
                       <label for="Doorman">Doorman</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="FreeParking"
@@ -997,7 +997,7 @@ const Qec = () => {
                       />
                       <label for="FreeParking">Free Parking</label>
                     </div>
-                    <div class="custom-checkbox">
+                    <div className="custom-checkbox">
                       <input
                         type="checkbox"
                         id="WineBar"
@@ -1014,7 +1014,7 @@ const Qec = () => {
           {show && (
             <Link
               to={"/qec-graph"}
-              class="theme-btn"
+              className="theme-btn"
               state={{
                 rating: rating,
                 value: value,

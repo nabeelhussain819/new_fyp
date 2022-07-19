@@ -27,21 +27,21 @@ const Students = () => {
 
   return (
     <div className="dashboard-content-wrap">
-      <div class="dashboard-bread dashboard--bread dashboard-bread-2">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="breadcrumb-content">
-                <div class="section-heading">
-                  <h2 class="sec__title font-size-30 text-white">Students</h2>
+      <div className="dashboard-bread dashboard--bread dashboard-bread-2">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="breadcrumb-content">
+                <div className="section-heading">
+                  <h2 className="sec__title font-size-30 text-white">Students</h2>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="breadcrumb-list text-right">
-                <ul class="list-items">
+            <div className="col-lg-6">
+              <div className="breadcrumb-list text-right">
+                <ul className="list-items">
                   <li>
-                    <Link to="/" class="text-white">
+                    <Link to="/" className="text-white">
                       Home
                     </Link>
                   </li>
@@ -59,21 +59,21 @@ const Students = () => {
             <div className="col-lg-12">
               <div className="form-box">
                 <div className="form-title-wrap">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h3 class="title">Students Results</h3>
+                  <div className="d-flex align-items-center justify-content-between">
+                    <h3 className="title">Students Results</h3>
                     <input
                       type="text"
                       className="form-control col-lg-4"
                       placeholder="Search Students"
                       onChange={searchData}
                     />
-                    <div class="select-contain">
-                      <div class="dropdown bootstrap-select select-contain-select"></div>
+                    <div className="select-contain">
+                      <div className="dropdown bootstrap-select select-contain-select"></div>
                     </div>
                   </div>
                 </div>
-                <div class="table-form table-responsive">
-                  <table class="table">
+                <div className="table-form table-responsive">
+                  <table className="table">
                     <thead>
                       <tr>
                         <th scope="col">No</th>
@@ -90,21 +90,21 @@ const Students = () => {
                           <tr>
                             <th scope="row">{i + 1}</th>
                             <td>
-                              <div class="table-content">
-                                <h3 class="title">{data.name}</h3>
+                              <div className="table-content">
+                                <h3 className="title">{data.name}</h3>
                               </div>
                             </td>
                             <td>{data.u_id}</td>
                             <td>{data.email}</td>
                             <td>{data.phone}</td>
                             <td>
-                              <div class="table-content">
+                              <div className="table-content">
                                 <Link
                                   to={"/details/" + data._id}
-                                  class="bg-transparent border-0 p-1 "
+                                  className="bg-transparent border-0 p-1 "
                                   state={{ from: data, api: "programs" }}
                                 >
-                                  <i class="la la-eye"></i>
+                                  <i className="la la-eye"></i>
                                 </Link>
                               </div>
                             </td>

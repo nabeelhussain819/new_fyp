@@ -150,23 +150,23 @@ export default function ExtendedForm() {
   }, []);
   return (
     <>
-      <div class="row ">
-        <div class="col-lg-12 ">
-          <div class="form-box">
-            <div class="form-title-wrap">
-              <h3 class="title">
-                <i class="la la-gear mr-2 text-gray"></i>Add Yours Services
+      <div className="row ">
+        <div className="col-lg-12 ">
+          <div className="form-box">
+            <div className="form-title-wrap">
+              <h3 className="title">
+                <i className="la la-gear mr-2 text-gray"></i>Add Yours Services
               </h3>
               <hr />
             </div>
-            <div class="form-content contact-form-action">
-              <div class="col-lg-12 responsive-column">
-                <div class="input-box">
-                  <label class="label-text">1) Select Department</label>
-                  <div class="form-group">
-                    <span class="la la-briefcase form-icon"></span>
+            <div className="form-content contact-form-action">
+              <div className="col-lg-12 responsive-column">
+                <div className="input-box">
+                  <label className="label-text">1) Select Department</label>
+                  <div className="form-group">
+                    <span className="la la-briefcase form-icon"></span>
                     <select
-                      class="select-contain-select form-control"
+                      className="select-contain-select form-control"
                       tabindex="-98"
                       onChange={(e) => handleNext(e.target.value)}
                     >
@@ -182,13 +182,13 @@ export default function ExtendedForm() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12 responsive-column">
-                <div class="input-box">
-                  <label class="label-text">2) Select Session</label>
-                  <div class="form-group">
-                    <span class="la la-briefcase form-icon"></span>
+              <div className="col-lg-12 responsive-column">
+                <div className="input-box">
+                  <label className="label-text">2) Select Session</label>
+                  <div className="form-group">
+                    <span className="la la-briefcase form-icon"></span>
                     <select
-                      class="select-contain-select form-control"
+                      className="select-contain-select form-control"
                       tabindex="-98"
                       onChange={(e) => handleNextSession(e.target.value)}
                     >
@@ -216,13 +216,13 @@ export default function ExtendedForm() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12 responsive-column">
-                <div class="input-box">
-                  <label class="label-text">3) Select Program</label>
-                  <div class="form-group">
-                    <span class="la la-briefcase form-icon"></span>
+              <div className="col-lg-12 responsive-column">
+                <div className="input-box">
+                  <label className="label-text">3) Select Program</label>
+                  <div className="form-group">
+                    <span className="la la-briefcase form-icon"></span>
                     <select
-                      class="select-contain-select form-control"
+                      className="select-contain-select form-control"
                       tabindex="-98"
                       onChange={(e) => handleNextProgram(e.target.value)}
                     >
@@ -251,13 +251,13 @@ export default function ExtendedForm() {
                 </div>
               </div>
               {localStorage.getItem("isTeacher") ? null : (
-                <div class="col-lg-12 responsive-column">
-                  <div class="input-box">
-                    <label class="label-text">4) Select Semester</label>
-                    <div class="form-group">
-                      <span class="la la-briefcase form-icon"></span>
+                <div className="col-lg-12 responsive-column">
+                  <div className="input-box">
+                    <label className="label-text">4) Select Semester</label>
+                    <div className="form-group">
+                      <span className="la la-briefcase form-icon"></span>
                       <select
-                        class="select-contain-select form-control"
+                        className="select-contain-select form-control"
                         tabindex="-98"
                         onChange={(e) => handleNextSemester(e.target.value)}
                       >
@@ -286,9 +286,9 @@ export default function ExtendedForm() {
                   </div>
                 </div>
               )}
-              <div class="col-lg-12">
-                <div class="input-box">
-                  <label class="label-text">
+              <div className="col-lg-12">
+                <div className="input-box">
+                  <label className="label-text">
                     5) Select Your Course (Click On The Course)
                   </label>
                   {course && (
@@ -323,7 +323,7 @@ export default function ExtendedForm() {
                                     {res.map(
                                       (item) =>
                                         item == data._id && (
-                                          <i class="la la-check-circle mr-1"></i>
+                                          <i className="la la-check-circle mr-1"></i>
                                         )
                                     )}
                                   </button>
@@ -333,7 +333,7 @@ export default function ExtendedForm() {
                               <>
                                 {data == false ? null : (
                                   <>
-                                    <div class="col-lg-12 responsive-column--m">
+                                    <div className="col-lg-12 responsive-column--m">
                                       <ul>
                                         {data.courseId.map((index, i) => {
                                           return (
@@ -350,7 +350,7 @@ export default function ExtendedForm() {
                                                 {res.map(
                                                   (item) =>
                                                     item == index._id && (
-                                                      <i class="la la-check-circle mr-1"></i>
+                                                      <i className="la la-check-circle mr-1"></i>
                                                     )
                                                 )}
                                               </li>
@@ -373,7 +373,7 @@ export default function ExtendedForm() {
               <div className="col-lg-12">
                 {fullscreen && (
                   <button
-                    class="theme-btn col-lg-12"
+                    className="theme-btn col-lg-12"
                     onClick={() => extendedRegisterUser()}
                   >
                     Done!

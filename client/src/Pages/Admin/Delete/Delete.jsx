@@ -32,10 +32,10 @@ function Delete({ id, api }) {
     <>
       <button
         variant="danger"
-        class="bg-transparent border-0 hidden-print p-1"
+        className="bg-transparent border-0 hidden-print p-1"
         onClick={onDelete}
       >
-        <i class="la la-trash mr-1"></i>
+        <i className="la la-trash mr-1"></i>
       </button>
     </>
   );

@@ -21,20 +21,20 @@ const Comment = () => {
   );
   return (
     <div>
-      <section class="breadcrumb-area bread-bg">
-        <div class="breadcrumb-wrap padding-right-100px padding-left-100px">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title text-white">Comments</h2>
+      <section className="breadcrumb-area bread-bg">
+        <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title text-white">Comments</h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>
                       <a href="/dashboard">Dashboard</a>
                     </li>
@@ -45,9 +45,9 @@ const Comment = () => {
             </div>
           </div>
         </div>
-        <div class="bread-svg-box">
+        <div className="bread-svg-box">
           <svg
-            class="hero-svg"
+            className="hero-svg"
             viewBox="0 0 500 150"
             preserveAspectRatio="none"
           >
@@ -56,79 +56,79 @@ const Comment = () => {
         </div>
       </section>
       <div>
-        <div class="container-fluid">
-          <div class="dashboard-card">
-            <div class="">
-              <h3 class="title">Select Comments</h3>
+        <div className="container-fluid">
+          <div className="dashboard-card">
+            <div className="">
+              <h3 className="title">Select Comments</h3>
             </div>
 
-            <div class="form-content">
-              <div class="row">
-                <div class="col-lg-3 responsive-column-l">
-                  <div class="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-1 pb-0">
-                    <div class="d-flex pb-3 justify-content-between">
-                      <div class="info-content">
-                        <p class="info__desc">Department Comments</p>
+            <div className="form-content">
+              <div className="row">
+                <div className="col-lg-3 responsive-column-l">
+                  <div className="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-1 pb-0">
+                    <div className="d-flex pb-3 justify-content-between">
+                      <div className="info-content">
+                        <p className="info__desc">Department Comments</p>
                       </div>
                       <button
                         className="bg-transparent border-0 p-0"
                         onClick={() => getData("departments")}
                       >
-                        <div class="info-icon icon-element bg-white text-color-5">
-                          <i class="la la-home"></i>
+                        <div className="info-icon icon-element bg-white text-color-5">
+                          <i className="la la-home"></i>
                         </div>
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 responsive-column-l">
-                  <div class="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-3 pb-0">
-                    <div class="d-flex pb-3 justify-content-between">
-                      <div class="info-content">
-                        <p class="info__desc">Teachers Comments</p>
+                <div className="col-lg-3 responsive-column-l">
+                  <div className="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-3 pb-0">
+                    <div className="d-flex pb-3 justify-content-between">
+                      <div className="info-content">
+                        <p className="info__desc">Teachers Comments</p>
                       </div>
 
                       <button
                         className="bg-transparent border-0 p-0"
                         onClick={() => getData("teachers")}
                       >
-                        <div class="info-icon icon-element bg-white text-color-5">
-                          <i class="la la-users"></i>
+                        <div className="info-icon icon-element bg-white text-color-5">
+                          <i className="la la-users"></i>
                         </div>
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 responsive-column-l">
-                  <div class="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-4 pb-0">
-                    <div class="d-flex pb-3 justify-content-between">
-                      <div class="info-content">
-                        <p class="info__desc">Courses Comments</p>
+                <div className="col-lg-3 responsive-column-l">
+                  <div className="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-4 pb-0">
+                    <div className="d-flex pb-3 justify-content-between">
+                      <div className="info-content">
+                        <p className="info__desc">Courses Comments</p>
                       </div>
 
                       <button
                         className="bg-transparent border-0 p-0"
                         onClick={() => getData("courses")}
                       >
-                        <div class="info-icon icon-element bg-white text-color-5">
-                          <i class="la la-book"></i>
+                        <div className="info-icon icon-element bg-white text-color-5">
+                          <i className="la la-book"></i>
                         </div>
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 responsive-column-l">
-                  <div class="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-5 pb-2">
-                    <div class="d-flex pb-3 justify-content-between">
-                      <div class="info-content">
-                        <p class="info__desc">Semesters Comments</p>
+                <div className="col-lg-3 responsive-column-l">
+                  <div className="icon-box icon-layout-2 dashboard-icon-box dashboard--icon-box bg-5 pb-2">
+                    <div className="d-flex pb-3 justify-content-between">
+                      <div className="info-content">
+                        <p className="info__desc">Semesters Comments</p>
                       </div>
                       <button
                         className="bg-transparent border-0 p-0"
                         onClick={() => getData("semesters")}
                       >
-                        <div class="info-icon icon-element bg-white text-color-5">
-                          <i class="la la-dashboard"></i>
+                        <div className="info-icon icon-element bg-white text-color-5">
+                          <i className="la la-dashboard"></i>
                         </div>
                       </button>
                     </div>
@@ -139,11 +139,11 @@ const Comment = () => {
           </div>
         </div>
       </div>
-      <section class="card-area ">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="filter-wrap ">
+      <section className="card-area ">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="filter-wrap ">
                 <div className="filter-top d-flex align-items-center justify-content-between">
                   <div>
                     <h3 className="font-size-24">
@@ -160,8 +160,8 @@ const Comment = () => {
               </div>
             </div>
           </div>
-          <div class="table-form table-responsive">
-            <table class="table">
+          <div className="table-form table-responsive">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col">No</th>
@@ -174,8 +174,8 @@ const Comment = () => {
                     <tr>
                       <td>{i + 1}</td>
                       <td>
-                        <div class="table-content">
-                          <h3 class="title">{data.comment}</h3>
+                        <div className="table-content">
+                          <h3 className="title">{data.comment}</h3>
                         </div>
                       </td>
                     </tr>

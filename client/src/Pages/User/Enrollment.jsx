@@ -66,15 +66,15 @@ export default function Enrollment() {
   }, []);
   return (
     <>
-      <section class="breadcrumb-area gradient-bg-gray before-none">
-        <div class="breadcrumb-wrap">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="breadcrumb-content d-flex flex-wrap align-items-center justify-content-between">
-                  <div class="section-heading text-left">
-                    <h2 class="sec__title">Enroll Courses</h2>
-                    <p class="sec__desc font-weight-regular pb-2">
+      <section className="breadcrumb-area gradient-bg-gray before-none">
+        <div className="breadcrumb-wrap">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="breadcrumb-content d-flex flex-wrap align-items-center justify-content-between">
+                  <div className="section-heading text-left">
+                    <h2 className="sec__title">Enroll Courses</h2>
+                    <p className="sec__desc font-weight-regular pb-2">
                       Select Your New Courses To Enroll
                     </p>
                   </div>
@@ -88,23 +88,23 @@ export default function Enrollment() {
         <div className="container">
           <div className="row">
             <div className="col-lg-9 mx-auto">
-              <div class="form-box">
-                <div class="form-title-wrap">
-                  <h3 class="title">
-                    <i class="la la-user mr-2 text-gray"></i>Your information
+              <div className="form-box">
+                <div className="form-title-wrap">
+                  <h3 className="title">
+                    <i className="la la-user mr-2 text-gray"></i>Your information
                   </h3>
                 </div>
                 {name.map((data, i) => {
                   return (
-                    <div class="form-content contact-form-action">
-                      <div class="row MultiFile-intercepted">
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Name</label>
-                            <div class="form-group">
-                              <span class="la la-user form-icon"></span>
+                    <div className="form-content contact-form-action">
+                      <div className="row MultiFile-intercepted">
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Name</label>
+                            <div className="form-group">
+                              <span className="la la-user form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 name="text"
                                 value={data.name}
@@ -112,13 +112,13 @@ export default function Enrollment() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Email</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Email</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="email"
                                 name="email"
                                 value={data.email}
@@ -126,13 +126,13 @@ export default function Enrollment() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Department</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Department</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="email"
                                 name="email"
                                 value={data.deptId.map((data) => data.name)}
@@ -140,13 +140,13 @@ export default function Enrollment() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Session</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Session</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="email"
                                 name="email"
                                 value={data.sessionId.map((data) => data.name)}
@@ -154,13 +154,13 @@ export default function Enrollment() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Program</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Program</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="email"
                                 name="email"
                                 value={data.programId.map((data) => data.name)}
@@ -168,11 +168,11 @@ export default function Enrollment() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Select Semester</label>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Select Semester</label>
                             <select
-                              class="select-contain-select form-control"
+                              className="select-contain-select form-control"
                               tabindex="-98"
                               onChange={(e) => GetCourses(e.target.value)}
                             >
@@ -198,13 +198,13 @@ export default function Enrollment() {
                         </div>
                         {formValues.map((element, index) => (
                           <>
-                            <div class="col-lg-6 responsive-column">
-                              <div class="input-box">
-                                <label class="label-text">
+                            <div className="col-lg-6 responsive-column">
+                              <div className="input-box">
+                                <label className="label-text">
                                   Select Course({index + 1}):
                                 </label>
                                 <select
-                                  class="select-contain-select form-control"
+                                  className="select-contain-select form-control"
                                   tabindex="-98"
                                   onChange={(e) => setCourseId(e.target.value)}
                                 >
@@ -226,7 +226,7 @@ export default function Enrollment() {
                               </div>
                             </div>
                             <div className="col-lg-6 responsive-column">
-                              <label class="label-text">
+                              <label className="label-text">
                                 Click Add To Enroll in Course!
                               </label>
                               <div className="input-box mt-2">

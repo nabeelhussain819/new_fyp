@@ -31,7 +31,7 @@ function Logout() {
           centered
           onClick={() => handleShow(v)}
         >
-          <i class="la la-power-off mr-2 text-color-11"></i>LogOut
+          <i className="la la-power-off mr-2 text-color-11"></i>LogOut
           {typeof v === "string" && `below ${v.split("-")[0]}`}
         </button>
       ))}

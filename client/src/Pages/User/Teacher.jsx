@@ -21,20 +21,20 @@ const Teacher = () => {
 
   return (
     <div>
-      <section class="breadcrumb-area bread-bg">
-        <div class="breadcrumb-wrap padding-right-100px padding-left-100px">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title text-white">Available Teachers</h2>
+      <section className="breadcrumb-area bread-bg">
+        <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title text-white">Available Teachers</h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>
                       <a href="/dashboard">Home</a>
                     </li>
@@ -44,16 +44,16 @@ const Teacher = () => {
               </div>
             </div>
           </div>
-          <div class="bread-svg-box">
-        <svg class="hero-svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+          <div className="bread-svg-box">
+        <svg className="hero-svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path></svg>
         </div>
         </div>
       </section>
-      <section class="card-area pt-4 bg-817">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="filter-wrap ">
+      <section className="card-area pt-4 bg-817">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="filter-wrap ">
                 <div className="filter-top d-flex align-items-center justify-content-between">
                   <div>
                     <h3 className="font-size-24">

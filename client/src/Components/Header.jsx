@@ -15,23 +15,23 @@ const Header = () => {
 
   return (
     <>
-      <header class="header-wrapper hidden-print wrapper">
-        <header class="header-area ">
-          <div class="header-top-bar">
-            <div class="container-fluid">
-              <div class="row align-items-center">
-                <div class="col-lg-12">
-                  <div class="header-top-content">
-                    <div class="header-left">
-                      <ul class="list-items">
+      <header className="header-wrapper hidden-print wrapper">
+        <header className="header-area ">
+          <div className="header-top-bar">
+            <div className="container-fluid">
+              <div className="row align-items-center">
+                <div className="col-lg-12">
+                  <div className="header-top-content">
+                    <div className="header-left">
+                      <ul className="list-items">
                         <li>
                           <a href="#">
-                            <i class="la la-phone mr-1"></i>(123) 123-456
+                            <i className="la la-phone mr-1"></i>(123) 123-456
                           </a>
                         </li>
                         <li>
                           <a href="#">
-                            <i class="la la-envelope mr-1"></i>
+                            <i className="la la-envelope mr-1"></i>
                             hnabeel570@gmail.com
                           </a>
                         </li>
@@ -49,21 +49,21 @@ const Header = () => {
             </div>
           </div>
 
-          <div class="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-light">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="menu-wrapper">
-                    <div class="logo">
+          <div className="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-light">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="menu-wrapper">
+                    <div className="logo">
                       <Link to="/">
                         <img
-                          class="img-responsive"
+                          className="img-responsive"
                           src={logo1}
                           alt="logo.jpg"
                           style={{ width: "150px" }}
                         />
                       </Link>
-                      <div class="menu-toggler">
+                      <div className="menu-toggler">
                         {show == false ? (
                           <Button
                             className="bg-transparent border-0"
@@ -81,7 +81,7 @@ const Header = () => {
                         )}
                       </div>
                     </div>
-                    <div class="right main-menu-content mt-4">
+                    <div className="right main-menu-content mt-4">
                       <nav>
                         <ul>
                           <li>
@@ -90,7 +90,7 @@ const Header = () => {
                           <li>
                             <Link to="/">
                               PAGES
-                              <ul class="dropdown-menu-item">
+                              <ul className="dropdown-menu-item">
                                 <li>
                                   <Link to="/teacher">TEACHERS</Link>
                                 </li>
@@ -126,57 +126,57 @@ const Header = () => {
         </header>
       </header>
       {show && (
-        <header class="header-wrapper">
-          <div class="header-nav d-xl-none">
-            <div class="container">
-              <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
-                <div class="header-static-nav">
+        <header className="header-wrapper">
+          <div className="header-nav d-xl-none">
+            <div className="container">
+              <div className="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
+                <div className="header-static-nav">
                   <p>Welcome you to T&S Evaluation System!</p>
                 </div>
-                <div class="header-menu-nav">
+                <div className="header-menu-nav">
                   <ul>
                     <li className="p-2">
-                      <Link to="/" class="text-dark">
+                      <Link to="/" className="text-dark">
                         Home
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/teacher" class="text-dark">
+                      <Link to="/teacher" className="text-dark">
                         Teachers
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/course" class="text-dark">
+                      <Link to="/course" className="text-dark">
                         Courses
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/program" class="text-dark">
+                      <Link to="/program" className="text-dark">
                         Programs
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/department" class="text-dark">
+                      <Link to="/department" className="text-dark">
                         Department
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="about" class="text-dark">
+                      <Link to="about" className="text-dark">
                         About
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="blog" class="text-dark">
+                      <Link to="blog" className="text-dark">
                         Gellery
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="contact" class="text-dark">
+                      <Link to="contact" className="text-dark">
                         Contact
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="signup" class="text-dark">
+                      <Link to="signup" className="text-dark">
                         Sign Up
                       </Link>
                     </li>

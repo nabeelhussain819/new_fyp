@@ -13,23 +13,23 @@ const Details = () => {
 console.log(from)
   return (
     <div>
-      <div class="dashboard-bread dashboard--bread dashboard-bread-2">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="breadcrumb-content">
-                <div class="section-heading">
-                  <h2 class="sec__title font-size-30 text-white">
+      <div className="dashboard-bread dashboard--bread dashboard-bread-2">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="breadcrumb-content">
+                <div className="section-heading">
+                  <h2 className="sec__title font-size-30 text-white">
                     Full Details
                   </h2>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="breadcrumb-list text-right">
-                <ul class="list-items">
+            <div className="col-lg-6">
+              <div className="breadcrumb-list text-right">
+                <ul className="list-items">
                   <li>
-                    <a href="index.html" class="text-white">
+                    <a href="index.html" className="text-white">
                       Home
                     </a>
                   </li>
@@ -41,27 +41,27 @@ console.log(from)
           </div>
         </div>
       </div>
-      <div class="dashboard-main-content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="form-box">
-                <div class="form-title-wrap">
-                  <h3 class="title"> Full Details Lists</h3>
+      <div className="dashboard-main-content">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="form-box">
+                <div className="form-title-wrap">
+                  <h3 className="title"> Full Details Lists</h3>
                 </div>
                 {[from].map((data) => {
                   return (
                     <>
                       <div className="container-fluid ">
-                        <div class="btn-box mt-4 ">      
+                        <div className="btn-box mt-4 ">      
                         {!data.u_id &&  <Delete id={id} api={api} />}                   
                          
                           <button className="btn-primary btn ml-2 hidden-print" onClick={()=>window.print()}>Print</button>
                         </div>
                       </div>
 
-                      <div class="form-content">
-                        <ul class="list-items list-items-2 list-items-flush">
+                      <div className="form-content">
+                        <ul className="list-items list-items-2 list-items-flush">
                           <li>
                             <span>ID</span>
                             {data._id}
@@ -182,40 +182,40 @@ console.log(from)
               </div>
             </div>
           </div>
-          <div class="border-top mt-5"></div>
-          <div class="row align-items-center hidden-print">
-            <div class="col-lg-7">
-              <div class="copy-right padding-top-30px">
-                <p class="copy__desc">
+          <div className="border-top mt-5"></div>
+          <div className="row align-items-center hidden-print">
+            <div className="col-lg-7">
+              <div className="copy-right padding-top-30px">
+                <p className="copy__desc">
                   © Copyright Nabeel Imrar Ali 2022. Made with
-                  <span class="la la-heart"></span> by{" "}
+                  <span className="la la-heart"></span> by{" "}
                   <a href="https://themeforest.net/user/techydevs/portfolio">
                     NIA
                   </a>
                 </p>
               </div>
             </div>
-            <div class="col-lg-5">
-              <div class="copy-right-content text-right padding-top-30px">
-                <ul class="social-profile">
+            <div className="col-lg-5">
+              <div className="copy-right-content text-right padding-top-30px">
+                <ul className="social-profile">
                   <li>
                     <a href="#">
-                      <i class="lab la-facebook-f"></i>
+                      <i className="lab la-facebook-f"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="lab la-twitter"></i>
+                      <i className="lab la-twitter"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="lab la-instagram"></i>
+                      <i className="lab la-instagram"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="lab la-linkedin-in"></i>
+                      <i className="lab la-linkedin-in"></i>
                     </a>
                   </li>
                 </ul>

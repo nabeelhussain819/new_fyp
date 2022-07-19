@@ -37,19 +37,19 @@ const Comment = ({ data, api }) => {
   };
   return (
     <div>
-      <div class="comment-forum padding-top-40px">
-        <div class="form-box">
-          <div class="form-title-wrap">
-            <h3 class="">Write a Review</h3>
+      <div className="comment-forum padding-top-40px">
+        <div className="form-box">
+          <div className="form-title-wrap">
+            <h3 className="">Write a Review</h3>
           </div>
-          <div class="form-content">
-            <div class="rate-option p-2">
-              <div class="row">
-                <div class="col-lg-4 responsive-column">
-                  <div class="rate-option-item">
+          <div className="form-content">
+            <div className="rate-option p-2">
+              <div className="row">
+                <div className="col-lg-4 responsive-column">
+                  <div className="rate-option-item">
                     <label>Service</label>
-                    <div class="rate-stars-option">
-                      <span class="ratings d-flex align-items-center mr-1">
+                    <div className="rate-stars-option">
+                      <span className="ratings d-flex align-items-center mr-1">
                         <input
                           type="checkbox"
                           id="lst1"
@@ -91,16 +91,16 @@ const Comment = ({ data, api }) => {
                 </div>
               </div>
             </div>
-            <div class="contact-form-action">
+            <div className="contact-form-action">
               <form method="post">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text">Name</label>
-                      <div class="form-group">
-                        <span class="la la-user form-icon"></span>
+                <div className="row">
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text">Name</label>
+                      <div className="form-group">
+                        <span className="la la-user form-icon"></span>
                         <input
-                          class="form-control"
+                          className="form-control"
                           type="text"
                           name="text"
                           placeholder="Your name"
@@ -109,13 +109,13 @@ const Comment = ({ data, api }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-box">
-                      <label class="label-text">Email</label>
-                      <div class="form-group">
-                        <span class="la la-envelope-o form-icon"></span>
+                  <div className="col-lg-6">
+                    <div className="input-box">
+                      <label className="label-text">Email</label>
+                      <div className="form-group">
+                        <span className="la la-envelope-o form-icon"></span>
                         <input
-                          class="form-control"
+                          className="form-control"
                           type="email"
                           name="email"
                           placeholder="Email address"
@@ -124,13 +124,13 @@ const Comment = ({ data, api }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="input-box">
-                      <label class="label-text">Message</label>
-                      <div class="form-group">
-                        <span class="la la-pencil form-icon"></span>
+                  <div className="col-lg-12">
+                    <div className="input-box">
+                      <label className="label-text">Message</label>
+                      <div className="form-group">
+                        <span className="la la-pencil form-icon"></span>
                         <textarea
-                          class="message-control form-control"
+                          className="message-control form-control"
                           name="message"
                           placeholder="Write message"
                           value={comment}
@@ -139,12 +139,12 @@ const Comment = ({ data, api }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="btn-box">
+                  <div className="col-lg-12">
+                    <div className="btn-box">
                       <button
                         type="button"
                         onClick={CommentC}
-                        class="theme-btn"
+                        className="theme-btn"
                       >
                         Leave a Review
                       </button>

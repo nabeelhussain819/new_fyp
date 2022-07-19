@@ -50,21 +50,21 @@ const Dashboard = () => {
   }, []);
   return (
     <div className="dashboard-content-wrap">
-      <div class="dashboard-bread dashboard-bread-2">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="breadcrumb-content">
-                <div class="section-heading">
-                  <h2 class="sec__title font-size-30 text-white">Dashboard</h2>
+      <div className="dashboard-bread dashboard-bread-2">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="breadcrumb-content">
+                <div className="section-heading">
+                  <h2 className="sec__title font-size-30 text-white">Dashboard</h2>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="breadcrumb-list text-right">
-                <ul class="list-items">
+            <div className="col-lg-6">
+              <div className="breadcrumb-list text-right">
+                <ul className="list-items">
                   <li>
-                    <a href="/dashboard" class="text-white">
+                    <a href="/dashboard" className="text-white">
                       Home
                     </a>
                   </li>
@@ -73,84 +73,84 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div class="row mt-4">
-            <div class="col-lg-3 responsive-column-l">
-              <div class="icon-box icon-layout-2 dashboard-icon-box pb-0">
-                <div class="d-flex pb-3 justify-content-between">
-                  <div class="info-content">
-                    <p class="info__desc">Total Courses!</p>
-                    <h4 class="info__title">{course.length}</h4>
+          <div className="row mt-4">
+            <div className="col-lg-3 responsive-column-l">
+              <div className="icon-box icon-layout-2 dashboard-icon-box pb-0">
+                <div className="d-flex pb-3 justify-content-between">
+                  <div className="info-content">
+                    <p className="info__desc">Total Courses!</p>
+                    <h4 className="info__title">{course.length}</h4>
                   </div>
-                  <div class="info-icon icon-element bg-4">
-                    <i class="la la-shopping-cart"></i>
+                  <div className="info-icon icon-element bg-4">
+                    <i className="la la-shopping-cart"></i>
                   </div>
                 </div>
-                <div class="section-block"></div>
+                <div className="section-block"></div>
                 <Link
                   to="/courses"
-                  class="d-flex align-items-center justify-content-between view-all"
+                  className="d-flex align-items-center justify-content-between view-all"
                 >
-                  View All <i class="la la-angle-right"></i>
+                  View All <i className="la la-angle-right"></i>
                 </Link>
               </div>
             </div>
-            <div class="col-lg-3 responsive-column-l">
-              <div class="icon-box icon-layout-2 dashboard-icon-box pb-0">
-                <div class="d-flex pb-3 justify-content-between">
-                  <div class="info-content">
-                    <p class="info__desc">Total Students!</p>
-                    <h4 class="info__title">{student.length}</h4>
+            <div className="col-lg-3 responsive-column-l">
+              <div className="icon-box icon-layout-2 dashboard-icon-box pb-0">
+                <div className="d-flex pb-3 justify-content-between">
+                  <div className="info-content">
+                    <p className="info__desc">Total Students!</p>
+                    <h4 className="info__title">{student.length}</h4>
                   </div>
-                  <div class="info-icon icon-element bg-3">
-                    <i class="la la-star"></i>
+                  <div className="info-icon icon-element bg-3">
+                    <i className="la la-star"></i>
                   </div>
                 </div>
-                <div class="section-block"></div>
+                <div className="section-block"></div>
                 <Link
                   to="/students"
-                  class="d-flex align-items-center justify-content-between view-all"
+                  className="d-flex align-items-center justify-content-between view-all"
                 >
-                  View All <i class="la la-angle-right"></i>
+                  View All <i className="la la-angle-right"></i>
                 </Link>
               </div>
             </div>
-            <div class="col-lg-3 responsive-column-l">
-              <div class="icon-box icon-layout-2 dashboard-icon-box pb-0">
-                <div class="d-flex pb-3 justify-content-between">
-                  <div class="info-content">
-                    <p class="info__desc">Total Teachers!</p>
-                    <h4 class="info__title">{teacher.length}</h4>
+            <div className="col-lg-3 responsive-column-l">
+              <div className="icon-box icon-layout-2 dashboard-icon-box pb-0">
+                <div className="d-flex pb-3 justify-content-between">
+                  <div className="info-content">
+                    <p className="info__desc">Total Teachers!</p>
+                    <h4 className="info__title">{teacher.length}</h4>
                   </div>
-                  <div class="info-icon icon-element bg-2">
-                    <i class="la la-envelope"></i>
+                  <div className="info-icon icon-element bg-2">
+                    <i className="la la-envelope"></i>
                   </div>
                 </div>
-                <div class="section-block"></div>
+                <div className="section-block"></div>
                 <Link
                   to="/teachers"
-                  class="d-flex align-items-center justify-content-between view-all"
+                  className="d-flex align-items-center justify-content-between view-all"
                 >
-                  View All <i class="la la-angle-right"></i>
+                  View All <i className="la la-angle-right"></i>
                 </Link>
               </div>
             </div>
-            <div class="col-lg-3 responsive-column-l">
-              <div class="icon-box icon-layout-2 dashboard-icon-box pb-0">
-                <div class="d-flex pb-3 justify-content-between">
-                  <div class="info-content">
-                    <p class="info__desc">Evaluation Recieved!</p>
-                    <h4 class="info__title">{qec.length}</h4>
+            <div className="col-lg-3 responsive-column-l">
+              <div className="icon-box icon-layout-2 dashboard-icon-box pb-0">
+                <div className="d-flex pb-3 justify-content-between">
+                  <div className="info-content">
+                    <p className="info__desc">Evaluation Recieved!</p>
+                    <h4 className="info__title">{qec.length}</h4>
                   </div>
-                  <div class="info-icon icon-element bg-1">
-                    <i class="la la-bookmark-o"></i>
+                  <div className="info-icon icon-element bg-1">
+                    <i className="la la-bookmark-o"></i>
                   </div>
                 </div>
-                <div class="section-block"></div>
+                <div className="section-block"></div>
                 <Link
                   to="/qec"
-                  class="d-flex align-items-center justify-content-between view-all"
+                  className="d-flex align-items-center justify-content-between view-all"
                 >
-                  View All <i class="la la-angle-right"></i>
+                  View All <i className="la la-angle-right"></i>
                 </Link>
               </div>
             </div>
@@ -160,28 +160,28 @@ const Dashboard = () => {
       <div className="dashboard-main-content">
         <div className="container-fluid">
           <div className="row">
-            <div class="col-lg-6 responsive-column--m">
+            <div className="col-lg-6 responsive-column--m">
               <LineChart2 />
             </div>
-            <div class="col-lg-6 responsive-column--m">
+            <div className="col-lg-6 responsive-column--m">
               <QecGraph_1 />
             </div>
-            <div class="col-lg-6 responsive-column--m">
+            <div className="col-lg-6 responsive-column--m">
               <QecChart />
             </div>
-            <div class="col-lg-6 responsive-column--m">
+            <div className="col-lg-6 responsive-column--m">
               <LineChart3 />
             </div>
-            <div class="col-lg-6 responsive-column--m">
-              <div class="form-box dashboard-card">
-                <div class="form-title-wrap">
-                  <h3 class="title">Server Stats</h3>
+            <div className="col-lg-6 responsive-column--m">
+              <div className="form-box dashboard-card">
+                <div className="form-title-wrap">
+                  <h3 className="title">Server Stats</h3>
                 </div>
-                <div class="form-content pb-0">
-                  <div class="dashboard-progressbar pb-4">
-                    <div class="progress">
+                <div className="form-content pb-0">
+                  <div className="dashboard-progressbar pb-4">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-striped"
+                        className="progress-bar progress-bar-striped"
                         role="progressbar"
                         style={{ width: `${student.length}px` }}
                         aria-valuenow="10"
@@ -189,14 +189,14 @@ const Dashboard = () => {
                         aria-valuemax="1000"
                       ></div>
                     </div>
-                    <p class="font-size-14 pt-1">
+                    <p className="font-size-14 pt-1">
                       Total students engage: {student.length}{" "}
                     </p>
                   </div>
-                  <div class="dashboard-progressbar pb-4">
-                    <div class="progress">
+                  <div className="dashboard-progressbar pb-4">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-striped bg-success"
+                        className="progress-bar progress-bar-striped bg-success"
                         role="progressbar"
                         style={{ width: `${teacher.length}px` }}
                         aria-valuenow="25"
@@ -204,14 +204,14 @@ const Dashboard = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <p class="font-size-14 pt-1">
+                    <p className="font-size-14 pt-1">
                       Total Teachers engage: {teacher.length}
                     </p>
                   </div>
-                  <div class="dashboard-progressbar pb-4">
-                    <div class="progress">
+                  <div className="dashboard-progressbar pb-4">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-striped bg-info"
+                        className="progress-bar progress-bar-striped bg-info"
                         role="progressbar"
                         style={{ width: `${course.length}%` }}
                         aria-valuenow="50"
@@ -219,14 +219,14 @@ const Dashboard = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <p class="font-size-14 pt-1">
+                    <p className="font-size-14 pt-1">
                       courses: {course.length}/100
                     </p>
                   </div>
-                  <div class="dashboard-progressbar pb-4">
-                    <div class="progress">
+                  <div className="dashboard-progressbar pb-4">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-striped bg-warning"
+                        className="progress-bar progress-bar-striped bg-warning"
                         role="progressbar"
                         style={{ width: `${program.length}%` }}
                         aria-valuenow="75"
@@ -234,47 +234,47 @@ const Dashboard = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <p class="font-size-14 pt-1">
+                    <p className="font-size-14 pt-1">
                       All Programs: {program.length}/100
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 responsive-column--m">
-              <div class="form-box dashboard-card">
-                <div class="form-title-wrap">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="title">Notifications About Complain</h3>
+            <div className="col-lg-6 responsive-column--m">
+              <div className="form-box dashboard-card">
+                <div className="form-title-wrap">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h3 className="title">Notifications About Complain</h3>
                   </div>
                 </div>
-                <div class="form-content p-0">
-                  <div class="list-group drop-reveal-list">
+                <div className="form-content p-0">
+                  <div className="list-group drop-reveal-list">
                     {comment.slice(0, 5).map((data) => {
                       return (
                         <>
                           {data == false ? null : (
                             <>
                               {" "}
-                              <div class="list-group-item list-group-item-action border-top-0">
-                                <div class="msg-body d-flex align-items-center">
-                                  <div class="icon-element flex-shrink-0 mr-3 ml-0">
-                                    <i class="la la-bell"></i>
+                              <div className="list-group-item list-group-item-action border-top-0">
+                                <div className="msg-body d-flex align-items-center">
+                                  <div className="icon-element flex-shrink-0 mr-3 ml-0">
+                                    <i className="la la-bell"></i>
                                   </div>
-                                  <div class="msg-content w-100">
-                                    <h3 class="title pb-1 text-dark">
+                                  <div className="msg-content w-100">
+                                    <h3 className="title pb-1 text-dark">
                                       {data.complain}
                                     </h3>
                                   </div>
                                   <span
-                                    class="icon-element mark-as-read-btn flex-shrink-0 ml-auto mr-0"
+                                    className="icon-element mark-as-read-btn flex-shrink-0 ml-auto mr-0"
                                     data-toggle="tooltip"
                                     data-placement="left"
                                     title=""
                                     data-original-title="Mark as read"
                                   >
                                     {data.replay ? (
-                                      <i class="la la-star"></i>
+                                      <i className="la la-star"></i>
                                     ) : (
                                       "Not"
                                     )}
@@ -290,21 +290,21 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 responsive-column--m">
-              <div class="form-box dashboard-card">
-                <div class="form-title-wrap">
-                  <h3 class="title">
+            <div className="col-lg-12 responsive-column--m">
+              <div className="form-box dashboard-card">
+                <div className="form-title-wrap">
+                  <h3 className="title">
                     {teacher.length + student.length} people Registered this
                     site
                   </h3>
                 </div>
-                <div class="form-content pb-0">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="sparkline-chart-item">
-                        <span class="font-size-15">Registered As A stdent</span>
-                        <h3 class="title font-size-16">{student.length}</h3>
-                        <div class="visits-chart mt-2">
+                <div className="form-content pb-0">
+                  <div className="row">
+                    <div className="col-lg-4">
+                      <div className="sparkline-chart-item">
+                        <span className="font-size-15">Registered As A stdent</span>
+                        <h3 className="title font-size-16">{student.length}</h3>
+                        <div className="visits-chart mt-2">
                           <canvas
                             style={{
                               display: "inline-block",
@@ -316,11 +316,11 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="sparkline-chart-item">
-                        <span class="font-size-15">Register As A Teacher</span>
-                        <h3 class="title font-size-16">{teacher.length}</h3>
-                        <div class="visits-chart mt-2">
+                    <div className="col-lg-4">
+                      <div className="sparkline-chart-item">
+                        <span className="font-size-15">Register As A Teacher</span>
+                        <h3 className="title font-size-16">{teacher.length}</h3>
+                        <div className="visits-chart mt-2">
                           <canvas
                             style={{
                               display: "inline-block",
@@ -332,11 +332,11 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="sparkline-chart-item">
-                        <span class="font-size-15">Evaluated Students</span>
-                        <h3 class="title font-size-16">{qec.length}</h3>
-                        <div class="previews-chart mt-2">
+                    <div className="col-lg-4">
+                      <div className="sparkline-chart-item">
+                        <span className="font-size-15">Evaluated Students</span>
+                        <h3 className="title font-size-16">{qec.length}</h3>
+                        <div className="previews-chart mt-2">
                           <canvas
                             style={{
                               display: "inline-block",
@@ -348,11 +348,11 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="sparkline-chart-item">
-                        <span class="font-size-15">Complains </span>
-                        <h3 class="title font-size-16">{comment.length}</h3>
-                        <div class="visits-chart-2 mt-2">
+                    <div className="col-lg-4">
+                      <div className="sparkline-chart-item">
+                        <span className="font-size-15">Complains </span>
+                        <h3 className="title font-size-16">{comment.length}</h3>
+                        <div className="visits-chart-2 mt-2">
                           <canvas
                             style={{
                               display: "inline-block",
@@ -364,13 +364,13 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="sparkline-chart-item">
-                        <span class="font-size-15">Non Evaluated Students</span>
-                        <h3 class="title font-size-16">
+                    <div className="col-lg-4">
+                      <div className="sparkline-chart-item">
+                        <span className="font-size-15">Non Evaluated Students</span>
+                        <h3 className="title font-size-16">
                           {student.length - qec.length}
                         </h3>
-                        <div class="previews-chart mt-2">
+                        <div className="previews-chart mt-2">
                           <canvas
                             style={{
                               display: "inline-block",
@@ -382,17 +382,17 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="sparkline-chart-item">
-                        <span class="font-size-15">
+                    <div className="col-lg-4">
+                      <div className="sparkline-chart-item">
+                        <span className="font-size-15">
                           Total Rating By Evaluation (All Teachers)
                         </span>
-                        <h3 class="title font-size-16">
+                        <h3 className="title font-size-16">
                           {qec.reduce((accumulator, object) => {
                             return accumulator + object.rating;
                           }, 0)}
                         </h3>
-                        <div class="previews-chart mt-2">
+                        <div className="previews-chart mt-2">
                           <canvas
                             style={{
                               display: "inline-block",

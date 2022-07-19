@@ -45,7 +45,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -58,10 +58,10 @@ function MyVerticallyCenteredModal(props) {
             <tr>
               <th scope="row">01</th>
               <td>
-                <div class="table-content">{props.data.complain}</div>
+                <div className="table-content">{props.data.complain}</div>
               </td>
               <td>
-                <div class="table-content">
+                <div className="table-content">
                   {props.data.departId &&
                     props.data.departId.map((data) => data.name)}
                   {props.data.courseId &&
@@ -69,13 +69,13 @@ function MyVerticallyCenteredModal(props) {
                 </div>
               </td>
               <td>
-                <div class="table-content">
+                <div className="table-content">
                   <Link
                     to={"/details/" + props.data._id}
-                    class="bg-transparent border-0 p-1"
+                    className="bg-transparent border-0 p-1"
                     state={{ from: props.data, api: "departments" }}
                   >
-                    <i class="la la-eye"></i>
+                    <i className="la la-eye"></i>
                   </Link>
                   <Delete id={props.data._id} api={"departments"} />
                 </div>
@@ -84,12 +84,12 @@ function MyVerticallyCenteredModal(props) {
           </tbody>
         </table>
       </Modal.Body>
-      <div class="col-lg-12 responsive-column">
-        <div class="input-box">
-          <label class="label-text">Your Reply</label>
-          <div class="form-group">
+      <div className="col-lg-12 responsive-column">
+        <div className="input-box">
+          <label className="label-text">Your Reply</label>
+          <div className="form-group">
             <textarea
-              class="message-control form-control"
+              className="message-control form-control"
               name="message"
               placeholder="No HTML, no web or email address, no ALL CAPS "
               value={reply}
@@ -114,10 +114,10 @@ function Replay({ data }) {
   return (
     <>
       <button
-        class="bg-transparent border-0 p-1"
+        className="bg-transparent border-0 p-1"
         onClick={() => setModalShow(true)}
       >
-        <i class="la la-edit"></i>
+        <i className="la la-edit"></i>
       </button>
 
       <MyVerticallyCenteredModal

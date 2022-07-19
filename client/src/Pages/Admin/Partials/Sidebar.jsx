@@ -5,82 +5,82 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div>
-      <div class="sidebar-nav sidebar--nav hidden-print">
-        <div class="sidebar-nav-body">
-          <div class="side-menu-close">
-            <i class="la la-times"></i>
+      <div className="sidebar-nav sidebar--nav hidden-print">
+        <div className="sidebar-nav-body">
+          <div className="side-menu-close">
+            <i className="la la-times"></i>
           </div>
-          <div class="author-content">
-            <div class="d-flex align-items-center">
-              <div class="author-img avatar-sm">
+          <div className="author-content">
+            <div className="d-flex align-items-center">
+              <div className="author-img avatar-sm">
                 <img src={logo1} alt="testimonial image" />
               </div>
-              <div class="author-bio">
-                <h4 class="author__title">ADMIN</h4>
-                <span class="author__meta">Welcome to Admin Panel</span>
+              <div className="author-bio">
+                <h4 className="author__title">ADMIN</h4>
+                <span className="author__meta">Welcome to Admin Panel</span>
               </div>
             </div>
           </div>
-          <div class="sidebar-menu-wrap">
-            <ul class="sidebar-menu toggle-menu list-items">
-              <li class="page-active">
+          <div className="sidebar-menu-wrap">
+            <ul className="sidebar-menu toggle-menu list-items">
+              <li className="page-active">
                 <Link to="dashboard">
-                  <i class="la la-dashboard mr-2"></i>Dashboard
+                  <i className="la la-dashboard mr-2"></i>Dashboard
                 </Link>
               </li>
               <li>
                 <Link to="departments">
-                  <i class="la la-shopping-cart mr-2 text-color"></i>Departments
+                  <i className="la la-shopping-cart mr-2 text-color"></i>Departments
                 </Link>
               </li>
               <li>
                 <Link to="programs">
-                  <i class="la la-list mr-2 text-color-2"></i>Programs
+                  <i className="la la-list mr-2 text-color-2"></i>Programs
                 </Link>
               </li>
               <li>
                 <Link to="teachers">
-                  <i class="la la-users mr-2 text-color-3"></i>Teachers
+                  <i className="la la-users mr-2 text-color-3"></i>Teachers
                 </Link>
               </li>
               <li>
                 <Link to="students">
-                  <i class="la la-users mr-2 text-color-3"></i>Students
+                  <i className="la la-users mr-2 text-color-3"></i>Students
                 </Link>
               </li>
               <li>
                 <Link to="sessions">
-                  <i class="la la-star mr-2 text-color-3"></i>Sessions
+                  <i className="la la-star mr-2 text-color-3"></i>Sessions
                 </Link>
               </li>
               <li>
                 <Link to="semesters">
-                  <i class="la la-heart mr-2 text-color-3"></i>Semesters
+                  <i className="la la-heart mr-2 text-color-3"></i>Semesters
                 </Link>
               </li>
               <li>
                 <Link to="Courses">
-                  <i class="la la-text-width mr-2 text-color-3"></i>Courses
+                  <i className="la la-text-width mr-2 text-color-3"></i>Courses
                 </Link>
               </li>
               <li>
                 <Link to="complains">
-                  <i class="la la-area-chart mr-2 text-color-3"></i>Complians
+                  <i className="la la-area-chart mr-2 text-color-3"></i>Complians
                 </Link>
               </li>
               <li>
                 <Link to="comments">
-                  <i class="la la-area-chart mr-2 text-color-3"></i>Comments
+                  <i className="la la-area-chart mr-2 text-color-3"></i>Comments
                 </Link>
               </li>
               <li>
               <Link to="qec">
-                  <i class="la la-area-chart mr-2 text-color-3"></i>QEC results
+                  <i className="la la-area-chart mr-2 text-color-3"></i>QEC results
                 </Link>
               </li>
               <li>
                 <a href="admin-dashboard-settings.html">
-                  <i class="la la-cog mr-2 text-color-10"></i>Settings
+                  <i className="la la-cog mr-2 text-color-10"></i>Settings
                 </a>
               </li>
             </ul>

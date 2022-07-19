@@ -9,13 +9,13 @@ export default function UserQec(props) {
   return (
     <div>
       <div>
-        <div class="col-lg-12 responsive-column--m">
-          <div class="form-box dashboard-card">
-            <div class="form-content pb-0">
-              <div class="dashboard-progressbar pb-4">
-                <div class="progress">
+        <div className="col-lg-12 responsive-column--m">
+          <div className="form-box dashboard-card">
+            <div className="form-content pb-0">
+              <div className="dashboard-progressbar pb-4">
+                <div className="progress">
                   <div
-                    class="progress-bar progress-bar-striped"
+                    className="progress-bar progress-bar-striped"
                     role="progressbar"
                     style={{
                       width: `${props.data.map(
@@ -27,15 +27,15 @@ export default function UserQec(props) {
                     aria-valuemax="100"
                   ></div>
                 </div>
-                <p class="font-size-14 pt-1">
+                <p className="font-size-14 pt-1">
                   Rating of Helpfull :{" "}
                   {props.data.map((data) => data.isHelpfull.length)}{" "}
                 </p>
               </div>
-              <div class="dashboard-progressbar pb-4">
-                <div class="progress">
+              <div className="dashboard-progressbar pb-4">
+                <div className="progress">
                   <div
-                    class="progress-bar progress-bar-striped bg-success"
+                    className="progress-bar progress-bar-striped bg-success"
                     role="progressbar"
                     style={{
                       width: `${props.data.map(
@@ -47,15 +47,15 @@ export default function UserQec(props) {
                     aria-valuemax="100"
                   ></div>
                 </div>
-                <p class="font-size-14 pt-1">
+                <p className="font-size-14 pt-1">
                   Rating of Friendly:{" "}
                   {props.data.map((data) => data.isFriendly.length)}
                 </p>
               </div>
-              <div class="dashboard-progressbar pb-4">
-                <div class="progress">
+              <div className="dashboard-progressbar pb-4">
+                <div className="progress">
                   <div
-                    class="progress-bar progress-bar-striped bg-info"
+                    className="progress-bar progress-bar-striped bg-info"
                     role="progressbar"
                     style={{
                       width: `${props.data.map(
@@ -67,7 +67,7 @@ export default function UserQec(props) {
                     aria-valuemax="100"
                   ></div>
                 </div>
-                <p class="font-size-14 pt-1">
+                <p className="font-size-14 pt-1">
                   Rating of Professsional:{" "}
                   {props.data.map((data) => data.isProfessional.length)}/100
                 </p>

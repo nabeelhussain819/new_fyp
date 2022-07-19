@@ -98,24 +98,24 @@ const Complain = () => {
   }, []);
   return (
     <div className="bread-bg">
-      <section class="hero-wrapper bread-bg pb-4">
-        <div class="pb-0">
-          <div class="container pt-4">
-            <div class="col-lg-12 pt-4">
-              <div class="hero-content pb-5 pt-4">
-                <div class="section-heading">
-                  <p class="sec__desc pb-2">Complain Box</p>
-                  <h2 class="sec__title">Report A Complain</h2>
-                  <p class="sec__desc">
+      <section className="hero-wrapper bread-bg pb-4">
+        <div className="pb-0">
+          <div className="container pt-4">
+            <div className="col-lg-12 pt-4">
+              <div className="hero-content pb-5 pt-4">
+                <div className="section-heading">
+                  <p className="sec__desc pb-2">Complain Box</p>
+                  <h2 className="sec__title">Report A Complain</h2>
+                  <p className="sec__desc">
                     Select A tab For Which You To Report A Complain
                   </p>
                 </div>
               </div>
-              <div class="section-tab text-center pl-4">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
+              <div className="section-tab text-center pl-4">
+                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                  <li className="nav-item">
                     <button
-                      class="nav-link d-flex align-items-center"
+                      className="nav-link d-flex align-items-center"
                       id="flight-tab"
                       data-toggle="tab"
                       role="tab"
@@ -123,12 +123,12 @@ const Complain = () => {
                       aria-selected="true"
                       onClick={() => change("dept")}
                     >
-                      <i class="la la-plane mr-1"></i>Department
+                      <i className="la la-plane mr-1"></i>Department
                     </button>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <button
-                      class="nav-link d-flex align-items-center"
+                      className="nav-link d-flex align-items-center"
                       id="hotel-tab"
                       data-toggle="tab"
                       role="tab"
@@ -136,12 +136,12 @@ const Complain = () => {
                       aria-selected="false"
                       onClick={() => change("course")}
                     >
-                      <i class="la la-hotel mr-1"></i>Courses
+                      <i className="la la-hotel mr-1"></i>Courses
                     </button>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <button
-                      class="nav-link d-flex align-items-center"
+                      className="nav-link d-flex align-items-center"
                       id="cruise-tab"
                       data-toggle="tab"
                       onClick={() => change("evaluate")}
@@ -149,12 +149,12 @@ const Complain = () => {
                       aria-controls="cruise"
                       aria-selected="false"
                     >
-                      <i class="la la-ship mr-1"></i>Evaluation
+                      <i className="la la-ship mr-1"></i>Evaluation
                     </button>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <button
-                      class="nav-link d-flex align-items-center"
+                      className="nav-link d-flex align-items-center"
                       id="tour-tab"
                       data-toggle="tab"
                       onClick={() => change("site")}
@@ -162,23 +162,23 @@ const Complain = () => {
                       aria-controls="tour"
                       aria-selected="false"
                     >
-                      <i class="la la-globe mr-1"></i>Site
+                      <i className="la la-globe mr-1"></i>Site
                     </button>
                   </li>
                 </ul>
               </div>
-              <div class="search-fields-container">
-                <div class="contact-form-action">
-                  <form action="#" class="row">
+              <div className="search-fields-container">
+                <div className="contact-form-action">
+                  <form action="#" className="row">
                     {dept && (
                       <>
-                        <div class="col-lg-6 pr-0">
-                          <div class="input-box">
-                            <label class="label-text">Select Department</label>
-                            <div class="form-group">
-                              <span class="la la-map-marker form-icon"></span>
+                        <div className="col-lg-6 pr-0">
+                          <div className="input-box">
+                            <label className="label-text">Select Department</label>
+                            <div className="form-group">
+                              <span className="la la-map-marker form-icon"></span>
                               <select
-                                class="select-contain-select form-control"
+                                className="select-contain-select form-control"
                                 tabindex="-98"
                                 onChange={(e) => setDepartId(e.target.value)}
                               >
@@ -196,13 +196,13 @@ const Complain = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 pr-0">
-                          <div class="input-box">
-                            <label class="label-text">Select Issue</label>
-                            <div class="form-group">
-                              <span class="la la-map-marker form-icon"></span>
+                        <div className="col-lg-6 pr-0">
+                          <div className="input-box">
+                            <label className="label-text">Select Issue</label>
+                            <div className="form-group">
+                              <span className="la la-map-marker form-icon"></span>
                               <select
-                                class="select-contain-select form-control"
+                                className="select-contain-select form-control"
                                 tabindex="-98"
                                 onChange={(e) => setIssue(e.target.value)}
                               >
@@ -217,13 +217,13 @@ const Complain = () => {
                     )}
                     {course && (
                       <>
-                        <div class="col-lg-6 pr-0">
-                          <div class="input-box">
-                            <label class="label-text">Select Courses</label>
-                            <div class="form-group">
-                              <span class="la la-calendar form-icon"></span>
+                        <div className="col-lg-6 pr-0">
+                          <div className="input-box">
+                            <label className="label-text">Select Courses</label>
+                            <div className="form-group">
+                              <span className="la la-calendar form-icon"></span>
                               <select
-                                class="select-contain-select form-control"
+                                className="select-contain-select form-control"
                                 tabindex="-98"
                                 onChange={(e) => setCourseId(e.target.value)}
                               >
@@ -241,13 +241,13 @@ const Complain = () => {
                             </div>
                           </div>
                         </div>{" "}
-                        <div class="col-lg-6 pr-0">
-                          <div class="input-box">
-                            <label class="label-text">Select Issue</label>
-                            <div class="form-group">
-                              <span class="la la-map-marker form-icon"></span>
+                        <div className="col-lg-6 pr-0">
+                          <div className="input-box">
+                            <label className="label-text">Select Issue</label>
+                            <div className="form-group">
+                              <span className="la la-map-marker form-icon"></span>
                               <select
-                                class="select-contain-select form-control"
+                                className="select-contain-select form-control"
                                 tabindex="-98"
                                 onChange={(e) => setIssue(e.target.value)}
                               >
@@ -262,13 +262,13 @@ const Complain = () => {
                     )}
                     {evaluation && (
                       <>
-                        <div class="col-lg-12 pr-0">
-                          <div class="input-box">
-                            <label class="label-text">Select Issue</label>
-                            <div class="form-group">
-                              <span class="la la-calendar form-icon"></span>
+                        <div className="col-lg-12 pr-0">
+                          <div className="input-box">
+                            <label className="label-text">Select Issue</label>
+                            <div className="form-group">
+                              <span className="la la-calendar form-icon"></span>
                               <select
-                                class="select-contain-select form-control"
+                                className="select-contain-select form-control"
                                 tabindex="-98"
                                 onChange={(e) => setIssue(e.target.value)}
                               >
@@ -283,13 +283,13 @@ const Complain = () => {
                     )}
                     {site && (
                       <>
-                        <div class="col-lg-12 pr-0">
-                          <div class="input-box">
-                            <label class="label-text">Select Issue</label>
-                            <div class="form-group">
-                              <span class="la la-calendar form-icon"></span>
+                        <div className="col-lg-12 pr-0">
+                          <div className="input-box">
+                            <label className="label-text">Select Issue</label>
+                            <div className="form-group">
+                              <span className="la la-calendar form-icon"></span>
                               <select
-                                class="select-contain-select form-control"
+                                className="select-contain-select form-control"
                                 tabindex="-98"
                                 onChange={(e) => setIssue(e.target.value)}
                               >
@@ -306,9 +306,9 @@ const Complain = () => {
                   {show && (
                     <>
                       {(departId || courseId || issue) && (
-                        <div class="btn-box pt-3 col-lg-12">
+                        <div className="btn-box pt-3 col-lg-12">
                           <button
-                            class="theme-btn theme-btn-small col-lg-12"
+                            className="theme-btn theme-btn-small col-lg-12"
                             onClick={next}
                           >
                             Report Now!
@@ -324,25 +324,25 @@ const Complain = () => {
         </div>
       </section>
       {step && (
-        <section class="hero-wrapper bread-bg pb-4">
-          <div class="pb-0">
-            <div class="container pt-4">
-              <div class="col-lg-12 pt-4">
-                <div class="form-box">
-                  <div class="form-title-wrap">
-                    <h3 class="title">
-                      <i class="la la-user mr-2 text-gray"></i>Your Complain
+        <section className="hero-wrapper bread-bg pb-4">
+          <div className="pb-0">
+            <div className="container pt-4">
+              <div className="col-lg-12 pt-4">
+                <div className="form-box">
+                  <div className="form-title-wrap">
+                    <h3 className="title">
+                      <i className="la la-user mr-2 text-gray"></i>Your Complain
                     </h3>
                   </div>
-                  <div class="form-content contact-form-action">
-                    <div class="row MultiFile-intercepted">
-                      <div class="col-lg-12 responsive-column">
-                        <div class="input-box">
-                          <label class="label-text">Your Complain</label>
-                          <div class="form-group">
-                            <span class="la la-pencil form-icon"></span>
+                  <div className="form-content contact-form-action">
+                    <div className="row MultiFile-intercepted">
+                      <div className="col-lg-12 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Your Complain</label>
+                          <div className="form-group">
+                            <span className="la la-pencil form-icon"></span>
                             <textarea
-                              class="message-control form-control"
+                              className="message-control form-control"
                               name="message"
                               placeholder="No HTML, no web or email address, no ALL CAPS "
                               value={complain}
@@ -351,185 +351,185 @@ const Complain = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="input-box">
-                          <label class="label-text text-color-6">
+                      <div className="col-lg-6">
+                        <div className="input-box">
+                          <label className="label-text text-color-6">
                             Minimum stay* (not including holidays)
                           </label>
-                          <div class="form-group d-flex align-items-center">
+                          <div className="form-group d-flex align-items-center">
                             <label
                               for="radio-1"
-                              class="radio-trigger mb-0 font-size-14 mr-3"
+                              className="radio-trigger mb-0 font-size-14 mr-3"
                             >
                               <input type="radio" id="radio-1" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>3 nights or less</span>
                             </label>
                             <label
                               for="radio-2"
-                              class="radio-trigger mb-0 font-size-14"
+                              className="radio-trigger mb-0 font-size-14"
                             >
                               <input type="radio" id="radio-2" name="radio" />
-                              <span class="checkmark"></span>
+                              <span className="checkmark"></span>
                               <span>More than 3 nights</span>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-12 responsive-column pt-4">
-                        <div class="submit-box">
-                          <h3 class="title pb-3">Submit this listing</h3>
-                          <div class="custom-checkbox">
+                      <div className="col-lg-12 responsive-column pt-4">
+                        <div className="submit-box">
+                          <h3 className="title pb-3">Submit this listing</h3>
+                          <div className="custom-checkbox">
                             <input type="checkbox" id="agreeChb" />
                             <label for="agreeChb">
                               Check this box to certify that you are an official
@@ -542,14 +542,14 @@ const Complain = () => {
                               from your use of the image.
                             </label>
                           </div>
-                          <div class="btn-box pt-3">
+                          <div className="btn-box pt-3">
                             <button
                               type="submit"
-                              class="theme-btn"
+                              className="theme-btn"
                               onClick={ComplainDept}
                             >
                               Submit Listing{" "}
-                              <i class="la la-arrow-right ml-1"></i>
+                              <i className="la la-arrow-right ml-1"></i>
                             </button>
                           </div>
                         </div>

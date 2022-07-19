@@ -5,20 +5,20 @@ import "react-toastify/dist/ReactToastify.css";
 export const Contact = () => {
   return (
     <div>
-      <section class="breadcrumb-area bread-bg-5">
-        <div class="breadcrumb-wrap">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title text-white">Contact us</h2>
+      <section className="breadcrumb-area bread-bg-5">
+        <div className="breadcrumb-wrap">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title text-white">Contact us</h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>
                       <a href="/">Home</a>
                     </li>
@@ -30,9 +30,9 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-        <div class="bread-svg-box">
+        <div className="bread-svg-box">
           <svg
-            class="bread-svg"
+            className="bread-svg"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 10"
             preserveAspectRatio="none"
@@ -41,27 +41,27 @@ export const Contact = () => {
           </svg>
         </div>
       </section>
-      <section class="contact-area section--padding bg-817">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="form-box">
-                <div class="form-title-wrap">
-                  <h3 class="title">We'd love to hear from you</h3>
-                  <p class="font-size-15">
+      <section className="contact-area section--padding bg-817">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="form-box">
+                <div className="form-title-wrap">
+                  <h3 className="title">We'd love to hear from you</h3>
+                  <p className="font-size-15">
                     Send us a message and we'll respond as soon as possible
                   </p>
                 </div>
-                <div class="form-content ">
-                  <div class="contact-form-action">
-                    <form method="post" class="row">
-                      <div class="col-lg-6 responsive-column">
-                        <div class="input-box">
-                          <label class="label-text">Your Name</label>
-                          <div class="form-group">
-                            <span class="la la-user form-icon"></span>
+                <div className="form-content ">
+                  <div className="contact-form-action">
+                    <form method="post" className="row">
+                      <div className="col-lg-6 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Your Name</label>
+                          <div className="form-group">
+                            <span className="la la-user form-icon"></span>
                             <input
-                              class="form-control"
+                              className="form-control"
                               type="text"
                               name="text"
                               placeholder="Your name"
@@ -69,13 +69,13 @@ export const Contact = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6 responsive-column">
-                        <div class="input-box">
-                          <label class="label-text">Your Email</label>
-                          <div class="form-group">
-                            <span class="la la-envelope-o form-icon"></span>
+                      <div className="col-lg-6 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Your Email</label>
+                          <div className="form-group">
+                            <span className="la la-envelope-o form-icon"></span>
                             <input
-                              class="form-control"
+                              className="form-control"
                               type="email"
                               name="email"
                               placeholder="Email address"
@@ -83,27 +83,27 @@ export const Contact = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="input-box">
-                          <label class="label-text">Message</label>
-                          <div class="form-group">
-                            <span class="la la-pencil form-icon"></span>
+                      <div className="col-lg-12">
+                        <div className="input-box">
+                          <label className="label-text">Message</label>
+                          <div className="form-group">
+                            <span className="la la-pencil form-icon"></span>
                             <textarea
-                              class="message-control form-control"
+                              className="message-control form-control"
                               name="message"
                               placeholder="Write message"
                             ></textarea>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="input-box">
-                          <div class="recapcha-box pb-4 d-flex align-items-center">
-                            <label class="label-text flex-shrink-0 mr-3 mb-0">
+                      <div className="col-lg-12">
+                        <div className="input-box">
+                          <div className="recapcha-box pb-4 d-flex align-items-center">
+                            <label className="label-text flex-shrink-0 mr-3 mb-0">
                               What is? 3 + 5 =
                             </label>
                             <input
-                              class="form-control"
+                              className="form-control"
                               type="text"
                               name="text"
                               placeholder="Type answer"
@@ -111,9 +111,9 @@ export const Contact = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="btn-box">
-                          <button type="button" class="theme-btn" onClick={()=>toast.success("MESSAGE HAS BEEN SENT")}>
+                      <div className="col-lg-12">
+                        <div className="btn-box">
+                          <button type="button" className="theme-btn" onClick={()=>toast.success("MESSAGE HAS BEEN SENT")}>
                             Send Message
                           </button>
                         </div>
@@ -123,58 +123,58 @@ export const Contact = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="form-box">
-                <div class="form-title-wrap">
-                  <h3 class="title">Contact Us</h3>
+            <div className="col-lg-4">
+              <div className="form-box">
+                <div className="form-title-wrap">
+                  <h3 className="title">Contact Us</h3>
                 </div>
-                <div class="form-content">
-                  <div class="address-book">
-                    <ul class="list-items contact-address">
+                <div className="form-content">
+                  <div className="address-book">
+                    <ul className="list-items contact-address">
                       <li>
-                        <i class="la la-map-marker icon-element"></i>
-                        <h5 class="title font-size-16 pb-1">Address</h5>
-                        <p class="map__desc">
+                        <i className="la la-map-marker icon-element"></i>
+                        <h5 className="title font-size-16 pb-1">Address</h5>
+                        <p className="map__desc">
                           SINDH MADRESSATUL ISLAM UNIVERSITY
                         </p>
                       </li>
                       <li>
-                        <i class="la la-phone icon-element"></i>
-                        <h5 class="title font-size-16 pb-1">Phone</h5>
-                        <p class="map__desc">Telephone: 2800 256 508</p>
-                        <p class="map__desc">Mobile: 666 777 888</p>
+                        <i className="la la-phone icon-element"></i>
+                        <h5 className="title font-size-16 pb-1">Phone</h5>
+                        <p className="map__desc">Telephone: 2800 256 508</p>
+                        <p className="map__desc">Mobile: 666 777 888</p>
                       </li>
                       <li>
-                        <i class="la la-envelope-o icon-element"></i>
-                        <h5 class="title font-size-16 pb-1">Email</h5>
-                        <p class="map__desc">smiu@email.com</p>
-                        <p class="map__desc">smiu@edu.pk.com</p>
+                        <i className="la la-envelope-o icon-element"></i>
+                        <h5 className="title font-size-16 pb-1">Email</h5>
+                        <p className="map__desc">smiu@email.com</p>
+                        <p className="map__desc">smiu@edu.pk.com</p>
                       </li>
                     </ul>
-                    <ul class="social-profile text-center">
+                    <ul className="social-profile text-center">
                       <li>
                         <a href="#">
-                          <i class="lab la-facebook-f"></i>
+                          <i className="lab la-facebook-f"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="lab la-twitter"></i>
+                          <i className="lab la-twitter"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="lab la-instagram"></i>
+                          <i className="lab la-instagram"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="lab la-linkedin-in"></i>
+                          <i className="lab la-linkedin-in"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="lab la-youtube"></i>
+                          <i className="lab la-youtube"></i>
                         </a>
                       </li>
                     </ul>

@@ -16,19 +16,19 @@ const Courses = () => {
 
   return (
     <div>
-      <section class="breadcrumb-area gradient-bg-gray before-none">
-        <div class="breadcrumb-wrap padding-right-100px padding-left-100px">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title text-dark">Enrolled Courses</h2>
+      <section className="breadcrumb-area gradient-bg-gray before-none">
+        <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title text-dark">Enrolled Courses</h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
                   <Link to="/Enrollment">
                     <Button className="theme-btn border-0">
                       Enroll New Course
@@ -40,18 +40,18 @@ const Courses = () => {
           </div>
         </div>
       </section>
-      <section class="card-area pt-4 ">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="filter-wrap ">
+      <section className="card-area pt-4 ">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="filter-wrap ">
                 <div className="filter-top d-flex align-items-center justify-content-between">
                   <div>
                     <h3 className="font-size-24">Your Enrolled Courses </h3>
                   </div>
                 </div>
-                <div class="table-form table-responsive">
-                  <table class="table">
+                <div className="table-form table-responsive">
+                  <table className="table">
                     <thead>
                       <tr>
                         <th scope="col">No</th>
@@ -70,28 +70,28 @@ const Courses = () => {
                             <tr>
                               <th scope="row">{i + 1}</th>
                               <td>
-                                <div class="table-content">
-                                  <h3 class="title">{index.name}</h3>
+                                <div className="table-content">
+                                  <h3 className="title">{index.name}</h3>
                                 </div>
                               </td>
                               <td>{index.code}</td>
                               <td>{index.studentId.length}</td>
                               <td>{index.teacherId.length}</td>
                               <td>
-                                <span class="badge badge-warning py-1 px-2">
+                                <span className="badge badge-warning py-1 px-2">
                                   {index.studentId.length < 100
                                     ? "Less Students"
                                     : "ACTIVE"}
                                 </span>
                               </td>
                               <td>
-                                <div class="table-content">
+                                <div className="table-content">
                                   <Link
                                     to={"/details/" + index._id}
-                                    class="border-0 bg-transparent"
+                                    className="border-0 bg-transparent"
                                     state={{ from: index, api: "courses" }}
                                   >
-                                    <i class="la la-eye"></i>
+                                    <i className="la la-eye"></i>
                                   </Link>
                                 </div>
                               </td>

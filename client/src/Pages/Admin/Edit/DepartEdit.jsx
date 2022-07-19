@@ -44,7 +44,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -57,7 +57,7 @@ function MyVerticallyCenteredModal(props) {
             <tr>
               <th scope="row">01</th>
               <td>
-                <div class="table-content">
+                <div className="table-content">
                   <input
                     type="text"
                     placeholder={props.data.name}
@@ -74,13 +74,13 @@ function MyVerticallyCenteredModal(props) {
                 />
               </td>
               <td>
-                <div class="table-content">
+                <div className="table-content">
                   <Link
                     to={"/details/" + props.data._id}
-                    class="bg-transparent border-0 p-1"
+                    className="bg-transparent border-0 p-1"
                     state={{ from: props.data, api: "departments" }}
                   >
-                    <i class="la la-eye"></i>
+                    <i className="la la-eye"></i>
                   </Link>
                   <Delete id={props.data._id} api={"departments"} />
                 </div>
@@ -105,10 +105,10 @@ function Edit({ data }) {
   return (
     <>
       <button
-        class="bg-transparent border-0 p-1"
+        className="bg-transparent border-0 p-1"
         onClick={() => setModalShow(true)}
       >
-        <i class="la la-edit"></i>
+        <i className="la la-edit"></i>
       </button>
 
       <MyVerticallyCenteredModal

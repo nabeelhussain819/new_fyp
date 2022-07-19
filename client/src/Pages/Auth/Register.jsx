@@ -64,35 +64,35 @@ const Register = () => {
             <div className="col-lg-9 mx-auto">
               {!show && (
                 <>
-                  <div class="listing-header pb-4">
-                    <h3 class="title font-size-28 pb-2">
+                  <div className="listing-header pb-4">
+                    <h3 className="title font-size-28 pb-2">
                       SignUp To T&S Evaluation Form
                     </h3>
-                    <p class="font-size-14">
+                    <p className="font-size-14">
                       Enter Your Valid Information Then Click On Next
                     </p>
-                    <p class="font-size-14">
+                    <p className="font-size-14">
                       You Will Move To Anoter Step Where You Enter Your
                       Information About Yourself
                     </p>
                   </div>
 
-                  <div class="form-box">
-                    <div class="form-title-wrap">
-                      <h3 class="title">
-                        <i class="la la-user mr-2 text-gray"></i>Your
+                  <div className="form-box">
+                    <div className="form-title-wrap">
+                      <h3 className="title">
+                        <i className="la la-user mr-2 text-gray"></i>Your
                         information
                       </h3>
                     </div>
-                    <div class="form-content contact-form-action">
-                      <form method="post" class="row MultiFile-intercepted">
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Email</label>
-                            <div class="form-group">
-                              <span class="la la-user form-icon"></span>
+                    <div className="form-content contact-form-action">
+                      <form method="post" className="row MultiFile-intercepted">
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Email</label>
+                            <div className="form-group">
+                              <span className="la la-user form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 name="text"
                                 value={email}
@@ -103,13 +103,13 @@ const Register = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Phone Number</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Phone Number</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="number"
                                 name="text"
                                 value={phone}
@@ -120,13 +120,13 @@ const Register = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Full Name</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Full Name</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 name="text"
                                 value={name}
@@ -137,13 +137,13 @@ const Register = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Universty ID</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Universty ID</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="text"
                                 name="text"
                                 value={u_id}
@@ -154,13 +154,13 @@ const Register = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 responsive-column">
-                          <div class="input-box">
-                            <label class="label-text">Your Password</label>
-                            <div class="form-group">
-                              <span class="la la-envelope-o form-icon"></span>
+                        <div className="col-lg-6 responsive-column">
+                          <div className="input-box">
+                            <label className="label-text">Your Password</label>
+                            <div className="form-group">
+                              <span className="la la-envelope-o form-icon"></span>
                               <input
-                                class="form-control"
+                                className="form-control"
                                 type="password"
                                 name="text"
                                 value={password}
@@ -171,7 +171,7 @@ const Register = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-12 responsive-column">
+                        <div className="col-lg-12 responsive-column">
                           <button
                             type="button"
                             onClick={registerUser}

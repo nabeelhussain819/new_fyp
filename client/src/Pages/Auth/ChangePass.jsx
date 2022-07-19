@@ -55,20 +55,20 @@ export default function ChangePass() {
 
   return (
     <>
-      <section class="breadcrumb-area bread-bg">
-        <div class="breadcrumb-wrap">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title text-white">Recover Password</h2>
+      <section className="breadcrumb-area bread-bg">
+        <div className="breadcrumb-wrap">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title text-white">Recover Password</h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>
                       <a href="index.html">Home</a>
                     </li>
@@ -79,9 +79,9 @@ export default function ChangePass() {
             </div>
           </div>
         </div>
-        <div class="bread-svg-box">
+        <div className="bread-svg-box">
           <svg
-            class="hero-svg"
+            className="hero-svg"
             viewBox="0 0 500 150"
             preserveAspectRatio="none"
           >
@@ -89,31 +89,31 @@ export default function ChangePass() {
           </svg>
         </div>
       </section>
-      <section class="contact-area padding-top-40px ">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7 mx-auto">
-              <div class="form-box">
-                <div class="form-title-wrap">
-                  <h3 class="title">Check Your Account</h3>
-                  <p class="font-size-15 pt-2">
+      <section className="contact-area padding-top-40px ">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-7 mx-auto">
+              <div className="form-box">
+                <div className="form-title-wrap">
+                  <h3 className="title">Check Your Account</h3>
+                  <p className="font-size-15 pt-2">
                     Enter the email of your account to reset password. Then you
                     will receive a link to email to reset the password.If you
                     have any issue about reset password
-                    <a href="contact.html" class="text-color">
+                    <a href="contact.html" className="text-color">
                       contact us
                     </a>
                   </p>
                 </div>
-                <div class="form-content ">
-                  <div class="contact-form-action">
+                <div className="form-content ">
+                  <div className="contact-form-action">
                     <form method="post">
-                      <div class="input-box">
-                        <label class="label-text">Your Email</label>
-                        <div class="form-group">
-                          <span class="la la-envelope-o form-icon"></span>
+                      <div className="input-box">
+                        <label className="label-text">Your Email</label>
+                        <div className="form-group">
+                          <span className="la la-envelope-o form-icon"></span>
                           <input
-                            class="form-control"
+                            className="form-control"
                             type="email"
                             name="email"
                             onChange={(e) => setEmail(e.target.value)}
@@ -121,12 +121,12 @@ export default function ChangePass() {
                           />
                         </div>
                       </div>
-                      <div class="input-box">
-                        <label class="label-text">Your Unviersity ID</label>
-                        <div class="form-group">
-                          <span class="la la-envelope-o form-icon"></span>
+                      <div className="input-box">
+                        <label className="label-text">Your Unviersity ID</label>
+                        <div className="form-group">
+                          <span className="la la-envelope-o form-icon"></span>
                           <input
-                            class="form-control"
+                            className="form-control"
                             type="text"
                             name="email"
                             onChange={(e) => setUid(e.target.value)}
@@ -134,8 +134,8 @@ export default function ChangePass() {
                           />
                         </div>
                       </div>
-                      <div class="btn-box">
-                        <button type="button" class="theme-btn" onClick={check}>
+                      <div className="btn-box">
+                        <button type="button" className="theme-btn" onClick={check}>
                           Check Account
                         </button>
                       </div>
@@ -148,23 +148,23 @@ export default function ChangePass() {
         </div>
       </section>
       {show && (
-        <section class="contact-area ">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-7 mx-auto">
-                <div class="form-box">
-                  <div class="form-title-wrap">
-                    <h3 class="title">Recover Password</h3>
+        <section className="contact-area ">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-7 mx-auto">
+                <div className="form-box">
+                  <div className="form-title-wrap">
+                    <h3 className="title">Recover Password</h3>
                   </div>
-                  <div class="form-content ">
-                    <div class="contact-form-action">
+                  <div className="form-content ">
+                    <div className="contact-form-action">
                       <form method="post">
-                        <div class="input-box">
-                          <label class="label-text">New Password</label>
-                          <div class="form-group">
-                            <span class="la la-user-o form-icon"></span>
+                        <div className="input-box">
+                          <label className="label-text">New Password</label>
+                          <div className="form-group">
+                            <span className="la la-user-o form-icon"></span>
                             <input
-                              class="form-control"
+                              className="form-control"
                               type="password"
                               name="email"
                               onChange={(e) => setPass(e.target.value)}
@@ -172,12 +172,12 @@ export default function ChangePass() {
                             />
                           </div>
                         </div>
-                        <div class="input-box">
-                          <label class="label-text">Confirm New Password</label>
-                          <div class="form-group">
-                            <span class="la la-user-o form-icon"></span>
+                        <div className="input-box">
+                          <label className="label-text">Confirm New Password</label>
+                          <div className="form-group">
+                            <span className="la la-user-o form-icon"></span>
                             <input
-                              class="form-control"
+                              className="form-control"
                               type="password"
                               name="email"
                               onChange={(e) => setCPass(e.target.value)}
@@ -185,10 +185,10 @@ export default function ChangePass() {
                             />
                           </div>
                         </div>
-                        <div class="btn-box">
+                        <div className="btn-box">
                           <button
                             type="button"
-                            class="theme-btn"
+                            className="theme-btn"
                             onClick={Done}
                           >
                             Reset Password

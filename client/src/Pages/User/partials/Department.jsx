@@ -18,20 +18,20 @@ const Department = () => {
 
   return (
     <div>
-      <section class="breadcrumb-area gradient-bg-gray before-none">
-        <div class="breadcrumb-wrap padding-right-100px padding-left-100px">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title text-dark">Enrolled Program</h2>
+      <section className="breadcrumb-area gradient-bg-gray before-none">
+        <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title text-dark">Enrolled Program</h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>
                       <a href="/dashboard">Home</a>
                     </li>
@@ -50,45 +50,45 @@ const Department = () => {
             {department.map((data) => {
               return (
                 <>
-                  <div class="col-lg-12">
-                    <div class="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
-                      <div class="card-body px-0 pb-0">
-                        <div class="post-categories"></div>
-                        <h3 class="card-title font-size-28">
+                  <div className="col-lg-12">
+                    <div className="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
+                      <div className="card-body px-0 pb-0">
+                        <div className="post-categories"></div>
+                        <h3 className="card-title font-size-28">
                           Department :{data.name}
                         </h3>
-                        <p class="card-meta pb-3">
-                          <span class="post__author">
+                        <p className="card-meta pb-3">
+                          <span className="post__author">
                             Joined At{" "}
                             {new Date(data.createdAt).toLocaleDateString(
                               "en-US"
                             )}
                           </span>
-                          <span class="post-dot"></span>
-                          <span class="post__time">
+                          <span className="post-dot"></span>
+                          <span className="post__time">
                             Total Students {data.studentId.length}
                           </span>
-                          <span class="post-dot"></span>
-                          <span class="post__time">
+                          <span className="post-dot"></span>
+                          <span className="post__time">
                             {" "}
                             Total Teachers {data.teacherId.length}
                           </span>
-                          <span class="post-dot"></span>
-                          <span class="post__time">
+                          <span className="post-dot"></span>
+                          <span className="post__time">
                             {" "}
                             Total Program {data.programId.length}
                           </span>
-                          <span class="post-dot"></span>
-                          <span class="post__time">
+                          <span className="post-dot"></span>
+                          <span className="post__time">
                             {" "}
                             Session {data.sessionId.map((data) => data.name)}
                           </span>
                         </p>
-                        <div class="section-block"></div>
+                        <div className="section-block"></div>
                         {data.description ? (
-                          <p class="card-text py-3">{data.description}</p>
+                          <p className="card-text py-3">{data.description}</p>
                         ) : (
-                          <p class="card-text py-3">
+                          <p className="card-text py-3">
                             Simple point-and-shoot digital cameras can give
                             surprising quality when they have the right lenses
                             and sensors. Because they are totally automatic in
@@ -97,7 +97,7 @@ const Department = () => {
                             capabilities for controlling the image
                           </p>
                         )}
-                        <div class="section-block"></div>
+                        <div className="section-block"></div>
                         <div id="faq" className="page-scroll">
                           <div className="single-content-item padding-top-40px padding-bottom-40px">
                             <h3 className=" font-size-20">FAQ</h3>

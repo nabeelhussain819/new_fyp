@@ -56,37 +56,37 @@ function Dashboard() {
   return (
     <>
       <section className="dashboard-content-wrap ">
-        <div class="breadcrumb-area bread-bg">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title font-size-30 text-white">
+        <div className="breadcrumb-area bread-bg">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title font-size-30 text-white">
                       Hi, {localStorage.getItem("data")} Welcome Back!
                     </h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>Home</li>
                     <li>User Dashboard</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="row mt-4 ">
-              <div class="col-lg-3 responsive-column-m ">
-                <div class="icon-box shadow-lg icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element flex-shrink-0">
-                      <i class="la la-shopping-cart"></i>
+            <div className="row mt-4 ">
+              <div className="col-lg-3 responsive-column-m ">
+                <div className="icon-box shadow-lg icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element flex-shrink-0">
+                      <i className="la la-shopping-cart"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">Total Courses</p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">Total Courses</p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return (
                             <>
@@ -101,15 +101,15 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element bg-2 flex-shrink-0">
-                      <i class="la la-bookmark"></i>
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element bg-2 flex-shrink-0">
+                      <i className="la la-bookmark"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">You Loged In </p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">You Loged In </p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return (
                             <>
@@ -123,15 +123,15 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element bg-3 flex-shrink-0">
-                      <i class="la la-plane"></i>
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element bg-3 flex-shrink-0">
+                      <i className="la la-plane"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">Comment</p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">Comment</p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return (
                             <>
@@ -146,15 +146,15 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element bg-4 flex-shrink-0">
-                      <i class="la la-star"></i>
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element bg-4 flex-shrink-0">
+                      <i className="la la-star"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">Rating</p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">Rating</p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return (
                             <>{data == false ? null : <>{data.rating}</>}</>
@@ -170,46 +170,46 @@ function Dashboard() {
         </div>
         <div className="dashboard-main-content">
           <div className="container-fluid">
-            <div class="row">
-              <div class="col-lg-6 responsive-column--m">
-                <div class="form-box shadow-lg">
-                  <div class="form-title-wrap">
-                    <h3 class="title">Statics Results</h3>
+            <div className="row">
+              <div className="col-lg-6 responsive-column--m">
+                <div className="form-box shadow-lg">
+                  <div className="form-title-wrap">
+                    <h3 className="title">Statics Results</h3>
                   </div>
                 </div>
                 <LineChart data={name} />
               </div>
-              <div class="col-lg-6 responsive-column--m">
-                <div class="form-box dashboard-card shadow-lg">
-                  <div class="form-title-wrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <h3 class="title">Notifications</h3>
+              <div className="col-lg-6 responsive-column--m">
+                <div className="form-box dashboard-card shadow-lg">
+                  <div className="form-title-wrap">
+                    <div className="d-flex justify-content-between align-items-center">
+                      <h3 className="title">Notifications</h3>
                     </div>
                   </div>
-                  <div class="form-content p-0">
-                    <div class="list-group drop-reveal-list">
+                  <div className="form-content p-0">
+                    <div className="list-group drop-reveal-list">
                       {name.slice(0, 5).map((data) => {
                         return (
                           <>
                             {data == false ? null : (
                               <>
                                 {" "}
-                                <div class="list-group-item list-group-item-action border-top-0">
-                                  <div class="msg-body d-flex align-items-center">
-                                    <div class="icon-element flex-shrink-0 mr-3 ml-0">
-                                      <i class="la la-bell"></i>
+                                <div className="list-group-item list-group-item-action border-top-0">
+                                  <div className="msg-body d-flex align-items-center">
+                                    <div className="icon-element flex-shrink-0 mr-3 ml-0">
+                                      <i className="la la-bell"></i>
                                     </div>
-                                    <div class="msg-content w-100">
-                                      <h3 class="title pb-1">{data.comment}</h3>
+                                    <div className="msg-content w-100">
+                                      <h3 className="title pb-1">{data.comment}</h3>
                                     </div>
                                     <span
-                                      class="icon-element mark-as-read-btn flex-shrink-0 ml-auto mr-0"
+                                      className="icon-element mark-as-read-btn flex-shrink-0 ml-auto mr-0"
                                       data-toggle="tooltip"
                                       data-placement="left"
                                       title=""
                                       data-original-title="Mark as read"
                                     >
-                                      <i class="la la-check-square"></i>
+                                      <i className="la la-check-square"></i>
                                     </span>
                                   </div>
                                 </div>
@@ -222,33 +222,33 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 responsive-column--m">
-                <div class="form-box shadow-lg">
-                  <div class="form-title-wrap">
-                    <h3 class="title">Statics Results</h3>
+              <div className="col-lg-6 responsive-column--m">
+                <div className="form-box shadow-lg">
+                  <div className="form-title-wrap">
+                    <h3 className="title">Statics Results</h3>
                   </div>
                 </div>
                 <LineChart1 />
               </div>
-              <div class="col-lg-6 responsive-column--m">
-                <div class="form-box shadow-lg">
-                  <div class="form-title-wrap">
-                    <h3 class="title">Statics Results</h3>
+              <div className="col-lg-6 responsive-column--m">
+                <div className="form-box shadow-lg">
+                  <div className="form-title-wrap">
+                    <h3 className="title">Statics Results</h3>
                   </div>
                 </div>
                 <LineChart2 />
               </div>
-              <div class="col-lg-12 responsive-column--m">
+              <div className="col-lg-12 responsive-column--m">
                 <div className="container">
-                  <div class="row padding-top-30px ">
-                    <div class="col-lg-12 ">
-                      <h3 class="title font-size-24">Add Yours Services</h3>
+                  <div className="row padding-top-30px ">
+                    <div className="col-lg-12 ">
+                      <h3 className="title font-size-24">Add Yours Services</h3>
                       <hr />
-                      <div class="section-tab section-tab-3 pt-4 pb-5">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item">
+                      <div className="section-tab section-tab-3 pt-4 pb-5">
+                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                          <li className="nav-item">
                             <button
-                              class="nav-link active"
+                              className="nav-link active"
                               id="my-hotel-tab"
                               data-toggle="tab"
                               href="#my-hotel"
@@ -260,9 +260,9 @@ function Dashboard() {
                               Department
                             </button>
                           </li>
-                          <li class="nav-item">
+                          <li className="nav-item">
                             <button
-                              class="nav-link active"
+                              className="nav-link active"
                               id="my-activity-tab"
                               data-toggle="tab"
                               href="#my-activity"
@@ -275,9 +275,9 @@ function Dashboard() {
                             </button>
                           </li>
                           {!localStorage.getItem("isTeacher") ? (
-                            <li class="nav-item">
+                            <li className="nav-item">
                               <button
-                                class="nav-link active"
+                                className="nav-link active"
                                 id="my-car-tab"
                                 data-toggle="tab"
                                 href="#my-car"
@@ -291,9 +291,9 @@ function Dashboard() {
                             </li>
                           ) : null}
 
-                          <li class="nav-item">
+                          <li className="nav-item">
                             <button
-                              class="nav-link active"
+                              className="nav-link active"
                               id="my-flight-tab"
                               data-toggle="tab"
                               href="#my-flight"
@@ -320,19 +320,19 @@ function Dashboard() {
                                   return (
                                     <>
                                       <div
-                                        class="tab-content margin-bottom-40px"
+                                        className="tab-content margin-bottom-40px"
                                         id="myTabcontent"
                                       >
                                         <div
-                                          class="tab-pane fade active show"
+                                          className="tab-pane fade active show"
                                           id="my-hotel"
                                           role="tabpanel"
                                           aria-labelledby="my-hotel-tab"
                                         >
-                                          <div class="my-service-list">
-                                            <div class="card-item card-item-list">
-                                              <div class="card-img">
-                                                <a href="#" class="d-block">
+                                          <div className="my-service-list">
+                                            <div className="card-item card-item-list">
+                                              <div className="card-img">
+                                                <a href="#" className="d-block">
                                                   {/* <img
                                                   src={smiu}
                                                   alt="hotel-img"
@@ -340,24 +340,24 @@ function Dashboard() {
                                                 </a>
                                               </div>
 
-                                              <div class="card-body">
-                                                <h3 class="card-title">
+                                              <div className="card-body">
+                                                <h3 className="card-title">
                                                   <a href="#">{data.name}</a>
                                                 </h3>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total Students{" "}
                                                   {data.studentId.length}
                                                 </p>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total teachers{" "}
                                                   {data.teacherId.length}
                                                 </p>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total program{" "}
                                                   {data.programId.length}
                                                 </p>
 
-                                                <div class="card-price d-flex align-items-center justify-content-between">
+                                                <div className="card-price d-flex align-items-center justify-content-between">
                                                   <button className="theme-btn">
                                                     Enroll Now
                                                   </button>
@@ -388,49 +388,49 @@ function Dashboard() {
                                   return (
                                     <>
                                       <div
-                                        class="tab-content margin-bottom-40px"
+                                        className="tab-content margin-bottom-40px"
                                         id="myTabcontent"
                                       >
                                         <div
-                                          class="tab-pane fade active show"
+                                          className="tab-pane fade active show"
                                           id="my-hotel"
                                           role="tabpanel"
                                           aria-labelledby="my-hotel-tab"
                                         >
-                                          <div class="my-service-list">
-                                            <div class="card-item card-item-list">
-                                              <div class="card-img">
-                                                <a href="#" class="d-block">
+                                          <div className="my-service-list">
+                                            <div className="card-item card-item-list">
+                                              <div className="card-img">
+                                                <a href="#" className="d-block">
                                                   <img
                                                     // src={smiu}
                                                     alt="hotel-img"
                                                   />
                                                 </a>
-                                                <span class="badge">
+                                                <span className="badge">
                                                   {index.name}
                                                 </span>
                                               </div>
 
-                                              <div class="card-body">
-                                                <h3 class="card-title">
+                                              <div className="card-body">
+                                                <h3 className="card-title">
                                                   <a href="#">{index.name}</a>
                                                 </h3>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total Students :
                                                   {index.studentId.length}
                                                 </p>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total teachers :
                                                   {index.teacherId.length}
                                                 </p>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Joined At :
                                                   {new Date(
                                                     index.createdAt
                                                   ).toLocaleDateString("en-US")}
                                                 </p>
 
-                                                <div class="card-price d-flex align-items-center justify-content-between">
+                                                <div className="card-price d-flex align-items-center justify-content-between">
                                                   <button className="theme-btn">
                                                     Enroll Now
                                                   </button>
@@ -461,49 +461,49 @@ function Dashboard() {
                                   return (
                                     <>
                                       <div
-                                        class="tab-content margin-bottom-40px"
+                                        className="tab-content margin-bottom-40px"
                                         id="myTabcontent"
                                       >
                                         <div
-                                          class="tab-pane fade active show"
+                                          className="tab-pane fade active show"
                                           id="my-hotel"
                                           role="tabpanel"
                                           aria-labelledby="my-hotel-tab"
                                         >
-                                          <div class="my-service-list">
-                                            <div class="card-item card-item-list">
-                                              <div class="card-img">
-                                                <a href="#" class="d-block">
+                                          <div className="my-service-list">
+                                            <div className="card-item card-item-list">
+                                              <div className="card-img">
+                                                <a href="#" className="d-block">
                                                   <img
                                                     // src={smiu}
                                                     alt="hotel-img"
                                                   />
                                                 </a>
-                                                <span class="badge">
+                                                <span className="badge">
                                                   {index.name}
                                                 </span>
                                               </div>
 
-                                              <div class="card-body">
-                                                <h3 class="card-title">
+                                              <div className="card-body">
+                                                <h3 className="card-title">
                                                   <a href="#">{index.name}</a>
                                                 </h3>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total Students :
                                                   {index.studentId.length}
                                                 </p>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Total teachers :
                                                   {index.teacherId.length}
                                                 </p>
-                                                <p class="card-meta">
+                                                <p className="card-meta">
                                                   Joined At :
                                                   {new Date(
                                                     index.createdAt
                                                   ).toLocaleDateString("en-US")}
                                                 </p>
 
-                                                <div class="card-price d-flex align-items-center justify-content-between">
+                                                <div className="card-price d-flex align-items-center justify-content-between">
                                                   <button className="theme-btn">
                                                     Enroll Now
                                                   </button>

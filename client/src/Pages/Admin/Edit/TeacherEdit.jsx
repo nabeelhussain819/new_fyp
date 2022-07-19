@@ -34,10 +34,10 @@ function Edit({ data }) {
   return (
     <>
       <button
-        class="theme-btn btn-warning theme-btn-small "
+        className="theme-btn btn-warning theme-btn-small "
         onClick={() => setModalShow(true)}
       >
-        <i class="la la-edit"></i>
+        <i className="la la-edit"></i>
       </button>
 
       <MyVerticallyCenteredModal

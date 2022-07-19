@@ -30,37 +30,37 @@ export const Dashboard = () => {
   return (
     <>
       <section className="dashboard-content-wrap  bg-818">
-        <div class="dashboard-bread">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="breadcrumb-content">
-                  <div class="section-heading">
-                    <h2 class="sec__title font-size-30 text-white">
+        <div className="dashboard-bread">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="breadcrumb-content">
+                  <div className="section-heading">
+                    <h2 className="sec__title font-size-30 text-white">
                       Hi, {localStorage.getItem("data")} Welcome Back!
                     </h2>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="breadcrumb-list text-right">
-                  <ul class="list-items">
+              <div className="col-lg-6">
+                <div className="breadcrumb-list text-right">
+                  <ul className="list-items">
                     <li>Home</li>
                     <li>User Dashboard</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="row mt-4">
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element flex-shrink-0">
-                      <i class="la la-shopping-cart"></i>
+            <div className="row mt-4">
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element flex-shrink-0">
+                      <i className="la la-shopping-cart"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">Enrolled Courses</p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">Enrolled Courses</p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return (
                             <>
@@ -73,15 +73,15 @@ export const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element bg-2 flex-shrink-0">
-                      <i class="la la-bookmark"></i>
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element bg-2 flex-shrink-0">
+                      <i className="la la-bookmark"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">You Logged In </p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">You Logged In </p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return <>{data.tokens.length}</>;
                         })}{" "}
@@ -91,15 +91,15 @@ export const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element bg-3 flex-shrink-0">
-                      <i class="la la-plane"></i>
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element bg-3 flex-shrink-0">
+                      <i className="la la-plane"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">Comment</p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">Comment</p>
+                      <h4 className="info__title">
                         {name.map((data) => {
                           return (
                             <>
@@ -115,15 +115,15 @@ export const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 responsive-column-m">
-                <div class="icon-box icon-layout-2 dashboard-icon-box">
-                  <div class="d-flex">
-                    <div class="info-icon icon-element bg-4 flex-shrink-0">
-                      <i class="la la-star"></i>
+              <div className="col-lg-3 responsive-column-m">
+                <div className="icon-box icon-layout-2 dashboard-icon-box">
+                  <div className="d-flex">
+                    <div className="info-icon icon-element bg-4 flex-shrink-0">
+                      <i className="la la-star"></i>
                     </div>
-                    <div class="info-content">
-                      <p class="info__desc">Rating</p>
-                      <h4 class="info__title">
+                    <div className="info-content">
+                      <p className="info__desc">Rating</p>
+                      <h4 className="info__title">
                         {}
                         {rating.map((data) => data.rating)}
                       </h4>
@@ -136,30 +136,30 @@ export const Dashboard = () => {
         </div>
         <div className="dashboard-main-content">
           <div className="container-fluid">
-            <div class="row">
-              <div class="col-lg-6 responsive-column--m">
-                <div class="form-box shadow-lg">
-                  <div class="form-title-wrap">
-                    <h3 class="title">Rating Given By Teachers</h3>
+            <div className="row">
+              <div className="col-lg-6 responsive-column--m">
+                <div className="form-box shadow-lg">
+                  <div className="form-title-wrap">
+                    <h3 className="title">Rating Given By Teachers</h3>
                   </div>
                 </div>
                 <GpaGraph />
               </div>
-              <div class="col-lg-6 responsive-column--m">
-                <div class="form-box shadow-lg">
-                  <div class="form-title-wrap">
-                    <h3 class="title">Your Evaluation Results Graph</h3>
+              <div className="col-lg-6 responsive-column--m">
+                <div className="form-box shadow-lg">
+                  <div className="form-title-wrap">
+                    <h3 className="title">Your Evaluation Results Graph</h3>
                   </div>
                 </div>
                 <Graph data={name && name.map((data) => data.qec)} qec={name} />
               </div>
-              <div class="col-lg-12 responsive-column--m">
-                <div class="form-box">
-                  <div class="form-title-wrap"></div>
-                  <div class="col-lg-12 responsive-column--m">
+              <div className="col-lg-12 responsive-column--m">
+                <div className="form-box">
+                  <div className="form-title-wrap"></div>
+                  <div className="col-lg-12 responsive-column--m">
                     <div>
                       <div>
-                        <h3 class="title">
+                        <h3 className="title">
                           {name.map((data) => {
                             return (
                               <>
@@ -172,28 +172,28 @@ export const Dashboard = () => {
                           times you visited this site
                         </h3>
                       </div>
-                      <div class="form-content pb-0">
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <div class="sparkline-chart-item">
-                              <span class="font-size-15">
+                      <div className="form-content pb-0">
+                        <div className="row">
+                          <div className="col-lg-4">
+                            <div className="sparkline-chart-item">
+                              <span className="font-size-15">
                                 Evaluated Courses
                               </span>
-                              <h3 class="title font-size-16">
+                              <h3 className="title font-size-16">
                                 {name &&
                                   name.map((data) =>
                                     data == false ? null : data.qec.length
                                   )}
                               </h3>
-                              <div class="visits-chart mt-2"></div>
+                              <div className="visits-chart mt-2"></div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="sparkline-chart-item">
-                              <span class="font-size-15">
+                          <div className="col-lg-4">
+                            <div className="sparkline-chart-item">
+                              <span className="font-size-15">
                                 Enrolled Courses{" "}
                               </span>
-                              <h3 class="title font-size-16">
+                              <h3 className="title font-size-16">
                                 {name.map((data) => {
                                   return (
                                     <>
@@ -204,13 +204,13 @@ export const Dashboard = () => {
                                   );
                                 })}
                               </h3>
-                              <div class="visits-chart mt-2"></div>
+                              <div className="visits-chart mt-2"></div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="sparkline-chart-item">
-                              <span class="font-size-15">Your Teachers </span>
-                              <h3 class="title font-size-16">
+                          <div className="col-lg-4">
+                            <div className="sparkline-chart-item">
+                              <span className="font-size-15">Your Teachers </span>
+                              <h3 className="title font-size-16">
                                 {name.map((data) => {
                                   return (
                                     <>
@@ -227,13 +227,13 @@ export const Dashboard = () => {
                                   );
                                 })}
                               </h3>
-                              <div class="previews-chart mt-2"></div>
+                              <div className="previews-chart mt-2"></div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="sparkline-chart-item">
-                              <span class="font-size-15">Your Department</span>
-                              <h3 class="title font-size-16">
+                          <div className="col-lg-4">
+                            <div className="sparkline-chart-item">
+                              <span className="font-size-15">Your Department</span>
+                              <h3 className="title font-size-16">
                                 {name.map((data) => {
                                   return (
                                     <>
@@ -246,13 +246,13 @@ export const Dashboard = () => {
                                   );
                                 })}
                               </h3>
-                              <div class="visits-chart-2 mt-2"></div>
+                              <div className="visits-chart-2 mt-2"></div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="sparkline-chart-item">
-                              <span class="font-size-15">Joined At</span>
-                              <h3 class="title font-size-16">
+                          <div className="col-lg-4">
+                            <div className="sparkline-chart-item">
+                              <span className="font-size-15">Joined At</span>
+                              <h3 className="title font-size-16">
                                 {name.map((data) => {
                                   return (
                                     <>
@@ -267,13 +267,13 @@ export const Dashboard = () => {
                                   );
                                 })}
                               </h3>
-                              <div class="previews-chart mt-2"></div>
+                              <div className="previews-chart mt-2"></div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="sparkline-chart-item">
-                              <span class="font-size-15">CGPA</span>
-                              <h3 class="title font-size-16">
+                          <div className="col-lg-4">
+                            <div className="sparkline-chart-item">
+                              <span className="font-size-15">CGPA</span>
+                              <h3 className="title font-size-16">
                                 {name.map((data) => {
                                   return (
                                     <>
@@ -282,7 +282,7 @@ export const Dashboard = () => {
                                   );
                                 })}
                               </h3>
-                              <div class="previews-chart mt-2"></div>
+                              <div className="previews-chart mt-2"></div>
                             </div>
                           </div>
                         </div>

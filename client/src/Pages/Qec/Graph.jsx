@@ -35,63 +35,63 @@ const Graph = () => {
 
   return (
     <>
-      <div class="dashboard-bread gradient-bg-gray ">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="breadcrumb-content">
-                <div class="section-heading">
-                  <h2 class="sec__title font-size-30 text-dark">
+      <div className="dashboard-bread gradient-bg-gray ">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="breadcrumb-content">
+                <div className="section-heading">
+                  <h2 className="sec__title font-size-30 text-dark">
                     EVALUATION FORM Result
                   </h2>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="text-right">
-                <ul class="list-items">
+            <div className="col-lg-6">
+              <div className="text-right">
+                <ul className="list-items">
                   <img src={logo1} alt="logo" style={{ width: "200px" }} />
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-3 responsive-column-m">
-            <div class="icon-box icon-layout-2 dashboard-icon-box">
-              <div class="d-flex">
-                <div class="info-icon icon-element flex-shrink-0">
-                  <i class="la la-shopping-cart"></i>
+        <div className="row mt-4">
+          <div className="col-lg-3 responsive-column-m">
+            <div className="icon-box icon-layout-2 dashboard-icon-box">
+              <div className="d-flex">
+                <div className="info-icon icon-element flex-shrink-0">
+                  <i className="la la-shopping-cart"></i>
                 </div>
-                <div class="info-content">
-                  <p class="info__desc">Average Result</p>
-                  <h4 class="info__title">{percent}%</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 responsive-column-m">
-            <div class="icon-box icon-layout-2 dashboard-icon-box">
-              <div class="d-flex">
-                <div class="info-icon icon-element bg-2 flex-shrink-0">
-                  <i class="la la-bookmark"></i>
-                </div>
-                <div class="info-content">
-                  <p class="info__desc">Total Marks</p>
-                  <h4 class="info__title">{rating}</h4>
+                <div className="info-content">
+                  <p className="info__desc">Average Result</p>
+                  <h4 className="info__title">{percent}%</h4>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 responsive-column-m">
-            <div class="icon-box icon-layout-2 dashboard-icon-box">
-              <div class="d-flex">
-                <div class="info-icon icon-element bg-3 flex-shrink-0">
-                  <i class="la la-plane"></i>
+          <div className="col-lg-3 responsive-column-m">
+            <div className="icon-box icon-layout-2 dashboard-icon-box">
+              <div className="d-flex">
+                <div className="info-icon icon-element bg-2 flex-shrink-0">
+                  <i className="la la-bookmark"></i>
                 </div>
-                <div class="info-content">
-                  <p class="info__desc">Status</p>
-                  <h4 class="info__title">
+                <div className="info-content">
+                  <p className="info__desc">Total Marks</p>
+                  <h4 className="info__title">{rating}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 responsive-column-m">
+            <div className="icon-box icon-layout-2 dashboard-icon-box">
+              <div className="d-flex">
+                <div className="info-icon icon-element bg-3 flex-shrink-0">
+                  <i className="la la-plane"></i>
+                </div>
+                <div className="info-content">
+                  <p className="info__desc">Status</p>
+                  <h4 className="info__title">
                     {rating == 12
                       ? "BEST"
                       : rating >= 10
@@ -106,25 +106,25 @@ const Graph = () => {
               </div>
             </div>
           </div>
-          <div class="col-lg-3 responsive-column-m">
-            <div class="icon-box icon-layout-2 dashboard-icon-box">
-              <div class="d-flex">
-                <div class="info-icon icon-element bg-4 flex-shrink-0">
-                  <i class="la la-star"></i>
+          <div className="col-lg-3 responsive-column-m">
+            <div className="icon-box icon-layout-2 dashboard-icon-box">
+              <div className="d-flex">
+                <div className="info-icon icon-element bg-4 flex-shrink-0">
+                  <i className="la la-star"></i>
                 </div>
-                <div class="info-content">
-                  <p class="info__desc">Rating</p>
-                  <h4 class="info__title">
+                <div className="info-content">
+                  <p className="info__desc">Rating</p>
+                  <h4 className="info__title">
                     {rating == 12 ? (
-                      <i class="la la-star">5</i>
+                      <i className="la la-star">5</i>
                     ) : rating == 11 ? (
-                      <i class="la la-star">4</i>
+                      <i className="la la-star">4</i>
                     ) : rating >= 9 ? (
-                      <i class="la la-star">3</i>
+                      <i className="la la-star">3</i>
                     ) : rating >= 7 ? (
-                      <i class="la la-star">2</i>
+                      <i className="la la-star">2</i>
                     ) : (
-                      <i class="la la-star">1</i>
+                      <i className="la la-star">1</i>
                     )}
                   </h4>
                 </div>
@@ -136,7 +136,7 @@ const Graph = () => {
       <div className="dashboard-main-content">
         <div className="container-fluid">
           <div className="row">
-            <div class="col-lg-6 responsive-column--m mt-4">
+            <div className="col-lg-6 responsive-column--m mt-4">
               <div className="form-box">
                 <div className="form-content">
                   <Bar
@@ -156,7 +156,7 @@ const Graph = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 responsive-column--m mt-4">
+            <div className="col-lg-6 responsive-column--m mt-4">
               <div className="form-box">
                 <div className="form-content">
                   <Line
@@ -177,13 +177,13 @@ const Graph = () => {
               </div>
             </div>
 
-            <div class="col-lg-6 responsive-column--m mt-4">
-              <div class="form-box dashboard-card">
-                <div class="form-content pb-0">
-                  <div class="dashboard-progressbar pb-4">
-                    <div class="progress">
+            <div className="col-lg-6 responsive-column--m mt-4">
+              <div className="form-box dashboard-card">
+                <div className="form-content pb-0">
+                  <div className="dashboard-progressbar pb-4">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-striped"
+                        className="progress-bar progress-bar-striped"
                         role="progressbar"
                         style={{ width: `${percent}%` }}
                         aria-valuenow="1"
@@ -191,36 +191,36 @@ const Graph = () => {
                         aria-valuemax="1"
                       ></div>
                     </div>
-                    <p class="font-size-14 pt-1">Rating : {percent}% </p>
+                    <p className="font-size-14 pt-1">Rating : {percent}% </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 responsive-column--m">
-              <div class="form-box dashboard-card">
-                <div class="form-title-wrap">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="title">Rating Procedure</h3>
+            <div className="col-lg-6 responsive-column--m">
+              <div className="form-box dashboard-card">
+                <div className="form-title-wrap">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h3 className="title">Rating Procedure</h3>
                   </div>
                 </div>
-                <div class="form-content p-0">
-                  <div class="list-group drop-reveal-list">
-                    <div class="list-group-item list-group-item-action border-top-0">
-                      <div class="msg-body d-flex align-items-center">
-                        <div class="icon-element flex-shrink-0 mr-3 ml-0">
-                          <i class="la la-bell"></i>
+                <div className="form-content p-0">
+                  <div className="list-group drop-reveal-list">
+                    <div className="list-group-item list-group-item-action border-top-0">
+                      <div className="msg-body d-flex align-items-center">
+                        <div className="icon-element flex-shrink-0 mr-3 ml-0">
+                          <i className="la la-bell"></i>
                         </div>
-                        <div class="msg-content w-100">
-                          <h3 class="title pb-1">"SS</h3>
+                        <div className="msg-content w-100">
+                          <h3 className="title pb-1">"SS</h3>
                         </div>
                         <span
-                          class="icon-element mark-as-read-btn flex-shrink-0 ml-auto mr-0"
+                          className="icon-element mark-as-read-btn flex-shrink-0 ml-auto mr-0"
                           data-toggle="tooltip"
                           data-placement="left"
                           title=""
                           data-original-title="Mark as read"
                         >
-                          <i class="la la-star"></i>
+                          <i className="la la-star"></i>
                         </span>
                       </div>
                     </div>
@@ -228,38 +228,38 @@ const Graph = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 responsive-column--m">
-              <div class="form-box">
-                <div class="form-title-wrap">
-                  <h3 class="title">Statics Results</h3>
+            <div className="col-lg-12 responsive-column--m">
+              <div className="form-box">
+                <div className="form-title-wrap">
+                  <h3 className="title">Statics Results</h3>
                 </div>
-                <div class="col-lg-12 responsive-column--m">
+                <div className="col-lg-12 responsive-column--m">
                   <div>
-                    <div class="form-content pb-0">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <div class="sparkline-chart-item">
-                            <span class="font-size-15">Given Rating </span>
-                            <h3 class="title font-size-16">
+                    <div className="form-content pb-0">
+                      <div className="row">
+                        <div className="col-lg-4">
+                          <div className="sparkline-chart-item">
+                            <span className="font-size-15">Given Rating </span>
+                            <h3 className="title font-size-16">
                               {rating == 12 ? (
-                                <i class="la la-star">5</i>
+                                <i className="la la-star">5</i>
                               ) : rating == 11 ? (
-                                <i class="la la-star">4</i>
+                                <i className="la la-star">4</i>
                               ) : rating >= 9 ? (
-                                <i class="la la-star">3</i>
+                                <i className="la la-star">3</i>
                               ) : rating >= 7 ? (
-                                <i class="la la-star">2</i>
+                                <i className="la la-star">2</i>
                               ) : (
-                                <i class="la la-star">1</i>
+                                <i className="la la-star">1</i>
                               )}
                             </h3>
-                            <div class="visits-chart mt-2"></div>
+                            <div className="visits-chart mt-2"></div>
                           </div>
                         </div>
-                        <div class="col-lg-4">
-                          <div class="sparkline-chart-item">
-                            <span class="font-size-15">Given Status </span>
-                            <h3 class="title font-size-16">
+                        <div className="col-lg-4">
+                          <div className="sparkline-chart-item">
+                            <span className="font-size-15">Given Status </span>
+                            <h3 className="title font-size-16">
                               {rating > 12
                                 ? "BEST"
                                 : rating > 10
@@ -270,35 +270,35 @@ const Graph = () => {
                                 ? "AVERAGE"
                                 : "NOT BAD"}{" "}
                             </h3>
-                            <div class="visits-chart mt-2"></div>
+                            <div className="visits-chart mt-2"></div>
                           </div>
                         </div>
-                        <div class="col-lg-4">
-                          <div class="sparkline-chart-item">
-                            <span class="font-size-15">Marks Achieved </span>
-                            <h3 class="title font-size-16">{rating}</h3>
-                            <div class="previews-chart mt-2"></div>
+                        <div className="col-lg-4">
+                          <div className="sparkline-chart-item">
+                            <span className="font-size-15">Marks Achieved </span>
+                            <h3 className="title font-size-16">{rating}</h3>
+                            <div className="previews-chart mt-2"></div>
                           </div>
                         </div>
-                        <div class="col-lg-4">
-                          <div class="sparkline-chart-item">
-                            <span class="font-size-15">Average Of Marks</span>
-                            <h3 class="title font-size-16">{percent}%</h3>
-                            <div class="visits-chart-2 mt-2"></div>
+                        <div className="col-lg-4">
+                          <div className="sparkline-chart-item">
+                            <span className="font-size-15">Average Of Marks</span>
+                            <h3 className="title font-size-16">{percent}%</h3>
+                            <div className="visits-chart-2 mt-2"></div>
                           </div>
                         </div>
-                        <div class="col-lg-4">
-                          <div class="sparkline-chart-item">
-                            <span class="font-size-15">Joined At</span>
-                            <h3 class="title font-size-16">
+                        <div className="col-lg-4">
+                          <div className="sparkline-chart-item">
+                            <span className="font-size-15">Joined At</span>
+                            <h3 className="title font-size-16">
                               {new Date(Date.now()).toLocaleDateString("en-US")}
                             </h3>
-                            <div class="previews-chart mt-2"></div>
+                            <div className="previews-chart mt-2"></div>
                           </div>
                         </div>
-                        <div class="col-lg-12">
-                          <div class="sparkline-chart-item">
-                            <div class="previews-chart mt-2 ">
+                        <div className="col-lg-12">
+                          <div className="sparkline-chart-item">
+                            <div className="previews-chart mt-2 ">
                               <button className="theme-btn btn-lg col-lg-12">
                                 <Link to="/dashboard" className="text-white">
                                   Finish!

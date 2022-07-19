@@ -92,7 +92,9 @@ const Course = () => {
                       </div>
                       <div className="col-lg-12 responsive-column">
                         <div className="input-box">
-                          <label className="label-text">Course Description</label>
+                          <label className="label-text">
+                            Course Description
+                          </label>
                           <div className="form-group">
                             <input
                               className="form-control"

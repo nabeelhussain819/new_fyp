@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from "react";
-import myData from '../Pages/Qec/question.json'
 import { useNavigate, Link } from "react-router-dom";
-import {
-  FcBusinessman,
-  FcCollaboration,
-  FcDepartment,
-  FcGraduationCap,
-} from "react-icons/fc";
 import CarouselItem from "./Utilis/Carousel";
-import  img  from "../Assets/smiu-logo.png";
+import img from "../Assets/smiu-logo.png";
 import { GalleryImages } from "../Pages/Utilis/Images";
 import { ReadDepartment } from "../Api/Department";
 import { ReadProgram } from "../Api/Program";
 import { ReadTeacher } from "../Api/Teacher";
-import Login from "./Auth/Login";
 import MapContainer from "../Components/Map";
+
 export const Home = () => {
   const [dept, setDept] = useState([]);
   const [program, setProgram] = useState([]);
@@ -29,49 +22,53 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    const getData = () => {
+    const getDepartment = () => {
       ReadDepartment().then(function (result) {
         setDept(result);
       });
     };
 
-    const getData2 = async () => {
+    const getProgram = async () => {
       ReadProgram().then(function (result) {
         setProgram(result);
       });
     };
-    const getData3 = async () => {
+
+    const getTeacher = async () => {
       ReadTeacher().then(function (result) {
         setTeacher(result);
       });
     };
-    getData3();
-    getData2();
-    getData();
+
+    getDepartment();
+    getProgram();
+    getTeacher();
   }, []);
+
   return (
     <>
       <CarouselItem />
-      <section class="about-area padding-bottom-90px padding-top-80px overflow-hidden bg-818">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="section-heading margin-bottom-40px">
-                <h2 class="sec__title">Welcome To Sindh Madressatul Islam University (SMIU)</h2>
-                
-                <p class="sec__desc font-size-16 pb-3 mt-4 pt-4">
-                Sindh Madressatul Islam University (SMIU) is a chartered University duly recognized by the Higher Education Commission of Pakistan. It is one of the oldest institutions in South Asia, which started as a school in 1885, became a college in 1943 and a university in February 2012.
+      <section className="about-area padding-bottom-90px padding-top-80px overflow-hidden bg-818">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="section-heading margin-bottom-40px">
+                <h2 className="sec__title">
+                  Welcome To Sindh Madressatul Islam University (SMIU)
+                </h2>
+
+                <p className="sec__desc font-size-16 pb-3 mt-4 pt-4">
+                  Sindh Madressatul Islam University (SMIU) is a chartered
+                  University duly recognized by the Higher Education Commission
+                  of Pakistan. It is one of the oldest institutions in South
+                  Asia, which started as a school in 1885, became a college in
+                  1943 and a university in February 2012.
                 </p>
-                
               </div>
             </div>
-            <div class="col-lg-4 ml-auto">
-              <div class="image-box about-img-box">
-                 <img
-                  src={img}
-                  alt="about-img"
-                  class="img__item img__item-1"
-                />              
+            <div className="col-lg-4 ml-auto">
+              <div className="image-box about-img-box">
+                <img src={img} alt="about-img" className="img__item img__item-1" />
               </div>
             </div>
           </div>
@@ -144,11 +141,19 @@ export const Home = () => {
             <div className="col-lg-12">
               <div className="section-heading">
                 <h2 className="sec__title text-white font-size-50 line-height-60">
-                Prof. Dr. Mujeeb-U-Ddin Sahrai Memon
-Vice Chancellor
+                  Prof. Dr. Mujeeb-U-Ddin Sahrai Memon Vice Chancellor
                 </h2>
                 <p className="sec__desc text-white pt-3">
-                It gives natural vibrations to my hands and sensations to my mind when to write about this august university i.e. Sindh Madressatul Islam University, Karachi. This is the institute credited with production of wise persons, visionary leaders, freedom fighters, educationists and founders, viz: Quaid-e-Azam Mohammad Ali Jinnah, Sir Shahnawaz Bhutto, Sir Abdullah Haroon, Sir Ghulam Hussain Hidayatullah, Khan Bahadur Mohammad Ayub Khuhro, Allama I.I. Kazi, Allama Umer Bin Mohammad Doudpota, Hanif Muhammad and to my groomer i.e. my father father Taj Muhammad Sahrai.​
+                  It gives natural vibrations to my hands and sensations to my
+                  mind when to write about this august university i.e. Sindh
+                  Madressatul Islam University, Karachi. This is the institute
+                  credited with production of wise persons, visionary leaders,
+                  freedom fighters, educationists and founders, viz:
+                  Quaid-e-Azam Mohammad Ali Jinnah, Sir Shahnawaz Bhutto, Sir
+                  Abdullah Haroon, Sir Ghulam Hussain Hidayatullah, Khan Bahadur
+                  Mohammad Ayub Khuhro, Allama I.I. Kazi, Allama Umer Bin
+                  Mohammad Doudpota, Hanif Muhammad and to my groomer i.e. my
+                  father father Taj Muhammad Sahrai.​
                 </p>
               </div>
             </div>
@@ -171,10 +176,10 @@ Vice Chancellor
                   <div className="owl-item active">
                     <div className="card-item shadow-lg trending-card mb-0 mb-3">
                       <div className="card-img">
-                      <Link
-                            to={"/details/" + data._id}
-                            state={{ from: data, api: "programs" }}
-                          > 
+                        <Link
+                          to={"/details/" + data._id}
+                          state={{ from: data, api: "programs" }}
+                        >
                           {GalleryImages.map((data, key) => {
                             return (
                               key === index && (
@@ -185,11 +190,15 @@ Vice Chancellor
                         </Link>
                       </div>
                       <div className="card-body">
-                      <Link
-                            to={"/details/" + data._id}
-                            state={{ from: data, api: "programs" }}
-                          > <h3 className="card-title">Department Of {data.name}</h3></Link>
-                       
+                        <Link
+                          to={"/details/" + data._id}
+                          state={{ from: data, api: "programs" }}
+                        >
+                          {" "}
+                          <h3 className="card-title">
+                            Department Of {data.name}
+                          </h3>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -209,12 +218,11 @@ Vice Chancellor
       </section>
       <section className="faq-area section-bg4  section--padding">
         <div className="container">
-          <div className="row">          
-          </div>
+          <div className="row"></div>
           <div className="row padding-top-20px">
             <div className="col-lg-7">
-           <MapContainer/>
-           </div>
+              <MapContainer />
+            </div>
             <div className="col-lg-5">
               <div className="faq-forum pl-4">
                 <div className="form-box border">

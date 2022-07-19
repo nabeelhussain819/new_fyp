@@ -88,66 +88,66 @@ function Commend({ data }) {
             </div>
             <div className="modal-body">
               <div className="contact-form-action">
-                <div class="reviews-reaction">
+                <div className="reviews-reaction">
                   <button
-                    class="comment-love bg-transparent border-0 text-primary p-1"
+                    className="comment-love bg-transparent border-0 text-primary p-1"
                     onClick={() => setIsgood("1")}
                   >
-                    <i class="la la-thumbs-up"></i>
+                    <i className="la la-thumbs-up"></i>
                   </button>
                   <button
-                    class="comment-love bg-transparent border-0 text-warning p-1"
+                    className="comment-love bg-transparent border-0 text-warning p-1"
                     onClick={() => setIsgood("2")}
                   >
-                    <i class="la la-fire"></i>
+                    <i className="la la-fire"></i>
                   </button>
                   <button
-                    class="comment-love bg-transparent border-0 text-danger p-1 pr-4"
+                    className="comment-love bg-transparent border-0 text-danger p-1 pr-4"
                     onClick={() => setIsgood("3")}
                   >
-                    <i class="la la-heart-o"></i>
+                    <i className="la la-heart-o"></i>
                   </button>
                   <label for="catChb2">Is HelpFull in Nature</label>
                 </div>
-                <div class="reviews-reaction">
+                <div className="reviews-reaction">
                   <button
-                    class="comment-love bg-transparent border-0 text-primary p-1"
+                    className="comment-love bg-transparent border-0 text-primary p-1"
                     onClick={() => setIsfriendly("1")}
                   >
-                    <i class="la la-thumbs-up"></i>
+                    <i className="la la-thumbs-up"></i>
                   </button>
                   <button
-                    class="comment-love bg-transparent border-0 text-warning p-1"
+                    className="comment-love bg-transparent border-0 text-warning p-1"
                     onClick={() => setIsfriendly("2")}
                   >
-                    <i class="la la-fire"></i>
+                    <i className="la la-fire"></i>
                   </button>
                   <button
-                    class="comment-love bg-transparent border-0 text-danger p-1 pr-4"
+                    className="comment-love bg-transparent border-0 text-danger p-1 pr-4"
                     onClick={() => setIsfriendly("3")}
                   >
-                    <i class="la la-heart-o"></i>
+                    <i className="la la-heart-o"></i>
                   </button>
                   <label for="catChb2">Is Friendly in Nature</label>
                 </div>
-                <div class="reviews-reaction">
+                <div className="reviews-reaction">
                   <button
-                    class="comment-love bg-transparent border-0 text-primary p-1"
+                    className="comment-love bg-transparent border-0 text-primary p-1"
                     onClick={() => setIsprofessional("1")}
                   >
-                    <i class="la la-thumbs-up"></i>
+                    <i className="la la-thumbs-up"></i>
                   </button>
                   <button
-                    class="comment-love bg-transparent border-0 text-warning p-1"
+                    className="comment-love bg-transparent border-0 text-warning p-1"
                     onClick={() => setIsprofessional("2")}
                   >
-                    <i class="la la-fire"></i>
+                    <i className="la la-fire"></i>
                   </button>
                   <button
-                    class="comment-love bg-transparent border-0 text-danger p-1 pr-4"
+                    className="comment-love bg-transparent border-0 text-danger p-1 pr-4"
                     onClick={() => setIsprofessional("3")}
                   >
-                    <i class="la la-heart-o"></i>
+                    <i className="la la-heart-o"></i>
                   </button>
                   <label for="catChb2">Is Best in his Profession</label>
                 </div>

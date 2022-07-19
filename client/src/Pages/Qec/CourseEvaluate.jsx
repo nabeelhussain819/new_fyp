@@ -41,31 +41,31 @@ const CourseEvaluate = () => {
   }, []);
   return (
     <div className="bread-bg">
-      <section class="hero-wrapper bread-bg pb-4">
-        <div class="pb-0">
-          <div class="container pt-4">
-            <div class="col-lg-12 pt-4">
-              <div class="hero-content pb-5 pt-4">
-                <div class="section-heading">
-                  <p class="sec__desc pb-2">Evalation Form</p>
-                  <h2 class="sec__title">
+      <section className="hero-wrapper bread-bg pb-4">
+        <div className="pb-0">
+          <div className="container pt-4">
+            <div className="col-lg-12 pt-4">
+              <div className="hero-content pb-5 pt-4">
+                <div className="section-heading">
+                  <p className="sec__desc pb-2">Evalation Form</p>
+                  <h2 className="sec__title">
                     Are You Ready To Evaluate? <br /> Select Course & Teacher To
                     Evaluate
                   </h2>
                 </div>
               </div>
-              <div class="search-fields-container">
-                <div class="contact-form-action">
-                  <form action="#" class="row">
-                    <div class="col-lg-4 pr-0">
-                      <div class="input-box">
-                        <label class="label-text">
+              <div className="search-fields-container">
+                <div className="contact-form-action">
+                  <form action="#" className="row">
+                    <div className="col-lg-4 pr-0">
+                      <div className="input-box">
+                        <label className="label-text">
                           Select Enrolled Course{" "}
                         </label>
-                        <div class="form-group">
-                          <span class="la la-map-marker form-icon"></span>
+                        <div className="form-group">
+                          <span className="la la-map-marker form-icon"></span>
                           <select
-                            class="select-contain-select form-control"
+                            className="select-contain-select form-control"
                             tabindex="-98"
                             onChange={(e) => getChange(e.target.value)}
                           >
@@ -84,13 +84,13 @@ const CourseEvaluate = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 pr-0">
-                      <div class="input-box">
-                        <label class="label-text">Select Term</label>
-                        <div class="form-group">
-                          <span class="la la-calendar form-icon"></span>
+                    <div className="col-lg-4 pr-0">
+                      <div className="input-box">
+                        <label className="label-text">Select Term</label>
+                        <div className="form-group">
+                          <span className="la la-calendar form-icon"></span>
                           <select
-                            class="select-contain-select form-control"
+                            className="select-contain-select form-control"
                             tabindex="-98"
                             onChange={(e) => setTerm(e.target.value)}
                           >
@@ -101,13 +101,13 @@ const CourseEvaluate = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 pr-0">
-                      <div class="input-box">
-                        <label class="label-text">Select Teachers</label>
-                        <div class="form-group">
-                          <span class="la la-calendar form-icon"></span>
+                    <div className="col-lg-4 pr-0">
+                      <div className="input-box">
+                        <label className="label-text">Select Teachers</label>
+                        <div className="form-group">
+                          <span className="la la-calendar form-icon"></span>
                           <select
-                            class="select-contain-select form-control"
+                            className="select-contain-select form-control"
                             tabindex="-98"
                             onChange={(e) => getChange1(e.target.value)}
                           >
@@ -137,10 +137,10 @@ const CourseEvaluate = () => {
                     </div>
                   </form>
                   {show && (
-                    <div class="btn-box pt-3">
+                    <div className="btn-box pt-3">
                       <Link
                         to={"/qec-evaluate"}
-                        class="theme-btn theme-btn-small"
+                        className="theme-btn theme-btn-small"
                         state={{
                           courseId: courseId,
                           teacherId: teacherId,
@@ -157,24 +157,24 @@ const CourseEvaluate = () => {
           </div>
         </div>
       </section>
-      <section class="hero-wrapper bread-bg pb-4">
-        <div class="pb-0">
-          <div class="container pt-4">
-            <div class="col-lg-12 pt-4"></div>
+      <section className="hero-wrapper bread-bg pb-4">
+        <div className="pb-0">
+          <div className="container pt-4">
+            <div className="col-lg-12 pt-4"></div>
           </div>
         </div>
       </section>
-      <section class="hero-wrapper bread-bg pb-4">
-        <div class="pb-0">
-          <div class="container pt-4">
-            <div class="col-lg-12 pt-4"></div>
+      <section className="hero-wrapper bread-bg pb-4">
+        <div className="pb-0">
+          <div className="container pt-4">
+            <div className="col-lg-12 pt-4"></div>
           </div>
         </div>
       </section>
-      <section class="hero-wrapper bread-bg pb-4">
-        <div class="pb-0">
-          <div class="container pt-4">
-            <div class="col-lg-12 pt-4"></div>
+      <section className="hero-wrapper bread-bg pb-4">
+        <div className="pb-0">
+          <div className="container pt-4">
+            <div className="col-lg-12 pt-4"></div>
           </div>
         </div>
       </section>
