@@ -7,6 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { doLogin, updateDataInStore } from "../../setup/service/Auth";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import Error from "../../Components/Utils/Messages/Error";
+import Input from "../../Components/UI/Forms/Input";
 
 const schema = yup
   .object({
@@ -93,42 +95,34 @@ function Login() {
                 className="MultiFile-intercepted"
                 onSubmit={handleSubmit(loginUser)}
               >
-                <div className="input-box">
-                  <label className="label-text">Email</label>
-                  <div className="form-group">
-                    <span className="la la-user form-icon"></span>
-                    <input
-                      className="form-control"
-                      type="email"
-                      name="email"
-                      placeholder="Type your email"
-                      {...register("email")}
-                    />
-                    <p className="text-danger m-1">{errors.email?.message}</p>
-                  </div>
+                <Input
+                  title="Email"
+                  type="email"
+                  name="email"
+                  hook={register("email")}
+                  errors={errors.email?.message}
+                  icon="la la-user form-icon"
+                  placeholder="Type your email"
+                  hasIcon
+                />
+                <Input
+                  title="Password"
+                  type="password"
+                  name="password"
+                  hook={register("password")}
+                  errors={errors.password?.message}
+                  icon="la la-lock form-icon"
+                  placeholder="Type password"
+                  hasIcon
+                />
+
+                <div className="d-flex align-items-center justify-content-between">
+                  <div className="custom-checkbox mb-0"></div>
+                  <p className="forgot-password">
+                    <a href="recover">Forgot Password?</a>
+                  </p>
                 </div>
-                <div className="input-box">
-                  <label className="label-text">Password</label>
-                  <div className="form-group mb-2">
-                    <span className="la la-lock form-icon"></span>
-                    <input
-                      className="form-control"
-                      type="password"
-                      name="password"
-                      placeholder="Type password"
-                      {...register("password")}
-                    />
-                    <p className="text-danger m-1">
-                      {errors.password?.message}
-                    </p>
-                  </div>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <div className="custom-checkbox mb-0"></div>
-                    <p className="forgot-password">
-                      <a href="recover">Forgot Password?</a>
-                    </p>
-                  </div>
-                </div>
+
                 <div className="btn-box pt-3 pb-4">
                   <button type="submit" className="theme-btn w-100">
                     Login Account
