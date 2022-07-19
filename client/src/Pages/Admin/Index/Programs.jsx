@@ -113,19 +113,23 @@ const Programs = () => {
                                 <h3 class="title">{data.name}</h3>
                               </div>
                             </td>
-                            <td>{data.departmentId.map((data1)=>data1.name)}</td>
-                            <td>{data.sessionId.map((data1)=>data1.name)}</td>
+                            <td>
+                              {data.departmentId.map((data1) => data1.name)}
+                            </td>
+                            <td>{data.sessionId.map((data1) => data1.name)}</td>
                             <td>{data.studentId.length}</td>
                             <td>
-                            <span class="badge badge-warning py-1 px-2">
-                              {data.studentId.length < 100 ? "Less Students" :"ACTIVE"}
+                              <span class="badge badge-warning py-1 px-2">
+                                {data.studentId.length < 100
+                                  ? "Less Students"
+                                  : "ACTIVE"}
                               </span>
                             </td>
                             <td>
                               <div class="table-content">
                                 <Link
                                   to={"/details/" + data._id}
-                                  class="theme-btn theme-btn-small "
+                                  class="bg-transparent border-0 p-1"
                                   state={{ from: data, api: "programs" }}
                                 >
                                   <i class="la la-eye"></i>

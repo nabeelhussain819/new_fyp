@@ -81,7 +81,6 @@ const Students = () => {
                         <th scope="col">University Id</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Status</th>
                         <th scope="col">Action</th>
                       </tr>
                     </thead>
@@ -99,15 +98,10 @@ const Students = () => {
                             <td>{data.email}</td>
                             <td>{data.phone}</td>
                             <td>
-                              <span class="badge badge-success py-1 px-2">
-                                Active
-                              </span>
-                            </td>
-                            <td>
                               <div class="table-content">
                                 <Link
                                   to={"/details/" + data._id}
-                                  class="theme-btn theme-btn-small "
+                                  class="bg-transparent border-0 p-1 "
                                   state={{ from: data, api: "programs" }}
                                 >
                                   <i class="la la-eye"></i>

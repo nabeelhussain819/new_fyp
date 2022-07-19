@@ -1,34 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Line, PolarArea } from "react-chartjs-2";
-import { AuthTeacher } from "../../../Api/Teacher";
-import { AuthTeacherQec } from "../../../Api/SpecificData/AuthUser";
-export default function LineChart1({ data }) {
-  const [rating, setRating] = useState([]);
-  const [name, setName] = useState([]);
+import { Line, Bar } from "react-chartjs-2";
+import { AuthQec } from "../../../Api/SpecificData/AuthUser";
 
+export default function LineChart({ data, qec }) {
+  const [rating, setRating] = useState([]);
   const state = {
-    labels: name.map((data) => data.courseId.map((data) => data.name)),
+    labels: rating.map((data) => data.courseId.map((data) => data.name)),
     datasets: [
       {
-        label: "Qec Result Graph",
+        label: "Todays rating of your friendly",
         fill: false,
         lineTension: 0.5,
         backgroundColor: "rgba(75,192,192,1)",
         borderColor: "rgba(0,0,0,1)",
         borderWidth: 2,
-        data: name.map((data) => data.rating),
+        data: rating.map((data) => data.rating),
       },
     ],
   };
-
   useEffect(() => {
     const getData = () => {
-      AuthTeacherQec().then(function (result) {
-        setName(result);
+      AuthQec().then(function (result) {
+        setRating(result);
       });
     };
-
     getData();
   }, []);
   return (
@@ -39,7 +35,7 @@ export default function LineChart1({ data }) {
           options={{
             title: {
               display: true,
-              text: "Average rating per month",
+              text: "Average Rating per month",
               fontSize: 20,
             },
             legend: {
@@ -47,7 +43,7 @@ export default function LineChart1({ data }) {
               position: "right",
             },
           }}
-        />
+        />{" "}
       </div>
     </div>
   );

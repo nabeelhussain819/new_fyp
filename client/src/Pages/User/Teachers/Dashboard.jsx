@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AuthTeacher } from "../../../Api/Teacher";
+import { AuthTeacherQec } from "../../../Api/SpecificData/AuthUser";
 import BarChart from "../partials/BarChart";
 import LineChart from "../partials/Charts";
 import LineChart1 from "../partials/LineChart";
@@ -44,6 +45,9 @@ function Dashboard() {
     const getData = () => {
       AuthTeacher().then(function (result) {
         result.map((data) => (data == false ? null : setName([data])));
+      });
+      AuthTeacherQec().then(function (result) {
+        console.log(result);
       });
     };
 

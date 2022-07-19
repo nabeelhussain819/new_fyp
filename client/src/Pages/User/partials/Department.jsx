@@ -1,59 +1,62 @@
-import React, { useState } from "react";
-import { useParams, useLocation } from "react-router-dom";
-import Commend from "./Commend";
-import Complain from "./Complain";
-import myData from "../Qec/question.json";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-const Details = () => {
-  const location = useLocation();
-  const params = useParams();
+import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { useNavigate, Link } from "react-router-dom";
+import { AuthStudentDepartment } from "../../../Api/SpecificData/AuthUser";
+import myData from "../../Qec/question.json";
+const Department = () => {
+  let navigate = useNavigate();
+  const [department, setCourse] = useState([]);
+  console.log(department);
+  useEffect(() => {
+    const getData = () => {
+      AuthStudentDepartment().then(function (result) {
+        setCourse(result);
+      });
+    };
+    getData();
+  }, []);
 
-  const { from, api } = location.state;
-  console.log(api);
-
-  function print() {
-    window.print();
-  }
   return (
     <div>
-      <div class="dashboard-bread">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="breadcrumb-content">
-                <div class="section-heading">
-                  <h2 class="sec__title font-size-30 text-white">Details</h2>
+      <section class="breadcrumb-area gradient-bg-gray before-none">
+        <div class="breadcrumb-wrap padding-right-100px padding-left-100px">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="breadcrumb-content">
+                  <div class="section-heading">
+                    <h2 class="sec__title text-dark">Enrolled Program</h2>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="breadcrumb-list text-right">
-                <ul class="list-items">
-                  <li>Home</li>
-                  <li>Details</li>
-                </ul>
+              <div class="col-lg-6">
+                <div class="breadcrumb-list text-right">
+                  <ul class="list-items">
+                    <li>
+                      <a href="/dashboard">Home</a>
+                    </li>
+                    <li>Program</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section className="card-area bg-818">
         <div className="container">
           <div className="row">
-            {[from].map((data) => {
+            {department.map((data) => {
               return (
                 <>
-                  <div class="col-lg-8">
+                  <div class="col-lg-12">
                     <div class="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
                       <div class="card-body px-0 pb-0">
-                        <div class="post-categories">
-                          {api == "teachers" && localStorage.getItem("id") && (
-                            <Commend data={data} />
-                          )}
-                        </div>
-                        <h3 class="card-title font-size-28">{data.name}</h3>
+                        <div class="post-categories"></div>
+                        <h3 class="card-title font-size-28">
+                          Department :{data.name}
+                        </h3>
                         <p class="card-meta pb-3">
                           <span class="post__author">
                             Joined At{" "}
@@ -63,35 +66,22 @@ const Details = () => {
                           </span>
                           <span class="post-dot"></span>
                           <span class="post__time">
-                            {data.studentId && (
-                              <a href="#" class="text-gray">
-                                {data.studentId.length} Total Students
-                              </a>
-                            )}
+                            Total Students {data.studentId.length}
                           </span>
                           <span class="post-dot"></span>
                           <span class="post__time">
-                            {data.teacherId && (
-                              <a href="#" class="text-gray">
-                                {data.teacherId.length} Total Teachers
-                              </a>
-                            )}
+                            {" "}
+                            Total Teachers {data.teacherId.length}
                           </span>
                           <span class="post-dot"></span>
                           <span class="post__time">
-                            {data.isTeacher && (
-                              <a href="#" class="text-gray">
-                                {data.email}
-                              </a>
-                            )}
+                            {" "}
+                            Total Program {data.programId.length}
                           </span>
                           <span class="post-dot"></span>
                           <span class="post__time">
-                            {data.isTeacher == false ? (
-                              <a href="#" class="text-gray">
-                                {data.email}
-                              </a>
-                            ) : null}
+                            {" "}
+                            Session {data.sessionId.map((data) => data.name)}
                           </span>
                         </p>
                         <div class="section-block"></div>
@@ -115,6 +105,7 @@ const Details = () => {
                               className="accordion accordion-item padding-top-30px"
                               id="accordionExample2"
                             >
+                              {" "}
                               {myData.slice(0, 1).map((data) => {
                                 return (
                                   <>
@@ -198,11 +189,6 @@ const Details = () => {
                       </div>
                     </div>
                   </div>
-                  {localStorage.getItem("isTeacher") ? (
-                    ""
-                  ) : (
-                    <Complain data={data} api={api} />
-                  )}
                 </>
               );
             })}
@@ -213,4 +199,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Department;

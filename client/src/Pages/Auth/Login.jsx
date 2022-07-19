@@ -156,28 +156,6 @@ function Login() {
                     Don't Have Any Account ?{" "}
                     <Link to="/signup">Register Now </Link>
                   </p>
-                  <ul class="social-profile py-3">
-                    <li>
-                      <a href="#" class="bg-5 text-white">
-                        <i class="lab la-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="bg-6 text-white">
-                        <i class="lab la-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="bg-7 text-white">
-                        <i class="lab la-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="bg-5 text-white">
-                        <i class="lab la-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </form>
             </div>

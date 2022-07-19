@@ -7,17 +7,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 function MyVerticallyCenteredModal(props) {
   const [name, setName] = useState("");
-  const [id, setId] = useState(props.data._id);
-  const [code, setCode] = useState("");
+  const [complainId, setId] = useState(props.data._id);
+  const [reply, setComplain] = useState("");
+  console.log(props.data);
   const sendData = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://fyptes.herokuapp.com/edit-programs", {
+    const res = await fetch("http://localhost:5000/reply", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name,
-        id,
+        complainId,
+        reply,
       }),
     });
     const data = await res.json();
@@ -39,7 +41,7 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          {props.data.name}
+          About {props.data.issue}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -47,7 +49,8 @@ function MyVerticallyCenteredModal(props) {
           <thead>
             <tr>
               <th scope="col">No</th>
-              <th scope="col">Name</th>
+              <th scope="col">Complain</th>
+              <th scope="col">For</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -55,12 +58,14 @@ function MyVerticallyCenteredModal(props) {
             <tr>
               <th scope="row">01</th>
               <td>
+                <div class="table-content">{props.data.complain}</div>
+              </td>
+              <td>
                 <div class="table-content">
-                  <input
-                    type="text"
-                    placeholder={props.data.name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
+                  {props.data.departId &&
+                    props.data.departId.map((data) => data.name)}
+                  {props.data.courseId &&
+                    props.data.courseId.map((data) => data.name)}
                 </div>
               </td>
               <td>
@@ -68,17 +73,31 @@ function MyVerticallyCenteredModal(props) {
                   <Link
                     to={"/details/" + props.data._id}
                     class="bg-transparent border-0 p-1"
-                    state={{ from: props.data, api: "programs" }}
+                    state={{ from: props.data, api: "departments" }}
                   >
                     <i class="la la-eye"></i>
                   </Link>
-                  <Delete id={props.data._id} api={"programs"} />
+                  <Delete id={props.data._id} api={"departments"} />
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
       </Modal.Body>
+      <div class="col-lg-12 responsive-column">
+        <div class="input-box">
+          <label class="label-text">Your Reply</label>
+          <div class="form-group">
+            <textarea
+              class="message-control form-control"
+              name="message"
+              placeholder="No HTML, no web or email address, no ALL CAPS "
+              value={reply}
+              onChange={(e) => setComplain(e.target.value)}
+            ></textarea>
+          </div>
+        </div>
+      </div>
       <Modal.Footer>
         <Button onClick={sendData}>Submit</Button>
         <Button onClick={props.onHide} className="btn-danger">
@@ -89,7 +108,7 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-function Edit({ data }) {
+function Replay({ data }) {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -110,4 +129,4 @@ function Edit({ data }) {
   );
 }
 
-export default Edit;
+export default Replay;

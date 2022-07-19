@@ -56,7 +56,14 @@ const StudentSchema = new mongoose.Schema(
         required: false,
       },
     ],
-    cgpaRate: [
+    qec: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Qec",
+        required: false,
+      },
+    ],
+    Rate: [
       {
         type: Schema.Types.ObjectId,
         ref: "GPA",
@@ -81,12 +88,6 @@ const StudentSchema = new mongoose.Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "Course",
-        required: false,
-      },
-    ],
-    rating: [
-      {
-        type: Number,
         required: false,
       },
     ],

@@ -22,14 +22,14 @@ const Courses = () => {
 
   return (
     <div>
-      <section class="breadcrumb-area bread-bg ">
+      <section class="breadcrumb-area gradient-bg-gray before-none">
         <div class="breadcrumb-wrap padding-right-100px padding-left-100px">
           <div class="container-fluid">
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <div class="breadcrumb-content">
                   <div class="section-heading">
-                    <h2 class="sec__title text-white">Available Courses</h2>
+                    <h2 class="sec__title text-dark">Available Courses</h2>
                   </div>
                 </div>
               </div>
@@ -45,9 +45,6 @@ const Courses = () => {
               </div>
             </div>
           </div>
-          <div class="bread-svg-box">
-        <svg class="hero-svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path></svg>
-        </div>
         </div>
       </section>
       <section class="card-area pt-4 bg-817">

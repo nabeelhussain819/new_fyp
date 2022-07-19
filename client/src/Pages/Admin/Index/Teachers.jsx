@@ -93,7 +93,7 @@ const Teachers = () => {
                                 <h3 class="title">{data.name}</h3>
                               </div>
                             </td>
-                            <td>{data.deptId.map((data1)=>data1.name)}</td>
+                            <td>{data.deptId.map((data1) => data1.name)}</td>
                             <td>{data.email}</td>
                             <td>{data.phone}</td>
                             <td>
@@ -105,7 +105,7 @@ const Teachers = () => {
                               <div class="table-content">
                                 <Link
                                   to={"/details/" + data._id}
-                                  class="theme-btn theme-btn-small "
+                                  class="bg-transparent border-0 p-1 "
                                   state={{ from: data, api: "programs" }}
                                 >
                                   <i class="la la-eye"></i>

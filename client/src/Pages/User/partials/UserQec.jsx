@@ -3,10 +3,9 @@ import { Chart as ChartJS } from "chart.js/auto";
 import { Line, Bar } from "react-chartjs-2";
 import { AuthTeacher } from "../../../Api/Teacher";
 
-export default function LineChart(props) {
+export default function UserQec(props) {
   const [rating, setRating] = useState([]);
 
-  console.log(props.data.map((data) => data.isHelpfull.length));
   return (
     <div>
       <div>

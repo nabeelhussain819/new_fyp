@@ -9,7 +9,7 @@ function Delete({ id, api }) {
   const onDelete = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://fyptes.herokuapp.com/delete-" + api, {
+    const res = await fetch("http://localhost:5000/delete-" + api, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -32,7 +32,7 @@ function Delete({ id, api }) {
     <>
       <button
         variant="danger"
-        class="theme-btn btn-danger theme-btn-small hidden-print "
+        class="bg-transparent border-0 hidden-print p-1"
         onClick={onDelete}
       >
         <i class="la la-trash mr-1"></i>

@@ -3,11 +3,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "../Pages/Home";
 import { Dashboard } from "../Pages/User/Dashboard";
 import Navbar from "../Pages/User/partials/Navbar";
-import Sidebar from "../Pages/User/partials/Sidebar";
-import Courses from "../Pages/User/Course";
-import Department from "../Pages/User/Department";
-import Program from "../Pages/User/Program";
-import Teacher from "../Pages/User/Teacher";
+import Department from "../Pages/User/partials/Department";
+import Program from "../Pages/User/partials/Program";
 import Details from "../Pages/Utilis/Details";
 import Qec from "../Pages/Utilis/Qec";
 import CourseEvaluate from "../Pages/Qec/CourseEvaluate";
@@ -20,6 +17,9 @@ import HowEvaluation from "../Pages/Qec/HowEvaluate";
 import RuleEvaluation from "../Pages/Qec/RulesEvaluate";
 import Graph from "../Pages/Qec/Graph";
 import ChangePass from "../Pages/Auth/ChangePass";
+import Enrollment from "../Pages/User/Enrollment";
+import Courses from "../Pages/User/partials/Courses";
+import Teachers from "../Pages/User/partials/Teachers";
 function Students() {
   return (
     <>
@@ -34,7 +34,7 @@ function Students() {
           <Route path="/programs" element={<Program />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/details/:id" element={<Details />} />
-          <Route path="/teachers" element={<Teacher />} />
+          <Route path="/teachers" element={<Teachers />} />
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/qec-evaluate" element={<Qec />} />
@@ -47,6 +47,7 @@ function Students() {
           <Route path="/complains" element={<Complain />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/recover" element={<ChangePass />} />
+          <Route path="/Enrollment" element={<Enrollment />} />
         </Routes>
       </Fragment>
       {/* </section> */}

@@ -5,19 +5,22 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MyVerticallyCenteredModal(props) {
-  const [gpa,setGpa] = useState("")
-  const [studentId,setId]= useState(props.data._id);
-  const [teacherId,setd]= useState(localStorage.getItem('id'));
-  const [rating,setRating ] = useState("")
-  console.log(teacherId)
-  const sendData=async(e)=>{
+  const [gpa, setGpa] = useState("");
+  const [studentId, setId] = useState(props.data._id);
+  const [teacherId, setd] = useState(localStorage.getItem("id"));
+  const [rating, setRating] = useState("");
+  console.log(teacherId);
+  const sendData = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://fyptes.herokuapp.com/gpaRate" , {
+    const res = await fetch("http://localhost:5000/gpaRate", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        rating,studentId,gpa,teacherId
+        rating,
+        studentId,
+        gpa,
+        teacherId,
       }),
     });
     const data = await res.json();
@@ -27,9 +30,8 @@ function MyVerticallyCenteredModal(props) {
       toast.warning("Invalid entry!");
     } else {
       toast.success("Done!");
-      
     }
-  }
+  };
   return (
     <Modal
       {...props}
@@ -39,38 +41,37 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-         Name: {props.data.name}
+          Name: {props.data.name}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-    
-      <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Cgpa</th>
-                        <th scope="col">Rating</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                          <tr>
-                            <th scope="row">01</th>
-                            <td>
-                              <div class="table-content">
-                                <input type="text" placeholder="addCgpa"onChange={(e)=>setGpa(e.target.value)}/>
-                              </div>
-                            </td>
-                            <td>   <input type="text" placeholder="addCgpa" onChange={(e)=>setRating(e.target.value)}/></td>
-                           
-                          </tr>
-                      
-                    </tbody>
-                  </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">01</th>
+              <td>
+                <input
+                  type="number"
+                  className="form-control"
+                  placeholder="Add Rating Of The Student"
+                  onChange={(e) => setRating(e.target.value)}
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </Modal.Body>
       <Modal.Footer>
-      <Button onClick={sendData}>Submit</Button> 
-        <Button onClick={props.onHide} className="btn-danger">Cancel</Button>
+        <Button onClick={sendData}>Submit</Button>
+        <Button onClick={props.onHide} className="btn-danger">
+          Cancel
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -82,7 +83,7 @@ function StudentRating({ data }) {
   return (
     <>
       <button
-        class="theme-btn btn-warning theme-btn-small "
+        class="btn-transparent btn-sm p-2 border-0"
         onClick={() => setModalShow(true)}
       >
         <i class="la la-edit"></i>

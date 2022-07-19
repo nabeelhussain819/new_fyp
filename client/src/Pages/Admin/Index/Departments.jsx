@@ -27,7 +27,7 @@ const Departments = () => {
   }, []);
 
   return (
-    <div className="dashboard-content-wrap">
+    <>
       <div class="dashboard-bread dashboard--bread dashboard-bread-2">
         <div class="container-fluid">
           <div class="row align-items-center">
@@ -53,99 +53,103 @@ const Departments = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="dashboard-main-content">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="form-box">
-                <div className="form-title-wrap">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h3 class="title">Department Results</h3>
-                    <input
-                      type="text"
-                      className="form-control col-lg-4"
-                      placeholder="Search Departments"
-                      onChange={searchData}
-                    />
-                    <div class="select-contain">
-                      <div class="dropdown bootstrap-select select-contain-select">
-                        {show ? (
-                          <button
-                            className="btn dropdown-toggle btn-dark"
-                            onClick={() => setShow(false)}
-                          >
-                            Close
-                          </button>
-                        ) : (
-                          <button
-                            className="btn dropdown-toggle btn-dark"
-                            onClick={() => setShow(true)}
-                          >
-                            Create Department
-                          </button>
-                        )}
+      </div>{" "}
+      <div className="dashboard-content-wrap">
+        <div className="dashboard-main-content">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="form-box">
+                  <div className="form-title-wrap">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h3 class="title">Department Results</h3>
+                      <input
+                        type="text"
+                        className="form-control col-lg-4"
+                        placeholder="Search Departments"
+                        onChange={searchData}
+                      />
+                      <div class="select-contain">
+                        <div class="dropdown bootstrap-select select-contain-select">
+                          {show ? (
+                            <button
+                              className="btn dropdown-toggle btn-dark"
+                              onClick={() => setShow(false)}
+                            >
+                              Close
+                            </button>
+                          ) : (
+                            <button
+                              className="btn dropdown-toggle btn-dark"
+                              onClick={() => setShow(true)}
+                            >
+                              Create Department
+                            </button>
+                          )}
+                        </div>
                       </div>
                     </div>
+                    {show && <Allcreate />}
                   </div>
-                  {show && <Allcreate />}
-                </div>
-                <div class="table-form table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Code</th>
-                        <th scope="col">Total Students</th>
-                        <th scope="col">Total Teacher</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {filterData.map((data, i) => {
-                        return (
-                          <tr>
-                            <th scope="row">{i + 1}</th>
-                            <td>
-                              <div class="table-content">
-                                <h3 class="title">{data.name}</h3>
-                              </div>
-                            </td>
-                            <td>{data.code}</td>
-                            <td>{data.studentId.length}</td>
-                            <td>{data.teacherId.length}</td>
-                            <td>
-                              <span class="badge badge-warning py-1 px-2">
-                              {data.studentId.length < 100 ? "Less Students" :"ACTIVE"}
-                              </span>
-                            </td>
-                            <td>
-                              <div class="table-content">
-                                <Link
-                                  to={"/details/" + data._id}
-                                  class="theme-btn theme-btn-small "
-                                  state={{ from: data, api: "departments" }}
-                                >
-                                  <i class="la la-eye"></i>
-                                </Link>
-                                <Edit data={data} />
-                                <Delete id={data._id} api={"departments"} />
-                              </div>
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
+                  <div class="table-form table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Code</th>
+                          <th scope="col">Total Students</th>
+                          <th scope="col">Total Teacher</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {filterData.map((data, i) => {
+                          return (
+                            <tr>
+                              <th scope="row">{i + 1}</th>
+                              <td>
+                                <div class="table-content">
+                                  <h3 class="title">{data.name}</h3>
+                                </div>
+                              </td>
+                              <td>{data.code}</td>
+                              <td>{data.studentId.length}</td>
+                              <td>{data.teacherId.length}</td>
+                              <td>
+                                <span class="badge badge-warning py-1 px-2">
+                                  {data.studentId.length < 100
+                                    ? "Less Students"
+                                    : "ACTIVE"}
+                                </span>
+                              </td>
+                              <td>
+                                <div class="table-content">
+                                  <Link
+                                    to={"/details/" + data._id}
+                                    class="bg-transparent border-0 p-1"
+                                    state={{ from: data, api: "departments" }}
+                                  >
+                                    <i class="la la-eye"></i>
+                                  </Link>
+                                  <Edit data={data} />
+                                  <Delete id={data._id} api={"departments"} />
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

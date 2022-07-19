@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ReadCourse } from "../../../Api/Course";
 import StudentRatings from "./StudentRating";
+import { AuthTeacherStudents } from "../../../Api/SpecificData/AuthUser";
 
 const Students = () => {
   const [show, setShow] = useState(false);
@@ -15,8 +16,7 @@ const Students = () => {
   }
   useEffect(() => {
     const getData = () => {
-      ReadCourse().then(function (result) {
-        result.map((data)=>setTeacher(data.teacherId) )
+      AuthTeacherStudents().then(function (result) {
         setDept(result);
       });
     };
@@ -59,7 +59,7 @@ const Students = () => {
                 <div className="form-title-wrap">
                   <div class="d-flex align-items-center justify-content-between">
                     <h3 class="title">Students Results</h3>
-                  
+
                     <div class="select-contain">
                       <div class="dropdown bootstrap-select select-contain-select"></div>
                     </div>
@@ -79,41 +79,45 @@ const Students = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {teacher.map((data, i) => {
+                      {dept.map((index) => {
                         return (
-                            <> {data._id == localStorage.getItem('id') ?
-                            <>{dept.map((index)=>{return(<>{index.studentId.map((data)=>{return(  <tr><th scope="row">{i + 1}</th>
-                            <td>
-                              <div class="table-content">
-                                <h3 class="title">{data.name}</h3>
-                              </div>
-                            </td>
-                            <td>{data.u_id}</td>
-                            <td>{data.email}</td>
-                            <td>{data.phone}</td>
-                            <td>
-                              <span class="badge badge-success py-1 px-2">
-                                Active
-                              </span>
-                            </td>
-                            <td>
-                              <div class="table-content">
-                                <Link
-                                  to={"/details/" + data._id}
-                                  class="theme-btn theme-btn-small "
-                                  state={{ from: data, api: "programs" }}
-                                >
-                                  <i class="la la-eye"></i>
-                                </Link>
-                                <StudentRatings data={data}/>
-                              </div>
-                            </td></tr>)})}
-                          </>)})}
-                                
-                              </>
-                             :null}
-                            </>
-                         
+                          <>
+                            {index.studentId.map((data, i) => {
+                              return (
+                                <tr>
+                                  <th scope="row">{i + 1}</th>
+                                  <td>
+                                    <div class="table-content">
+                                      <h3 class="title">{data.name}</h3>
+                                    </div>
+                                  </td>
+                                  <td>{data.u_id}</td>
+                                  <td>{data.email}</td>
+                                  <td>{data.phone}</td>
+                                  <td>
+                                    <span class="badge badge-success py-1 px-2">
+                                      Active
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="table-content">
+                                      <Link
+                                        to={"/details/" + data._id}
+                                        class="btn-transparent btn-md p-2"
+                                        state={{
+                                          from: data,
+                                          api: "programs",
+                                        }}
+                                      >
+                                        <i class="la la-eye"></i>
+                                      </Link>
+                                      <StudentRatings data={data} />
+                                    </div>
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </>
                         );
                       })}
                     </tbody>

@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Modal, Button, Container } from "react-bootstrap";
 
-function Commend({data}) {
+function Commend({ data }) {
   const values = [true];
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
@@ -12,22 +12,22 @@ function Commend({data}) {
   const [teacherId, setTeacherId] = useState(data._id);
   const [isFriendly, setIsfriendly] = useState(false);
   const [commend, setCommend] = useState(true);
-  
+
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
     setShow(true);
   }
-
+  console.log(isHelpfull, isProfessional, isFriendly);
   const sendData = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://fyptes.herokuapp.com/commend", {
+    const res = await fetch("http://localhost:5000/commend", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         isHelpfull,
         isProfessional,
         isFriendly,
-        teacherId
+        teacherId,
       }),
     });
     const data = await res.json();
@@ -36,43 +36,41 @@ function Commend({data}) {
     } else if (res.status === 401) {
       toast.success(data.message);
     } else {
- 
-     if(! localStorage.getItem("isCommend")){   
-        localStorage.setItem("isCommend",teacherId)
+      toast.success("Done!");
+      if (!localStorage.getItem("isCommend")) {
+        localStorage.setItem("isCommend", teacherId);
         setShow(false);
-      }else{
+      } else {
         toast.info("One Commend At a day");
       }
-    
     }
-
   };
- useEffect(()=>{
-  if (localStorage.getItem("isCommend") == data._id) {
-    setCommend(false);
-  }
- },[])
+  useEffect(() => {
+    if (localStorage.getItem("isCommend") == data._id) {
+      setCommend(false);
+    }
+  }, []);
   return (
     <>
       {values.map((v, idx) => (
-
-        <>  {!commend ? (
-          <>commended!</>
-        ) : (
-          <button
-          key={idx}
-          className=" border-0 bg-transparent"
-          style={{ textDecoration: "none" }}
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-          onClick={() => handleShow(v)}
-        >
-          
-          Commend Me!
-          {typeof v === "string" && `below ${v.split("-")[0]}`}
-        </button>
-        )}</>
-       
+        <>
+          {" "}
+          {!commend ? (
+            <>commended!</>
+          ) : (
+            <button
+              key={idx}
+              className=" border-0 bg-transparent"
+              style={{ textDecoration: "none" }}
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              onClick={() => handleShow(v)}
+            >
+              Commend Me!
+              {typeof v === "string" && `below ${v.split("-")[0]}`}
+            </button>
+          )}
+        </>
       ))}
 
       <Modal
@@ -90,52 +88,80 @@ function Commend({data}) {
             </div>
             <div className="modal-body">
               <div className="contact-form-action">
-                <form className="form " method="POST" action="">
-                  <div className="custom-checkbox">
-                    <input
-                      type="number"
-                      min="1"
-                      max="5"
-                      id="catChb1"
-                         required
-                      onChange={(e) => setIsgood(e.target.value)}
-                    />
-                    <label for="catChb1">Is HelpFull To Students</label>
+                <div class="reviews-reaction">
+                  <button
+                    class="comment-love bg-transparent border-0 text-primary p-1"
+                    onClick={() => setIsgood("1")}
+                  >
+                    <i class="la la-thumbs-up"></i>
+                  </button>
+                  <button
+                    class="comment-love bg-transparent border-0 text-warning p-1"
+                    onClick={() => setIsgood("2")}
+                  >
+                    <i class="la la-fire"></i>
+                  </button>
+                  <button
+                    class="comment-love bg-transparent border-0 text-danger p-1 pr-4"
+                    onClick={() => setIsgood("3")}
+                  >
+                    <i class="la la-heart-o"></i>
+                  </button>
+                  <label for="catChb2">Is HelpFull in Nature</label>
+                </div>
+                <div class="reviews-reaction">
+                  <button
+                    class="comment-love bg-transparent border-0 text-primary p-1"
+                    onClick={() => setIsfriendly("1")}
+                  >
+                    <i class="la la-thumbs-up"></i>
+                  </button>
+                  <button
+                    class="comment-love bg-transparent border-0 text-warning p-1"
+                    onClick={() => setIsfriendly("2")}
+                  >
+                    <i class="la la-fire"></i>
+                  </button>
+                  <button
+                    class="comment-love bg-transparent border-0 text-danger p-1 pr-4"
+                    onClick={() => setIsfriendly("3")}
+                  >
+                    <i class="la la-heart-o"></i>
+                  </button>
+                  <label for="catChb2">Is Friendly in Nature</label>
+                </div>
+                <div class="reviews-reaction">
+                  <button
+                    class="comment-love bg-transparent border-0 text-primary p-1"
+                    onClick={() => setIsprofessional("1")}
+                  >
+                    <i class="la la-thumbs-up"></i>
+                  </button>
+                  <button
+                    class="comment-love bg-transparent border-0 text-warning p-1"
+                    onClick={() => setIsprofessional("2")}
+                  >
+                    <i class="la la-fire"></i>
+                  </button>
+                  <button
+                    class="comment-love bg-transparent border-0 text-danger p-1 pr-4"
+                    onClick={() => setIsprofessional("3")}
+                  >
+                    <i class="la la-heart-o"></i>
+                  </button>
+                  <label for="catChb2">Is Best in his Profession</label>
+                </div>
+                <div>
+                  <div className="btn-box pt-3 pb-4">
+                    <button
+                      type="button"
+                      onClick={sendData}
+                      className="theme-btn w-100"
+                    >
+                      Submit
+                    </button>
                   </div>
-                  <div className="custom-checkbox">
-                    <input
-                      type="number"
-                      id="catChb2"
-                      max="5"
-                      min="1"
-                   required
-                      onChange={(e) => setIsfriendly(e.target.value)}
-                    />
-                    <label for="catChb2">Is Friendly in Nature</label>
-                  </div>
-                  <div className="custom-checkbox">
-                    <input
-                        type="number"
-                        id="catChb2"
-                        max="5"
-                        min="1"
-                     required
-                      onChange={(e) => setIsprofessional(e.target.value)}
-                    />
-                    <label for="catChb3">Is Best in his Profession</label>
-                  </div>
-                  <div>
-                    <div className="btn-box pt-3 pb-4">
-                      <button
-                        type="button"
-                        onClick={sendData}
-                        className="theme-btn w-100"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>

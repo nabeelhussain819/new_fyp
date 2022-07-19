@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GetSpecificCourse } from "../../Api/Department";
-import { ReadQec } from "../../Api/Qec";
-import { AuthStudent } from "../../Api/Student";
-import img from "../../Assets/img21.jpg";
-import spr1 from "../../Assets/img22.jpg";
-import spr from "../../Assets/img23.jpg";
+import { AuthQec, AuthStudentTeacher } from "../../Api/SpecificData/AuthUser";
 const CourseEvaluate = () => {
   const [course, setCourse] = useState([]);
   const [teacher, setTeacher] = useState([]);
@@ -14,6 +10,7 @@ const CourseEvaluate = () => {
   const [qecCourse, setQec] = useState([]);
   const [show, setShow] = useState(false);
   const [term, setTerm] = useState("");
+
   const getChange = (data) => {
     setCourseId(data);
     getData4({ data });
@@ -30,12 +27,12 @@ const CourseEvaluate = () => {
 
   useEffect(() => {
     const getData = () => {
-      AuthStudent().then(function (result) {
+      AuthStudentTeacher().then(function (result) {
         setCourse(result);
       });
     };
     const getQecCourse = () => {
-      ReadQec().then(function (result) {
+      AuthQec().then(function (result) {
         setQec(result);
       });
     };
@@ -62,7 +59,9 @@ const CourseEvaluate = () => {
                   <form action="#" class="row">
                     <div class="col-lg-4 pr-0">
                       <div class="input-box">
-                        <label class="label-text">Select Enrolled Course</label>
+                        <label class="label-text">
+                          Select Enrolled Course{" "}
+                        </label>
                         <div class="form-group">
                           <span class="la la-map-marker form-icon"></span>
                           <select
@@ -70,28 +69,14 @@ const CourseEvaluate = () => {
                             tabindex="-98"
                             onChange={(e) => getChange(e.target.value)}
                           >
+                            <option>Select One</option>
+
                             {course.map((data) => {
                               return (
                                 <>
-                                  {data == false ? null : (
-                                    <>
-                                      <option>Select One</option>{" "}
-                                      {data.courseId.map((index) => {
-                                        return (
-                                          <>
-                                            {index.isCourse ==
-                                            localStorage.getItem("id") ? (
-                                              <option disabled>Done</option>
-                                            ) : (
-                                              <option value={index._id}>
-                                                {index.name}
-                                              </option>
-                                            )}
-                                          </>
-                                        );
-                                      })}
-                                    </>
-                                  )}
+                                  <option value={data._id} name={data.name}>
+                                    {data.name}
+                                  </option>
                                 </>
                               );
                             })}
@@ -131,7 +116,6 @@ const CourseEvaluate = () => {
                                 <>
                                   {data == false ? null : (
                                     <>
-                                      {" "}
                                       <option>Select One</option>
                                       {data.teacherId.map((index) => {
                                         return (

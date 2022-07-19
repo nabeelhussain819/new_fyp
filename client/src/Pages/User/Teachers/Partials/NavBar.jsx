@@ -87,11 +87,7 @@ const Navbar = () => {
                 <i class="la la-text-width mr-2 text-color-3"></i>Courses
               </Link>
             </li>
-            <li>
-              <Link to="complains">
-                <i class="la la-area-chart mr-2 text-color-3"></i>Complians
-              </Link>
-            </li>
+
             <li>
               <Link to="comments">
                 <i class="la la-area-chart mr-2 text-color-3"></i>Comments
@@ -145,12 +141,6 @@ const Navbar = () => {
                       <Link to="Courses">
                         <i class="la la-text-width mr-2 text-color-3"></i>
                         <span className="text-white">Courses</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="complains">
-                        <i class="la la-area-chart mr-2 text-color-3"></i>
-                        <span className="text-white">Complians</span>
                       </Link>
                     </li>
                     <li>

@@ -8,9 +8,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div class="wrapper">
+      <div class="wrapper ">
         <div class="multi_color_border "></div>
-        <div class="top_nav">
+        <div class="top_nav ">
           <div class="left">
             <div class="logo">
               <img
@@ -45,7 +45,7 @@ const Navbar = () => {
               <li>
                 <Link to="dashboard">
                   <i class="la la-area-chart mr-2 text-color-3"></i>
-                  <span className="text-white">Dashboard</span>
+                  <span>Dashboard</span>
                 </Link>
               </li>
 
@@ -102,16 +102,13 @@ const Navbar = () => {
                 <i class="la la-area-chart mr-2 text-color-3"></i>Comments
               </Link>
             </li>
-            <li>
-              <Link to="qec">
-                <i class="la la-area-chart mr-2 text-color-3"></i>QEC Result
-              </Link>
-            </li>
-            <li>
-              <Link to="students">
-                <i class="la la-area-chart mr-2 text-color-3"></i>Students
-              </Link>
-            </li>
+            {localStorage.getItem("isTeacher") && (
+              <li>
+                <Link to="students">
+                  <i class="la la-area-chart mr-2 text-color-3"></i>Students
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
@@ -125,61 +122,63 @@ const Navbar = () => {
                     <li className="pb-2">
                       <Link to="qec">
                         <i class="la la-dashboard mr-2"></i>{" "}
-                        <span className="text-white">Evaluation</span>
+                        <span>Evaluation</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="dashboard">
                         <i class="la la-area-chart mr-2 text-color-3"></i>
-                        <span className="text-white">Dashboard</span>
+                        <span>Dashboard</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="departments ">
                         <i class="la la-shopping-cart mr-2 text-color"></i>{" "}
-                        <span className="text-white">Departments</span>
+                        <span>Departments</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="programs">
                         <i class="la la-list mr-2 text-color-2"></i>
-                        <span className="text-white">Programs</span>
+                        <span>Programs</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="teachers">
                         <i class="la la-users mr-2 text-color-3"></i>
-                        <span className="text-white">Teachers</span>
+                        <span>Teachers</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="Courses">
                         <i class="la la-text-width mr-2 text-color-3"></i>
-                        <span className="text-white">Courses</span>
+                        <span>Courses</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="complains">
                         <i class="la la-area-chart mr-2 text-color-3"></i>
-                        <span className="text-white">Complians</span>
+                        <span>Complians</span>
                       </Link>
                     </li>
                     <li className="pb-2">
                       <Link to="comments">
                         <i class="la la-area-chart mr-2 text-color-3"></i>
-                        <span className="text-white">Comments</span>
+                        <span>Comments</span>
                       </Link>
                     </li>
-                    <li className="pb-2">
-                      <Link to="students">
-                        <i class="la la-area-chart mr-2 text-color-3"></i>
-                        <span className="text-white">Students</span>
-                      </Link>
-                    </li>
+                    {localStorage.getItem("isTeacher") && (
+                      <li className="pb-2">
+                        <Link to="students">
+                          <i class="la la-area-chart mr-2 text-color-3"></i>
+                          Students
+                        </Link>
+                      </li>
+                    )}
                     <li className="pb-2">
                       <Link to="profile">
                         <i class="la la-area-chart mr-2 text-color-3"></i>
-                        <span className="text-white">Profile</span>
+                        <span>Profile</span>
                       </Link>
                     </li>
                     <li className="pb-2">

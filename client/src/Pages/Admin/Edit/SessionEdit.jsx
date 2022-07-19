@@ -6,17 +6,18 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MyVerticallyCenteredModal(props) {
-  const [name,setName] = useState("")
-  const [id,setId]= useState(props.data._id);
-  const [code,setCode ] = useState("")
-  const sendData=async(e)=>{
+  const [name, setName] = useState("");
+  const [id, setId] = useState(props.data._id);
+  const [code, setCode] = useState("");
+  const sendData = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://fyptes.herokuapp.com/edit-sessions" , {
+    const res = await fetch("https://fyptes.herokuapp.com/edit-sessions", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        name,id
+        name,
+        id,
       }),
     });
     const data = await res.json();
@@ -28,7 +29,7 @@ function MyVerticallyCenteredModal(props) {
       alert("Edited Successfully");
       window.location.reload();
     }
-  }
+  };
   return (
     <Modal
       {...props}
@@ -42,44 +43,47 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-    
-      <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                          <tr>
-                            <th scope="row">01</th>
-                            <td>
-                              <div class="table-content">
-                                <input type="text" placeholder={props.data.name} onChange={(e)=>setName(e.target.value)}/>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="table-content">
-                                <Link
-                                  to={"/details/" + props.data._id}
-                                  class="theme-btn theme-btn-small "
-                                  state={{ from: props.data, api: "sessions" }}
-                                >
-                                  <i class="la la-eye"></i>
-                                </Link>
-                                <Delete id={props.data._id} api={"sessions"} />
-                              </div>
-                            </td>
-                          </tr>
-                      
-                    </tbody>
-                  </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">01</th>
+              <td>
+                <div class="table-content">
+                  <input
+                    type="text"
+                    placeholder={props.data.name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="table-content">
+                  <Link
+                    to={"/details/" + props.data._id}
+                    class="bg-transparent border-0 p-1"
+                    state={{ from: props.data, api: "sessions" }}
+                  >
+                    <i class="la la-eye"></i>
+                  </Link>
+                  <Delete id={props.data._id} api={"sessions"} />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </Modal.Body>
       <Modal.Footer>
-      <Button onClick={sendData}>Submit</Button> 
-        <Button onClick={props.onHide} className="btn-danger">Cancel</Button>
+        <Button onClick={sendData}>Submit</Button>
+        <Button onClick={props.onHide} className="btn-danger">
+          Cancel
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -91,7 +95,7 @@ function Edit({ data }) {
   return (
     <>
       <button
-        class="theme-btn btn-warning theme-btn-small "
+        class="bg-transparent border-0 p-1"
         onClick={() => setModalShow(true)}
       >
         <i class="la la-edit"></i>

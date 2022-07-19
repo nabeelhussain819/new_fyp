@@ -250,40 +250,42 @@ export default function ExtendedForm() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12 responsive-column">
-                <div class="input-box">
-                  <label class="label-text">4) Select Semester</label>
-                  <div class="form-group">
-                    <span class="la la-briefcase form-icon"></span>
-                    <select
-                      class="select-contain-select form-control"
-                      tabindex="-98"
-                      onChange={(e) => handleNextSemester(e.target.value)}
-                    >
-                      {semesterApi.map((data) => {
-                        return (
-                          <>
-                            {data == false ? null : (
-                              <>
-                                <option>Select One</option>
-                                {data.semesterId.map((index) => {
-                                  return (
-                                    <>
-                                      <option value={index._id}>
-                                        semester-{index.name}
-                                      </option>
-                                    </>
-                                  );
-                                })}
-                              </>
-                            )}
-                          </>
-                        );
-                      })}
-                    </select>
+              {localStorage.getItem("isTeacher") ? null : (
+                <div class="col-lg-12 responsive-column">
+                  <div class="input-box">
+                    <label class="label-text">4) Select Semester</label>
+                    <div class="form-group">
+                      <span class="la la-briefcase form-icon"></span>
+                      <select
+                        class="select-contain-select form-control"
+                        tabindex="-98"
+                        onChange={(e) => handleNextSemester(e.target.value)}
+                      >
+                        {semesterApi.map((data) => {
+                          return (
+                            <>
+                              {data == false ? null : (
+                                <>
+                                  <option>Select One</option>
+                                  {data.semesterId.map((index) => {
+                                    return (
+                                      <>
+                                        <option value={index._id}>
+                                          semester-{index.name}
+                                        </option>
+                                      </>
+                                    );
+                                  })}
+                                </>
+                              )}
+                            </>
+                          );
+                        })}
+                      </select>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
               <div class="col-lg-12">
                 <div class="input-box">
                   <label class="label-text">
@@ -317,7 +319,13 @@ export default function ExtendedForm() {
                                     className="bg-transparent border-0"
                                     onClick={() => registerCourse(data._id)}
                                   >
-                                    {i + 1}) {data.name}
+                                    {i + 1}) {data.name}{" "}
+                                    {res.map(
+                                      (item) =>
+                                        item == data._id && (
+                                          <i class="la la-check-circle mr-1"></i>
+                                        )
+                                    )}
                                   </button>
                                 </li>
                               </>

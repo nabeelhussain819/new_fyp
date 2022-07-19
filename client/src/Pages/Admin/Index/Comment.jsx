@@ -205,12 +205,12 @@ const Comments = () => {
                               <div class="table-content">
                                 <Link
                                   to={"/details/" + data._id}
-                                  class="theme-btn theme-btn-small "
+                                  class="bg-transparent border-0 p-1 "
                                   state={{ from: data, api: "comments" }}
                                 >
                                   <i class="la la-eye"></i>
                                 </Link>
-                              
+
                                 <Delete id={data._id} api={"comments"} />
                               </div>
                             </td>

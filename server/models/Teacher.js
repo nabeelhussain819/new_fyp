@@ -65,7 +65,8 @@ const TeacherSchema = new mongoose.Schema(
     },
     isQec: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "Qec",
         required: false,
       },
     ],

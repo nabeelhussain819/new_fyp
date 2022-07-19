@@ -4,14 +4,18 @@ import Logout from "../../../Components/Logout";
 const Header = () => {
   return (
     <div>
-      <div className="dashboard-nav dashboard--nav hidden-print">
+      <div className="dashboard-nav dashboard--nav hidden-print bg-light">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
               <div className="menu-wrapper">
                 <div className="logo mr-5">
                   <a href="index.html">
-                    <img src={logo1} alt="testimonial image" style={{width:"200px"}}/>
+                    <img
+                      src={logo1}
+                      alt="testimonial image"
+                      style={{ width: "200px" }}
+                    />
                   </a>
                   <div className="menu-toggler">
                     <i className="la la-bars"></i>
@@ -38,7 +42,7 @@ const Header = () => {
                             <div className="avatar avatar-sm flex-shrink-0 mr-2">
                               <img src={logo1} alt="testimonial image" />
                             </div>
-                            <span className="font-size-14 font-weight-bold">
+                            <span className="font-size-14 font-weight-bold text-dark">
                               Royel Admin
                             </span>
                           </div>

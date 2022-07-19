@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import bg from "../Assets/logo-5.png";
 const Footer = () => {
   return (
-    <section className="footer-area section-bg padding-top-30px padding-bottom-10px hidden-print bg-info">
+    <section className="footer-area section-bg padding-top-30px padding-bottom-10px hidden-print bg-light">
       <div className="container text-dark">
         <div className="row">
-          <div className="col-lg-3 responsive-column"> 
+          <div className="col-lg-3 responsive-column">
             <div className="footer-item">
               <div className="footer-logo padding-bottom-30px">
                 <a href="index.html" className="foot__logo">
-                <img src={bg} alt="logo" style={{width:"260px"}}/>
+                  <img src={bg} alt="logo" style={{ width: "260px" }} />
                 </a>
               </div>
               <p className="footer__desc">Sindh Madressatul Islam University</p>
