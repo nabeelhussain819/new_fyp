@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
-import { doLogin } from "../../setup/service/Auth";
+import { doLogin, updateDataInStore } from "../../setup/service/Auth";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
@@ -44,44 +44,19 @@ function Login() {
       toast.warning(data.message);
     }
 
+    updateDataInStore(data);
     toast.success("Logged In Successfully");
 
-    const name = data.name.name;
-    const id = data.name._id;
-    const email = data.name.email;
-    const u_id = data.name.u_id;
-    const phone = data.name.phone;
-    const code = data.name.courseId;
-
-    if (email === "admin@admin.com") {
-      localStorage.setItem("data", "admin");
-      localStorage.setItem("isAdmin", "Admin");
-      localStorage.setItem("depart", "all");
-    } else {
-      const depart = data.name.deptId.department;
-      localStorage.setItem("depart", depart);
-      localStorage.setItem("data", name);
-    }
-    if (data.name.isTeacher === true) {
-      localStorage.setItem("isTeacher", "teacher");
-    }
-    localStorage.setItem("token", JSON.stringify(data.token));
-    localStorage.setItem("email", email);
-
-    localStorage.setItem("u_id", u_id);
-    localStorage.setItem("phone", phone);
-    localStorage.setItem("code", code);
-    localStorage.setItem("id", id);
     if (localStorage.getItem("isAdmin")) {
       navigate("/");
       window.location.reload();
-    } else if (localStorage.getItem("isTeacher")) {
-      navigate("/");
-      window.location.reload();
-    } else {
+    }
+    if (localStorage.getItem("isTeacher")) {
       navigate("/");
       window.location.reload();
     }
+    navigate("/");
+    window.location.reload();
   };
 
   return (
@@ -143,7 +118,9 @@ function Login() {
                       placeholder="Type password"
                       {...register("password")}
                     />
-                    <p className="text-danger m-1">{errors.password?.message}</p>
+                    <p className="text-danger m-1">
+                      {errors.password?.message}
+                    </p>
                   </div>
                   <div className="d-flex align-items-center justify-content-between">
                     <div className="custom-checkbox mb-0"></div>
