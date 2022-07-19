@@ -44,6 +44,7 @@ function Login() {
 
     if (res.status === 400 || !data || res.status === 401) {
       toast.warning(data.message);
+      return;
     }
 
     updateDataInStore(data);

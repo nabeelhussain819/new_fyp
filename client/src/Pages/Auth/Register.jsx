@@ -1,23 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ReadDepartment } from "../../Api/Department";
-import { GetSession } from "../../Api/Department";
-import smiu from "../../Assets/smiu2.jpg";
-import ExtendedForm from "./ExtendedRegister";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import Input from "../../Components/UI/Forms/Input";
+import { doRegister } from "../../setup/service/Auth";
+
+const schema = yup
+  .object({
+    name: yup.string().required(),
+    u_id: yup.string().required("Your university id is required"),
+    phone: yup.string().max(11).required(),
+    email: yup.string().email().required(),
+    password: yup.string().min(8).max(32).required(),
+  })
+  .required();
+
 const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [u_id, setUid] = useState("");
+
   const [all, setAll] = useState(true);
   //   const filterDepart = depart.filter((data) => data.name.includes(search));
-  if (all == true) {
+  if (all === true) {
     if (localStorage.getItem("isTeacher") || localStorage.getItem("user")) {
       alert("you want To Sign Up!");
       localStorage.clear();
@@ -25,35 +39,22 @@ const Register = () => {
   }
 
   const registerUser = async (e) => {
-    e.preventDefault();
-    const res = await fetch("http://localhost:5000/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-        u_id,
-        phone,
-      }),
-    });
+    const res = await doRegister(e);
     const data = await res.json();
     if (res.status === 400 || !data) {
       toast.error(data.error);
-    } else {
-      {
-        data.isTeacher === true
-          ? localStorage.setItem("isTeacher", data._id)
-          : localStorage.setItem("user", data._id);
-      }
-      setAll(false);
-      setShow(true);
-      if (localStorage.getItem("isTeacher", data._id)) {
-        setShow(true);
-      }
-      toast.success("register Successfully");
-      toast.warning("Please Fill the Extended Form");
+      return;
     }
+    data.isTeacher === true
+      ? localStorage.setItem("isTeacher", data._id)
+      : localStorage.setItem("user", data._id);
+    setAll(false);
+    setShow(true);
+    if (localStorage.getItem("isTeacher", data._id)) {
+      setShow(true);
+    }
+    toast.success("register Successfully");
+    toast.warning("Please Fill the Extended Form");
   };
 
   return (
@@ -85,98 +86,73 @@ const Register = () => {
                       </h3>
                     </div>
                     <div className="form-content contact-form-action">
-                      <form method="post" className="row MultiFile-intercepted">
+                      <form
+                        method="post"
+                        onSubmit={handleSubmit(registerUser)}
+                        className="row MultiFile-intercepted"
+                      >
                         <div className="col-lg-6 responsive-column">
-                          <div className="input-box">
-                            <label className="label-text">Your Email</label>
-                            <div className="form-group">
-                              <span className="la la-user form-icon"></span>
-                              <input
-                                className="form-control"
-                                type="text"
-                                name="text"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Type your Email"
-                                required
-                              />
-                            </div>
-                          </div>
+                          <Input
+                            title="Email"
+                            type="email"
+                            name="email"
+                            hook={register("email")}
+                            errors={errors.email?.message}
+                            icon="la la-user form-icon"
+                            placeholder="Type your email"
+                            hasIcon
+                          />
                         </div>
                         <div className="col-lg-6 responsive-column">
-                          <div className="input-box">
-                            <label className="label-text">Your Phone Number</label>
-                            <div className="form-group">
-                              <span className="la la-envelope-o form-icon"></span>
-                              <input
-                                className="form-control"
-                                type="number"
-                                name="text"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                placeholder="Type your Phone"
-                                required
-                              />
-                            </div>
-                          </div>
+                          <Input
+                            title="Your Phone Number"
+                            type="number"
+                            name="phone"
+                            hook={register("phone")}
+                            errors={errors.phone?.message}
+                            icon="la la-envelope-o form-icon"
+                            placeholder="Type your Phone"
+                            hasIcon
+                          />
                         </div>
                         <div className="col-lg-6 responsive-column">
-                          <div className="input-box">
-                            <label className="label-text">Your Full Name</label>
-                            <div className="form-group">
-                              <span className="la la-envelope-o form-icon"></span>
-                              <input
-                                className="form-control"
-                                type="text"
-                                name="text"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                placeholder="Type your username"
-                                required
-                              />
-                            </div>
-                          </div>
+                          <Input
+                            title="Your Full Name"
+                            type="text"
+                            name="name"
+                            hook={register("name")}
+                            errors={errors.name?.message}
+                            icon="la la-envelope-o form-icon"
+                            placeholder="Type your username"
+                            hasIcon
+                          />
                         </div>
                         <div className="col-lg-6 responsive-column">
-                          <div className="input-box">
-                            <label className="label-text">Your Universty ID</label>
-                            <div className="form-group">
-                              <span className="la la-envelope-o form-icon"></span>
-                              <input
-                                className="form-control"
-                                type="text"
-                                name="text"
-                                value={u_id}
-                                onChange={(e) => setUid(e.target.value)}
-                                placeholder="Type your University ID"
-                                required
-                              />
-                            </div>
-                          </div>
+                          <Input
+                            title="Your Universty ID"
+                            type="text"
+                            name="name"
+                            hook={register("u_id")}
+                            errors={errors.u_id?.message}
+                            icon="la la-envelope-o form-icon"
+                            placeholder="Type your University ID"
+                            hasIcon
+                          />
                         </div>
                         <div className="col-lg-6 responsive-column">
-                          <div className="input-box">
-                            <label className="label-text">Your Password</label>
-                            <div className="form-group">
-                              <span className="la la-envelope-o form-icon"></span>
-                              <input
-                                className="form-control"
-                                type="password"
-                                name="text"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Type your Password"
-                                required
-                              />
-                            </div>
-                          </div>
+                          <Input
+                            title="Your Password"
+                            type="password"
+                            name="password"
+                            hook={register("password")}
+                            errors={errors.password?.message}
+                            icon="la la-lock form-icon"
+                            placeholder="Your password"
+                            hasIcon
+                          />
                         </div>
                         <div className="col-lg-12 responsive-column">
-                          <button
-                            type="button"
-                            onClick={registerUser}
-                            className="theme-btn w-100"
-                          >
+                          <button type="submit" className="theme-btn w-100">
                             Create Account
                           </button>
                         </div>
@@ -185,7 +161,7 @@ const Register = () => {
                   </div>
                 </>
               )}
-              {show && <ExtendedForm />}
+              {/* {show && <ExtendedForm />} */}
             </div>
           </div>
         </div>

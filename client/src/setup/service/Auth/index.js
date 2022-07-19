@@ -6,6 +6,14 @@ export const doLogin = (params) => {
   });
 };
 
+export const doRegister = (params) => {
+  return fetch("http://localhost:5000/signup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(params),
+  });
+};
+
 export const updateDataInStore = (data) => {
   const name = data.name.name;
   const id = data.name._id;
