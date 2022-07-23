@@ -35,7 +35,7 @@ exports.register = async (req, res, next) => {
     return res
       .status(400)
       .json({ error: "An account with this University Id already exists." });
-  } else if (existingUserPhone ||existingUserPhone1) {
+  } else if (existingUserPhone || existingUserPhone1) {
     return res
       .status(400)
       .json({ error: "An account with this Phone Number already exists." });
@@ -53,27 +53,27 @@ exports.register = async (req, res, next) => {
     res.status(200).json(Teacher);
   } else if (user.test(term)) {
 
-      const Student = new student(req.body);
-      await Student.save();
-   
+    const Student = new student(req.body);
+    await Student.save();
 
-      res.status(200).json(Student);
-   
+
+    res.status(200).json(Student);
+
   } else {
     return res.status(400).json({ error: "ID isnot valid" });
   }
 };
 exports.extendedRegister = async (req, res, next) => {
 
-  const { deptId, studentId, teacherId,programId,semesterId,sessionId } = req.body;
+  const { deptId, studentId, teacherId, programId, semesterId, sessionId } = req.body;
   console.log(req.body)
-  if (!deptId  || !programId||!sessionId ) {
+  if (!deptId || !programId || !sessionId) {
     console.log(req.body)
     return res
       .status(400)
       .json({ error: "Add All Feilds" });
   } else {
-    
+
     if (teacherId) {
 
       const Teacher = await teacher.findById({ _id: teacherId });
@@ -105,14 +105,14 @@ exports.extendedRegister = async (req, res, next) => {
       Depart.studentId.push(req.body.studentId);
       await Depart.save();
 
-    
+
       Student.programId.push(programId);
       await Student.save();
 
       const Program = await program.findById({ _id: programId });
       Program.studentId.push(req.body.studentId);
       await Program.save();
-     
+
       Student.semesterId.push(semesterId);
       await Student.save();
 
@@ -136,25 +136,44 @@ exports.addCourse = async (req, res, next) => {
       .status(400)
       .json({ error: "An account with this email already exists." });
   } else {
-   
+
     if (teacherId) {
       const Teacher = await teacher.findById({ _id: teacherId });
-      Teacher.courseId.push(req.body.courseId);
-      await Teacher.save();
 
-      const Course = await course.findById({ _id: courseId });
-      Course.teacherId.push(teacherId);
-      await Course.save();
+      if (Teacher.courseId.includes(req.body.courseId)) {
+        return res
+          .status(400)
+          .json({ error: "Already Enrolled In This Course" });
+      } else {
+        Teacher.courseId.push(req.body.courseId);
+        await Teacher.save();
+
+        const Course = await course.findById({ _id: courseId });
+        Course.teacherId.push(teacherId);
+        await Course.save();
+        res.status(200).json({ courseId });
+      }
+
     } else {
-      const Student = await student.findById({ _id: studentId });
-      Student.courseId.push(req.body.courseId);
-      await Student.save();
 
-      const Course = await course.findById({ _id: courseId });
-      Course.studentId.push(studentId);
-      await Course.save();
+      const Student = await student.findById({ _id: studentId });
+
+      if (Student.courseId.includes(req.body.courseId)) {
+        return res
+          .status(400)
+          .json({ error: "Already Enrolled In This Course" });
+      } else {
+        Student.courseId.push(req.body.courseId);
+        await Student.save();
+
+        const Course = await course.findById({ _id: courseId });
+        Course.studentId.push(studentId);
+        await Course.save();
+        res.status(200).json({ courseId });
+      }
+
     }
-    res.status(200).json({ courseId });
+
   }
 };
 exports.addSemester = async (req, res, next) => {

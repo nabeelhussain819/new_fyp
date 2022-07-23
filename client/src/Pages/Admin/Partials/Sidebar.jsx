@@ -17,13 +17,13 @@ function Sidebar() {
               </div>
               <div className="author-bio">
                 <h4 className="author__title">ADMIN</h4>
-                <span className="author__meta">Welcome to Admin Panel</span>
+                <span className="author__meta text-light">Welcome to Admin Panel</span>
               </div>
             </div>
           </div>
           <div className="sidebar-menu-wrap">
             <ul className="sidebar-menu toggle-menu list-items">
-              <li className="page-active">
+              <li >
                 <Link to="dashboard">
                   <i className="la la-dashboard mr-2"></i>Dashboard
                 </Link>
@@ -79,9 +79,9 @@ function Sidebar() {
                 </Link>
               </li>
               <li>
-                <a href="admin-dashboard-settings.html">
-                  <i className="la la-cog mr-2 text-color-10"></i>Settings
-                </a>
+              <Link to="setting">
+              <i className="la la-cog mr-2 text-color-10"></i>Settings
+                </Link>
               </li>
             </ul>
           </div>

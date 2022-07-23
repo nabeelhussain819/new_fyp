@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
   AuthUser,
   AuthStudentProgram,
   AuthStudentCourse,
 } from "../../Api/SpecificData/AuthUser";
+import {
+  ReadSetting
+} from "../../Api/Qec";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,7 +18,7 @@ export default function Enrollment() {
   const [courseId, setCourseId] = useState("");
   const [formValues, setFormValues] = useState([{ subject: "" }]);
   const [move, setMove] = useState(false);
-
+const navigate = useNavigate()
   const registerCourse = async () => {
     const res = await fetch("https://fyptes.herokuapp.com/add-course", {
       method: "POST",
@@ -37,7 +40,6 @@ export default function Enrollment() {
       toast.success("Course registered Successfully");
     }
   };
-
   let removeFormFields = (i) => {
     let newFormValues = [...formValues];
     newFormValues.splice(i, 1);
@@ -50,15 +52,23 @@ export default function Enrollment() {
     });
   };
   const GetCourses = (semesterId) => {
-    console.log(semesterId);
     AuthStudentCourse({ semesterId: semesterId }).then(function (result) {
       setCourse(result);
     });
   };
   useEffect(() => {
+    
+     
     const getData = () => {
       AuthUser().then(function (result) {
         setName([result]);
+      });
+      ReadSetting().then(function (result) {
+       const sms= result.map((data)=>JSON.stringify(data.Course))
+       if(sms.includes('false')){
+        toast.info("You Cannot Enroll Now!");
+        navigate('/courses')
+       }
       });
     };
     getData();

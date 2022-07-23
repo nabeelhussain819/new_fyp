@@ -31,6 +31,15 @@ exports.reply = async (req, res, next) => {
     }
   });
 };
+exports.deleteComplains = async (req, res, next) => {
+  const complain = await Complain.findById({ _id: req.body.id });
+  if (!complain) {
+    res.status(400).json({ error: "add all feilds" });
+  } else {
+    complain.delete();
+    res.status(200).json({ message: "Done" });
+  }
+};
 // exports.deleteComplains = async (req, res, next) => {
 //   const Complain = await complain.findById({ _id: req.body.id });
 //   const Complain1 = await complain1.findById({ _id: req.body.id });

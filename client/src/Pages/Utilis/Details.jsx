@@ -17,7 +17,7 @@ const Details = () => {
   }
   return (
     <div>
-      <div className="dashboard-bread">
+      <div className="dashboard-bread breadcrumb-area">
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -39,14 +39,14 @@ const Details = () => {
         </div>
       </div>
 
-      <section className="card-area bg-818">
+      <section className="card-area">
         <div className="container">
           <div className="row">
             {[from].map((data) => {
               return (
                 <>
                   <div className="col-lg-8">
-                    <div className="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
+                    <div className="text-light mb-5">
                       <div className="card-body px-0 pb-0">
                         <div className="post-categories">
                           {api == "teachers" && localStorage.getItem("id") && (
@@ -115,10 +115,10 @@ const Details = () => {
                               className="accordion accordion-item padding-top-30px"
                               id="accordionExample2"
                             >
-                              {myData.slice(0, 1).map((data) => {
+                              {myData.slice(1, 2).map((data) => {
                                 return (
                                   <>
-                                    <div className="card">
+                                    <div className="card-item">
                                       <div
                                         className="card-header"
                                         id="faqHeadingFour"
@@ -163,7 +163,7 @@ const Details = () => {
                                   </>
                                 );
                               })}
-                              {myData.slice(1, 4).map((data) => {
+                              {myData.slice(2, 5).map((data) => {
                                 return (
                                   <>
                                     <div className="card">

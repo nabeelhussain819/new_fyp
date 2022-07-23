@@ -44,19 +44,16 @@ const Teacher = () => {
               </div>
             </div>
           </div>
-          <div className="bread-svg-box">
-        <svg className="hero-svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path></svg>
-        </div>
         </div>
       </section>
-      <section className="card-area pt-4 bg-817">
+      <section className="card-area pt-4">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="filter-wrap ">
                 <div className="filter-top d-flex align-items-center justify-content-between">
                   <div>
-                    <h3 className="font-size-24">
+                    <h3 className="font-size-24 text-light">
                       Total Teacher Available {teacher.length}
                     </h3>
                   </div>

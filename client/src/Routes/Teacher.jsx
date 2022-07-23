@@ -4,13 +4,13 @@ import { Home } from "../Pages/Home";
 import Dashboard from "../Pages/User/Teachers/Dashboard";
 import NavBar from "../Pages/User/Teachers/Partials/NavBar";
 import Sidebar from "../Pages/User/Teachers/Partials/Sidebar";
-import Courses from "../Pages/User/Course";
+import Courses from "../Pages/User/Teachers/Partials/Courses";
 import Department from "../Pages/User/Department";
 import Program from "../Pages/User/Program";
 import Teache1r from "../Pages/User/Teacher";
 import Details from "../Pages/Utilis/Details";
 import Complain from "../Pages/User/Complain";
-import Comment from "../Pages/User/Comments";
+import Comment from "../Pages/User/Teachers/Partials/Comment";
 import QecResult from "../Pages/Qec/QecResult";
 import Students from "../Pages/User/Teachers/Students";
 import Profile from "../Pages/User/Teachers/Profile";
@@ -18,8 +18,6 @@ import ChangePass from "../Pages/Auth/ChangePass";
 function Teacher() {
   return (
     <>
-      {/* <Sidebar />
-      <section className="dashboard-area"> */}
         <NavBar />
         <Fragment>
           <Routes>
@@ -39,7 +37,6 @@ function Teacher() {
             <Route path="/recover" element={<ChangePass />} />
           </Routes>
         </Fragment>
-      {/* </section> */}
     </>
   );
 }

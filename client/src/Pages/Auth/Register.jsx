@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Input from "../../Components/UI/Forms/Input";
 import { doRegister } from "../../setup/service/Auth";
+import ExtendedForm from "./ExtendedRegister";
 
 const schema = yup
   .object({
@@ -26,7 +27,7 @@ const Register = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-
+const navigate = useNavigate()
   const [show, setShow] = useState(false);
 
   const [all, setAll] = useState(true);
@@ -55,6 +56,7 @@ const Register = () => {
     }
     toast.success("register Successfully");
     toast.warning("Please Fill the Extended Form");
+  
   };
 
   return (
@@ -161,7 +163,7 @@ const Register = () => {
                   </div>
                 </>
               )}
-              {/* {show && <ExtendedForm />} */}
+              {show && <ExtendedForm />}
             </div>
           </div>
         </div>

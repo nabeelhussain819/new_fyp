@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo1 from "../../../../Assets/logo-6.png";
 import { Link } from "react-router-dom";
 import Logout from "../../../../Components/Logout";
-
+import Dropdown from 'react-bootstrap/Dropdown';
 const Navbar = () => {
   const [show, setShow] = useState(false);
 
@@ -42,26 +42,26 @@ const Navbar = () => {
           </div>
           <div className="right main-menu-content">
             <ul>
-              <li>
-                <Link to="dashboard">
-                  <i className="la la-area-chart mr-2 text-color-3"></i>
-                  <span className="text-white">Dashboard</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link to="profile">
-                  <span className="font-size-16 mb-2">
+<li> <Dropdown>
+            <Dropdown.Toggle variant="dark" id="dropdown-basic">
+            <span className="font-size-16 mb-2">
                     {localStorage.getItem("data")}
                   </span>
-                </Link>
-              </li>
-              <li>
-                <a href="recover">Change Password?</a>
-              </li>
-              <li className="mt-2">
-                <Logout />
-              </li>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className="bg-dark">
+              <Dropdown.Item > <Link to="profile">
+                Profile
+                </Link></Dropdown.Item>
+              <Dropdown.Item href="recover"> Change Password?</Dropdown.Item>
+              <Dropdown.Item > <Logout /></Dropdown.Item>
+              <Dropdown.Item > <Link to="dashboard">
+                  <i className="la la-area-chart mr-2 text-color-3"></i>
+                  <span>Dashboard</span>
+                </Link></Dropdown.Item>
+             
+            </Dropdown.Menu>
+          </Dropdown></li>
             </ul>
           </div>
         </div>

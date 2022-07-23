@@ -125,7 +125,7 @@ const Complains = () => {
                                 >
                                   <i className="la la-eye"></i>
                                 </Link>
-                                {data.complain ? (
+                                {!data.complain ? (
                                   <Replay
                                     id={data._id}
                                     data={data}

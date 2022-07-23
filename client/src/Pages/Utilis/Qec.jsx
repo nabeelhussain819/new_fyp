@@ -81,7 +81,7 @@ const Qec = () => {
             <div className="col-lg-6">
               <div className="breadcrumb-content">
                 <div className="section-heading">
-                  <h2 className="sec__title font-size-30 text-dark">
+                  <h2 className="sec__title font-size-30 text-light">
                     EVALUATION FORM
                   </h2>
                 </div>

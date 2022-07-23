@@ -142,7 +142,7 @@ return(<>
                                                     </div>
                                                 </td>
                                                 <td>:</td>
-                                                <td>{data.courseId.map((index)=> index.name)}</td>
+                                                <td>{data.courseId.map((index)=> {return (<><br/>{index.name}</>)})}</td>
                                             </tr>
                                             
                                             

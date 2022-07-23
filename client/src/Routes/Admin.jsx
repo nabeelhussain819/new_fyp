@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import Setting from "../Pages/Admin/Create/Setting";
 
 import Dashboard from "../Pages/Admin/Dashboard";
 import Comments from "../Pages/Admin/Index/Comment";
@@ -61,6 +62,7 @@ function Admin() {
             <Route path="/complains" element={<Complains />} />
             <Route path="/qec" element={<QEC />} />
             <Route path="/details/:id" element={<Details />} />
+            <Route path="/setting" element={<Setting />} />
             {/* <Route path="/dashboard" element={<AdminDashboard />} />
             <Route path="/program" element={<Program />} />
             <Route path="/semester" element={<Semester />} />

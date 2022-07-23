@@ -49,7 +49,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="header-menu-wrapper sticky-top padding-right-100px padding-left-100px bg-light">
+          <div className="header-menu-wrapper sticky-top padding-right-100px padding-left-100px">
             <div className="container-fluid">
               <div className="row">
                 <div className="col-lg-12">
@@ -130,53 +130,53 @@ const Header = () => {
           <div className="header-nav d-xl-none">
             <div className="container">
               <div className="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
-                <div className="header-static-nav">
+                <div className="header-static-nav text-light">
                   <p>Welcome you to T&S Evaluation System!</p>
                 </div>
                 <div className="header-menu-nav">
                   <ul>
                     <li className="p-2">
-                      <Link to="/" className="text-dark">
+                      <Link to="/" className="text-light">
                         Home
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/teacher" className="text-dark">
+                      <Link to="/teacher" className="text-light">
                         Teachers
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/course" className="text-dark">
+                      <Link to="/course" className="text-light">
                         Courses
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/program" className="text-dark">
+                      <Link to="/program" className="text-light">
                         Programs
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="/department" className="text-dark">
+                      <Link to="/department" className="text-light">
                         Department
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="about" className="text-dark">
+                      <Link to="about" className="text-light">
                         About
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="blog" className="text-dark">
+                      <Link to="blog" className="text-light">
                         Gellery
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="contact" className="text-dark">
+                      <Link to="contact" className="text-light">
                         Contact
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link to="signup" className="text-dark">
+                      <Link to="signup" className="text-light">
                         Sign Up
                       </Link>
                     </li>

@@ -30,18 +30,9 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="bread-svg-box">
-          <svg
-            className="bread-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 10"
-            preserveAspectRatio="none"
-          >
-            <polygon points="100 0 50 10 0 0 0 10 100 10"></polygon>
-          </svg>
-        </div>
+       
       </section>
-      <section className="contact-area section--padding bg-817">
+      <section className="contact-area section--padding ">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">

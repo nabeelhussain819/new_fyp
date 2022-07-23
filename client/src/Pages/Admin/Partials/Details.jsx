@@ -104,16 +104,19 @@ console.log(from)
                           </li><li>
                             <span>Student</span>
                             {data.studentId.map((data)=>data.name)}
-                          </li></>} 
+                          </li></>}
                           {data.comment && <><li>
-                            <span>Comment</span>
-                            {data.complain}
+                            <span>Comments</span>
+                            {data.comment}
                           </li>
                           {data.studentId &&   <li>
                             <span>Student</span>
                             {data.studentId.map((data)=>data.name)}
                           </li>}
-                        
+                          {data.teacherId &&   <li>
+                            <span>Teacher</span>
+                            {data.teacherId.map((data)=>data.name)}
+                          </li>}
                           </>}   
                           {data.semesterId && <li>
                             <span>Semester</span>
@@ -143,24 +146,16 @@ console.log(from)
                             <span>Session</span>
                             {data.sessionId.map((data)=>data.name )}
                           </li> }
-                          {!data.complain && <>{data.studentId && <li>
+                          {/* {!data.complain && <>{data.studentId && <li>
                             <span>Total Students</span>
                             {data.studentId.length}
                           </li> }</> }
                           {!data.complain && <>{data.teacherId && <li>
                             <span>Total Teachers</span>
                             {data.teacherId.length}
-                          </li> }</>}
-                          {!data.comment && <>{data.teacherId && <li>
-                            <span>Total Teachers</span>
-                            {data.teacherId.length}
-                          </li> }</>}
-                          {!data.comment && <>{data.studentId && <li>
-                            <span>Total Students</span>
-                            {data.studentId.length}
-                          </li> }</> }
+                          </li> }</>} */}
                           {data.tokens && <li>
-                            <span>Loged In</span>
+                            <span>Logged In</span>
                             {data.tokens.length} times
                           </li>} 
                           {data.rating && <li>

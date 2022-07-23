@@ -4,7 +4,7 @@ import Logout from "../../../Components/Logout";
 const Header = () => {
   return (
     <div>
-      <div className="dashboard-nav dashboard--nav hidden-print bg-light">
+      <div className="dashboard-nav dashboard--nav hidden-print bg-dark">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
@@ -42,7 +42,7 @@ const Header = () => {
                             <div className="avatar avatar-sm flex-shrink-0 mr-2">
                               <img src={logo1} alt="testimonial image" />
                             </div>
-                            <span className="font-size-14 font-weight-bold text-dark">
+                            <span className="font-size-14 font-weight-bold text-light">
                               Royel Admin
                             </span>
                           </div>

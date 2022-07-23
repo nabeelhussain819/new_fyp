@@ -41,7 +41,7 @@ const Graph = () => {
             <div className="col-lg-6">
               <div className="breadcrumb-content">
                 <div className="section-heading">
-                  <h2 className="sec__title font-size-30 text-dark">
+                  <h2 className="sec__title font-size-30 text-light">
                     EVALUATION FORM Result
                   </h2>
                 </div>
@@ -289,7 +289,7 @@ const Graph = () => {
                         </div>
                         <div className="col-lg-4">
                           <div className="sparkline-chart-item">
-                            <span className="font-size-15">Joined At</span>
+                            <span className="font-size-15">Evaluated At</span>
                             <h3 className="title font-size-16">
                               {new Date(Date.now()).toLocaleDateString("en-US")}
                             </h3>

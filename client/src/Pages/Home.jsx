@@ -48,7 +48,7 @@ export const Home = () => {
   return (
     <>
       <CarouselItem />
-      <section className="about-area padding-bottom-90px padding-top-80px overflow-hidden bg-818">
+      <section className="about-area padding-bottom-90px padding-top-80px overflow-hidden ">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
@@ -74,7 +74,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="destination-area section-bg3 padding-bottom-80px bg-818 ">
+      <section className="destination-area section-bg3 padding-bottom-80px ">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
@@ -123,7 +123,7 @@ export const Home = () => {
                             to={"/details/" + item._id}
                             state={{ from: item, api: "departments" }}
                           >
-                            see Details
+                            Details
                           </Link>
                         </div>
                       </div>
@@ -160,7 +160,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="trending-area section-bg  position-relative section-padding bg-817 ">
+      <section className="trending-area   position-relative section-padding ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -207,14 +207,6 @@ export const Home = () => {
             })}
           </div>
         </div>
-        <svg
-          className="hero-svg"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 10"
-          preserveAspectRatio="none"
-        >
-          <path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path>
-        </svg>
       </section>
       <section className="faq-area section-bg4  section--padding">
         <div className="container">

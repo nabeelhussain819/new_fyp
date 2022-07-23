@@ -1,19 +1,39 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link,Navigate, useNavigate } from "react-router-dom";
 import { GetSpecificCourse } from "../../Api/Department";
-import { AuthQec, AuthStudentTeacher } from "../../Api/SpecificData/AuthUser";
+import { ReadSetting } from "../../Api/Qec";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthQec, AuthStudentTeacher,AuthNonEvaluateCourse,AuthUser } from "../../Api/SpecificData/AuthUser";
 const CourseEvaluate = () => {
   const [course, setCourse] = useState([]);
   const [teacher, setTeacher] = useState([]);
   const [courseId, setCourseId] = useState("");
   const [teacherId, setTeacherId] = useState("");
   const [qecCourse, setQec] = useState([]);
+  const [qecCourse1, setQec1] = useState([]);
+  const [user, setUser] = useState([]);
   const [show, setShow] = useState(false);
   const [term, setTerm] = useState("");
-
-  const getChange = (data) => {
-    setCourseId(data);
-    getData4({ data });
+  const [termV, setTermV] = useState("");
+  const navigate = useNavigate()
+  const same = qecCourse1.map((item)=>item._id )
+  console.log(term)
+  const getChange = (data) => { 
+    const jack = same.filter((item)=>item.includes(data))
+    if(jack.length > 0 ){
+      toast.warning("You Cannot Evaluate An Evaluated Course")
+      toast.info("Please Select A Course Which is not Evaluated")
+    }else{
+      if(user.semesterId.map((data)=> data.name) == 1){
+        toast.warning("You Cannot Evaluate A Course ")
+        toast.info("1st Semester Student Cannot Evaluate!")
+      }else{
+        setCourseId(data);
+      getData4({ data });
+      }
+   
+    }
   };
   const getChange1 = (data) => {
     setTeacherId(data);
@@ -35,6 +55,21 @@ const CourseEvaluate = () => {
       AuthQec().then(function (result) {
         setQec(result);
       });
+      AuthUser().then(function (result) {
+        setUser(result);
+      });
+      AuthNonEvaluateCourse().then(function (result) {
+        setQec1(result);
+      });
+      ReadSetting().then(function (result) {
+        const sms= result.map((data)=>JSON.stringify(data.Evaluate))
+        
+        if(sms.includes('false')){
+         toast.info("You Cannot Evaluate Now!");
+         navigate('/qec')
+        }
+        setTermV(result.map((data)=>data.Term))
+       });
     };
     getQecCourse();
     getData();
@@ -47,7 +82,7 @@ const CourseEvaluate = () => {
             <div className="col-lg-12 pt-4">
               <div className="hero-content pb-5 pt-4">
                 <div className="section-heading">
-                  <p className="sec__desc pb-2">Evalation Form</p>
+                  <p className="sec__desc pb-2">Evaluation Form</p>
                   <h2 className="sec__title">
                     Are You Ready To Evaluate? <br /> Select Course & Teacher To
                     Evaluate
@@ -75,7 +110,7 @@ const CourseEvaluate = () => {
                               return (
                                 <>
                                   <option value={data._id} name={data.name}>
-                                    {data.name}
+                                    {data.name} {qecCourse1.map((item)=>item._id == data._id && "Done!" )}
                                   </option>
                                 </>
                               );
@@ -95,8 +130,11 @@ const CourseEvaluate = () => {
                             onChange={(e) => setTerm(e.target.value)}
                           >
                             <option>Select One</option>
-                            <option value="Mid">Mid Term</option>
-                            <option value="Mid">Final Term</option>
+                            
+                                <option value={termV}>{termV}</option>
+                            
+                            
+                            
                           </select>
                         </div>
                       </div>
@@ -157,27 +195,7 @@ const CourseEvaluate = () => {
           </div>
         </div>
       </section>
-      <section className="hero-wrapper bread-bg pb-4">
-        <div className="pb-0">
-          <div className="container pt-4">
-            <div className="col-lg-12 pt-4"></div>
-          </div>
-        </div>
-      </section>
-      <section className="hero-wrapper bread-bg pb-4">
-        <div className="pb-0">
-          <div className="container pt-4">
-            <div className="col-lg-12 pt-4"></div>
-          </div>
-        </div>
-      </section>
-      <section className="hero-wrapper bread-bg pb-4">
-        <div className="pb-0">
-          <div className="container pt-4">
-            <div className="col-lg-12 pt-4"></div>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };

@@ -35,7 +35,7 @@ export default function ExtendedForm() {
   const [studentId, setStudentId] = useState(localStorage.getItem("user"));
   const [teacherId, setTeacherId] = useState(localStorage.getItem("isTeacher"));
   const [res, setResCourse] = useState([]);
-
+console.log(res)
   const filterData = localStorage.getItem("isTeacher")
     ? courseApi.filter((data) => data.name.includes(searchData))
     : courseApi;
@@ -103,7 +103,7 @@ export default function ExtendedForm() {
     });
     const data = await res.json();
     if (res.status === 400 || !data) {
-      toast.error("Course is not registered Successfully");
+      toast.error(data.error  );
     } else {
       setResCourse((old) => [...old, data.courseId]);
       localStorage.setItem("courseId", data.courseId);
@@ -296,7 +296,7 @@ export default function ExtendedForm() {
                       {localStorage.getItem("isTeacher") ? (
                         <>
                           <div className="container p-4">
-                            <h4>Search Course</h4>
+                            <h4 className="text-white">Search Course</h4>
                             <div className="card">
                               <input
                                 type="text"
@@ -340,7 +340,7 @@ export default function ExtendedForm() {
                                             <>
                                               <li>
                                                 <button
-                                                  className="bg-transparent border-0"
+                                                  className="bg-transparent border-0 text-light"
                                                   onClick={() =>
                                                     registerCourse(index._id)
                                                   }

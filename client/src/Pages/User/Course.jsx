@@ -47,7 +47,7 @@ const Courses = () => {
           </div>
         </div>
       </section>
-      <section className="card-area pt-4 bg-817">
+      <section className="card-area pt-4">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

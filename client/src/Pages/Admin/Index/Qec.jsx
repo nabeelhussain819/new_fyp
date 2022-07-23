@@ -2,20 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Semester from "../Create/Semester";
 import { ReadQec } from "../../../Api/Qec";
-
+import { ReadTeacher } from "../../../Api/Teacher";
 const QEC = () => {
   const [show, setShow] = useState(false);
   const [dept, setDept] = useState([]);
+  const [teacher, setTeacher] = useState([]);
   const [name, setName] = useState("");
-  function searchData(e) {
-    let item = e.target.value;
+  function searchData(item) {
     setName(item);
   }
-  const filterData = dept
+  console.log(name)
+  const filterData = dept.filter((data)=>data.term.includes(name)) 
   useEffect(() => {
     const getData = () => {
       ReadQec().then(function (result) {
         setDept(result);
+        ReadTeacher().then(function (result) {
+          setTeacher(result);
+        });
       });
     };
     getData();
@@ -55,15 +59,23 @@ const QEC = () => {
             <div className="col-lg-12">
               <div className="form-box">
                 <div className="form-title-wrap">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <h3 className="title">QEC Results</h3>
-                    <input
-                      type="text"
-                      className="form-control col-lg-4"
-                      placeholder="Search Qec By Rating"
-                      onChange={searchData}
-                    />
-                  </div>
+                  <div className="row"> <div className="col-lg-6 responsive-column">
+                        <div className="input-box">
+                          <label className="label-text">Select By Term</label>
+                          <div className="form-group">
+                          <select
+                              className="form-control p-3"
+                              value={name}
+                            onChange={(e)=>searchData(e.target.value)}
+                            >
+                              <option className="option">----select-one----</option>
+                              <option    className="option" value="Mid">Mid</option>
+                              <option    className="option" value="Final">Final</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div></div>
+               
                 </div>
                 <div className="table-form table-responsive">
                   <table className="table">
@@ -92,7 +104,7 @@ const QEC = () => {
                             <td>{data.teacherId.map((data)=>data.name)}</td>
                             <td>
                             <span className="badge badge-warning py-1 px-2">
-                              {data.studentId.length < 100 ? "Less Students" :"ACTIVE"}
+                              {data.studentId.length < 30 ? "Not Good" :"Good"}
                               </span>
                             </td>
                           </tr>

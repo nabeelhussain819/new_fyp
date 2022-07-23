@@ -18,14 +18,14 @@ const Program = () => {
 
   return (
     <div>
-      <section className="breadcrumb-area gradient-bg-gray before-none">
+      <section className="breadcrumb-area dashboard-bread">
         <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="breadcrumb-content">
                   <div className="section-heading">
-                    <h2 className="sec__title text-dark">Enrolled Program</h2>
+                    <h2 className="sec__title text-light pt-4">Enrolled Program</h2>
                   </div>
                 </div>
               </div>
@@ -44,14 +44,14 @@ const Program = () => {
         </div>
       </section>
 
-      <section className="card-area bg-818">
+      <section className="">
         <div className="container">
           <div className="row">
             {program.map((data) => {
               return (
                 <>
                   <div className="col-lg-12">
-                    <div className="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
+                    <div className=" mb-5 text-white">
                       <div className="card-body px-0 pb-0">
                         <div className="post-categories"></div>
                         <h3 className="card-title font-size-28">
@@ -109,7 +109,7 @@ const Program = () => {
                               {myData.slice(0, 1).map((data) => {
                                 return (
                                   <>
-                                    <div className="card">
+                                    <div className="card-item">
                                       <div
                                         className="card-header"
                                         id="faqHeadingFour"

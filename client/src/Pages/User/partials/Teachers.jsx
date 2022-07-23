@@ -17,14 +17,14 @@ const Teachers = () => {
 
   return (
     <div>
-      <section className="breadcrumb-area gradient-bg-gray before-none">
+      <section className="breadcrumb-area dashboard-bread  ">
         <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="breadcrumb-content">
                   <div className="section-heading">
-                    <h2 className="sec__title text-dark">Your Teachers</h2>
+                    <h2 className="sec__title text-light pt-4">Your Teachers</h2>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Teachers = () => {
               <div className="filter-wrap ">
                 <div className="filter-top d-flex align-items-center justify-content-between">
                   <div>
-                    <h3 className="font-size-24">Your Enrolled Teachers </h3>
+                    <h3 className="font-size-24   text-light">Your Enrolled Teachers </h3>
                   </div>
                 </div>
                 <div className="table-form table-responsive">

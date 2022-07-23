@@ -7,7 +7,7 @@ import video4 from "../../Assets/video4.mp4";
 const Evaluation = () => {
   return (
     <div>
-      <div className="dashboard-bread">
+      <div className="breadcrumb-area dashboard-bread ">
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -81,11 +81,11 @@ const Evaluation = () => {
           </div>
         </div>
       </div>
-      <section className="card-area ">
+      <section className="card-item ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="card-item blog-card blog-card-layout-2 blog-single-card mb-5 bg-817">
+              <div className="mb-5 ">
                 <div className="card-img before-none"></div>
                 <div className="card-body px-0 pb-0">
                   <h3 className="card-title font-size-28">
@@ -125,59 +125,8 @@ const Evaluation = () => {
                     sodales aliquet felis, quis volutpat massa imperdiet in.
                     Praesent rutrum malesuada risus, ullamcorper pretium tortor
                   </p>
-                  <div className="photo-block-gallery">
-                    <h3 className="title pb-2">Travelling Highlight</h3>
-                    <p className="card-text pb-4">
-                      Quodsi sanctus pro eu, ne audire scripserit quo. Vel an
-                      enim offendit salutandi, in eos quod omnes epicurei, ex
-                      veri qualisque scriptorem mei.
-                    </p>
-                    <video
-                      playsInline
-                      autoPlay
-                      muted
-                      loop
-                      poster={video4}
-                      className="vedio-bg"
-                    >
-                      Your browser does not support the video tag.
-                      <source src={video4} type="video/webm" />
-                    </video>
-                  </div>
-
                   <div className="post-tag-wrap d-flex align-items-center justify-content-between py-4">
-                    <ul className="tag-list">
-                      <li>
-                        {" "}
-                        <Link className="theme-btn text-light" to="/qec">
-                          When
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link
-                          className="theme-btn btn-light"
-                          to="/howEvaluation"
-                        >
-                          How
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link
-                          className="theme-btn btn-light"
-                          to="/ruleEvaluation"
-                        >
-                          Rules
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link className="theme-btn btn-light" to="#">
-                          Evaluate
-                        </Link>
-                      </li>
-                    </ul>
+               
                     <div>
                       <Link className="theme-btn" to="/howEvaluation">
                         NEXT PAGE

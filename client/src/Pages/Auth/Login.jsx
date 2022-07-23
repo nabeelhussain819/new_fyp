@@ -67,19 +67,19 @@ function Login() {
       <Button
         variant="primary"
         onClick={handleShow}
-        className="bg-transparent border-0 text-dark"
+        className="bg-transparent border-0 text-light"
       >
         LOG IN
       </Button>
 
-      <Modal show={show} onHide={handleClose} keyboard={false} centered>
-        <div className="modal-content">
+      <Modal show={show} onHide={handleClose} keyboard={false} centered >
+        <div className="modal-content ">
           <div className="modal-header">
             <div>
               <h5 className="modal-title title" id="exampleModalLongTitle2">
                 Login
               </h5>
-              <p className="font-size-14">Hello! Welcome to your account</p>
+              <p className="font-size-14 text-light">Hello! Welcome to your account</p>
             </div>
             <button
               type="button"
@@ -119,7 +119,7 @@ function Login() {
 
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="custom-checkbox mb-0"></div>
-                  <p className="forgot-password">
+                  <p className="forgot-password ">
                     <a href="recover">Forgot Password?</a>
                   </p>
                 </div>
@@ -130,7 +130,7 @@ function Login() {
                   </button>
                 </div>
                 <div className="action-box text-center">
-                  <p className="font-size-14">
+                  <p className="font-size-14 text-light">
                     {" "}
                     Don't Have Any Account ?{" "}
                     <Link to="/signup">Register Now </Link>

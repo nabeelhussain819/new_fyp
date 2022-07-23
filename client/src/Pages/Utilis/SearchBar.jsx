@@ -19,7 +19,7 @@ const SearchBar = ({ item, api }) => {
                 </div>
                 <div>
                   <input
-                    className="fancybox-share__input"
+                    className="form-control"
                     type="text"
                     value={searchData}
                     placeholder="Search..."

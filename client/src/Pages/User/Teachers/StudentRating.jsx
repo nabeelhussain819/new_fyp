@@ -40,7 +40,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter" className="text-light">
           Name: {props.data.name}
         </Modal.Title>
       </Modal.Header>

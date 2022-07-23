@@ -38,7 +38,7 @@ const { student } = require("../controller/Index/Student");
 const { teacher } = require("../controller/Index/Teacher");
 const { login, check, forget } = require("../controller/auth/Login");
 const { Commend } = require("../controller/Create/teacher");
-const { report, reply } = require("../controller/Create/Complain");
+const { report, reply, deleteComplains } = require("../controller/Create/Complain");
 const {
   departComment,
   teacherComment,
@@ -68,8 +68,11 @@ const {
   AuthStudentSemesterCourse,
   AuthStudentTeacher,
   AuthStudentDepartment,
+  AuthNonEvaluateCourse,
+  AuthTeacherComment
 } = require("../controller/SpecificData/AuthUser");
 const { getReport } = require("../controller/Index/Complain");
+const { updateSetting, readSetting } = require("../controller/Create/Setting");
 
 var storage = multer.diskStorage({
   destination: function (req, file, callback) {
@@ -134,6 +137,7 @@ router.route("/sections").get(section);
 // for Complain
 router.route("/reply").post(reply);
 router.route("/complain").post(report);
+router.route("/delete-complains").post(deleteComplains);
 router.route("/get-complain").get(getReport);
 // router.route("/delete-complains").post(deleteComplains);
 // for Comment
@@ -157,7 +161,9 @@ router.route("/gpaRate").post(createCgpa);
 
 // Specific Data
 router.route("/AuthUser").post(AuthUser);
+router.route("/AuthTeacher").post(AuthTeacher);
 router.route("/AuthQec").post(AuthQec);
+router.route("/AuthTeacherComment").post(AuthTeacherComment);
 router.route("/AuthTeacher").post(AuthTeacher);
 router.route("/AuthStudentRating").post(AuthStudentRating);
 router.route("/AuthTeacherQec").post(AuthTeacherQec);
@@ -166,4 +172,8 @@ router.route("/AuthStudentProgram").post(AuthStudentProgram);
 router.route("/AuthStudentSemesterCourse").post(AuthStudentSemesterCourse);
 router.route("/AuthStudentTeacher").post(AuthStudentTeacher);
 router.route("/AuthStudentDepartment").post(AuthStudentDepartment);
+router.route("/AuthNonEvaluateCourse").post(AuthNonEvaluateCourse);
+//  Setting
+router.route("/setting").post(updateSetting);
+router.route("/readSetting").get(readSetting);
 module.exports = router;

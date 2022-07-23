@@ -39,7 +39,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter" className="text-white">
           {props.data.name}
         </Modal.Title>
       </Modal.Header>
@@ -59,7 +59,8 @@ function MyVerticallyCenteredModal(props) {
               <td>
                 <div className="table-content">
                   <input
-                    type="text"
+                    type="text" 
+                    className="form-control"
                     placeholder={props.data.name}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -69,6 +70,7 @@ function MyVerticallyCenteredModal(props) {
                 {" "}
                 <input
                   type="text"
+                  className="form-control"
                   placeholder={props.data.code}
                   onChange={(e) => setCode(e.target.value)}
                 />
@@ -77,7 +79,7 @@ function MyVerticallyCenteredModal(props) {
                 <div className="table-content">
                   <Link
                     to={"/details/" + props.data._id}
-                    className="theme-btn theme-btn-small "
+                    className="bg-transparent border-0"
                     state={{ from: props.data, api: "courses" }}
                   >
                     <i className="la la-eye"></i>

@@ -23,18 +23,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="bread-svg-box">
-          <svg
-            className="bread-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 10"
-            preserveAspectRatio="none"
-          >
-            <polygon points="100 0 50 10 0 0 0 10 100 10"></polygon>
-          </svg>
-        </div>
       </section>
-      <section className="about-area padding-bottom-90px overflow-hidden bg-817">
+      <section className="about-area padding-bottom-90px overflow-hidden ">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">

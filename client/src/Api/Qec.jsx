@@ -33,3 +33,13 @@ export const ReadFinalQec = async () => {
     });
   return response;
 };
+export const ReadSetting = async () => {
+  const response = await (
+    await fetch("http://localhost:5000/readSetting")
+  )
+    .json()
+    .then(function (result) {
+      return result;
+    });
+  return response;
+};

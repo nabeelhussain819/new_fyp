@@ -60,7 +60,7 @@ function Commend({ data }) {
           ) : (
             <button
               key={idx}
-              className=" border-0 bg-transparent"
+              className=" border-0 bg-transparent text-light"
               style={{ textDecoration: "none" }}
               aria-labelledby="contained-modal-title-vcenter"
               centered
@@ -84,7 +84,7 @@ function Commend({ data }) {
         <Modal.Body>
           <div className="modal-content border-0 ">
             <div className="modal-header text-center">
-              <h2 className="modal-title ">Commend Now</h2>
+              <h2 className="modal-title text-light">Commend Now</h2>
             </div>
             <div className="modal-body">
               <div className="contact-form-action">
@@ -107,7 +107,7 @@ function Commend({ data }) {
                   >
                     <i className="la la-heart-o"></i>
                   </button>
-                  <label for="catChb2">Is HelpFull in Nature</label>
+                  <label for="catChb2" className="text-light">Is HelpFull in Nature</label>
                 </div>
                 <div className="reviews-reaction">
                   <button
@@ -128,7 +128,7 @@ function Commend({ data }) {
                   >
                     <i className="la la-heart-o"></i>
                   </button>
-                  <label for="catChb2">Is Friendly in Nature</label>
+                  <label for="catChb2" className="text-light">Is Friendly in Nature</label>
                 </div>
                 <div className="reviews-reaction">
                   <button
@@ -149,7 +149,7 @@ function Commend({ data }) {
                   >
                     <i className="la la-heart-o"></i>
                   </button>
-                  <label for="catChb2">Is Best in his Profession</label>
+                  <label for="catChb2" className="text-light">Is Best in his Profession</label>
                 </div>
                 <div>
                   <div className="btn-box pt-3 pb-4">

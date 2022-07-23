@@ -9,7 +9,7 @@ import spr from "../../Assets/img25.jpg";
 const HowEvaluation = () => {
   return (
     <div>
-      <div className="dashboard-bread">
+      <div className="breadcrumb-area dashboard-bread ">
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -85,13 +85,13 @@ const HowEvaluation = () => {
           </div>
         </div>
       </div>
-      <section className="card-area ">
+      <section className="card-item ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
+              <div className="mb-5">
                 <div className="card-body px-0 pb-0">
-                  <section className="about-area padding-bottom-90px overflow-hidden bg-817">
+                  <section className="about-area padding-bottom-90px overflow-hidden">
                     <div className="container">
                       <div className="row">
                         <div className="col-lg-6">
@@ -137,65 +137,9 @@ const HowEvaluation = () => {
                       </div>
                     </div>
                   </section>
-                  <div className="photo-block-gallery">
-                    <h3 className="title pb-2">Travelling Highlight</h3>
-                    <p className="card-text pb-4">
-                      Quodsi sanctus pro eu, ne audire scripserit quo. Vel an
-                      enim offendit salutandi, in eos quod omnes epicurei, ex
-                      veri qualisque scriptorem mei.
-                    </p>
-                    <section className="cta-area cta-bg bg-fixed section-padding text-center ">
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div className="section-heading">
-                              <h2 className="sec__title text-white font-size-50 line-height-60">
-                                Join with us. To Share Love With Your Teahcers.
-                              </h2>
-                              <p className="sec__desc text-white pt-3">
-                                Nemo enim ipsam voluptatem quia voluptas sit
-                                aspernatur
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
 
                   <div className="post-tag-wrap d-flex align-items-center justify-content-between py-4">
-                    <ul className="tag-list">
-                      <li>
-                        {" "}
-                        <Link className="theme-btn text-light" to="/qec">
-                          When
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link
-                          className="theme-btn text-light"
-                          to="/howEvaluation"
-                        >
-                          How
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link
-                          className="theme-btn btn-light"
-                          to="/ruleEvaluation"
-                        >
-                          Rules
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link className="theme-btn btn-light" to="#">
-                          Evaluate
-                        </Link>
-                      </li>
-                    </ul>
+                   
                     <div>
                       <Link className="theme-btn" to="/ruleEvaluation">
                         NEXT PAGE

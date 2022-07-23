@@ -18,14 +18,14 @@ const Department = () => {
 
   return (
     <div>
-      <section className="breadcrumb-area gradient-bg-gray before-none">
+      <section className="breadcrumb-area dashboard-bread">
         <div className="breadcrumb-wrap padding-right-100px padding-left-100px">
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="breadcrumb-content">
                   <div className="section-heading">
-                    <h2 className="sec__title text-dark">Enrolled Program</h2>
+                    <h2 className="sec__title text-light pt-4">Enrolled Department</h2>
                   </div>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Department = () => {
                     <li>
                       <a href="/dashboard">Home</a>
                     </li>
-                    <li>Program</li>
+                    <li>Department</li>
                   </ul>
                 </div>
               </div>
@@ -44,14 +44,14 @@ const Department = () => {
         </div>
       </section>
 
-      <section className="card-area bg-818">
+      <section className="card-area">
         <div className="container">
           <div className="row">
             {department.map((data) => {
               return (
                 <>
                   <div className="col-lg-12">
-                    <div className="card-item blog-card blog-card-layout-2 blog-single-card mb-5">
+                    <div className="mb-5 text-light">
                       <div className="card-body px-0 pb-0">
                         <div className="post-categories"></div>
                         <h3 className="card-title font-size-28">
@@ -106,10 +106,10 @@ const Department = () => {
                               id="accordionExample2"
                             >
                               {" "}
-                              {myData.slice(0, 1).map((data) => {
+                              {myData.slice(1, 2).map((data) => {
                                 return (
                                   <>
-                                    <div className="card">
+                                    <div className="card-item">
                                       <div
                                         className="card-header"
                                         id="faqHeadingFour"
@@ -154,10 +154,10 @@ const Department = () => {
                                   </>
                                 );
                               })}
-                              {myData.slice(1, 4).map((data) => {
+                              {myData.slice(2, 5).map((data) => {
                                 return (
                                   <>
-                                    <div className="card">
+                                    <div className="card-item">
                                       <div
                                         className="card-header"
                                         id="faqHeadingSix"

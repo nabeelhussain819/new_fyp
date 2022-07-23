@@ -21,7 +21,7 @@ function Logout() {
       {values.map((v, idx) => (
         <button
           key={idx}
-          className=" bg-transparent border-0 text-dark"
+          className=" bg-transparent border-0 text-light"
           style={{
             textDecoration: "none",
             letterSpacing: "2px",
@@ -46,12 +46,12 @@ function Logout() {
       >
         <Modal.Body
           id="contained-modal-title-vcenter"
-          className=" text-right text-dark mt-2  bg-transparent"
+          className=" text-right text-dark mt-2  bg-dark"
         >
           <img src={logo1} style={{ width: "450px" }} alt="" />
           <div id="loading-wrapper" className="p-4">
             <div id="loading-text">
-              <h3>LOGING OUT...</h3>
+              <h3 className="text-white">LOGING OUT...</h3>
             </div>
             <div id="loading-content"></div>
           </div>

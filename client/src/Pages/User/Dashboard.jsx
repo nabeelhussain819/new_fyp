@@ -29,7 +29,7 @@ export const Dashboard = () => {
   }, []);
   return (
     <>
-      <section className="dashboard-content-wrap  bg-818">
+      <section className="dashboard-content-wrap  ">
         <div className="dashboard-bread">
           <div className="container-fluid">
             <div className="row align-items-center">

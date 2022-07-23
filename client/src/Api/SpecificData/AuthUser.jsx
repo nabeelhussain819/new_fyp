@@ -15,6 +15,40 @@ export const AuthUser = async () => {
     return data;
   }
 };
+export const AuthTeacher = async () => {
+  const res = await fetch("http://localhost:5000/AuthTeacher", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      id: localStorage.getItem("id"),
+    }),
+  });
+  const data = await res.json();
+  if (res.status === 400 || !data) {
+    console.log(data);
+  } else if (res.status === 401) {
+    console.log(data);
+  } else {
+    return data;
+  }
+};
+export const AuthTeacherComment = async () => {
+  const res = await fetch("http://localhost:5000/AuthTeacherComment", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      id: localStorage.getItem("id"),
+    }),
+  });
+  const data = await res.json();
+  if (res.status === 400 || !data) {
+    console.log(data);
+  } else if (res.status === 401) {
+    console.log(data);
+  } else {
+    return data;
+  }
+};
 export const AuthQec = async () => {
   const res = await fetch("http://localhost:5000/AuthQec", {
     method: "POST",
@@ -136,6 +170,23 @@ export const AuthStudentCourse = async ({ semesterId }) => {
 };
 export const AuthStudentTeacher = async () => {
   const res = await fetch("http://localhost:5000/AuthStudentTeacher", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      id: localStorage.getItem("id"),
+    }),
+  });
+  const data = await res.json();
+  if (res.status === 400 || !data) {
+    console.log(data);
+  } else if (res.status === 401) {
+    console.log(data);
+  } else {
+    return data;
+  }
+};
+export const AuthNonEvaluateCourse = async () => {
+  const res = await fetch("http://localhost:5000/AuthNonEvaluateCourse", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
