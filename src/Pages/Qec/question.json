@@ -1,0 +1,140 @@
+[
+  {
+    "category": "completed" ,
+    "question": "YOU ARE ALL DONE! GO TO PROCEED",
+    "answer": [
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor was well prepared for class",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "Individual class meetings were well prepared",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor was well prepared for class",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "Individual class meetings were well prepared",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor used class time effectively",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor was organized, well prepared, and used class time efficiently",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor communicated clearly and was easy to understand",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor encouraged student participation in class",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor presented course material in a clear manner that facilitated understanding",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor effectively organized and facilitated well-run learning activities",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies",
+    "question": "The instructor’s teaching methods were effective",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  },
+  {
+    "category": "Instructor Strategies" ,
+    "question": "The instructor’s teaching methods aided my learning",
+    "answer": [
+      "Strongly Agree",
+      "Agree",
+      "Neutral",
+      "Disagree",
+      "Strongly Disagree"
+    ]
+  }
+]
